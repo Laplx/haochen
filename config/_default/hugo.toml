@@ -1,0 +1,66 @@
+baseURL = "https://haochen.info"
+disqusShortname = ""
+enableGitInfo = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+languageCode = "zh-cn"
+rssLimit = 10
+theme = "hugo-texify3"
+title = "Laplace's Blog"
+
+[pagination]
+pagerSize = 5
+
+[taxonomies]
+tags = "tags"
+categories = "categories"
+
+[[menu.main]]
+identifier = "notes"
+name = "Notes"
+url = "/notes/"
+pre = """
+<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><title xmlns="">notes</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zm4 2h6m-6 4h6m-6 4h4"/></svg>
+"""
+weight = 1
+
+[[menu.main]]
+identifier = "papers"
+name = "Papers"
+url = "/papers/"
+pre = """
+<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><title xmlns="">wallpaper</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 6h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6"/><path d="M4 18a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M8 18V6a2 2 0 1 0-4 0v12"/></g></svg>
+"""
+weight = 2
+
+[[menu.main]]
+identifier = "posts"
+name = "Causerie"
+url = "/posts/"
+pre = """
+<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><title xmlns="">pencil</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 20h4L18.5 9.5a2.828 2.828 0 1 0-4-4L4 16zm9.5-13.5l4 4"/></svg>
+"""
+weight = 3
+
+[[menu.main]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/laplx"
+pre = """
+<svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><title xmlns="">brand-github</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></svg>
+"""
+weight = 4
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark.renderer]
+  unsafe = true
+
+  [markup.highlight]
+  noClasses = false
+
+  [markup.tableOfContents]
+  endLevel = 6
+  ordered = false
+  startLevel = 2
