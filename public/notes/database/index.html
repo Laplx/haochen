@@ -1,0 +1,1750 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>数据库及实现 &middot; Hao Chen&#39;s Blog</title>
+  <meta name="title" content="数据库及实现 &middot; Hao Chen&#39;s Blog" />
+  
+  
+  <meta name="keywords" content="Database, CS, System, SQL, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/haochen/notes/database/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/haochen/css/main.bundle.min.782d2421d5c5317cdc02c61f82155e525a77a614c5fa1a9a7b869224bc8a4b5f82f2dfbaf303aec25835bc45f2accef2bacb96ecbb8ce23893017be37ad53294.css"
+    integrity="sha512-eC0kIdXFMXzcAsYfghVeUlp3phTF&#43;hqae4aSJLyKS1&#43;C8t&#43;68wOuwlg1vEXyrM7yusuW7LuM4jiTAXvjetUylA==" />
+  
+  
+  <script type="text/javascript" src="/haochen/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/haochen/js/main.bundle.min.0cc2c97290116f4d497b3ff680f6ed75d78c3f208c3fb6b7b4b7285cb1f711fb0eb48555c3b0c4e25317aee2a5abddb4abae6373e6cc4b824cd2952ee434f30c.js"
+    integrity="sha512-DMLJcpARb01Jez/2gPbtddeMPyCMP7a3tLcoXLH3EfsOtIVVw7DE4lMXruKlq920q65jc&#43;bMS4JM0pUu5DTzDA==" data-copy="复制" data-copied="已复制"></script>
+  
+  
+  
+  <script src="/haochen/lib/zoom/zoom.min.3530c2657381259433194af312ec3d322a97a2ad85661810299757fe793b24c3b8e07ab97fa8e5cf96cff1208f271e75394b6eaa56c2e39e7e2c3ca49fb1921c.js" integrity="sha512-NTDCZXOBJZQzGUrzEuw9MiqXoq2FZhgQKZdX/nk7JMO44Hq5f6jlz5bP8SCPJx51OUtuqlbC455&#43;LDykn7GSHA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/haochen/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/haochen/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/haochen/favicon-16x16.png" />
+  <link rel="manifest" href="/haochen/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/haochen/notes/database/">
+  <meta property="og:site_name" content="Hao Chen&#39;s Blog">
+  <meta property="og:title" content="数据库及实现">
+  <meta property="og:description" content="1 系统概论 #DBS：硬件；软件（应用系统，DBMS，OS）；DB；人（用户，管理员）
+DBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）
+DBS 结构：三级模式 Schema，二级映像
+子模式（外模式）、（概念）模式、内模式；物理独立性与逻辑独立性
+外部结构：单用户式、分布式和并行、客户机/服务器、浏览器/服务器（SaaS、PaaS、IaaS）
+数据模型三要素：数据结构，数据操作，完整性约束
+数据定义语言 DDL，数据操纵语言 DML（描述式的查询意图）
+（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型
+E-R 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen/Crow）
+层次（树）、网状（有向图）、关系（二维表：元组/属性；查询效率偏低）、面向对象（维护困难）
+向量、图（知识图谱）；数据仓库
+2 关系 #关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）
+超键、候选键（码，能唯一标识元组的最小属性组）、主键（主码）、外键、代理键（DBMS 分配）；
+主属性/非主属性，单码、全码
+关系运算：
+集合运算符 $\cap,\ \cup,\ -,\ \times$；逻辑与比较运算符 $\land,\ \vee,\ \neg$；
+专用运算符 选择 $\sigma_{\theta}$，投影 $\Pi$，连接 $\bowtie_{\theta},\ \bowtie$（一般连接、自然连接；内连接、左/右/全外连接 ⟕, ⟖, ⟗、反连接 $\rhd_\theta,\ \rhd$），除法 $\div$（$R\div S ={t|t\in \pi_X(R) \wedge t\times\pi_Y(S)\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），重命名 $\rho_{B\leftarrow A}(R),\ \rho_{S}(R),\ \rho_{S(A_1,\dots,A_n)}(R)$">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="notes">
+    <meta property="article:published_time" content="2025-06-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-09T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="CS">
+    <meta property="article:tag" content="System">
+    <meta property="article:tag" content="SQL">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="数据库及实现">
+  <meta name="twitter:description" content="1 系统概论 #DBS：硬件；软件（应用系统，DBMS，OS）；DB；人（用户，管理员）
+DBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）
+DBS 结构：三级模式 Schema，二级映像
+子模式（外模式）、（概念）模式、内模式；物理独立性与逻辑独立性
+外部结构：单用户式、分布式和并行、客户机/服务器、浏览器/服务器（SaaS、PaaS、IaaS）
+数据模型三要素：数据结构，数据操作，完整性约束
+数据定义语言 DDL，数据操纵语言 DML（描述式的查询意图）
+（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型
+E-R 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen/Crow）
+层次（树）、网状（有向图）、关系（二维表：元组/属性；查询效率偏低）、面向对象（维护困难）
+向量、图（知识图谱）；数据仓库
+2 关系 #关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）
+超键、候选键（码，能唯一标识元组的最小属性组）、主键（主码）、外键、代理键（DBMS 分配）；
+主属性/非主属性，单码、全码
+关系运算：
+集合运算符 $\cap,\ \cup,\ -,\ \times$；逻辑与比较运算符 $\land,\ \vee,\ \neg$；
+专用运算符 选择 $\sigma_{\theta}$，投影 $\Pi$，连接 $\bowtie_{\theta},\ \bowtie$（一般连接、自然连接；内连接、左/右/全外连接 ⟕, ⟖, ⟗、反连接 $\rhd_\theta,\ \rhd$），除法 $\div$（$R\div S ={t|t\in \pi_X(R) \wedge t\times\pi_Y(S)\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），重命名 $\rho_{B\leftarrow A}(R),\ \rho_{S}(R),\ \rho_{S(A_1,\dots,A_n)}(R)$">
+
+    
+  
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Notes",
+    "name": "数据库及实现",
+    "headline": "数据库及实现",
+    
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e1 系统概论 \r\n    \u003cdiv id=\u00221-系统概论\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#1-%e7%b3%bb%e7%bb%9f%e6%a6%82%e8%ae%ba\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eDBS：硬件；软件（应用系统，\u003cstrong\u003eDBMS\u003c\/strong\u003e，OS）；DB；人（用户，管理员）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003eDBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003eDBS 结构：三级模式 \u003cstrong\u003eSchema\u003c\/strong\u003e，二级映像\u003c\/p\u003e\n\u003cp\u003e子模式（外模式）、\u003cstrong\u003e（概念）模式\u003c\/strong\u003e、内模式；物理独立性与逻辑独立性\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e外部结构：单用户式、分布式和并行、客户机\/服务器、浏览器\/服务器（SaaS、PaaS、IaaS）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e数据模型\u003c\/strong\u003e三要素：数据结构，数据操作，完整性约束\u003c\/p\u003e\n\u003cp\u003e数据定义语言 \u003cstrong\u003eDDL\u003c\/strong\u003e，数据操纵语言 \u003cstrong\u003eDML\u003c\/strong\u003e（描述式的查询意图）\u003c\/p\u003e\n\u003cp\u003e（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eE-R\u003c\/strong\u003e 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen\/Crow）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e层次（树）、网状（有向图）、关系（二维表：元组\/属性；查询效率偏低）、面向对象（维护困难）\u003c\/p\u003e\n\u003cp\u003e向量、图（知识图谱）；数据仓库\u003c\/p\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\r\n\u003ch2 class=\u0022relative group\u0022\u003e2 关系 \r\n    \u003cdiv id=\u00222-关系\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#2-%e5%85%b3%e7%b3%bb\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）\u003c\/p\u003e\n\u003cp\u003e超键、候选键（码，能唯一标识元组的最小属性组）、\u003cstrong\u003e主键\u003c\/strong\u003e（主码）、\u003cstrong\u003e外键\u003c\/strong\u003e、代理键（DBMS 分配）；\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003e主属性\u003c\/strong\u003e\/非主属性，单码、全码\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e关系运算：\u003cbr\u003e\n集合运算符 $\\cap,\\ \\cup,\\ -,\\ \\times$；逻辑与比较运算符 $\\land,\\ \\vee,\\ \\neg$；\u003cbr\u003e\n专用运算符 \u003cstrong\u003e选择\u003c\/strong\u003e $\\sigma_{\\theta}$，\u003cstrong\u003e投影\u003c\/strong\u003e $\\Pi$，\u003cstrong\u003e连接\u003c\/strong\u003e $\\bowtie_{\\theta},\\ \\bowtie$（一般连接、\u003cstrong\u003e自然连接\u003c\/strong\u003e；内连接、左\/右\/全外连接 ⟕, ⟖, ⟗、反连接 $\\rhd_\\theta,\\ \\rhd$），\u003cstrong\u003e除法\u003c\/strong\u003e $\\div$（$R\\div S ={t|t\\in \\pi_X(R) \\wedge t\\times\\pi_Y(S)\\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），\u003cstrong\u003e重命名\u003c\/strong\u003e $\\rho_{B\\leftarrow A}(R),\\ \\rho_{S}(R),\\ \\rho_{S(A_1,\\dots,A_n)}(R)$\u003c\/p\u003e",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/haochen\/notes\/database\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hao Chen"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-06-09T00:00:00\u002b00:00",
+    "datePublished": "2025-06-09T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-06-09T00:00:00\u002b00:00",
+    
+    "keywords": ["Database","CS","System","SQL"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1210"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Hao Chen" />
+  
+  
+  
+  
+  <link href="laplx@foxmail.com" rel="me" />
+  
+  
+  
+  
+  <link href="https://github.com/Laplx/haochen" rel="me" />
+  
+  
+  
+  
+  
+
+<script src="/haochen/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/haochen/lib/katex/katex.min.33db995186a4f895643c57d5be16f59f520ffd0f0be5c9cb08ef158536fabdd3581893d7305846a7c83e495376021081ca5d4ad00a44bfe4d640c4917f087a9e.css"
+    integrity="sha512-M9uZUYak&#43;JVkPFfVvhb1n1IP/Q8L5cnLCO8VhTb6vdNYGJPXMFhGp8g&#43;SVN2AhCByl1K0ApEv&#43;TWQMSRfwh6ng==">
+  
+  
+  <script defer src="/haochen/lib/katex/katex.min.cadd45c1af1f44bdaf196dc9b104f1daeb29043f0dc59155ffe22847510a04390a0b7a859400d420a626204f7fc5ddb07c19311de1c66b25e19c2559d3e126a8.js" integrity="sha512-yt1Fwa8fRL2vGW3JsQTx2uspBD8NxZFV/&#43;IoR1EKBDkKC3qFlADUIKYmIE9/xd2wfBkxHeHGayXhnCVZ0&#43;EmqA=="></script>
+  
+  
+  <script
+    defer
+    src="/haochen/lib/katex/auto-render.min.e9b2833d28623d18c071d78ef13e9c79d695122d296af3dbcee7bf1bf6518b0565bab59939267fbc8f5faf696193c20f5caef3e7501969cfb306f6738032730d.js"
+    integrity="sha512-6bKDPShiPRjAcdeO8T6cedaVEi0pavPbzue/G/ZRiwVlurWZOSZ/vI9fr2lhk8IPXK7z51AZac&#43;zBvZzgDJzDQ=="
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+    ], throwOnError: false,
+    trust: true,  // 允许信任命令
+    });"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+  
+  
+  <meta name="theme-color"/>
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a
+      >
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px] z-index-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 padding-main-menu">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/haochen/" class="text-base font-medium text-gray-500 hover:text-gray-900">Hao Chen&rsquo;s Blog</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a
+  href="/haochen/notes/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Notes">
+    Notes
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/papers/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Papers">
+    Papers
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/essays/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Essays">
+    Essays
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/tags/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Tags">
+    Tags
+  </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 padding-top-[5px]">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/notes/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Notes">
+      Notes
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/papers/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Papers">
+      Papers
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/essays/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Essays">
+      Essays
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/tags/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Tags">
+      Tags
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/background-blur.min.4812321520cc2e4cd52bf9137015a55bb6c0b5e66a6b2c96b8654c0ec99be59e8e6425dd838a6fd9bac54000586f37f4a9680bbefaa2aee4601a69e188005cf6.js"
+  integrity="sha512-SBIyFSDMLkzVK/kTcBWlW7bAteZqayyWuGVMDsmb5Z6OZCXdg4pv2brFQABYbzf0qWgLvvqiruRgGmnhiABc9g=="
+  data-target-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/"
+      >Hao Chen&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/notes/"
+      >Notes</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/notes/database/"
+      >数据库及实现</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        数据库及实现
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-06-09T00:00:00&#43;00:00">June 9, 2025</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/zen-mode.min.2a0a1375509c03daf41c53a9831aa2d560895b7a2528c3eb3b56e7b11a135c7529e49727162a053b6193be8340270a8342f42c69f3d7e262ae54bc248eaac8f5.js"
+  integrity="sha512-KgoTdVCcA9r0HFOpgxqi1WCJW3olKMPrO1bnsRoTXHUp5JcnFioFO2GTvoNAJwqDQvQsafPX4mKuVLwkjqrI9Q=="></script>
+
+<span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title=""
+    data-title-i18n-disable=""
+    data-title-i18n-enable="">
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    
+      <div class="flex flex-row flex-wrap items-center">
+        
+          
+            
+          
+        
+          
+            
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/database/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Database
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/cs/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    CS
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/system/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    System
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/sql/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    SQL
+  </span>
+</span>
+
+                </span>
+              
+            
+          
+        
+      </div>
+    
+
+    
+    
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row lg:gap-12">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-12 rtl:lg:pr-12 lg:min-w-[240px]">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-系统概论">1 系统概论</a></li>
+    <li><a href="#2-关系">2 关系</a></li>
+    <li><a href="#3-设计">3 设计</a></li>
+    <li><a href="#4-mysql-概述">4 MySQL 概述</a></li>
+    <li><a href="#5-库表管理">5 库表管理</a></li>
+    <li><a href="#6-数据管理">6 数据管理</a></li>
+    <li><a href="#7-索引">7 索引</a></li>
+    <li><a href="#8-存储过程">8 存储过程</a></li>
+    <li><a href="#9-事务">9 事务</a></li>
+    <li><a href="#10-查询执行">10 查询执行</a></li>
+    <li><a href="#11-其他">11 其他</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-系统概论">1 系统概论</a></li>
+    <li><a href="#2-关系">2 关系</a></li>
+    <li><a href="#3-设计">3 设计</a></li>
+    <li><a href="#4-mysql-概述">4 MySQL 概述</a></li>
+    <li><a href="#5-库表管理">5 库表管理</a></li>
+    <li><a href="#6-数据管理">6 数据管理</a></li>
+    <li><a href="#7-索引">7 索引</a></li>
+    <li><a href="#8-存储过程">8 存储过程</a></li>
+    <li><a href="#9-事务">9 事务</a></li>
+    <li><a href="#10-查询执行">10 查询执行</a></li>
+    <li><a href="#11-其他">11 其他</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-screen-lg">
+        
+
+
+
+        <div class="article-content max-w-screen-lg mb-20">
+          
+
+
+<h2 class="relative group">1 系统概论 
+    <div id="1-系统概论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-%e7%b3%bb%e7%bb%9f%e6%a6%82%e8%ae%ba" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>DBS：硬件；软件（应用系统，<strong>DBMS</strong>，OS）；DB；人（用户，管理员）</p>
+</li>
+<li>
+<p>DBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）</p>
+</li>
+<li>
+<p>DBS 结构：三级模式 <strong>Schema</strong>，二级映像</p>
+<p>子模式（外模式）、<strong>（概念）模式</strong>、内模式；物理独立性与逻辑独立性</p>
+</li>
+<li>
+<p>外部结构：单用户式、分布式和并行、客户机/服务器、浏览器/服务器（SaaS、PaaS、IaaS）</p>
+</li>
+<li>
+<p><strong>数据模型</strong>三要素：数据结构，数据操作，完整性约束</p>
+<p>数据定义语言 <strong>DDL</strong>，数据操纵语言 <strong>DML</strong>（描述式的查询意图）</p>
+<p>（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型</p>
+</li>
+<li>
+<p><strong>E-R</strong> 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen/Crow）</p>
+</li>
+<li>
+<p>层次（树）、网状（有向图）、关系（二维表：元组/属性；查询效率偏低）、面向对象（维护困难）</p>
+<p>向量、图（知识图谱）；数据仓库</p>
+</li>
+</ul>
+
+<h2 class="relative group">2 关系 
+    <div id="2-关系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-%e5%85%b3%e7%b3%bb" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）</p>
+<p>超键、候选键（码，能唯一标识元组的最小属性组）、<strong>主键</strong>（主码）、<strong>外键</strong>、代理键（DBMS 分配）；</p>
+<p><strong>主属性</strong>/非主属性，单码、全码</p>
+</li>
+<li>
+<p>关系运算：<br>
+集合运算符 $\cap,\ \cup,\ -,\ \times$；逻辑与比较运算符 $\land,\ \vee,\ \neg$；<br>
+专用运算符 <strong>选择</strong> $\sigma_{\theta}$，<strong>投影</strong> $\Pi$，<strong>连接</strong> $\bowtie_{\theta},\ \bowtie$（一般连接、<strong>自然连接</strong>；内连接、左/右/全外连接 ⟕, ⟖, ⟗、反连接 $\rhd_\theta,\ \rhd$），<strong>除法</strong> $\div$（$R\div S ={t|t\in \pi_X(R) \wedge t\times\pi_Y(S)\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），<strong>重命名</strong> $\rho_{B\leftarrow A}(R),\ \rho_{S}(R),\ \rho_{S(A_1,\dots,A_n)}(R)$</p>
+</li>
+<li>
+<p><em>例子：S C SC  找出没选过课的学生的姓名；找出选修了所有课程的学生的学号</em></p>
+</li>
+<li>
+<p>有序集交集：merge（两个指针，$O(|A|+|B|)$）；二分查找（$O(|A|log|B|)$）；前者两集大小相近更佳（<em>临界约 32 倍</em>）</p>
+</li>
+<li>
+<p>数据依赖 $F$（更新异常、冗余），<strong>规范化</strong>（模式分解）</p>
+<p>函数依赖 $X\rightarrow Y$（所有关系实例上的规定），完全函数依赖 $X\overset{f}{\rightarrow}Y$；Armstrong 公理系统</p>
+<p>属性集闭包 $X_F^+ = {A|A\in U, F\vDash X\rightarrow A}$，函数依赖集闭包 $F^+$，最小覆盖 $F_C$（分解右部 - 删除左部属性冗余 - 删除函数冗余）</p>
+</li>
+<li>
+<p>范式：<strong>1NF</strong>（属性不可分）、<strong>2NF</strong>（+ 所有非主属性完全依赖每个码）、<strong>3NF</strong>（+ 所有非主属性直接依赖每个码 $Y \nrightarrow X$）、<strong>BCNF</strong>（所有非平凡依赖关系左部为码；<em>或</em> 3NF + 所有主属性非平凡<em>直接完全</em>依赖每个码）</p>
+<p><em>提示</em>：码 $X,Y \subset U$ 必有 $X\leftrightarrow Y$ 且 $X$ 和 $Y$ 互不包含
+<em>总结</em>：检查非主与主之间、主与主之间的完全性与传递性</p>
+</li>
+<li>
+<p><strong>完整性约束</strong>：实体完整性（行不相同、主键不空），参照完整性（外键若不空则取值在参照主键中存在），域完整性（类型格式），用户定义完整性（数据类型和域、缺省和空值、唯一和依赖性）</p>
+</li>
+</ul>
+
+<h2 class="relative group">3 设计 
+    <div id="3-设计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-%e8%ae%be%e8%ae%a1" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>设计方法：需求分析、概念设计（E-R）、逻辑设计、物理设计、数据库实施、数据库运维</p>
+</li>
+<li>
+<p><strong>需求分析</strong>：业务现状，信息源，外部要求（信息要求、处理要求、安全性与完整性要求）</p>
+<p>业务流程图（用户活动）- 系统范围图 - 数据流图 DFD - 数据字典 DD（数据项、数据结构、数据流、数据存储、处理过程）- 需求说明书</p>
+</li>
+<li>
+<p><strong>概念设计</strong>：局部 E-R 模型 - 全局 E-R 模型 - 优化冗余</p>
+<p>（数据抽象方法）分类（member）、概括（subset）、聚集（part, aspect）；划分局部；定义实体、定义联系（1:1/1:n/m:n）、确定属性（及键）</p>
+</li>
+<li>
+<p><strong>逻辑设计</strong>（特定 MDBS 支持的如关系模型）：实体型关系（多值属性转换为新关系并建立外键约束）；1:1 联系到关系（独立并保留各自的码均可为码，<em>或</em>将码和联系属性并入任意一端）；1:n 联系到关系（独立并以 n 端实体的码为码，<em>或</em>将 1 端实体的码和联系属性并入 n 端）；m:n 联系到关系（独立并将多元联系的全部实体的码作为码，再加联系的属性）</p>
+</li>
+<li>
+<p><strong>物理设计</strong>：存取方法（索引方法、聚簇方法、HASH 方法），存储结构（顺序存储、散列存储、聚簇存储）</p>
+</li>
+<li>
+<p><strong>行为设计</strong>：功能分析，功能设计，事务设计</p>
+</li>
+<li>
+<p><strong>实施与运维</strong>：数据的载入，应用程序编码和调试，试运行并调试（功能和性能测试）；转储与恢复，安全性、完整性控制，监督与改进，重组（优化存储，不改变物理结构）与重构（涉及模式和内模式的修改）</p>
+</li>
+</ul>
+
+<h2 class="relative group">4 MySQL 概述 
+    <div id="4-mysql-概述" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-mysql-%e6%a6%82%e8%bf%b0" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>MySQL：单进程多线程、支持多用户、基于客户机/服务器的关系数据库管理系统；服务器、实例和数据库，客户程序和工具程序（与服务器通信，多个实例以端口号区分）；服务器语言 SQL</p>
+<p>体系结构 Management Services &amp; Utilities、Connectors、Connection Pool（缓冲连接、线程处理），SQL Interface、Parser、Optimizer、Cache &amp; Buffer，Pluggable Storage Engine、(File System、Files &amp; Logs)</p>
+<p>启动服务 - 配置读入服务器内存 - 生成服务实例进程 - 派生出多个线程 - 客户机与服务器通信链路</p>
+</li>
+<li>
+<p><code>mysql -u root -p</code></p>
+</li>
+<li>
+<p>CREATE DROP ALTER RENAME TRUNCATE COMMENT</p>
+<p>SELECT INSERT DELETE UPDATE</p>
+<p>GRANT DENY REVOKE</p>
+<p>SET TRANSACTIION  ROLLBACK COMMIT SAVEPOINT</p>
+</li>
+</ul>
+
+<h2 class="relative group">5 库表管理 
+    <div id="5-库表管理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#5-%e5%ba%93%e8%a1%a8%e7%ae%a1%e7%90%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>存储引擎（<code>SHOW ENGINES</code>；<code>SHOW VARIABLES LIKE 'storage_engine'</code>）：\</p>
+</li>
+<li>
+<p><strong>InnoDB</strong>（大数据量、ACID 事务安全、外键，表空间，读写效率低、占用空间大）；<br>
+<strong>MyISAM</strong>（大量查询，.frm .myd .myi，静态型、动态型、压缩型，空间小速度快）；<br>
+<strong>MEMORY</strong>（临时表、磁盘只存表结构，HASH 索引，速度快、并发差、浪费内存、重启丢失）；<br>
+MERGE（一组 MyISAM 表）；BLACKHOLE；CSV；ARCHIVE</p>
+<p><em>B-tree、B+tree 索引</em></p>
+</li>
+<li>
+<p><strong>字符集</strong>与校对规则（<code>SHOW CHARACTER SET</code>；<code>SHOW VARIABLES LIKE 'character_set_server'</code>；<code>SHOW COLLATION WHERE Charset = 'utf8mb4'</code>）：服务器级、数据库级、表级、字段级（前三者修改只会影响新增数据）；中文，定长；客户端、连接、返回结果的字符集（<code>SET NAMES ...</code>）</p>
+<p><em>带特殊字符（空格、连字符、点号等）及保留关键字作名称需括反引号</em></p>
+</li>
+<li>
+<p>库操作：</p>
+<p>创建 <code>CREATE {DATABASE|SCHEMA} [IF NOT EXISTS] db_name [[DEFAULT] CHARACTER SET charset_name] [[DEFALUT] COLLATE collation_name]</code>；</p>
+<p>修改（InnoDB 无法改名）<code>ALTER {DATABASE|SCHEMA} [db_name] [[DEFAULT] CHARACTER SET [=] charset_name]|[[DEFAULT] COLLATE [=] collation_name]</code>；</p>
+<p>删除 <code>DROP DATABASE [IF EXISTS] db_name</code>；</p>
+<p>切换、查看定义、查看当前 <code>USE db_name; SHOW CREATE DATABASE db_name; SELECT DATABASE()</code>；</p>
+<p><code>mysqldump -u root -p old_database &gt; backup.sql</code>，<br>
+<code>mysql -u root -p new_database &lt; backup.sql</code></p>
+</li>
+<li>
+<p>数值类型 INT(EGER)、SMALLINT、TINYINT、MEDIUMINT、BIGINT，FLOAT、DOUBLE（<em>精确 10 位以上</em>）、DECIMAL；<br>
+日期 YEAR、TIME、DATE、DATATIME、TIMESTAMP；<br>
+字符串文本 CHAR、VARCHAR、TEXT（不区分大小写，检索效率最低），ENUM（除非约束否则可 NULL）、SET；<br>
+二进制（仅二进制字符集）BLOB、BIT（位而非字节存储）、BINARY 等</p>
+</li>
+<li>
+<p>表操作：</p>
+<p>创建 <code>CREATE TABLE [IF NOT EXISTS] 表名 (字段名称 字段类型 [完整性约束条件],...) ENGINE=引擎名称 CHARSET=编码方式</code>（约束：PRIMARY KEY、FOREIGN KEY、UNIQUE KEY、AUTO_INCREMENT、NOT NULL、DEFAULT、CHECK）；</p>
+<p>查看 <code>DES[CRIBE] t_name; SHOW CREATE TABLE t_name; SHOW TABLE STATUS [{FROM|IN} db_name] [LIKE 'pattern'|WHERE expr]</code>；</p>
+<p><strong>修改</strong> <code>ALTER TABLE t_name</code> + <code>RENAME/TO</code>，<br>
+<code>ADD 字段名称 字段类型 [完整性约束条件] [FIRST|AFTER 字段名称]</code>、<code>DROP</code>、<code>MODIFY</code>、<code>CHANGE</code>（<code>旧字段名 新字段名</code>）、<code>ALTER 字段名称 SET/DROP DEFAULT</code>、<code>ADD [CONSTRAINT symbol] PRIMARY KEY [index_type] (字段名称,...)</code>、<code>DROP PRIMARY KEY</code>，<br>
+<code>ADD [CONSTRAINT symbol] UNIQUE [INDEX|KEY] [索引名称] (字段名称,...)</code>、<code>DROP {INDEX|KEY} index_name</code>，<code>AUTO_INCREMENT=自增长值</code>；</p>
+<p>复制 <code>CREATE TABLE T_A LIKE T_B</code>，<code>CREATE TABLE T_A AS SELECT ... FROM T_B</code>（均不复制权限，后者不复制索引）；</p>
+<p>删除 <code>DROP TABLE [IF EXISTS] t_name[,...]</code>；<br>
+<code>TRUNCATE [TABLE] t_name</code>（保留表定义）；<br>
+<code>DELETE FROM t_name</code>（DML，保留表定义，不释放空间，可在事务中回滚，速度慢）；</p>
+<p>NULL；IDENTITY<br>
+<em>&gt;3 VARCHAR</em></p>
+</li>
+<li>
+<p>约束控制（表级、列级）：（子句）<code>CONSTRAINT 约束名 完整性约束条件</code>（只用于表级，包括 PRIMARY KEY、FOREIGN KEY、UNIQUE、CHECK，列级的 DEFAULT  NOT NULL 可通过 MODIFY 命名）；更改会校验现有数据</p>
+<p><strong>主键约束</strong>（UNIQUE + NOT NULL）<code>PRIMARY KEY (字段名列表)</code>；<br>
+<strong>外键约束</strong>（须均使用 InnoDB，非临时表，均有索引，类型相似）<code>[CONSTRAINT symbol] FOREIGN KEY (本表字段名列表) REFERENCES 父表(父字段名列表) [ON DELETE {CASCADE|SET NULL|RESTRICT|NO ACTION}] [ON UPDATE {CASCADE|SET NULL|RESTRICT|NO ACTION}]</code>（级联约束）；<br>
+唯一性约束（允许且不检查 NULL）；非空约束；默认值约束；自增约束（只能于主键/唯一键上）；检查约束</p>
+<p><em>MySQL 列级外键约束（仅加 REFERENCES）无效；外键只能使用约束名引用，DROP FOREIGN KEY t_ibfk_1 未删除同名普通索引</em></p>
+</li>
+</ul>
+
+<h2 class="relative group">6 数据管理 
+    <div id="6-数据管理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#6-%e6%95%b0%e6%8d%ae%e7%ae%a1%e7%90%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>插入：<code>INSERT [INTO] t_name[(字段名称,...)]</code> + <code>VALUES|VALUE(值...)</code>（未赋值字段插入默认值）、<code>VALUES(值1...),(值2...)...</code>，<code>SELECT 字段名称 FROM t_name [WHERE 条件]</code>（字段数和类型需一致）；<code>REPLACE [INTO] t_name VALUES(值...)</code>（唯一约束若已有相同则会覆盖）；</p>
+<p>修改：<code>UPDATE t_name SET (字段名称＝值,...) [WHERE 条件]</code>（无 WHERE 将更新全部记录）；</p>
+<p>删除：<code>DELETE FROM t_name [WHERE 条件]</code>；</p>
+</li>
+<li>
+<p><strong>查询</strong>：<em>select_expr</em> <code> 目标列表达式 [AS 别名]</code></p>
+<p><em>条件</em> 逻辑 <code>AND OR XOR NOT</code>、比较、匹配 <code>LIKE</code>（&rsquo;_&rsquo;、&rsquo;%&rsquo;，<code>ESCAPE '\'</code> 转义）<code>REGEXP 正则表达式</code>、范围 <code>BETWEEN 值1 AND 值2; IN 集合</code>、空值 <code>IS NULL</code></p>
+<p><em>分组</em> 聚合函数（其余列应能聚合）<code>COUNT ({[ALL|DISTINCT] 字段名}|*)</code>（不统计 NULL）、<code>SUM() AVG() MAX() MIN()</code></p>
+<p><em>NULL 排序时最小</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="k">ALL</span><span class="o">|</span><span class="k">DISTINCT</span><span class="p">]</span><span class="w"> </span><span class="n">select_expr</span><span class="p">[,...]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">FROM</span><span class="w"> </span><span class="n">table_references</span><span class="p">[,...]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">[</span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">字段名</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">],...]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">[</span><span class="k">HAVING</span><span class="w"> </span><span class="err">条件</span><span class="mi">2</span><span class="w"> </span><span class="err">限制分组结果显示</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="k">ROLLUP</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">[</span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">字段名</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">],...]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">[</span><span class="k">LIMIT</span><span class="w"> </span><span class="err">{</span><span class="p">[</span><span class="err">偏移量</span><span class="p">,]</span><span class="w"> </span><span class="k">row_count</span><span class="o">|</span><span class="k">row_count</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="err">偏移量}</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><p><em>执行顺序：函数 &amp; 聚合 - SELECT 在 HAVING 之后，ORDER 之前</em></p>
+</li>
+<li>
+<p><strong>多表查询</strong>：<code>表名.列名</code>，可 <code>FROM 表名 AS 别名</code>；连接 <code>CROSS JOIN</code>、<code>[INNER] JOIN</code>、<code>NATURAL JOIN</code>、<code>LEFT|RIGHT [OUTER] JOIN</code>；<code>UNION [ALL]</code>（列数量和类型一致，会使用第一个语句中的列名）；</p>
+<p>子查询 <code>[NOT]IN</code>、<code>[NOT]EXISTS</code>、<code>JOIN</code>、比较运算符、<code>ANY()</code>、<code>ALL()</code>；</p>
+<p>查询并插入 <code>CREATE TABLE|INSERT ... SELECT ...</code>；</p>
+</li>
+<li>
+<p>传参 <code>${}</code> <code>getRequestString(&quot;...&quot;)</code> <strong>SQL注入</strong>（如 <code>--</code>）；<br>
+安全参数 <code>@var_name</code> <code>?</code> <code>#{}</code>，预编译 <code>PREPARE stmt_name FROM preparable_stmt; EXECUTE stmt_name [USING @var_name [,...]]; DEALLOCATE PREPARE stmt_name</code>；</p>
+</li>
+</ul>
+
+<h2 class="relative group">7 索引 
+    <div id="7-索引" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#7-%e7%b4%a2%e5%bc%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>（键值，地址指针）对；哈希索引（适合等值查询，MyISAM）、有序索引（如 B 树索引）；与主表逻辑独立、物理存储可能分开，降低数据维护速度；<br>
+<strong>聚簇</strong>/非聚簇索引（一个关系常只有一个聚簇，常为主键，叶子节点常包含完整数据行 InnnoDB、无需回表、减少磁盘 I/O，插入顺序重要，键值更新代价高）</p>
+<p><em>书的章节、名词索引</em></p>
+</li>
+<li>
+<p><strong>B+ 树</strong>非叶子节点只存储键值，通过叶子链表高效范围查询（聚簇最好）；插入时若溢出（m 阶）则向右分裂并在父节点插入新叶最小键及指针，逐级向上（内节点若需分裂，则左平分指针，右节点多出的键插入其父节点（或新建根节点）及指针）</p>
+</li>
+<li>
+<p>普通索引、唯一性索引 UNIQUE、全文索引 FULLTEXT（字符串）、空间索引 SPATIAL（GEOMETRY、POINT、LINESTRING、POLYGON）；<br>
+查询条件使用了第一个字段时才会使用索引（B+ 树中应连续存储），条件中不能包含表达式，不能跳过树中的属性；<br>
+多个单属性索引涉及索引合并，（相比复合索引）效率低</p>
+<p>创建 <code>CREATE TABLE t_name(..., [UNIQUE|FULLTEXT|SPATIAL] INDEX|KEY [索引名称](字段名称[(长度)] [ASC|DESC]) [USING BTREE|HASH]); CREATE [UNIQUE|FULLTEXT|SPATIAL] INDEX 索引名称 ON t_name (字段名称[(长度)] [ASC|DESC]) [USING BTREE|HASH]; ALTER TABLE t_name ADD [CONSTRAINT symbol] ...</code>；</p>
+<p>查看 <code>SHOW INDEX|KEYS FROM t_name [FROM db_name]</code>（或 <code>db_name.t_name</code>）；</p>
+<p>删除 <code>DROP INDEX index_name ON t_name; ALTER TABLE t_name DROP INDEX index_name</code>；</p>
+</li>
+<li>
+<p>索引设计：查询与更新分析；<strong>选择度</strong>，<strong>覆盖索引</strong>；调优 REINDEX、ANALYZE</p>
+<p>当条件选择度很高时，聚簇索引 ≈ 非聚簇索引 &lt; 顺序扫描；当条件选择度很低时，聚簇索引 &lt; 顺序扫描 &lt; 非聚簇索引；</p>
+<p><em>原则</em>：限制数目，为常作查询条件的字段、常需连接排序分组联合的字段建立，选择唯一性，使用数据量少或前缀</p>
+</li>
+<li>
+<p><strong>视图</strong>：虚拟表，由查询语句定义（外模式和逻辑独立性、安全性 <code>GRANT|REVOKE ... ON view_name TO user_name</code>、灵活性）</p>
+<p>创建 <code>CREATE [OR REPLACE] [ALGORITHM = {UNDEFINED|MERGE|TEMPTABLE}] VIEW 视图名 [(视图列表)] AS 查询语句 [WITH [CASCADED|LOCAL] CHECK OPTION]</code>（SELECT 语句不包含子查询、系统或用户变量、预处理参数等，不关联触发程序；WITH CHECK OPTION 保证数据操作满足 WHERE 子句条件）；</p>
+<p>查看、修改，插入、删除、更新数据同表（如 <code>SHOW CREATE VIEW</code>、<code>ALTER ...</code>、<code>UPDATE ...</code>）；可更新视图必须直接映射到基表（如不包含聚合、分组、去重）</p>
+<p>删除 <code>DROP VIEW [IF EXISTS] view_name[,...] [RESTRICT|CASCADE]</code>；</p>
+</li>
+</ul>
+
+<h2 class="relative group">8 存储过程 
+    <div id="8-存储过程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#8-%e5%ad%98%e5%82%a8%e8%bf%87%e7%a8%8b" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p>编译后的一组 SQL 语句</p>
+<p>创建 <code>CREATE PROCEDURE sp_name ([proc_parameter[,...]]) [characteristic...] [BEGIN] routine_body [END]</code>（<em>proc_parameter</em> <code>[IN|OUT|INOUT] param_name type</code>）；</p>
+<p>调用 <code>CALL sp_name([parameter[,...]])</code>；</p>
+<p>查看 <code>SHOW CREATE {PROCEDURE|FUNCTION} sp_name; SELECT * FROM db_name.routines [WHERE routine_name = '名称']</code>；</p>
+<p>删除 <code>DROP {PROCEDURE|FUNCTION} [IF EXISTS] sp_name</code>；</p>
+<p><em>DELIMITER 修改语句结束符号</em></p>
+</li>
+<li>
+<p>标识符（仅表的别名区分大小写）；常量 b'10&rsquo;、0b、0x；<br>
+用户定义会话变量、<strong>局部变量</strong> <code>DECLARE {local_var type}[,...] [DEFAULT value]; SET @var_name = expr[,...]; SELECT col_name[,...] INTO var_name[,...] FROM t_name [WHERE ...];</code>（多行只返回最后一行值）<code>SELECT var_name [AS 'string']</code>；<br>
+（系统）<strong>会话变量</strong>、<strong>全局变量</strong> <code> SHOW SESSION|GLOBAL VARIABLES; SET SESSION|GLOBAL var_name = value; SET @@session.var_name|@@global.var_name = value;</code> @@error @@nestlevel</p>
+</li>
+<li>
+<p>表达式（在 SELECT 句使用）：算术运算、位运算、逻辑与比较运算；带 NULL 一般结果为 NULL</p>
+</li>
+<li>
+<p>常用内置<strong>函数</strong>：<br>
+ASCII() LENGTH() CHAR_LENGTH() CONCAT()（CONCAT_WS()，pipe_as_concat $\vert\vert$）<br>
+FIELD() FIND_IN_SET() INSERT() LOCATE() POSITION( IN FROM )<br>
+LOWER() UPPER() SUBSTRING() REPEAT() REVERSE() LPAD/RPAD() LTRIM/RTRIM()（<code>TRIM([{BOTH|LEADING|TRAILING} [remstr] FROM] str)</code>）<br>
+FORMAT() SPACE() LEFT/RIGHT() STRCMP()<br>
+NOW() DATEDIFF()<br>
+IF() IFNULL() ISNULL() NULLIF()</p>
+<p>CAST( AS ) CONNECTION_ID() USER() LAST_INSERT_ID()<br>
+MD5() PASSWORD() ENCODE()</p>
+</li>
+<li>
+<p><code>CREATE FUNCTION sp_name ([func_parameter[,...]]) RETURNS type [characteristic...] routine_body; SELECT sp_name([func_parameter[,...]])</code>（<em>func_parameter</em> <code>para_name type</code>）；</p>
+<p><code>SHOW CREATE FUNCTION 函数名; SHOW FUNCTION STATUS [LIKE 'pattern']; DROP FUNCTION 函数名;</code></p>
+</li>
+<li>
+<p>（异常）<strong>条件处理</strong>：<code>DECLARE condition_name CONDITION FOR condition_value;</code></p>
+<p><code>DECLARE [CONTINUE|EXIT|UNDO] HANDLER FOR condition_value[,...] sp_stmt;</code></p>
+<p><em>condition_value</em> <code>{SQLSTATE [VALUE] SQLstate_value|MySQL_error_code|not found|condition_name|SQLwarning|SQLexception}</code></p>
+</li>
+<li>
+<p><strong>流程控制</strong>：<code>IF search_condition THEN stmt_list [ELSEIF search_condition THEN stmt_list] [ELSE search_condition THEN stmt_list] END IF</code>；<br>
+<code>CASE case_value WHEN when_value THEN stmt_list [WHEN when_value THEN stmt_list] [ELSE stmt_list] END CASE</code>；<br>
+<code>[begin_label:] LOOP stm_list END LOOP [end_label]; LEAVE label; ITERATE label</code>；<br>
+<code>[begin_label:] REPEAT stmt_list UNTIL search_confition END REPEAT [end_label]</code>；<br>
+<code>[begin_label:] WHILE search_condition DO stmt_list END WHILE [end_label]</code>；</p>
+</li>
+<li>
+<p><strong>游标</strong>：<code>DECLARE cursor_name CURSOR FOR select_stmt; OPEN|CLOSE cursor_name; FETCH cursor_name into var_name[,...];</code>（SQL Server 需 DEALLOCATE 显式释放游标资源）</p>
+</li>
+</ul>
+
+<h2 class="relative group">9 事务 
+    <div id="9-事务" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#9-%e4%ba%8b%e5%8a%a1" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p><strong>触发器</strong>：扩展完整性规则 Event - Condition - Action</p>
+<p>创建 <code>CREATE TRIGGER trigger_name {BEFORE|AFTER} {INSERT|UPDATE|DELETE} ON t_name FOR EACH ROW trigger_stmt</code>（永久表上）</p>
+<p>Insert/Delete、NEW/OLD 表</p>
+<p>查看 <code>SHOW TRIGGERS [FROM db_name]</code>，或使用 information_schema.triggers 表</p>
+<p>删除 <code>DROP TRIGGER [IF EXISTS] [db_name.]trigger_name</code></p>
+<p>不能调用将数据返回客户端的存储过程，不能采用 CALL 语句的动态 sql，不能使用显式或隐式开始或结束事务的语句；<br>
+（针对行操作）效率可能低，（MyIsam）不能保证原子性</p>
+</li>
+<li>
+<p><strong>事件</strong>调度器（临时触发器）：定时执行特定任务</p>
+<p><code>CREATE EVENT [IF NOT EXISTS] event_name ON SCHEDULE schedule [ON COMPLETION [NOT] PRESERVE] [ENABLE|DISABLE|DISABLE ON SLAVE] [COMMENT 'comment'] DO event_body</code></p>
+<p><em>schedule</em> <code>AT timestamp [+ INTEVEAL quantity]|EVERY quantity [STARTS timestamp] [ENDS timestamp]</code></p>
+</li>
+<li>
+<p><strong>权限管理</strong>，user、db、table_priv、columns_priv、procs_priv 表，用户管理</p>
+<p><code>GRANT priv_type[(column_list)] [,...] ON [object_type] priv_level TO user[,...] [WITH with_option...]</code>（转移与次数限制）; <br>
+<code>REVOKE priv_type[(column_list)] [,...] ON [object_type] priv_level FROM use r[,...]</code>（<code>REVOKE all privileges，grant option FROM user</code> 回收全部权限）</p>
+</li>
+<li>
+<p>原子性、一致性、隔离性、持久性；调度，异常（脏写、脏读、不可重复读、幻读）；<br>
+<strong>隔离级别</strong> <code>SET [SESSION|GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED|READ COMMITTED|REPEATABLE READ|SERIALIZABLE}</code></p>
+<p>START TRANSACTION; COMMIT; ROLLBACK;</p>
+</li>
+<li>
+<p>交叉/同时并发；<strong>锁</strong>机制（表级、页面级、行级（InnoDB，加锁慢、易死锁，并发度高）），共享锁/互斥锁；<br>
+<strong>死锁</strong>，超时/等待图检测，牺牲品；约定顺序，尽量排他</p>
+</li>
+</ul>
+
+<h2 class="relative group">10 查询执行 
+    <div id="10-查询执行" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#10-%e6%9f%a5%e8%af%a2%e6%89%a7%e8%a1%8c" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p><strong>LSM 树</strong>：异地更新，空间放大高，顺序I/O（高性能写），并发控制与故障恢复简单</p>
+<p>SQL Parser &amp; Translator - (relational algebra expression) - Query Optimizer - (physical query execution plan) - Query Executor</p>
+</li>
+<li>
+<p>（对索引项）排序执行算法：外排序，两趟<strong>多路归并</strong>（创建若干个归并段，各含若干页；每页含 $B$ 个元组，共 $B(R) = \lceil \frac{T(R)}{B}\rceil$ 页/块；内存要求 $B(R)\le M^2$；I/O 代价 $3B(R)$），多趟多路（$(2m-1)B(R)$；双缓冲优化）</p>
+<p>选择执行算法（内存要求 $M\ge 1$）：一趟扫描（聚簇 $B(R)$ 或非聚簇 $T(R)$）、哈希（访问桶的页面链 $\approx \lceil \frac{B(R)}{V(R,K)}\rceil$）、索引（$\approx \lceil \frac{B(R)}{V(R,K)}\rceil$ 或 $\lceil \frac{T(R)}{V(R,K)}\rceil$）</p>
+<p>投影执行算法（$M\ge 1$，I/O $B(R)$ 或 $T(R)$）</p>
+<p>去重执行算法：一趟（$B(\delta(R))\le M-1$，I/O $B(R)$ 或 $T(R)$）、排序（多路归并时仅输出不同的）、 哈希（$B(R)\le (M-1)^2$，I/O 分桶读 + 写 + 逐桶去重 $3B(R)$）；聚集类似</p>
+<p>集合差执行算法：一趟（build + probe，$B(S)\le M-1$，I/O $B(R)+B(S)$）、哈希（$B(S)\le (M-1)^2$，I/O $3B(R)+3B(S)$）、排序（同理 3）；并、交类似</p>
+<p>连接执行算法：一趟（build + probe 同上）、嵌套循环（outer + inner，$M\ge 2$，I/O 基于行 $T(S)(T(R)+1)$ 或基于块 $B(S)+\frac{B(R)B(S)}{M-1}$）、排序（按连接属性排，$B(R)+B(S)\le M^2$，I/O $3B(R)+3B(S)$）、哈希（两桶间一趟，要求和代价同上）、索引（$M\ge 2$，$B(R)+T(R)\lceil \frac{B(S)}{V(S,Y)}\rceil$ 或 $B(R)+\frac{T(R)T(S)}{V(S,Y)}$）</p>
+<p>物化执行、流水线执行/火山模型</p>
+</li>
+<li>
+<p>逻辑/物理<strong>查询优化</strong>（NP-hard）：选择下推（选择度、预先分解、有无索引），投影下推，枚举代价（以中间结果基数估计I/O次数）；<br>
+ANALYZE 统计信息（$T(R), V(R,A)$），基数估计时假设各属性均匀分布、互相独立；<br>
+<strong>左深连接树</strong>（树数量少、缓冲需求低、不多次物化中间关系）</p>
+<p>$T(\sigma_{A=a}(R)) = \frac{T(R)}{V(R,A)},\ T(R\bowtie S) = \frac{T(R)T(S)}{\prod_i \max {V(R,X_i), V(S,X_i)}}$</p>
+<p>索引扫描 + 过滤、多索引扫描 + 求交集、仅用索引、顺序扫描</p>
+<p><em>流水线例子：哈希分桶、逐桶连接（3B(R)+3B(S)+B(U) 或缓冲区不足 3B(R)+3B(S)+2B(R join S)+3B(U)，2来自于无需读取原始数据，已按哈希预分）</em></p>
+</li>
+</ul>
+
+<h2 class="relative group">11 其他 
+    <div id="11-其他" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#11-%e5%85%b6%e4%bb%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>
+<p><strong>分布式 DDB</strong>：分层模式结构（全局外模式、全局概念模式、分片模式、<strong>分布模式</strong>、局部概念模式、局部内模式）；分片和位置透明性；数据分片与分配分离、冗余显式控制、局部 DBMS 独立性</p>
+</li>
+<li>
+<p>数据复制（更新传播问题）、<strong>数据分片</strong>；分片条件：完备性、不相交（垂直分片除外）、可重构</p>
+</li>
+<li>
+<p><strong>NoSQL</strong>：各数据独立设计、易分散；数据模型灵活、可扩展性、高性能，维护简单，分布式计算；没有声明性查询语言、没有预定义模式、没有非结构化和不可预知的数据</p>
+<p>关系数据库劣势：大量写入、更新表索引和结构、字段不固定时应用存在困难，简单查询响应慢</p>
+<p>临时性键值存储（内存中，MemCached、Redis）、永久性键值存储（ROMA、Redis）、面向文档（不定义表结构、可利用复杂的查询条件，MongoDB、CouchDB）、面向列（Cassandra、HBase）、图（RDF 三元组）、向量</p>
+</li>
+<li>
+<p><strong>CAP</strong> 理论：（不可能同时很好的满足）一致性、可用性、分区容错性</p>
+<p>CA 单点集群 RDMBS，CP MongoDB、Redis，AP CouchDB、Cassandra</p>
+</li>
+</ul>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/haochen/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
+          integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
+          data-oid="views_notes\database\index.md"
+          data-oid-likes="likes_notes\database\index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/haochen/notes/nlp/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >自然语言处理</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-05-16T00:00:00&#43;00:00">May 16, 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/haochen/notes/quantum-form/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >量子力学的形式理论</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-10-01T00:00:00&#43;00:00">October 1, 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/share/"
+                title="分享">
+                
+                分享
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/about/"
+                title="关于">
+                
+                关于
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hao Chen
+      </p>
+    
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/haochen/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+    <style>
+    .small-gray-text {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+</style>
+
+
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
+  data-url="http://localhost:1313/haochen/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/ai/</link>
+    <description>Recent content in AI on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>强化学习</title>
+      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
+    &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#tables-in-rl-for-llm&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Algorithm&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Token Advantage $\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=0}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE with KL trick&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=t}^{T_{i j-1}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE ++&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=t}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$ with global batch normalization&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RLOO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$R_{i j}-\frac{1}{M-1} \sum_{l \neq j} R_{i j}$, where $R_{i j}:=r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=0}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REMAX&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-r\left(x_i, \hat{y}_i\right)-\beta \sum_{t^{\prime}=t}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$, where $\hat{y}_i$ is sampled from greedy policy of $\theta_k$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\begin{aligned} &amp;amp; \sum_{t^{\prime}=t}^{T_{i j}-1}(\lambda \gamma)^{t^{\prime}-t} \delta_{t^{\prime}}^{(i j)} \text { where } \delta_t^{(i j)}=\mathbb{I}\left\{t=T_{i j}-1\right\} \cdot r\left(x_i, y_{i j}\right)- \ &amp;amp; \beta \log \frac{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}+\gamma V_\phi\left(s_{t+1}^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right) \end{aligned}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ORZ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-V_\phi\left(s_t^{(i j)}\right)$ (PPO with $\lambda=\gamma=1, \beta=0$ )&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (origin verson)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{T_{i j}}\left[\frac{r\left(x_i, y_{i j}\right)-\text { mean }\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}+\beta\left(\frac{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}-1\right)\right]$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (R1 verson)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{r\left(x_i, y_{i j}\right)-\text { mean }\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}+\beta\left(\frac{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}-1\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DAPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\hat{T}_i}\left[\frac{r\left(x_i, y_{i j}\right)-\operatorname{mean}\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}\right]$, where $\hat{T}_i=\frac{1}{M} \sum_{j=1}^M T_{i j}$.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DR.GRPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\operatorname{mean}\left(\mathbb{R}_i\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Algorithm&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Token Advantage $\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;br /&gt;$(r(x_i,y_{ij})\in \{0,1\},\ \beta = 0)$&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Expectation of Token Advantage $\mathbb{E}\left[\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right) \mid\left(s_t^{(i j)}, a_t^{(i j)}\right)\right]$&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Expectation of the Gradient of Policy Loss $\mathbb{E}_{\mathbb{X}, \mathbb{Y}}\left[\nabla_\theta \hat{\mathcal{L}}\left(\theta_k\right)\right]$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE ++&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\operatorname{std}(\mathbb{R})}\left[r\left(x_i, y_{i j}\right)-\operatorname{mean}(\mathbb{R})\right]$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\sigma_k}\left(Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-\mu_k\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\frac{1}{\sigma_k} \nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $NM$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RLOO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\frac{1}{M-1} \sum_{l \neq j} r\left(x_i, y_{i l}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\pi_{\theta_k}}\left(x_i\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REMAX&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-r\left(x_i, \hat{y}_i\right)$, where $\hat{y}_i$ is sampled from the greedy policy of $\hat{\pi}_{\theta_k}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\hat{\pi}_{\theta_k}}\left(x_i\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\begin{aligned} &amp;amp; (\lambda \gamma)^{T_{i j}-1-t} r\left(x_i, y_{i j}\right)+ \ &amp;amp; \sum_{t^{\prime}=t+1}^{T_{i j}-1}\left(\frac{1}{\lambda}-1\right)(\lambda \gamma)^{t^{\prime}-t} V_\phi\left(s_{t^{\prime}}^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right) \end{aligned}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$A_{\lambda, \gamma}^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$. If $V_\phi=V^{\pi_{\theta_k}}$ and $\gamma=1, A_{\lambda, \gamma}^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)= A^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ If $V_\phi=V^{\pi_{\theta_k}}$ and $\gamma=1$.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ORZ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-V_\phi\left(s_t^{(i j)}\right)$ (PPO with $\lambda=\gamma=1$ )&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (origin version)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{T_{i j}}\left[\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}\right]$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Hard to analyze due to the length normalization term $\frac{1}{T_{i j}}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}}(\cdot \mid x)\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{T \sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq$ &lt;br&gt; $-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (R1 version)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-p_{\theta_k}\left(x_i\right)}{ \sqrt{p_{\theta_k}\left(x_i\right) (1-p_{\theta_k}\left(x_i\right))}}$ asymptotically as $M$ is large enough&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}}(\cdot \mid x)\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{\sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq$ &lt;br&gt; $-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DAPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\hat{T}_i}\left[\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}\right]$, where $\hat{T}_i=\frac{1}{M} \sum_{j=1}^M T_{i j}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-p_{\theta_k}\left(x_i\right)}{T_{\theta_k}\left(x_i\right) \sqrt{p_{\theta_k}\left(x_i\right) (1-p_{\theta_k}\left(x_i\right))}}$ asymptotically as $M$ is large enough&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}(\cdot \mid x)}\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{T_{\theta_k}(x) \cdot \sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq -\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DR.GRPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\hat{p}_i$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{M-1}{M}\left(Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\pi_{\theta_k}}\left(x_i\right)\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\frac{M-1}{M} \nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;REINFORCE ++ 和 DR. GRPO 隐式的采用了自适应的学习率。REINFORCE++ 是由于 global batch normalization，DR.GRPO 是由于没有留一。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>大模型与统计力学</title>
+      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
+&lt;p&gt;$$
+\arg\min_{\theta\in \Theta}\int L(x,\theta)d\hat{F}(x) \triangleq \hat{\theta}\\
+\int L(x,\hat{\theta})dF(x) \triangleq \mathcal{L}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\hat{F}$ 为采样 cdf，样本量记 $m$。定义 $S(\theta,x)\triangleq \frac{\partial L(x,\theta)}{\partial \theta},\ S(\theta)\triangleq \mathbb{E}S(\theta,x)$.&lt;/p&gt;
+&lt;p&gt;由 CLT 有
+$$
+\frac{1}{m}\sum\lim_{i=1}^m S(\theta,x_i) \overset{\text{a.}}{\sim} \mathcal{N}(S(\theta_0),\frac{1}{m}V(S(\theta_0,x)))
+$$&lt;/p&gt;
+&lt;p&gt;同时将损失 Taylor 展开
+$$
+\mathcal{L} -\mathcal{L}_{\min} \overset{\text{a.}}{\sim} \frac{\mathbb{E}\frac{\partial^2 L(x,\theta)}{\partial \theta^2}}{2} (\theta-\theta_0)^2
+$$&lt;/p&gt;
+&lt;p&gt;可以得到&lt;strong&gt;损失服从一个 Gamma 分布&lt;/strong&gt; $\mathcal{L} -\mathcal{L}_{\min} \overset{\text{a.}}{\sim} \text{Gamma}(\frac{1}{2},\beta)$，其中
+$$
+\beta = m \frac{\mathbb{E}\frac{\partial^2 L(x,\theta)}{\partial \theta^2}}{\mathbb{E}(\frac{\partial L(x,\theta)}{\partial \theta})^2}
+$$&lt;/p&gt;
+&lt;p&gt;（可将 $m$ 类比为 $\frac{1}{T}$，第二项为 $\frac{1}{k}$）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>生成模型</title>
+      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
+    &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#vae&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Settings and Loss 
+    &lt;div id=&#34;settings-and-loss&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#settings-and-loss&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+x \underset{q_\phi(z|x)}{\xrightarrow{\text{enc.}}} z \underset{p_\theta(x|z)}{\xrightarrow{\text{dec.}}} \hat{x}
+$$&lt;/p&gt;
+&lt;p&gt;Encoder (approximate posterior): $q_{\phi}(z\mid x)$&lt;br&gt;
+Decoder (likelihood model): $p_{\theta}(x\mid z)$&lt;/p&gt;
+&lt;p&gt;AE: deterministic in $z, \hat{x}$, $f_\theta$ acts like a corset, $\mathcal{L}_{\text{recons.}} = |x - \hat{x}|^2$&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{L}=-\mathbb{E}_{z \sim q_{\phi}(z\mid x)}\left[\log p_{\theta}(x\mid z)\right]+\beta \cdot \mathrm{KL}\bigl(q_{\phi}(z\mid x)|p(z)\bigr)
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
+    &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#attetion--transformer&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./attention.jpg&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>智能引论</title>
+      <link>http://localhost:1313/haochen/notes/ai-basics/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/ai-basics/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;0 Intro 
+    &lt;div id=&#34;0-intro&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#0-intro&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;智能计算的方法： 
+    &lt;div id=&#34;智能计算的方法&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%99%ba%e8%83%bd%e8%ae%a1%e7%ae%97%e7%9a%84%e6%96%b9%e6%b3%95&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;推理（符号主义），包括归纳、演绎、因果，e.g. 专家系统&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;搜索（问题求解），包括无信息（深/广度优先）、有信息（启发式）、对抗（e.g. Minimax, alpha-beta, MCT）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;机器学习（数据驱动），包括&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;监督：判别式 $P(y|x)$（e.g. 回归, 提升, SVM, DecisionTree）与生成式 $P(X,Y)$（e.g. LDA, HMM）&lt;/li&gt;
+&lt;li&gt;无监督：聚类（e.g K-means, 层次, 谱）、降维（线性（e.g. PCA, LDA/FDA, CCA）与非线性 i.e. 流形学习）、EM&lt;/li&gt;
+&lt;li&gt;半监督等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;强化学习（行为主义），MDP，exploration-exploitation tradeoff，MARL {博弈论可以提供多智能体环境下结果的刻画，或寻找合理解的非启发的方式，但不认为是核心}&lt;/p&gt;
+&lt;p&gt;esp. 深度学习（联结主义）作为监督学习方法，并和强化学习结合（如拟合 Q 函数）；类脑计算&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;AI 发展技术形态： 
+    &lt;div id=&#34;ai-发展技术形态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#ai-%e5%8f%91%e5%b1%95%e6%8a%80%e6%9c%af%e5%bd%a2%e6%80%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;从数据到知识到决策的大数据智能、多模态智能、群体智能、人机混合的增强智能、机器人的智能自主系统
+{总而言之是大量的具备学习探索能力、独立交互各类信息、人在回路的融合社会}&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

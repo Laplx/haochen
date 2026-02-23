@@ -1,0 +1,1437 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Ludology &middot; Hao Chen&#39;s Blog</title>
+  <meta name="title" content="Ludology &middot; Hao Chen&#39;s Blog" />
+  
+  
+  <meta name="keywords" content="Model, Economy, Psychology, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/24.07.12/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/haochen/css/main.bundle.min.782d2421d5c5317cdc02c61f82155e525a77a614c5fa1a9a7b869224bc8a4b5f82f2dfbaf303aec25835bc45f2accef2bacb96ecbb8ce23893017be37ad53294.css"
+    integrity="sha512-eC0kIdXFMXzcAsYfghVeUlp3phTF&#43;hqae4aSJLyKS1&#43;C8t&#43;68wOuwlg1vEXyrM7yusuW7LuM4jiTAXvjetUylA==" />
+  
+  
+  <script type="text/javascript" src="/haochen/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/haochen/js/main.bundle.min.0cc2c97290116f4d497b3ff680f6ed75d78c3f208c3fb6b7b4b7285cb1f711fb0eb48555c3b0c4e25317aee2a5abddb4abae6373e6cc4b824cd2952ee434f30c.js"
+    integrity="sha512-DMLJcpARb01Jez/2gPbtddeMPyCMP7a3tLcoXLH3EfsOtIVVw7DE4lMXruKlq920q65jc&#43;bMS4JM0pUu5DTzDA==" data-copy="复制" data-copied="已复制"></script>
+  
+  
+  
+  <script src="/haochen/lib/zoom/zoom.min.3530c2657381259433194af312ec3d322a97a2ad85661810299757fe793b24c3b8e07ab97fa8e5cf96cff1208f271e75394b6eaa56c2e39e7e2c3ca49fb1921c.js" integrity="sha512-NTDCZXOBJZQzGUrzEuw9MiqXoq2FZhgQKZdX/nk7JMO44Hq5f6jlz5bP8SCPJx51OUtuqlbC455&#43;LDykn7GSHA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/haochen/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/haochen/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/haochen/favicon-16x16.png" />
+  <link rel="manifest" href="/haochen/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/24.07.12/">
+  <meta property="og:site_name" content="Hao Chen&#39;s Blog">
+  <meta property="og:title" content="Ludology">
+  <meta property="og:description" content="游戏论 #之前与同学聊到怎么算第一性原理出发的视角，他的观点大概是“演绎而非归纳”；于是正好实操一下，打算选取三个事物，以它们为对象展开论述。这是第一篇（后续有时间再写），就来试试游戏吧。（可惜我玩过的游戏并不多，甚至很缺乏经验，最可笑的是也没去游戏公司了解过，却在这里夸夸其谈起来了……）
+我把游戏论分成三个部分，游戏理论 game theory、游戏设计 game design、游戏产业 game industry；后两者算是应用，限于精力不会有很多笔墨。Game theory 也是博弈论，因为我把游戏也放到一个博弈的框架里去。
+Game Theory #在开头首先完成两件大事，给游戏下定义和给游戏分类。（目前没有任何公认的定义和体系一点的分类；对一个比较日常化的词语下定义本身就需要摒弃一些东西、规范一些东西，不过只要这个方式合理且好用即可。）
+大部分已有的某些人士（Roger Caillois, Bernard Suits, Elliot Avedon, etc.）所述的定义较为狭窄，可以被下面所容纳；另一部分的论述过于简单宽泛（Eric Zimmerman, etc.），且含糊不清或偏颇，有些是从人的感受角度来谈的，更不方便于定义操作。我借鉴了 Chris Crawford 的定义（但他的过于复杂）：（分三步走）
+一个娱乐活动。It’s a recreational activity. 活动表示它需要专门付出独立的时间投入；娱乐一词仍然较口语化，其表示它通过内部虚拟的经历给予人体验，亦即用 inner rewards 替代外部真实生活经历当中的 rewards。如果不具备这个性质，那么它只是一个活动（如真实世界中的博弈）。 有互动。It has interactions. (Or it’s changing.) 在这种情况下我们才称之为玩耍 playing；否则如漫画书、电影，它们是没有互动的娱乐活动，它们不是游戏。 有目标/内部奖励。It has goals or inner rewards. 否则我们称其为玩具 toys。玩具不会因为你的小球滚到了恰当位置就给你吐出游戏币。这里需要提到一个特殊的游戏分类$【C】$ creation games，其中一大子类为 Sandbox 沙盒游戏，e.g. Minecraft 我的世界、Simcity 模拟城市；它们本质上应属于玩具，鉴于没有任何内置的奖励和要达成的目标（不考虑任务、成就的话）；但由于习惯原因，大家通常仍称作游戏。除此之外，存在 inner rewards 的，才被称为游戏 games。 注意道具 props 是游戏进行需要使用的辅助物体存在；从玩家上分，游戏可以分作$【P】$player-machine 单人的、$【MP】$multi-players 多人的（是否单机还是多机联机并不如参与者数量来的重要）；从形式上分，可以分作$【E】$electronic 电子的（包括 video games 电子游戏，还有 handheld、standalone system games，e.g. Slot machine 老虎机）、$【NE】$physical 物质的，其中 physical games 可能会使用道具。$【NE】$可进一步分为 Tabletop 桌面游戏（e.g. Go 围棋、Tic-tac-toe 井字棋、Avalon 阿瓦隆、Catan 卡坦岛）和 Motion 运动游戏（e.g. Hide-and-seek 捉迷藏），区别在于玩家的物理动作是否对游戏的 rewarding 产生影响。我们会比较关注电子游戏。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="essays">
+    <meta property="article:published_time" content="2024-07-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-12T00:00:00+00:00">
+    <meta property="article:tag" content="Model">
+    <meta property="article:tag" content="Economy">
+    <meta property="article:tag" content="Psychology">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ludology">
+  <meta name="twitter:description" content="游戏论 #之前与同学聊到怎么算第一性原理出发的视角，他的观点大概是“演绎而非归纳”；于是正好实操一下，打算选取三个事物，以它们为对象展开论述。这是第一篇（后续有时间再写），就来试试游戏吧。（可惜我玩过的游戏并不多，甚至很缺乏经验，最可笑的是也没去游戏公司了解过，却在这里夸夸其谈起来了……）
+我把游戏论分成三个部分，游戏理论 game theory、游戏设计 game design、游戏产业 game industry；后两者算是应用，限于精力不会有很多笔墨。Game theory 也是博弈论，因为我把游戏也放到一个博弈的框架里去。
+Game Theory #在开头首先完成两件大事，给游戏下定义和给游戏分类。（目前没有任何公认的定义和体系一点的分类；对一个比较日常化的词语下定义本身就需要摒弃一些东西、规范一些东西，不过只要这个方式合理且好用即可。）
+大部分已有的某些人士（Roger Caillois, Bernard Suits, Elliot Avedon, etc.）所述的定义较为狭窄，可以被下面所容纳；另一部分的论述过于简单宽泛（Eric Zimmerman, etc.），且含糊不清或偏颇，有些是从人的感受角度来谈的，更不方便于定义操作。我借鉴了 Chris Crawford 的定义（但他的过于复杂）：（分三步走）
+一个娱乐活动。It’s a recreational activity. 活动表示它需要专门付出独立的时间投入；娱乐一词仍然较口语化，其表示它通过内部虚拟的经历给予人体验，亦即用 inner rewards 替代外部真实生活经历当中的 rewards。如果不具备这个性质，那么它只是一个活动（如真实世界中的博弈）。 有互动。It has interactions. (Or it’s changing.) 在这种情况下我们才称之为玩耍 playing；否则如漫画书、电影，它们是没有互动的娱乐活动，它们不是游戏。 有目标/内部奖励。It has goals or inner rewards. 否则我们称其为玩具 toys。玩具不会因为你的小球滚到了恰当位置就给你吐出游戏币。这里需要提到一个特殊的游戏分类$【C】$ creation games，其中一大子类为 Sandbox 沙盒游戏，e.g. Minecraft 我的世界、Simcity 模拟城市；它们本质上应属于玩具，鉴于没有任何内置的奖励和要达成的目标（不考虑任务、成就的话）；但由于习惯原因，大家通常仍称作游戏。除此之外，存在 inner rewards 的，才被称为游戏 games。 注意道具 props 是游戏进行需要使用的辅助物体存在；从玩家上分，游戏可以分作$【P】$player-machine 单人的、$【MP】$multi-players 多人的（是否单机还是多机联机并不如参与者数量来的重要）；从形式上分，可以分作$【E】$electronic 电子的（包括 video games 电子游戏，还有 handheld、standalone system games，e.g. Slot machine 老虎机）、$【NE】$physical 物质的，其中 physical games 可能会使用道具。$【NE】$可进一步分为 Tabletop 桌面游戏（e.g. Go 围棋、Tic-tac-toe 井字棋、Avalon 阿瓦隆、Catan 卡坦岛）和 Motion 运动游戏（e.g. Hide-and-seek 捉迷藏），区别在于玩家的物理动作是否对游戏的 rewarding 产生影响。我们会比较关注电子游戏。">
+
+    
+  
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Essays",
+    "name": "Ludology",
+    "headline": "Ludology",
+    
+    "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e游戏论 \r\n    \u003cdiv id=\u0022游戏论\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%b8%b8%e6%88%8f%e8%ae%ba\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e之前与同学聊到怎么算第一性原理出发的视角，他的观点大概是“演绎而非归纳”；于是正好实操一下，打算选取三个事物，以它们为对象展开论述。这是第一篇（后续有时间再写），就来试试游戏吧。（可惜我玩过的游戏并不多，甚至很缺乏经验，最可笑的是也没去游戏公司了解过，却在这里夸夸其谈起来了……）\u003c\/p\u003e\n\u003cp\u003e我把游戏论分成三个部分，游戏理论 game theory、游戏设计 game design、游戏产业 game industry；后两者算是应用，限于精力不会有很多笔墨。Game theory 也是博弈论，因为我把游戏也放到一个博弈的框架里去。\u003c\/p\u003e\n\r\n\u003ch4 class=\u0022relative group\u0022\u003eGame Theory \r\n    \u003cdiv id=\u0022game-theory\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#game-theory\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h4\u003e\r\n\u003cp\u003e在开头首先完成两件大事，给游戏下定义和给游戏分类。（目前没有任何公认的定义和体系一点的分类；对一个比较日常化的词语下定义本身就需要摒弃一些东西、规范一些东西，不过只要这个方式合理且好用即可。）\u003c\/p\u003e\n\u003cp\u003e大部分已有的某些人士（Roger Caillois, Bernard Suits, Elliot Avedon, etc.）所述的定义较为狭窄，可以被下面所容纳；另一部分的论述过于简单宽泛（Eric Zimmerman, etc.），且含糊不清或偏颇，有些是从人的感受角度来谈的，更不方便于定义操作。我借鉴了 Chris Crawford 的定义（但他的过于复杂）：（分三步走）\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003e一个娱乐活动。It\u0026rsquo;s a recreational activity. 活动表示它需要专门付出独立的时间投入；娱乐一词仍然较口语化，其表示它通过内部虚拟的经历给予人体验，亦即用 inner rewards 替代外部真实生活经历当中的 rewards。如果不具备这个性质，那么它只是一个活动（如真实世界中的博弈）。\u003c\/li\u003e\n\u003cli\u003e有互动。It has interactions. (Or it\u0026rsquo;s changing.) 在这种情况下我们才称之为玩耍 playing；否则如漫画书、电影，它们是没有互动的娱乐活动，它们不是游戏。\u003c\/li\u003e\n\u003cli\u003e有目标\/内部奖励。It has goals or inner rewards. 否则我们称其为玩具 toys。玩具不会因为你的小球滚到了恰当位置就给你吐出游戏币。这里需要提到一个特殊的游戏分类$【C】$ creation games，其中一大子类为 Sandbox 沙盒游戏，e.g. Minecraft 我的世界、Simcity 模拟城市；它们本质上应属于玩具，鉴于没有任何内置的奖励和要达成的目标（不考虑任务、成就的话）；但由于习惯原因，大家通常仍称作游戏。除此之外，存在 inner rewards 的，才被称为游戏 games。\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003cp\u003e注意道具 props 是游戏进行需要使用的辅助物体存在；从玩家上分，游戏可以分作$【P】$player-machine 单人的、$【MP】$multi-players 多人的（是否单机还是多机联机并不如参与者数量来的重要）；从形式上分，可以分作$【E】$electronic 电子的（包括 video games 电子游戏，还有 handheld、standalone system games，e.g. Slot machine 老虎机）、$【NE】$physical 物质的，其中 physical games 可能会使用道具。$【NE】$可进一步分为 Tabletop 桌面游戏（e.g. Go 围棋、Tic-tac-toe 井字棋、Avalon 阿瓦隆、Catan 卡坦岛）和 Motion 运动游戏（e.g. Hide-and-seek 捉迷藏），区别在于玩家的物理动作是否对游戏的 rewarding 产生影响。我们会比较关注电子游戏。\u003c\/p\u003e",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/24.07.12\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hao Chen"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-07-12T00:00:00\u002b00:00",
+    "datePublished": "2024-07-12T00:00:00\u002b00:00",
+    
+    "dateModified": "2024-07-12T00:00:00\u002b00:00",
+    
+    "keywords": ["Model","Economy","Psychology"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "764"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Hao Chen" />
+  
+  
+  
+  
+  <link href="laplx@foxmail.com" rel="me" />
+  
+  
+  
+  
+  <link href="https://github.com/Laplx/haochen" rel="me" />
+  
+  
+  
+  
+  
+
+<script src="/haochen/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/haochen/lib/katex/katex.min.33db995186a4f895643c57d5be16f59f520ffd0f0be5c9cb08ef158536fabdd3581893d7305846a7c83e495376021081ca5d4ad00a44bfe4d640c4917f087a9e.css"
+    integrity="sha512-M9uZUYak&#43;JVkPFfVvhb1n1IP/Q8L5cnLCO8VhTb6vdNYGJPXMFhGp8g&#43;SVN2AhCByl1K0ApEv&#43;TWQMSRfwh6ng==">
+  
+  
+  <script defer src="/haochen/lib/katex/katex.min.cadd45c1af1f44bdaf196dc9b104f1daeb29043f0dc59155ffe22847510a04390a0b7a859400d420a626204f7fc5ddb07c19311de1c66b25e19c2559d3e126a8.js" integrity="sha512-yt1Fwa8fRL2vGW3JsQTx2uspBD8NxZFV/&#43;IoR1EKBDkKC3qFlADUIKYmIE9/xd2wfBkxHeHGayXhnCVZ0&#43;EmqA=="></script>
+  
+  
+  <script
+    defer
+    src="/haochen/lib/katex/auto-render.min.e9b2833d28623d18c071d78ef13e9c79d695122d296af3dbcee7bf1bf6518b0565bab59939267fbc8f5faf696193c20f5caef3e7501969cfb306f6738032730d.js"
+    integrity="sha512-6bKDPShiPRjAcdeO8T6cedaVEi0pavPbzue/G/ZRiwVlurWZOSZ/vI9fr2lhk8IPXK7z51AZac&#43;zBvZzgDJzDQ=="
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+    ], throwOnError: false,
+    trust: true,  // 允许信任命令
+    });"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+  
+  
+  <meta name="theme-color"/>
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a
+      >
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px] z-index-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 padding-main-menu">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/haochen/" class="text-base font-medium text-gray-500 hover:text-gray-900">Hao Chen&rsquo;s Blog</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a
+  href="/haochen/notes/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Notes">
+    Notes
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/papers/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Papers">
+    Papers
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/essays/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Essays">
+    Essays
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/tags/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Tags">
+    Tags
+  </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 padding-top-[5px]">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/notes/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Notes">
+      Notes
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/papers/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Papers">
+      Papers
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/essays/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Essays">
+      Essays
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/tags/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Tags">
+      Tags
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/background-blur.min.4812321520cc2e4cd52bf9137015a55bb6c0b5e66a6b2c96b8654c0ec99be59e8e6425dd838a6fd9bac54000586f37f4a9680bbefaa2aee4601a69e188005cf6.js"
+  integrity="sha512-SBIyFSDMLkzVK/kTcBWlW7bAteZqayyWuGVMDsmb5Z6OZCXdg4pv2brFQABYbzf0qWgLvvqiruRgGmnhiABc9g=="
+  data-target-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/"
+      >Hao Chen&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/essays/"
+      >Essays</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/essays/frivols/24.07.12/"
+      >Ludology</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Ludology
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-07-12T00:00:00&#43;00:00">July 12, 2024</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/zen-mode.min.2a0a1375509c03daf41c53a9831aa2d560895b7a2528c3eb3b56e7b11a135c7529e49727162a053b6193be8340270a8342f42c69f3d7e262ae54bc248eaac8f5.js"
+  integrity="sha512-KgoTdVCcA9r0HFOpgxqi1WCJW3olKMPrO1bnsRoTXHUp5JcnFioFO2GTvoNAJwqDQvQsafPX4mKuVLwkjqrI9Q=="></script>
+
+<span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title=""
+    data-title-i18n-disable=""
+    data-title-i18n-enable="">
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    
+      <div class="flex flex-row flex-wrap items-center">
+        
+          
+            
+          
+        
+          
+            
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/model/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Model
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/economy/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Economy
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/psychology/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Psychology
+  </span>
+</span>
+
+                </span>
+              
+            
+          
+        
+      </div>
+    
+
+    
+    
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row lg:gap-12">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-12 rtl:lg:pr-12 lg:min-w-[240px]">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#游戏论">游戏论</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#游戏论">游戏论</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-screen-lg">
+        
+
+
+
+        <div class="article-content max-w-screen-lg mb-20">
+          
+
+
+<h3 class="relative group">游戏论 
+    <div id="游戏论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%b8%b8%e6%88%8f%e8%ae%ba" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>之前与同学聊到怎么算第一性原理出发的视角，他的观点大概是“演绎而非归纳”；于是正好实操一下，打算选取三个事物，以它们为对象展开论述。这是第一篇（后续有时间再写），就来试试游戏吧。（可惜我玩过的游戏并不多，甚至很缺乏经验，最可笑的是也没去游戏公司了解过，却在这里夸夸其谈起来了……）</p>
+<p>我把游戏论分成三个部分，游戏理论 game theory、游戏设计 game design、游戏产业 game industry；后两者算是应用，限于精力不会有很多笔墨。Game theory 也是博弈论，因为我把游戏也放到一个博弈的框架里去。</p>
+
+<h4 class="relative group">Game Theory 
+    <div id="game-theory" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#game-theory" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>在开头首先完成两件大事，给游戏下定义和给游戏分类。（目前没有任何公认的定义和体系一点的分类；对一个比较日常化的词语下定义本身就需要摒弃一些东西、规范一些东西，不过只要这个方式合理且好用即可。）</p>
+<p>大部分已有的某些人士（Roger Caillois, Bernard Suits, Elliot Avedon, etc.）所述的定义较为狭窄，可以被下面所容纳；另一部分的论述过于简单宽泛（Eric Zimmerman, etc.），且含糊不清或偏颇，有些是从人的感受角度来谈的，更不方便于定义操作。我借鉴了 Chris Crawford 的定义（但他的过于复杂）：（分三步走）</p>
+<ol>
+<li>一个娱乐活动。It&rsquo;s a recreational activity. 活动表示它需要专门付出独立的时间投入；娱乐一词仍然较口语化，其表示它通过内部虚拟的经历给予人体验，亦即用 inner rewards 替代外部真实生活经历当中的 rewards。如果不具备这个性质，那么它只是一个活动（如真实世界中的博弈）。</li>
+<li>有互动。It has interactions. (Or it&rsquo;s changing.) 在这种情况下我们才称之为玩耍 playing；否则如漫画书、电影，它们是没有互动的娱乐活动，它们不是游戏。</li>
+<li>有目标/内部奖励。It has goals or inner rewards. 否则我们称其为玩具 toys。玩具不会因为你的小球滚到了恰当位置就给你吐出游戏币。这里需要提到一个特殊的游戏分类$【C】$ creation games，其中一大子类为 Sandbox 沙盒游戏，e.g. Minecraft 我的世界、Simcity 模拟城市；它们本质上应属于玩具，鉴于没有任何内置的奖励和要达成的目标（不考虑任务、成就的话）；但由于习惯原因，大家通常仍称作游戏。除此之外，存在 inner rewards 的，才被称为游戏 games。</li>
+</ol>
+<p>注意道具 props 是游戏进行需要使用的辅助物体存在；从玩家上分，游戏可以分作$【P】$player-machine 单人的、$【MP】$multi-players 多人的（是否单机还是多机联机并不如参与者数量来的重要）；从形式上分，可以分作$【E】$electronic 电子的（包括 video games 电子游戏，还有 handheld、standalone system games，e.g. Slot machine 老虎机）、$【NE】$physical 物质的，其中 physical games 可能会使用道具。$【NE】$可进一步分为 Tabletop 桌面游戏（e.g. Go 围棋、Tic-tac-toe 井字棋、Avalon 阿瓦隆、Catan 卡坦岛）和 Motion 运动游戏（e.g. Hide-and-seek 捉迷藏），区别在于玩家的物理动作是否对游戏的 rewarding 产生影响。我们会比较关注电子游戏。</p>
+<p>总结一下，游戏是一个有互动、内置目标和奖励的娱乐活动。为什么又说游戏是一个博弈呢？因为博弈指一切有固定转变机制的活动，即由一个状态 $G$ 经过一个（由自然 $\mathcal{N}$ 和人 $i\in I$）给出的一个选择规则（策略）$S$，变至另一个状态 $G^\prime$ 加上一个已实现的支付 $u$。从社会力学的角度看，世界都可以被这样机器式的模型化为博弈。</p>
+<p>娱乐活动是虚拟的，一定依靠 Narrate &amp; Simulation 叙事与模拟，最明显的即为 Role-playing games(RPG) 角色扮演游戏。</p>
+<p>游戏玩的是什么？是娱乐带来的经历体验和感受；除了美感感受，就是获得成就的体验——著名的心流模型告诉我们，就是学习策略（精进技能）带来的心流，这是人脑所决定的。一切成功的游戏都必须让玩家持续学习策略。</p>
+<p>既然人需要慢慢学习，那么它一定将具有 uncertainty 不确定性（这个词比未知 unknown 更广泛，你可以说 Go is known 但仍然面临着下哪里的问题）；不确定来源于三个方面，combinatorics or complexity 复杂性（如围棋等组合博弈）、randomness 随机性、incomplete info. 对其他玩家的不了解。（如果把支付 $u$ 视作一次自然的行动的话，实则只有一个方面，即对 $\mathcal{N}, -i$ 策略的不确定/不了解。）3*3 的井字棋不好玩自然是因为其不具备上述任何一条。</p>
+<p>其实我们已经把话题都引出来了。接下来无非从人的行为入手搭建一个框架（同时在这个框架下，我们将再给出硬性的分类）。</p>
+<p>Decision-making is by valuing game status. 我们同样采取序数效用的框架，使用两条假设：零背景假设和叠加原理。前者认为 $u(\cdot)$ 是一个 well-defined 效用函数，之后在 given background $G_0$ 上考察 $u(\cdot|G_0)$；后者认为对独立的事物组合进行选择可由效用值和代表。如信息本身可能也具有效用 $u(\mathcal{I})$，独立信息指满足 $u(c|\mathcal{I})=u(c)$。玩家的 $u(\cdot|C,\mathcal{I})$（也可用 $u(\cdot|C,t)$ 表征时间 $t$ 之前所有的历史信息）简记作 $u(\cdot)$。其中准则 $C$ 包括两部分，cognitive 如何学习（更新认知 $\mathsf{u}(G,S)$）和 strategical 如何评估（$u(\mathsf{u})$，$\mathsf{u}$ 为内部给出的奖励值）。</p>
+<p>$G\overset{S}{\rightarrow}\mathsf{u}+G^\prime$. 在某一状态下，玩家需要作两个决策（不一定显得这么有意识），一是是否还进行游戏，二是接下来选取什么策略。总评估包括已实现的和期望的：已实现部分分为两块，experience 与 achievement；experience 由 (form) senses &amp; aesthetics (e.g. 画风、声效)（绝大多数游戏都包括画面要素，除了 non-visual games）和 (content) stories &amp; oprations (e.g. 情感、手速快感) 组成；achievement 由准则给出对 $\mathsf{u}$ 的评估。期望部分来自于人的 anticipation &amp; curiosity（对于游戏刚开始阶段更为重要；这关乎学习成本，不同人耐心不同），其值可以来自 extrapolation or imagination。例如视作当前进行完的支付流的折现 $\frac{u_0}{r}$ 或线性外推 $\propto u(\mathcal{H})$，历史 $\mathcal{H}\subset \mathcal{I}$ 的效用可以用遗忘曲线卷积（e.g. Eibbinghaus $u(t)=\frac{ku(0)}{\ln^c(t+1)+k}$）或假设一种历史中性 historical neutrality（指均匀分摊）。</p>
+<p>那么是否进行游戏的决策即写为 $u(G(S))+A\sim \epsilon$ 的比较，$A$ 即为体验效用 i.e. 前面的 experience，$\epsilon$ 为生活中其他事的日常波动，在手头出现要紧的活时可能会让人放下游戏（$u(T;G(S))+A&lt; \epsilon(T)$，应把 $T$ 理解为单次游戏时长，$u$ 亦为单次中获得的效用）。</p>
+<p>在游戏中的决策需要选择 $\underset{S_i\in \mathsf{HS}_i}{\arg\max}\ u(G,S_i)$，$u(G,S)$ 由准则和此时掌握的信息生成。这里需要提出两个关键因素：信念 belief 和视野 horizon。</p>
+<p>在博弈论里有个非常 questionable 的假定就是 Harsanyi 公理（其认为 differences in individuals&rsquo; beliefs are to be attributed entirely to differences in information）；而这个公理（or the beliefs we frame）的 underlying logic 仍然是 model-based。我一直认为博弈论存在一个第零公理：参与者对不确定性（如前所述，即关于 $S_\mathcal{N},S_{-i}$）不是未知（model-free），而是 model-based。他知道有哪些可能性，作为视野，它衡量了 known 的范围，其外是 unknown（上段中的 $\mathsf{HS}_i$ 就是 $i$ 对自己可选策略的视野）；之后可能在其上（$\mathsf{HS}$, all players including Nature）存在一个以为的概率分布，即信念（其实理论上还应包括 $\mathsf{HC}$ 上对准则的信念）。所以 Zero Principle 先强调我们有 modelized belief；之后才再说存在一个根博弈，存在一个根节点上作为共同知识的自然策略（当然，我们认为上帝视角来看事实是这么运作的）。之后再次重复这个博弈时，参与者会对视野和信念进行修正和更新。</p>
+<p>而我们正是要抛弃这一公理，就像很多强化学习所做的那样。（应该说，一切交互式学习都可以转化成一个游戏，反之亦然。）无论是 Q-learning、MCTS 还是 PPO，它们都不作任何根博弈的假设，且是 level-0 belief。（可以把 off-policy 视作玩家看主播打游戏等观摩行为。）信念的层次即思维推导，需要满足 k 层和 k-1 层间的 consistency；如果信念是 common belief 且 consistent，则为 equilibrated 均衡信念 $\pi=(C,S)$。</p>
+<p>我认为比较重要的一个概念是 Conformity 一致性或 Nash player 纳什玩家。游戏需要考虑到玩家外在的效用和内置奖励的不一致性。（比如，“我就是休闲打打，不是要争榜单的……”）当 inner = outer 且不受无关信息影响, i.e. $u(\mathsf{u}|\mathsf{Hu})=\mathsf{u}$ 时，称这样的玩家是 Nash 玩家；其中 $\mathsf{Hu}$ 是玩家关于 rewards 的视野，如观察到大家可能的结果有哪些，一般 $\mathsf{Hu}\supset u(G,\mathsf{HS})$。我们在设计时可能大概率在分析这样的玩家，但同时必须注意到如何加强 Nash 玩家的实现——通过 Narrate&amp;Simulate 和 Socialize（社群影响见后）。每个游戏都有或多或少的叙事与模拟 （因为必须要进行设定）。N&amp;S 似乎有个专门的讨论领域名叫 Ludonarrative；可以大致分为 Role N&amp;S 和 God N&amp;S (Background N&amp;S)，区别在于是否有代理角色。好的 N&amp;S 可以 raise content experience，进一步提高 $A$；同时可以增强 conformity，尤其是在 role-playing 当中。（在应用层面，ludonarrative dissonance 是近年来游戏研究的热词，指激励 $\mathsf{u}$ 与叙事结构的冲突，在大部分情形下，这会削弱一致性并常常使玩家 ‘emerge&rsquo;。）</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./24.7.12%282%29.png">
+
+  
+</figure>
+</p>
+<p>口述一下心流模型的大意。当 Challenge 挑战上升（如 $\mathsf{Hu}$ 扩张、进入下一关）时，$u(G(S)|\mathsf{Hu})$ 可能具有形式 $f(\mathsf{u},\mathsf{Hu})+u(G^\prime)$，其中前者 $&lt;0$ 而后者起初 $&gt;0$，随着时间持续，如果挑战没有减少或技能没有进步的话最终将 $&lt;0$，失去耐心关闭游戏。当 Skill 技能/ Pattern 模式提高时，$S \rightarrow S^*$ 趋向最优解集，随着时间持续，重复事物的边际效用会逐渐减弱（saturating），最终 $0&lt;u(G(t;S)|\mathsf{Hu})&lt;0+\epsilon$ 关闭游戏。（在不更新的情况下，理论上，所有游戏都有 become boring 的一天，因为一切可能被学习的模式都已经被学习。）</p>
+<p>我们根据策略视野把游戏打上下面几类标签：</p>
+<p>$【A】$Action: 如果 $\mathsf{HS}(G)$ 受到玩家的物理操作限制（除脑子外）。如手灵活度、反应速度、精准度。E.g. Super Mario 马里奥、Overwatch 守望先锋、The King of Fighters 拳皇、Need for Speed 极品飞车, etc. 最主要的子类为 Fighting &amp; Sport（具体形式上还可分为 Platform 平台动作、Scrolling 卷轴动作和 Map 地图动作），此外还有 Rhythm 音乐游戏等。</p>
+<p>$【D】$Adventure: 如果 $\mathsf{HS}(G)$ 受到玩家的信息限制。且可以通过 exploration 改变。常以 puzzles &amp; directions 解谜与下命令为基本要素展开，有时 movement 空间会作为观察和探索的依赖要素。E.g. Resident Evil 生化危机、World of Warcraft 魔兽世界、Monument Valley 纪念碑谷、Galgame 美少女游戏, etc. RPG 基本属于此类。</p>
+<p>$【S】$Strategy: 所有游戏均具备策略性；理论上，把不具有$【A】$$【D】$属性的游戏统称入$【S】$。E.g. Monopoly 大富翁、StarCraft 星际争霸、Civilization 文明、Command &amp; Conquer: Red Alert 红色警戒, etc. 其中较大的一类为 RTS 即时战略游戏，从 $G(t)$ 的连续性而言。（一个变种又叫 RTT 即时战术，更多在含动作属性的游戏中出现，无非是策略选择不太偏向具有 resource flow 资源流作为基本要素的传统“战略”游戏。）</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./24.7.12.png">
+
+  
+</figure>
+</p>
+<p>不过我们通常把一定程度注重策略的游戏均视为$【S】$，例如 Pac-Man 吃豆人、Angry Birds 愤怒的小鸟，其同样具有或多或少的策略意味，故也可归入$【AS】$，但均相对于 ARTS/MOBA 子类（e.g. DOTA、LOL 英雄联盟）弱很多。图中间的$【AD】$即动作冒险游戏，主要为 ARPG（e.g. Tomb Raider 古墓丽影），一种常见形式为 free roam/open world 开放世界，e.g. The Legend of Zelda 塞尔达传说、Genshin 原神, etc.（某些情形下也可称$【ADS】$）未提到的$【DS】$如 Divinity: Original Sin 神界等。（此外还有所谓的 MMORPG，MMO 指大型多人联机，仅此而已）</p>
+<p>前面说到，任何游戏都玩的是对策略技能的学习、熟练，几乎没有游戏让玩家能够一次实现最佳策略或不需要实现较佳的策略（因为不是阅读故事书）。当然，大部分游戏皆为非完全信息博弈，否则约等于一个规划问题，除了如棋类等完全信息游戏。</p>
+<p>因此任何游戏都具有关卡性，无非是多少或直间接的问题。（D games 最明显，有时直接表现为关卡的形式进行，因为观察相当于回到了 $G^\prime=G$。）游戏的结构我将分为四步：</p>
+<p>$$
+Game \rightarrow Instance \rightarrow Stages \rightarrow Ludemes
+$$</p>
+<p>其中 Instance/Zones 包括主副本、片区、段位等等可能的形式，作为一些关卡的集合体出现。（当然，Game 和它之间还可以再塞许多层结构，但可以全部拆至这一层，没有本质区别。）Ludeme 并不是字典均有收录的词，由 Pierre Berloquin 创造，在很多游戏设计的书籍（e.g. A Theory of Fun for Game Design, Raph Koster）中有提及，指每个节点玩家行动的基本模块（或许可译为“玩法”）。鉴于大脑的学习成本，这应该是存在的，常见的有 card games 卡牌（e.g. Hearthstone 炉石传说）、技能（e.g. Onmyoji 阴阳师）、走动和攻击（一些开放世界）等。</p>
+<p>从博弈的连续性上说，一个关卡中的博弈可以是离散的（若采取回合制，则通常不属于 A games）或连续的（如即时游戏）；一个区段内各个关卡、各个区段之间也可以是离散的或连续的（如大部分 Sim/Management 经营游戏）。游戏需要明确对时间使用的定位；例如 Clash Royale 皇室战争，将一个即时对战关卡定位到玩家的碎片时间中。</p>
+<p>关卡有一个通关区域（而不是以时间或次数划分关卡），即 feasible region $FR\subset \mathbb{S}$。同时，玩家根据自己的准则会给出当下在视野中的最合适的选择域 $R(G,S;\mathsf{HS})\subset \mathsf{HS}$。我们把满足 $FR\cap \mathsf{HS} \neq \varnothing$ 的策略视野称作 qualified horizon 合格视野，否则为 failed horizon 失败视野（这与玩家的身体或脑当时的能力相关）。（把观察某个地方作为一个策略选项等同于把观察得到的新增选项直接打开放入。）注意准则可能是带探索性的，e.g. $\epsilon$-greedy（对 $R$ 在单纯形上附加一个邻域），在重复关卡的不同时候探索性也会调整。</p>
+<p>总结一下，由 $\mathcal{H}\subset \mathcal{I}$ 生成 level-k belief，再由此生成 $R$ 进行选择，若未进入 $FR$ 则将更新 belief 和选择。更新的方式很多，比如历史中性或其他预测方式；还可能如策略梯度算法，要求进行N次采样再移动。由此会在 $\mathbb{S}$ 中产生信念轨迹和学习轨迹（均衡为稳定的一个点；若 competitive game i.e. $R\subset FR \text{ if } \mathsf{HS}\cap FR\neq \varnothing$ 且 $FR$ 为 $\mathbb{S}$ 的一个划分，则不存在纯均衡）。</p>
+<p>除去最开始探索或游戏引导部分的数次外，$\mathsf{HS}$ 基本会达到一个短时间的能力范围 $\mathsf{MHS}$；此时视野满足 $\mathsf{HS}(p)\subset \mathsf{HS}$，$p$ 为博弈任意一条路径，称作序贯视野。博弈论里有序贯准则，反映在这里是 $R(p)\subset R$（每节点均选择该节点的 $R$ 内）。视野和准则的序贯性保证了在开头是不是考虑了后续子博弈并不重要，这符合玩家的行为。</p>
+
+<h4 class="relative group">Game Design &amp; Game Industry 
+    <div id="game-design--game-industry" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#game-design--game-industry" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>大部分成功的游戏具有以下特性：</p>
+<ul>
+<li>
+<p>ADS-MP</p>
+</li>
+<li>
+<p>优秀的叙事与模拟</p>
+</li>
+<li>
+<p>成熟的社群打造</p>
+</li>
+</ul>
+<p>（不过成功没有确切定义，游戏设计的目标是什么？本身就无一致的答案。是艺术品创作吗？是高用户黏性，还是设计者利润最大化？）</p>
+<p>我将指出两个对于每个游戏而言关键的参数：特征 $K$ 和特征 $\beta$。</p>
+<p>再来详细阐释一下心流图：横轴是 skill，纵轴是 challenge；对于一个给定的博弈 $G$，skill 的提高意味着 challenge 的减少；参与者会通过不断的重复博弈沿下斜线向下移动。先假设 Nash 玩家。challenge 使用结果衡量，$c(s;\mathsf{HS})=\mathsf{u}^*-\mathsf{u}(S)$，其中 $S$ 是满足 skill $s$ 的策略，$\mathsf{u}^*$ 为某序贯视野下的最优支付。记 $c_0=c(0;\mathbb{S})=\mathsf{u}^*-\mathsf{u}(\mathbb{S})$。skill 的单位是 bit，利用博弈熵的微分等式 $dc+\frac{ds}{\mathscr{S}}=0$ 积得。</p>
+<p>这个熵函数 $\mathscr{S}$ 显然是我捏造的，$\mathscr{S}_i(G,S;\mathsf{HS})=-\sum\limits_{\tau_i\in \text{path}(G,S)}p_S(\tau_i)\log h(\tau_i),\ h(\tau)=\frac{\mu(\{S\in \mathsf{HS},G_r(S)\in \tau\})}{\mu(\mathsf{HS})}$，$\mu$ 为 $\mathbb{S}$ 幂集上的测度，可以对每点 $S$ 赋予如 $\mathsf{u}$ 的权重；记 $\mathscr{S}_0=\mathscr{S}(G,\mathbb{S};\mathbb{S})$。我认为其能够反映学习或 skill 提升的难度。$ds=v(\gamma)dt$，其中 ability 系数 $\gamma$ 正向对应不同玩家的学习能力。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./24.7.12%283%29.png">
+
+  
+</figure>
+</p>
+<p>在游戏进行过程中，随着关卡难度的渐进，玩家会不断经历挑战增大、技能提高、挑战增大的持续心流的过程。那么利用这一微元过程我们可以得到心流图上直线的斜率 $K=\frac{ds}{dc}=\mathscr{S}(\frac{\mathscr{S}}{v(\gamma)}\frac{dc_0}{dt}-1)^{-1}$。</p>
+<p>上式是玩家特征 $K_P$，对于游戏还有游戏特征 $K_G$。$FR$ 对应有一个 feasible skill 和 feasible challenge $f=\mathsf{u}^*-\mathsf{u}(FR)$，$f$ 越小通关难度越大。 同理得到 $K_G=\mathscr{S}(\frac{dc_0}{df}-1)$。</p>
+<p>$G$ 最能吸引到靠近 $K_G$ 的一众玩家，他们能够获得良好的心流体验（过于偏大或偏小均要求有很高耐心，如前所述）。游戏 K 线下方的玩家（$K_P&gt;K_G$） 均能轻松通过，存在技术剩余；上方的一些玩家可以通过不断努力增强肢体或大脑能力以达到可行技术。</p>
+<p>（注意除了 characteristic K，有些游戏玩的就是审美或操作快感 $A$，但它们一定不持久。）</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./24.7.12%284%29.png">
+
+  
+</figure>
+</p>
+<p>鉴于各个 instance 难度不同，实际应作出一条近似光滑的 K-curve of the game 游戏的 K 曲线。如上面各段可以表示王者荣耀中多个段位，不同 $K_P$ 被落在各个段位当中。由于人可供投入的精力有限且边际产出递减，实际玩家的 K 曲线亦会向上弯折；从而给出一个交点。</p>
+<p>接下来纳入社群的考虑。我们找到一个 society representative player 社群代表玩家 $SP$，它是所有玩家 K 线的平均，$K_{SP}$ 是一个对于给定游戏而言外生的变量。非 Nash 玩家满足 $u(\mathsf{u}|\mathsf{Hu},FR)\neq \mathsf{u}$；这里处理一个非常简单的 $\mathsf{Hu}$ 的影响方式（相对常系数社群效用）：$u=\beta(\mathsf{u}-\mathsf{u}_{SP})+u_{SP}$。（如果 $u_{SP}=\beta \mathsf{u}_{SP}$，则 $u=\beta \mathsf{u},\ K=\beta K_{Nash}$。）在 $\beta&gt;1$ 的情形，K 线会向下偏移，反之向上。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./24.7.12%286%29.png">
+
+  
+</figure>
+</p>
+<p>可以看到，下方的玩家 $P1$ 存在 player&rsquo; surplus 技术剩余，大小正好可使用阴影面积衡量；如果存在交易与变现的渠道，这一部分将被转移到上方，$K_{P2}\rightarrow K_{P2^\prime}$，距离 $K_G$ 的空余还可以通过游戏内的充值实现。玩家特征 K 线向下/外旋转可能来自于充值、水平提高（e.g. $\mathsf{HS}$ 扩大、更加投入）、作弊或看攻略（因此游戏厂商应尽量防止）。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./24.7.12%285%29.png">
+
+  
+</figure>
+</p>
+<p>技术价格 $p$ 由上图显示的加总供给与需求决定；对于每个有剩余的玩家而言，$p\sim \frac{w}{v(\gamma)}$ 的关系决定了是否 sell skill（$w$ 为平均时间成本）；阴影部分即为公司完全价格歧视可以攫取的最大的 top-up profit 充值利润。</p>
+<p>特征 $\beta$ 的测算是一个问题，或许可以通过对采样玩家挖去感知部分 $A$（例如劣质画面等）得到的数据进行联立求解；在高一致性的情形下，也可以通过真实效益的转化率（如内部Q币与外部货币的兑换率）进行 $1+e$ 的估计。从这点来说，可能如以太坊的 NFT（非同质化代币）等数字化技术显示出一定的能力。</p>
+<p>检验这个效用形式（$\beta$-假说）可以采取如下方法：选取样本用户，对他们的内置奖励进行翻倍，并使他们误以为整个游戏服都进行了如此调整，考察这部分样本用户的游戏时间 $T_1$。$\mathsf{u}(T)$ 可以根据历史数据回归，检验 $\frac{\mathsf{u}_{SP}(T_1)}{2}+\mathsf{u}(T_1)\sim \mathsf{u}^o(T_1)$，其中 $\mathsf{u}^o$ 是调整开始前的奖励函数，应有相当接近的程度。</p>
+<p>关注到整个玩家群体，充值（应为玩家提供更多剩余而非补偿）与个人精进技术在时间意义上是有区别的，交易应会使市场接近出清。这就是**游戏关系式**：$\beta K_{SP}\approx K_G$.</p>
+<p>不仅社群存在反应，游戏公司也会设法通过游戏制作和 socializing（including propagation and monetary benefit）调整 $\beta$ 靠近上面的值。</p>
+<p>最后产业部分应该可以有很多经济学等可以讨论的话题；这里只来点传统的分析，使用简单的 Marshallian cross。注意到玩家的剩余效用与图上的阴影面积 $\Delta$ 成正比（向纵轴投影即可），此外加上销售技术的利益（同样正比于阴影面积），玩家的意愿价格可表示为 $m\cdot \Delta$，$m$ 为一系数。（值得讨论，但我觉得偏差不大。）将不同玩家的总游戏时间（满足 $u(T)=\epsilon(T)-A,\ T&lt;T_s$）横向加总即可得到一款游戏的需求曲线。供给侧的游戏厂家并不只是面对游戏价格 $P$，而包括对内的玩家充值（如前所述）、对外的广告服务（与 $Q$ 有关），以及衍生产业的周边产品等（可视作对需求曲线下方剩余的进一步攫取）。这样得到的供给与需求函数和市场结构一起形成了游戏市场的局部均衡分析。</p>
+<p>（总结一下便是，数学的尝试比较草率，有些一笔带过的东西缺乏深究，鉴定为自娱自乐（未尝不是与上帝的游戏）……笑）</p>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/haochen/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
+          integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
+          data-oid="views_essays\frivols\24.07.12\index.md"
+          data-oid-likes="likes_essays\frivols\24.07.12\index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/haochen/essays/frivols/23.09.08/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >New Conway's Automata</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-09-08T00:00:00&#43;00:00">September 8, 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/haochen/essays/swarm/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >打卡软件 Swarm 数据分析报告</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-06-02T00:00:00&#43;00:00">June 2, 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/share/"
+                title="分享">
+                
+                分享
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/about/"
+                title="关于">
+                
+                关于
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hao Chen
+      </p>
+    
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/haochen/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+    <style>
+    .small-gray-text {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+</style>
+
+
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
+  data-url="http://localhost:1313/haochen/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

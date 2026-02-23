@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linguistics on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/linguistics/</link>
+    <description>Recent content in Linguistics on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/linguistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>语言统计学下的红楼梦续作问题</title>
+      <link>http://localhost:1313/haochen/essays/hlm/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
+      <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
+&lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
+我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
+&lt;img src=&#34;./scatterplot.jpg&#34; style=&#34;zoom:40%;&#34;&gt;
+&lt;p&gt;&lt;em&gt;P1 以 120 回每回作为观测数据，以 44 个虚词和句长为特征，对应变换后在主平面的投影&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+      &lt;img
+    class=&#34;my-0 rounded-md&#34;
+    loading=&#34;lazy&#34;
+    decoding=&#34;async&#34;
+    fetchpriority=&#34;low&#34;
+    alt=&#34;&#34;
+    srcset=&#34;
+      /haochen/essays/hlm/clustering_hu_43f3a4b4ede02f58.png  330w,
+      /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
+      /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
+    &#34;
+    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;P2 以类卡方距离度量，类平均法递归的系统聚类图&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以看到两部分点有明显的分隔——前 80 回与后 40 回很可能出自截然不同的手笔。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;争议极大的 1-5 回（“曹第五次批阅说”）、17-18 回、53 回都得到了一定的支持。&lt;/p&gt;
+&lt;p&gt;细分来看前 80 与后 40 均非浑然一体，某些学者曾给出许多激进的论断：前 80 由佚名《石头记》经曹雪芹《风月宝鉴》插入；及三次增删的具体回目；后 40 并非胡适所说高鹗一人而由曹家据遗稿补写，程刊高校而成；均能得到映证。但此结果同时回避了脂砚斋、曹頫等说的疑问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下载链接：&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./text.zip&#34;&gt;红楼梦文本&lt;/a&gt;
+（网站文本、电子书转换的较脏文本，包含庚辰本、程乙本、当代校注本、脂评汇校本）&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./code.zip&#34;&gt;处理代码&lt;/a&gt;
+（Python，包含爬虫、分析、变量数据）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;相关文献：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[1] 李贤平. (1987). 《红楼梦》成书新说. Fu Dan Xue Bao. She Hui Ke Xue Ban, (5), 3-16.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[2] 施建军. (2010). 关于以《红楼梦》120回为样本进行其作者聚类分析的可信度问题研究. Hong Lou Meng Xue Kan, (5), 318-335.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
+    &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#attetion--transformer&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./attention.jpg&#34;&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

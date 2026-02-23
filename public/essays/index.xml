@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Essays on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/essays/</link>
+    <description>Recent content in Essays on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/essays/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ARC-AGI(Abstraction and Reasoning Corpus)</title>
+      <link>http://localhost:1313/haochen/essays/arc/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/arc/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;概况 Overview 
+    &lt;div id=&#34;概况-overview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%a6%82%e5%86%b5-overview&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;数据增强 Data Augmentation 
+    &lt;div id=&#34;数据增强-data-augmentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%95%b0%e6%8d%ae%e5%a2%9e%e5%bc%ba-data-augmentation&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;微调 Fine-tuning 
+    &lt;div id=&#34;微调-fine-tuning&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%be%ae%e8%b0%83-fine-tuning&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;后处理优化 Post-Training Optimization 
+    &lt;div id=&#34;后处理优化-post-training-optimization&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%90%8e%e5%a4%84%e7%90%86%e4%bc%98%e5%8c%96-post-training-optimization&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;强化训练 SDPO 
+    &lt;div id=&#34;强化训练-sdpo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%bc%ba%e5%8c%96%e8%ae%ad%e7%bb%83-sdpo&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>大模型与统计力学</title>
+      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
+&lt;p&gt;$$
+\arg\min_{\theta\in \Theta}\int L(x,\theta)d\hat{F}(x) \triangleq \hat{\theta}\\
+\int L(x,\hat{\theta})dF(x) \triangleq \mathcal{L}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\hat{F}$ 为采样 cdf，样本量记 $m$。定义 $S(\theta,x)\triangleq \frac{\partial L(x,\theta)}{\partial \theta},\ S(\theta)\triangleq \mathbb{E}S(\theta,x)$.&lt;/p&gt;
+&lt;p&gt;由 CLT 有
+$$
+\frac{1}{m}\sum\lim_{i=1}^m S(\theta,x_i) \overset{\text{a.}}{\sim} \mathcal{N}(S(\theta_0),\frac{1}{m}V(S(\theta_0,x)))
+$$&lt;/p&gt;
+&lt;p&gt;同时将损失 Taylor 展开
+$$
+\mathcal{L} -\mathcal{L}_{\min} \overset{\text{a.}}{\sim} \frac{\mathbb{E}\frac{\partial^2 L(x,\theta)}{\partial \theta^2}}{2} (\theta-\theta_0)^2
+$$&lt;/p&gt;
+&lt;p&gt;可以得到&lt;strong&gt;损失服从一个 Gamma 分布&lt;/strong&gt; $\mathcal{L} -\mathcal{L}_{\min} \overset{\text{a.}}{\sim} \text{Gamma}(\frac{1}{2},\beta)$，其中
+$$
+\beta = m \frac{\mathbb{E}\frac{\partial^2 L(x,\theta)}{\partial \theta^2}}{\mathbb{E}(\frac{\partial L(x,\theta)}{\partial \theta})^2}
+$$&lt;/p&gt;
+&lt;p&gt;（可将 $m$ 类比为 $\frac{1}{T}$，第二项为 $\frac{1}{k}$）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>语言统计学下的红楼梦续作问题</title>
+      <link>http://localhost:1313/haochen/essays/hlm/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
+      <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
+&lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
+我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
+&lt;img src=&#34;./scatterplot.jpg&#34; style=&#34;zoom:40%;&#34;&gt;
+&lt;p&gt;&lt;em&gt;P1 以 120 回每回作为观测数据，以 44 个虚词和句长为特征，对应变换后在主平面的投影&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+      &lt;img
+    class=&#34;my-0 rounded-md&#34;
+    loading=&#34;lazy&#34;
+    decoding=&#34;async&#34;
+    fetchpriority=&#34;low&#34;
+    alt=&#34;&#34;
+    srcset=&#34;
+      /haochen/essays/hlm/clustering_hu_43f3a4b4ede02f58.png  330w,
+      /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
+      /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
+    &#34;
+    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;P2 以类卡方距离度量，类平均法递归的系统聚类图&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以看到两部分点有明显的分隔——前 80 回与后 40 回很可能出自截然不同的手笔。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;争议极大的 1-5 回（“曹第五次批阅说”）、17-18 回、53 回都得到了一定的支持。&lt;/p&gt;
+&lt;p&gt;细分来看前 80 与后 40 均非浑然一体，某些学者曾给出许多激进的论断：前 80 由佚名《石头记》经曹雪芹《风月宝鉴》插入；及三次增删的具体回目；后 40 并非胡适所说高鹗一人而由曹家据遗稿补写，程刊高校而成；均能得到映证。但此结果同时回避了脂砚斋、曹頫等说的疑问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下载链接：&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./text.zip&#34;&gt;红楼梦文本&lt;/a&gt;
+（网站文本、电子书转换的较脏文本，包含庚辰本、程乙本、当代校注本、脂评汇校本）&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./code.zip&#34;&gt;处理代码&lt;/a&gt;
+（Python，包含爬虫、分析、变量数据）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;相关文献：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[1] 李贤平. (1987). 《红楼梦》成书新说. Fu Dan Xue Bao. She Hui Ke Xue Ban, (5), 3-16.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[2] 施建军. (2010). 关于以《红楼梦》120回为样本进行其作者聚类分析的可信度问题研究. Hong Lou Meng Xue Kan, (5), 318-335.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Planck 公式在历史上是怎么诞生的</title>
+      <link>http://localhost:1313/haochen/essays/planck/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/planck/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Wein：热力学结合实验定律猜测 
+    &lt;div id=&#34;wein热力学结合实验定律猜测&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#wein%e7%83%ad%e5%8a%9b%e5%ad%a6%e7%bb%93%e5%90%88%e5%ae%9e%e9%aa%8c%e5%ae%9a%e5%be%8b%e7%8c%9c%e6%b5%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;1896，Wien 考虑缓慢膨胀的球体中的单频平衡辐射场，由多普勒效应&lt;/p&gt;
+&lt;p&gt;$$
+\nu / T = Const
+$$&lt;/p&gt;
+&lt;p&gt;结合 Stefan-Boltzmann 的结果，平衡辐射场的能谱应为&lt;/p&gt;
+&lt;p&gt;$$
+u d\nu = \nu^{3} f(\nu/T)
+$$&lt;/p&gt;
+&lt;p&gt;结合实验规律，猜测未知函数为指数形式&lt;/p&gt;
+&lt;p&gt;$$
+u d\nu = c_{1} \nu^{3} e^{ - c_{2} \nu / T }
+$$&lt;/p&gt;
+&lt;p&gt;这个公式对实验的符合结果不错，替代了之前一系列猜的公式。&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Rayleigh：从电磁和统计的理论出发 
+    &lt;div id=&#34;rayleigh从电磁和统计的理论出发&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#rayleigh%e4%bb%8e%e7%94%b5%e7%a3%81%e5%92%8c%e7%bb%9f%e8%ae%a1%e7%9a%84%e7%90%86%e8%ae%ba%e5%87%ba%e5%8f%91&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;1900，Rayleigh 不满 Wein 的结果没有电磁相关基础，考虑一个电磁方腔，内部所有允许的电磁驻波构成了一系列振子，某个频率附近的振子数 $\frac{8\pi}{c^3} V \nu^{2} d \nu$。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Geometric Hermeneutics</title>
+      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
+    &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%af%ad%e8%a8%80%e7%9a%84%e5%87%a0%e4%bd%95%e5%ad%a6%e9%98%90%e9%87%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./25.1.10.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;Meaning 
+    &lt;div id=&#34;meaning&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#meaning&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;我们不能理解完全不依靠&lt;strong&gt;现实&lt;/strong&gt;的意义。（现实指的不一定就是真实存在发生的，而是一种类似生活经验的东西）所有的意思（意义，关于另外一种 “意义” 见下一小节）都指代了一系列可能的现实世界过程（称作&lt;strong&gt;宇宙&lt;/strong&gt; $u$）。某一时刻的宇宙 $u(t)$ 称作世界，是一系列状态信息的集合（能想象到的所有信息都可以如此纳入）$\{\pi^1,\pi^2,\dots\}$（暂时先把不可数的打包在一起，写成可数的形式；注意我们可以想象虚空中的抽象状态，但它仍然是一个与其他事实状态无二的东西）。一个半宇宙（前向/后向宇宙）指 $\{u_t\}_{t\ge 0}$ 或 $\{u_t\}_{t\le 0}$，包含一个给定的始终点 $u_0$。注意我们目前没说 $u(t)$ 随时间的变化满足一定的规律（比如 Newton&amp;rsquo;s Law），它允许了一切天马行空的假设与想象力。所有这些平行宇宙的集合 $\mathcal{O}$ 称作&lt;strong&gt;客观集&lt;/strong&gt;，鉴于它们都是思考的对象（因此可能可以认为启蒙运动是在扩展客观集）。建模时状态是&lt;strong&gt;外禀&lt;/strong&gt;的；例如总有人知道电场的存在，有人的世界里是不知道的（“因为太愚昧或太聪明而获得自由的幻象” 亨利·詹姆斯《使节》）。对于某个读者来说，他所能理解的一切宇宙集合记作&lt;strong&gt;知识域&lt;/strong&gt; $\mathcal{K}=\hat{\mathcal{O}}$。但这里面有一些宇宙大概是符合一些规律的，我们把符合该规律的集合称作&lt;strong&gt;真域&lt;/strong&gt; $\mathcal{T}$；同样，比方说或许有人眼里 Newton&amp;rsquo;s Law 和大家的不一样，故每个读者都有自己认为的真域 $\mathcal{U}=\hat{\mathcal{T}}$。&lt;strong&gt;意思空间&lt;/strong&gt; $\mathcal{M}=\mathcal{P}(\mathcal{O})$，真理空间 $\mathcal{M}_T=\mathcal{P}(\mathcal{T})$。意思之间存在包含关系 $m_1\subset m_2$；空/&lt;strong&gt;无知&lt;/strong&gt;意思点 $0\in \mathcal{M}$ 表示全集背景，无穷远/&lt;strong&gt;未知&lt;/strong&gt;意思点 $\infty$ 代表空集，其没有任何可理解的意义。&lt;/p&gt;
+&lt;p&gt;我们可以对意思之间进行简单的运算，包括&lt;strong&gt;反义&lt;/strong&gt; $m^c$、&lt;strong&gt;且（独立）&lt;/strong&gt;$m_1\cap m_2$、&lt;strong&gt;或&lt;/strong&gt; $m_1\cup m_2$。如果 $m_1, m_2$ 对应的文本是 $w_1, w_2$，总文本 $w=w_1w_2$ 对应的（作者的）意思是 $m$，$m$ 不一定是 $m_1\cap m_2$。&lt;strong&gt;顺序和&lt;/strong&gt; $m_1+m_2$，我们需要定义嵌入映射 $\phi:u \mapsto u^+/u^-$ 将时间压缩进半宇宙内，以实现时间上的先后关系，故 $m_1+m_2$ $=\{u\in m_1\cap m_2: \exists \phi_1,\phi_2,u_1\in m_1,u_2\in m_2 \text{ s.t. }u=\phi_1(u_1)+\phi_2(u_2)\}$ 对应于顺叙的文本 $w$。（对于始终点的衔接问题，设想一群在 $T$ 后就暂停演化的宇宙；即使受到真视域的限制，注意到人脑中状态序列的有限性和模糊性，这一点仍然可以成立。）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Attempts at Symmetry in Game Theory</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.08.02/</link>
+      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.08.02/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;关于对称性的类比尝试 
+    &lt;div id=&#34;关于对称性的类比尝试&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%85%b3%e4%ba%8e%e5%af%b9%e7%a7%b0%e6%80%a7%e7%9a%84%e7%b1%bb%e6%af%94%e5%b0%9d%e8%af%95&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;讨论的对象仍然是博弈。起因是我看到国自然基金的 Fundamental Research 发了一篇用群论研究博弈论当中对称性的文章&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，小吃一惊，原来已经有一少部分人关注这个想法了，于是连忙把自己许久以前想过的冷饭翻出来硬炒。&lt;/p&gt;
+&lt;p&gt;我将引入准则 $C(G,\tau): \mathbb{S} \rightarrow 2^{\mathbb{S}}$，为一集值函数，以表示在给定某一策略下在某节点该参与者认可的最优策略集合（常见有 $(r)$、$(rB)$ 等，具体前摇可参考我的 Game Theory 笔记）。其在策略空间 $\mathbb{S}$ 上作用的稳定集 equilirium 即 $\Pi_C=\{S\in \mathbb{S}|S\in C(G,\tau;S),\forall \tau \in \mathscr{T}\}$。我们还可以对准则函数进行一系列变换，以方便各方面如对动态博弈的研究；常用的算子包括均衡算子 $\Pi/\text{Eq}$、上/下序贯算子（分别向下/上节点至支付/根节点取交集）$\text{S}^\text{q}_iC(G,\tau)=\bigcup\limits_{\tau^\prime\in\tilde{\tau},\rho(\tau^\prime)=i}C(G,\tau^\prime),\text{S}_{\text{q}i}C(G,\tau)=\bigcup\limits_{\tau\in\tilde{\tau^\prime},\rho(\tau^\prime)=i}C(G,\tau^\prime)$、一致算子（严格序贯）$\zeta_i=\text{S}^\text{q}_i \text{S}_{\text{q}i}, \zeta=\zeta_1\cdots\zeta_m$、排除算子 $\delta$（剔去某些选择最优的可能性）、边缘算子 $\partial$（取像单纯复形的边界）。$\zeta C$ 一定是序贯/一致准则。特别提及一致反应准则（总准则） $\mathscr{R}C=\bigoplus\limits_{i\in\{1,\cdots,m\}}p_i\cdot\zeta C$（$p_i$ 为对参与者 $i$ 策略子空间的投影），接下来的 $C$ 均指总准则。依照其像的关系和操作我们还可称 $C_1\subset C_2$ 若 $\forall S, C_1(G,S)\subset C_2(G,S)$，即 $C_1$ 是 $C_2$ 的精炼；合并（且/或）准则 $C_1\cup C_2$、$C_1\cap C_2$（或写 $C_1C_2$），且有 $\Pi_{C_1\cap C_2}=\Pi_{C_1}\cap \Pi_{C_2}$ 等；同胚准则 $C_1(G_1)\cong C_2(G_2)$ 若 $\exists \text{ homeo. }\phi :\mathbb{S}_1\rightarrow \mathbb{S}_2$$\text{ s.t. }\forall S_1,\phi|_{C_1(G_1,S_1)}\text{ is a homeo. onto }C_2(G_2,\phi(S_1))$。注意准则同样可被视为算子，作用于平凡算子 $(1)$ 上（$\Pi_1=\mathbb{S}$），再如 $rC$ 即表示对原本的 $C$ 取符合纳什理性选择的交集。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>打卡软件 Swarm 数据分析报告</title>
+      <link>http://localhost:1313/haochen/essays/swarm/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
+&lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;
+&lt;p&gt;各城市的签到数据包括 8 个字段：用户 id，本地/外地，签到地点 id， 地点类型，地点类型 id，地点经度、纬度，签到时间。
+各城市对应签到的用 户数据包括 6 个字段：用户 id，本地/外地，男/女，签到发布数，照片发布数，好友数。&lt;/p&gt;
+&lt;p&gt;众所周知位置信息具有非常巨大的商业价值。本文仅作了一些初步的整理和观察。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;打卡的对数正态分布&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./SwarmTex/qq.png&#34;&gt;
+&lt;p&gt;&lt;strong&gt;用户偏好的因子模型&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./SwarmTex/fac2_oblique.png&#34;&gt;
+&lt;img src=&#34;./SwarmTex/group.png&#34;&gt;
+&lt;p&gt;&lt;strong&gt;判别本地还是外来&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./SwarmTex/disc.png&#34;&gt;
+&lt;img src=&#34;./SwarmTex/err_f.png&#34;&gt;
+&lt;hr&gt;
+&lt;p&gt;下载链接：&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./SwarmData.zip&#34;&gt;原数据集&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./Swarm.pdf&#34;&gt;完整报告&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./SwarmMatlab.zip&#34;&gt;源码&lt;/a&gt;
+（MATLAB，包含实时脚本、函数及工作区快照）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ludology</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.07.12/</link>
+      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.07.12/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;游戏论 
+    &lt;div id=&#34;游戏论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b8%b8%e6%88%8f%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;之前与同学聊到怎么算第一性原理出发的视角，他的观点大概是“演绎而非归纳”；于是正好实操一下，打算选取三个事物，以它们为对象展开论述。这是第一篇（后续有时间再写），就来试试游戏吧。（可惜我玩过的游戏并不多，甚至很缺乏经验，最可笑的是也没去游戏公司了解过，却在这里夸夸其谈起来了……）&lt;/p&gt;
+&lt;p&gt;我把游戏论分成三个部分，游戏理论 game theory、游戏设计 game design、游戏产业 game industry；后两者算是应用，限于精力不会有很多笔墨。Game theory 也是博弈论，因为我把游戏也放到一个博弈的框架里去。&lt;/p&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;Game Theory 
+    &lt;div id=&#34;game-theory&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#game-theory&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;在开头首先完成两件大事，给游戏下定义和给游戏分类。（目前没有任何公认的定义和体系一点的分类；对一个比较日常化的词语下定义本身就需要摒弃一些东西、规范一些东西，不过只要这个方式合理且好用即可。）&lt;/p&gt;
+&lt;p&gt;大部分已有的某些人士（Roger Caillois, Bernard Suits, Elliot Avedon, etc.）所述的定义较为狭窄，可以被下面所容纳；另一部分的论述过于简单宽泛（Eric Zimmerman, etc.），且含糊不清或偏颇，有些是从人的感受角度来谈的，更不方便于定义操作。我借鉴了 Chris Crawford 的定义（但他的过于复杂）：（分三步走）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一个娱乐活动。It&amp;rsquo;s a recreational activity. 活动表示它需要专门付出独立的时间投入；娱乐一词仍然较口语化，其表示它通过内部虚拟的经历给予人体验，亦即用 inner rewards 替代外部真实生活经历当中的 rewards。如果不具备这个性质，那么它只是一个活动（如真实世界中的博弈）。&lt;/li&gt;
+&lt;li&gt;有互动。It has interactions. (Or it&amp;rsquo;s changing.) 在这种情况下我们才称之为玩耍 playing；否则如漫画书、电影，它们是没有互动的娱乐活动，它们不是游戏。&lt;/li&gt;
+&lt;li&gt;有目标/内部奖励。It has goals or inner rewards. 否则我们称其为玩具 toys。玩具不会因为你的小球滚到了恰当位置就给你吐出游戏币。这里需要提到一个特殊的游戏分类$【C】$ creation games，其中一大子类为 Sandbox 沙盒游戏，e.g. Minecraft 我的世界、Simcity 模拟城市；它们本质上应属于玩具，鉴于没有任何内置的奖励和要达成的目标（不考虑任务、成就的话）；但由于习惯原因，大家通常仍称作游戏。除此之外，存在 inner rewards 的，才被称为游戏 games。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意道具 props 是游戏进行需要使用的辅助物体存在；从玩家上分，游戏可以分作$【P】$player-machine 单人的、$【MP】$multi-players 多人的（是否单机还是多机联机并不如参与者数量来的重要）；从形式上分，可以分作$【E】$electronic 电子的（包括 video games 电子游戏，还有 handheld、standalone system games，e.g. Slot machine 老虎机）、$【NE】$physical 物质的，其中 physical games 可能会使用道具。$【NE】$可进一步分为 Tabletop 桌面游戏（e.g. Go 围棋、Tic-tac-toe 井字棋、Avalon 阿瓦隆、Catan 卡坦岛）和 Motion 运动游戏（e.g. Hide-and-seek 捉迷藏），区别在于玩家的物理动作是否对游戏的 rewarding 产生影响。我们会比较关注电子游戏。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>New Conway&#39;s Automata</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.08/</link>
+      <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.08/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;新生命游戏 
+    &lt;div id=&#34;新生命游戏&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%96%b0%e7%94%9f%e5%91%bd%e6%b8%b8%e6%88%8f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;Conway 的生命游戏是一个零玩家的元胞自动机（cellular automata）。每个单元格即一个细胞，其有生死两种状态； 当细胞的周围少于两个活细胞时，其会死于孤立；周围多于三个活细胞时，其会死于拥挤；两个或三个时能继续存活；当死细胞周围刚好有三个活细胞时，其会被繁殖激活。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.8.gif&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（涌现出了的各式各样的模式，上图为滑翔者枪 glider gun）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（有非常多网页实现此程序，推荐一个 conwaylife.com）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;（灵感来自军训时的迷彩服）我想把生命游戏扩展到多种类（部落），它们以不同颜色表示。下面以双色为例。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.8%282%29.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;除了单色下已有的模式，列举一个新发现的模式：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.8%285%29.gif&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;（$2\times2$ 方块具有很强的稳定性，几乎不会被吞噬；吐司、灯塔、蜂巢等稳定结构均可以充当飞船反射镜，将另一个颜色的宇宙飞船以 $45^{\circ}$ 角反弹为滑翔机，或称拓荒者；风车、四风车均能被拓荒者侵占）&lt;/p&gt;
+&lt;p&gt;（将规则中允许 cell that has 4 living same-color cells around keep alive 还能看到领地的城墙、界河等等现象）&lt;/p&gt;
+&lt;p&gt;可能还具有一些研究和现实的意义，在此按下不表。程序附于页末（py tk库制作）。&lt;/p&gt;
+&lt;p&gt;这里再发散一下，其实我们还可以多样化。棋盘可以使用各种密铺图形，它们不必相同，甚至可以模拟各种地理环境；规则也可以因此更加复杂，并向现实匹配；还可以增高维度，变成立方的生命游戏……&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.8%283%29.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（一种不完全正镶嵌——中间的大多边形会是城堡吗？）&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下载：&lt;a
+  href=&#34;./23.9.8.zip&#34;&gt;新生命游戏(双色)&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;界面如下：&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.8%284%29.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Infinite Turing Machine</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
+    &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a0%e9%99%90%e5%9b%be%e7%81%b5%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本篇内容倒是很久以前就酝酿在脑子里了……只是一个乱七八糟的猜想，请当我是疯子罢……我发誓再也不搞了，这样下去要变民科叻）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./24.1.26.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;人类已经有很多关于超计算机的设想（超越图灵屏障），并对人脑是否可由机器模拟这类问题悬而未决。&lt;/p&gt;
+&lt;p&gt;我想试探性把可计算性和不可计算性（不完全地）对偶起来。我认为二者是可以互相涌现的。因此饼的右半部分需要定义一个新的称作无限图灵机 ITM（Infinite Turing Machine），它可以是有无限个带的图灵机、带有概率论意义上的随机的图灵机，或是无限个确定图灵机组成的网络（需要一个函数 $F$ 来刻画其中的输入输出连结关系），我认为它们是等价的（!）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Church-Turing Thesis:&lt;/strong&gt; A function can be calculated by an effective method if and only if it is computable by a Turing machine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dual Church-Turing Thesis:&lt;/strong&gt; A relation can be understanded by an effective way if and only if it is realized by a infinite Turing machine.&lt;/p&gt;
+&lt;p&gt;$RE$ 表示全部图灵可识别语言（Chomsky 形式语法 type-0），$TE$ 表示 Turing Emergenable（大概需要一个自然语言的语法层级），全部图灵可涌现识别的语言。对应通用图灵机 $\mathcal{U}$ 的为通用无限图灵机 $\tilde{\mathcal{U}}$。（由于至少一种图灵机 $M_\infty$ 有无限个，我们需要指明输入参数、算法指派的模式作为在无穷网络上的输入。）不仅 $ \tilde{\mathcal{U}} = F(\mathcal{U})$，$\mathcal{U} = F(\tilde{\mathcal{U}})$​ 亦成立。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Astrofinance</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.19/</link>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.19/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;天体金融学 
+    &lt;div id=&#34;天体金融学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a4%a9%e4%bd%93%e9%87%91%e8%9e%8d%e5%ad%a6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（这个名字大概也不恰当……呃但是我总是沿用最开始的称呼）（其实这周的内容是某种异世界的构想……在我能搜索到的范围内未发现有人研究了这方面嘎嘎）&lt;/p&gt;
+&lt;p&gt;假设未来的有一天人类已经发展到了整个庞大的星系，星球相互之间的距离甚至要以光年来计算，同时人类开发出了可以与光速量级比拟的高速飞船进行交通；自然会出现很多跨星公司，也需要一个星际的金融系统。让我们来明确一下其运行的逻辑。&lt;/p&gt;
+&lt;p&gt;首先需要刻画一下这个星际系统。我想所有人类社会依存或居住的地方都可以分为三类状态：静止 static，旋转 rotating，交通 transporting（即从A星系往B星系去）。（总之不能无限制跑远吧）（可以相对于自身所处的参考系而言，也可以统一对于如地球而言）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./24.1.19.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;假设琉球 Rover 负责在地球 Earth 和天狼星 Sirius 之间往复运输，它可能是个飞船（那也应该是相当巨大的社会生态系统了），或者人们已经能够熟练的操纵星球来回流浪……&lt;/p&gt;
+&lt;p&gt;鉴于相对论的效应，不同速度下的时间流逝是不同的。如果将来的体系仍以地球为中心（也许不是了），我们可以这样来表示 Rover 系的状态：用运行正方向在天球上的指向加上其速度 $\gamma$ 值，Sirius $\gamma=\frac{5}{4}$（或 $\alpha\ CMa\ 1.25$）；准确可写为 (06h45m08.9173s, −16°42′58.017″, 1.25)，使用赤经赤纬（GEI Celestial Coordinates）。不同星球上都有着自己正常运转的社会，有自己正常的时间历法，但为了自由大市场，均统一采用年-月-日-时-分-秒的形式。一般来说可以从出发星体处共时开始用历，但重要的只是差值。在同一个系内，各星理论上应同时为好（可以尽量协调，比如成立 ITCA 啥的——指 Interstellar Time-Coordinating Association）。&lt;/p&gt;
+&lt;p&gt;既然物理定律在所有参考系皆等价成立，不妨猜想所有星球都有相近的生产能力和无风险利率 $r$ 。即使我们的证券等金融手段为本星结算，套利也会出现：（$T = 2*8.6/0.6 = 28.67$）&lt;/p&gt;
+&lt;p&gt;我们在 Rover 出发时在 Earth 买入并在 Rover 卖出等额的零息债，无论我本人跟随 Rover 还是留在 Earth，在其回来的时候必然存在 $e^{rT}$ 和 $e^{r\frac{T}{\gamma}}$ 的差别。&lt;/p&gt;
+&lt;p&gt;解决方法可以是考虑货币的作用。我们假设存在美元 USD 和琉球美元 RVD。其汇率 $e$ 在不同时刻会不同，以使上述利差为 0。具体来说，应有 $\frac{e_t}{e_0} = e^{-r(1-\frac{1}{\gamma})}$，$e_t$ 为 $t$ 时刻美元的间接汇率。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Regression on Channel</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
+    &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%9e%e5%bd%92%e5%9c%a8%e4%bf%a1%e9%81%93%e4%b8%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（这是一个很蠢的想法……可以来抠一下是否成立或者说条件在哪里）&lt;/p&gt;
+&lt;p&gt;我们假想我们做的回归 $Y$ 对 $X$ 其实由一个高斯信道 $X\rightarrow Y$ 把控。如果事实上机制就是这样，那么估计的信道容量会趋向真实值 $\hat{C}\rightarrow C=-\frac{1}{2}\ln(1-R^2)$，这也是最大可能达到的码率——这里就有事了，我们正是依靠$X$的行为传递的信息去判别$Y$​。&lt;/p&gt;
+&lt;p&gt;若连续变量 $X$ 确实按照高斯分布，那么理论上我们能无限量的发出信息；但这并没有用，鉴于信道的限制，我们相当于以至少存在 $D_{min}=\sigma_X^2(1-R^2)$ 的均方误差进行测量。（$R(D)=\frac{1}{2}\ln\frac{\sigma_X^2}{D}&amp;lt;C$）&lt;/p&gt;
+&lt;p&gt;如果形式的分组（就像处理微分熵那样），那么我们有 $\lfloor \frac{1}{\sqrt{1-R^2}}\rfloor$ units。于是相关系数 $R\ge \frac{\sqrt{3}}{2}=0.866$ 尚才1个bit的定性判断。否则在样本量趋向于无穷时候，结果落在典型集中的概率会趋向于0，亦即此时用以预测其实跟打奖没什么区别呃呃。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Newton 力学纲要</title>
+      <link>http://localhost:1313/haochen/essays/newton/</link>
+      <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/newton/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Galileo 时空 
+    &lt;div id=&#34;galileo-时空&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#galileo-%e6%97%b6%e7%a9%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;Galileo 模型把事件抽象为时空中的一个点，时空同胚于在 $\mathbb{R}$ 上的四维仿射空间 $\mathcal{A}^{4}$。&lt;/p&gt;
+&lt;p&gt;定义时间间隔 $t(a,b) \in \mathbb{R}$ 使所有与某事件同时的事件构成一个三维仿射子空间 $\mathcal{A}^{3}$。这一附加结构指定了绝对时间。&lt;/p&gt;
+&lt;p&gt;定义同时事件的空间间隔 $d(a,b)$ 使得同时事件空间成为三维欧式空间 $\mathbf{E}^3$。&lt;/p&gt;
+&lt;p&gt;某参照系 $(O,\hat{e_{i}})$ 指定任一时刻的原点位置和笛卡尔坐标系的三个方向。此时任意事件在该参考系下具有一个时间坐标和三个空间坐标 $a \mapsto (t,\mathbf{r})$。我们描述物理过程总是离不开参考系。上述两个假定保证了不同参照系间的时间间隔不变性和空间间隔不变性。&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;质点与质点组 
+    &lt;div id=&#34;质点与质点组&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%b4%a8%e7%82%b9%e4%b8%8e%e8%b4%a8%e7%82%b9%e7%bb%84&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;质点是描述力学系统运动最基本的单元，其运动用 $\mathbf{r}(t)$ 描述，具有内禀属性质量 m。&lt;/p&gt;
+&lt;p&gt;复杂的力学系统可以分解成质点的集合，系统的内部性质由质点间的相互作用表示。对质点的作用用力表示。&lt;/p&gt;
+&lt;p&gt;此时每个质点受到的力可以归结为外部作用力（包括保守力和非保守力）加上质点组内部的作用力。&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{F}_{i}=\sum_{j\neq i} \mathbf{F}_{ji}+\mathbf{F}_{i}^{(e)}(+\mathbf{F}_{i}^{(s)})
+$$&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Newton 第一定律 
+    &lt;div id=&#34;newton-第一定律&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#newton-%e7%ac%ac%e4%b8%80%e5%ae%9a%e5%be%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;有一类特殊的参照系，其时空平直，称为惯性系。惯性系中，自由质点有&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>国际金融危机的分析框架</title>
+      <link>http://localhost:1313/haochen/essays/tirole/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/tirole/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;介绍 
+    &lt;div id=&#34;介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%8b%e7%bb%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;EM 新兴市场危机 
+    &lt;div id=&#34;em-新兴市场危机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#em-%e6%96%b0%e5%85%b4%e5%b8%82%e5%9c%ba%e5%8d%b1%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;危机前 
+    &lt;div id=&#34;危机前&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%8d%b1%e6%9c%ba%e5%89%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;大规模资本流入；资本账户脆弱：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;货币体制&lt;/strong&gt; 固定汇率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;宏观经济&lt;/strong&gt; 经常账户赤字，财政赤字&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;金融部门&lt;/strong&gt; 银行规制与风控缺乏&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通货和偿还期错配&lt;/strong&gt; 短期政府贷款、外债&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;制度建设与治理&lt;/strong&gt; e.g. 投资保护，关联借贷，执行无效率，不良会计&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;危机 
+    &lt;div id=&#34;危机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%8d%b1%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;表征&lt;/em&gt;：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CC Theorem</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.05/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.05/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;CC 定理 
+    &lt;div id=&#34;cc-定理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#cc-%e5%ae%9a%e7%90%86&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（感谢 Y. S. Cao 的邀请！正好我也姓C，依葫芦画瓢搞了个搞笑版的 CC 定理）&lt;/p&gt;
+&lt;p&gt;我们打算评判一个学生的期末价值。这个价值为整学期知识流的折现和，但这里的知识流仅仅是针对考试的‘有用’，因此都可以通过期末考卷评估，最后被GPA所衡量。那么影响这个价值的有哪些因素呢？可以是多种结构的作用，如融课结构和时序结构，等等。（融课结构指学生选择的水硬课杠杆，时序结构指不同课考试时间的安排——这对期末复/预习的精力分配及最终的成绩异常重要）&lt;/p&gt;
+&lt;p&gt;$$
+\text{ courses } \left\{\begin{array}{l}
+\text{ hard } H \text{ with honor tax } \tau\\
+\text{ easy } E
+\end{array} \right.
+$$&lt;/p&gt;
+&lt;p&gt;这个荣誉税 honor tax 指的是某些荣誉课每周加一些事情的现象，而且这些事情对期末成绩几乎没有影响，纯纯占用学习时间罢了（注意我们这里在功利的评判期末价值）。因此相当于上交了一定比例的精力（若用之学习带来的知识流的机会成本）。在不考虑荣誉税，且学生可以自由退选课以最大化绩点的情形下有：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+&amp;amp;\text{ CC Theorem 1:} \\
+&amp;amp;\quad V = H + E = \frac{K}{r} \\
+&amp;amp;\text{ Proposition: Free Course Market }
+\end{align}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Theory about Making Friends</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.12.29/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.12.29/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;交友论 
+    &lt;div id=&#34;交友论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%ba%a4%e5%8f%8b%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;让我们从一个功利的视角建模人们怎么交友。评判朋友的价值可能非常不合适——不过毕竟连精神损失也可以经过鉴定来补偿一定的费用呢，这里姑且做个货币价值的量化，并按邪恶的经济学家们喜欢的方式假设一些理性人，他们打算最大化自己的效用啦。&lt;/p&gt;
+&lt;p&gt;$V_{ji}$ 表示 $j$ 对 $i$ 而言的价值。我把朋友带来的价值简单的分为两部分：内在价值和外在价值。内在即心理价值，如倾诉、分享、玩乐，都满足了人一定的情感需求；外在即物质价值或现实价值，一般是帮忙或者所谓的”人情“。&lt;/p&gt;
+&lt;p&gt;$C_{ij}$ 表示 $i$ 对 $j$ 付出的交友成本。不过这里的成本更加通用化，以具体事物作衡量，并不等同于某个人实际感受到的效用（比如对于社牛，可能他们专门出去找好友玩、参加联谊交往活动等并不会感觉有多心累或浪费时间精力）。&lt;/p&gt;
+&lt;p&gt;$\theta_{ji}$ 表示 $j$ 对 $i$ 的亲密度。想了想我觉得不应直接假设 $\theta_{ji} = \theta_{ij}$，很可能双方对友谊的认知存在偏差。但或许对于情商高的人，他们能够更快的意识到差距并调整 $\left \vert \theta_{ji} - \theta_{ij} \right \vert$ 趋于 0。$\theta$ 取决于双方对友谊付出的成本多少，及环境外生的互动系数 $\mu_{ij} = \mu_{ji}$（不同来源性质的好友天生会产生亲密度的差别，比如中学里和同班同学的关系自然会高于一般的非同班同学）。而在某些特殊函数形式下可以造成 $\theta_{ji} = \theta_{ij}$ ——接下来为了简单的解析结果，我们令 $\theta_{ji}(C_{ji},C_{ij},\mu_{ji}) = \mu_{ji} C_{ji} C_{ij}$。&lt;/p&gt;
+&lt;p&gt;内在价值可写为 $D_{ji}(\theta_{ij},d)$，其中 $d$ 为情感偏好程度。令 $D_{ji} = d_i \theta_{ji}$。现实价值 $P_{ji}$ 又怎么衡量呢？好友是一个期权。&lt;/p&gt;
+&lt;p&gt;等一下，这并不简单，这个期权不止是美式的，甚至不知道可能有哪些可以行权。再者，我们这里还需要两个假设：不考虑跨人际交往（”我朋友的朋友……“）；不考虑关系网的延伸（$i,j \in I$ 均为已知的一群人）（理论上还应该考虑新认识陌生人可能的”启动成本“）。但我们这里稍稍不讲道理的简化一点，想象一群欧式期权，它们依 $(S,K,T)$ 联合概率分布，以表征不确定性。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dividend Signaling Model</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.12.15/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.12.15/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;一个股利信号模型 
+    &lt;div id=&#34;一个股利信号模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%b8%80%e4%b8%aa%e8%82%a1%e5%88%a9%e4%bf%a1%e5%8f%b7%e6%a8%a1%e5%9e%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;来尝试做一个可以解释正向 / 反向股利信号的模型。我这里叫正向指的是公告发放股利后，公司股价上升的情况，即投资者认为是公司盈利好、富裕现金多的信号；反向信号即公告后股价下跌。&lt;/p&gt;
+&lt;p&gt;模型的设定如下：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.12.15.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;我们纳入代理问题的考量。存在投资者（外部股权）和内部代理人（经理，可能持有股份）两方，公司正在经营一个新项目。这里关键的假设有：风险中性（贝叶斯均衡）；风险项目的产出简化为两点分布，以一定概率 $\alpha$ 获得现值 $R$，$1-\alpha$ 概率亏空为 $0$；私人收益线性函数（见下）。&lt;/p&gt;
+&lt;p&gt;当下第一期实现了收入 $R_0$，但之后仍然存在风险：好项目获得 $R$ 的概率为 $\alpha_H - \tau \theta$（$0$ 的概率为 $1-\alpha_H+ \tau \theta$），坏项目获得 $R$ 的概率为 $\alpha_L - \tau \theta$，且 $\alpha_H &amp;gt; \alpha_L$。其中 $\theta$ 为经理的偷懒程度，$\theta \in [0,1]$，$\theta = 0$ 为认真工作；$\tau$ 表示了偷懒对项目经营的危险程度。&lt;/p&gt;
+&lt;p&gt;这里的信息不对称表现为外部投资者不清楚 $\alpha$ 并赋以 $\alpha_H$ 概率 $\gamma$（$\alpha_L$ 概率 $1-\gamma$），而经理知道自己是 $\alpha_H$ 还是 $\alpha_L$。经理决定股利分配政策，实施发放股利 $D$，为市场所观测。之后由董事会（投资者控制）决定经理报酬方案 $R^a$（根据信号 $D$ 和未来项目收入 $R$ 获得报酬，即 $R^a(D,R)$ 且默认失败没有补偿 $R^a(D,0) = 0$）。最后项目执行，经理选择 $\theta$ 并最终依概率得到 $R$ 或 $0$。（流程可见上图）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Model for the Nations</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.24/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.24/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;国际关系模型 
+    &lt;div id=&#34;国际关系模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%bd%e9%99%85%e5%85%b3%e7%b3%bb%e6%a8%a1%e5%9e%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我想依葫芦画瓢构建一个类似于凯恩斯框架下的简单模型去描述国际关系，方法就是把最原始的宏观经济模型稍作无厘头的扩展。$r_{ij}$ 表示国家 $i$ 和国家 $j$ 的国际出清关系（International Clearing Relationship，ICR），$r$ 越大（姑且作一标量）关系越正面。（这也许可以计量，比如通过文本分析和情感分析，可以构造并量化国家之间官方媒体互相报道或高层互动事件的一个关系指数）&lt;/p&gt;
+&lt;p&gt;我们要多引入一些将被考虑的内生和外生变量，它们有一些类似于模块化拼装，可以纳入也可能在考察后认为不足轻重而舍去。除了熟知的 $Y$ 产出、$A$ 技术（这里将科教研究水平与技术合一视之了）、$C$ 消费、$P$ 价格水平、$T$ 税收（及其它强制扭曲）等总量以外，我们还有 $D$ 文化富合度（Cultural Affluence）（正面反映了闲暇和文娱时间；同时负向描述了种族、宗教冲突的程度）、$W$ 民众福利（Welfare）、$M$ 武装力量（Millitary Power）、$U$ 意识介度（Consciousness Dissemination）（指出社会意见和思想的传播程度或多元程度；同时一定的反映政权或宣传机器的把控力量）等。还要介绍的有 $ID$ 政治位移（Ideology），不称意识形态的原因是它可以不仅仅是衡量左右，而是一个可以在设定的多个意识评价标准下的多维空间里移动的一个矢量，其决定了政治和经济制度，特别反映在产权组织 $PI(ID)$ 上（跟政府架构等有关，但核心归于 $ID$）。$PI$（Property Inequality）将政治光谱（空间）划分开来（或连续化），表示了“生产关系”（比如可以粗分为资本主义、社会主义等）及其导致的分配关系。再如 $U$ 应该也与 $ID$ 有关。&lt;/p&gt;
+&lt;p&gt;模型的假设（缺陷）包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;市场化（may not be free markets but there must exists an adjusting power not controlling）&lt;/li&gt;
+&lt;li&gt;不考虑预期，且无理性预期（no long-term expectation）&lt;/li&gt;
+&lt;li&gt;仅宏观政策（macroscopic open actions 即没有微观或暗面的操作，如针对个别企业的制裁或间谍行为）&lt;/li&gt;
+&lt;li&gt;无随机扰动（no stochastic terms 不包含概率成分，没有影响国际关系的黑天鹅事件）&lt;/li&gt;
+&lt;li&gt;不考虑能源、移民、生态环境等其他重要因素（only has political interest and economic interest / no key mesoscopic factors 不考虑关键中观领域的作用）&lt;/li&gt;
+&lt;li&gt;无阶层分化（no hierarchy 尽管有 PI 且纳入了分配结构，但并未分群体建模）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;影响国家决策的无非是两个方面：一边讲发展，一边要安全（就像投资决策的 $\mu$ 和 $\sigma$ 那样）。或者说，国际关系无非是 Benefit 和 Security 的综合作用（Inner &amp;amp; Outer）。不过我们这里要把原来的 IS-LM-BP model 说的详细一些，把 $NX$ 拆开写为 $NX_{ij}(e_{ij},Y_i,Y_j,r_{ij})$ 表示 $i$ 国向 $j$ 国的净出口。即有 $NX_{ij}(e_{ij},Y_i,Y_j,r_{ij})$ $=$ $KF_{ij}(i_i,i_j,K_i,K_j,r_{ij})$。注意实际上我们应分写进口 $IM$ 和出口 $EX$ 函数，鉴于双向大量贸易和几乎不贸易在净值上无法区别。总而言之：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>谈竞赛</title>
+      <link>http://localhost:1313/haochen/essays/olympic/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/olympic/</guid>
+      <description>&lt;p&gt;​		刚好看到《金榜题名之后》和一篇北大教育研究的论文，想起曾经和一个人讨论过其所谓的&amp;rsquo;竞赛绑架论&amp;rsquo;。虽然高考、大学教育的讨论很火，但似乎没人写过关于高中竞赛的一些文字…于是突然想回忆一下竞赛这件事，不过我也只能从我的视角发表一些观点。&lt;/p&gt;
+&lt;p&gt;​		很多关于竞赛的争论本质上是精英文化和大众文化对话语权的争夺（譬如强基计划的种种争论）。&lt;/p&gt;
+&lt;p&gt;​		不过准确来说，同国际教育、素质教育、领导力教育不同，竞赛是介于大众和精英之间的&amp;rsquo;亚精英&amp;rsquo;。这使得大众的态度相比正宗的海淀精英教育对竞赛更加软化，在绝对的能力面前转而攻讦其他（如&amp;rsquo;为 🇺🇸 服务&amp;rsquo;）——崇拜和仇视是对立统一的。但&amp;rsquo;无产阶级&amp;rsquo;不是&amp;rsquo;普通阶级&amp;rsquo;。&lt;/p&gt;
+&lt;p&gt;​		当下的竞赛被符号化了。学生不是按照竞赛选择学校，而是拿着竞赛奖项待价而沽。&lt;/p&gt;
+&lt;p&gt;​		这个符号背后的实质是撕裂的：一是社会语境的竞赛和内容里的竞赛的错位，高中的象牙塔也不能阻挡外部逻辑的侵蚀和重构；二是竞赛配备的冲击和社会固化的矛盾，一部分阶层出人头地的能力成为了各方势力的角斗场。&lt;/p&gt;
+&lt;p&gt;​		还有一个值得提及的矛盾是学科竞赛和学科本身的错位。竞赛不曾标榜自己选拔科研人才。做题不是学科本身，做高中竞赛题更不是。中学阶段没有人会与你探讨理论物理应该是什么样的，只会告诉你物理奖牌是什么样的。&lt;/p&gt;
+&lt;p&gt;​		普通学校和县中模式面对的是&amp;rsquo;提高一分，超越千人&amp;rsquo;的高考，和竞赛生所全力面对的保送、自招、三一已然可以说是两个相当不同的生长模式。然而后者的生态正在萎缩，异化出的&amp;rsquo;二次高考&amp;rsquo;、强基计划就是竞赛窘境的缩影——可见整合二者升学版图之困难。在各类比赛甚嚣尘上，个人兴趣与升学利益合谋之时，官方进一步摁下了精英文化的抬头与分野。&lt;/p&gt;
+&lt;p&gt;​		我想讲的另一个关键词是体制化 institutionalize。&amp;lsquo;开始你恨它，接着适应了它，最后你离不开它&amp;rsquo;。举办了39届的物理竞赛背后俨然是一个初具规模的市场与产业（点名某些只会贩卖焦虑的机构），更是大量模版化的技巧和培训。那些天赋论者没有意识到在每年数以百计的竞赛获奖者前，真正的天赋是绝对的少数，竞赛学习和普通学习几乎没有区别，大部分学习的本质仍是重复、锻炼（做题尤甚），而这是由相当的资源（经济资本、数理资本、名校团队资本）来保证的。在激烈内卷亦即宽松学习（高考简单化）和严酷选拔（逐年增多的人数）的张力下，这些资源既得者亟需争取彰显自己的标签。在&amp;rsquo;竞赛折叠&amp;rsquo;的现实下，胜出者往往与高考殊途同归。&lt;/p&gt;
+&lt;p&gt;​		有不少说法直指竞赛带来了人格的枯竭（尽管我身边并没有这种说法的证据… 应该跟地区发展程度有关）。至少标签之外的某些东西无法通过一阵衡水式的输出就能够达到，譬如 Bourdieu 的文化资本（视野、思维，且往往通过家庭传播）。这种补缺便是教育的力量——真正的教育。但其折现却远不如竞赛或应试教育，拥有明确、体制化的产物，学校自然难有大力的投入。&lt;/p&gt;
+&lt;p&gt;​		仿佛只有我经常提起竞赛——可是我的高中离开它的确很难再有精彩之处。竞赛大概绑架了高中的课余时间和假期时间、文科课程乃至升学。它用方程描述生活，用&amp;rsquo;成功&amp;rsquo;覆写&amp;rsquo;成长&amp;rsquo;。&lt;/p&gt;
+&lt;p&gt;​		对于我来说，甚至根本没有成功，物理竞赛只能算是一次尝试。&lt;/p&gt;
+&lt;p&gt;​		当我们的教育制度不再复刻市场的逻辑，竞赛的迷思方能终止。教育的权威在于引领社会。这种引领归根到底来自内心锚下的航标——而竞赛不会告诉你。&lt;/p&gt;
+&lt;p&gt;​		回到最初的话题，我回忆的大概不是竞赛本身——它只是一个值得讨论的载体。物理竞赛的遗产除了数十本教材、无需多少投入即可得A的高数和大物、一些特定圈子的人脉和梗（&amp;lsquo;电容器水面上升&amp;rsquo;）之外，还留下了什么呢？一些探索与思考？竞赛与高考莫不过是大学万花筒的前奏，也有月亮和六便士——现在在大学更是如此。某些场景某些时候也会突然恍惚和悸动，一切都像物理实验室三那么熟悉，我们还是一样的年轻，一样的努力，黑板上的数字停下又重启，挥之不去的蚊子和琴声依旧挥之不去，一些当时厚重的经历却随着几本书的合上永远合上了。&lt;/p&gt;
+&lt;p&gt;（只跟身边几个人聊过，也许可以做更多的调查和访谈；这对新闻和教育方面的研究者想来是一个不错的话题）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The Apple that Never Lands</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.17/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.17/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;永不落地的苹果 
+    &lt;div id=&#34;永不落地的苹果&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b0%b8%e4%b8%8d%e8%90%bd%e5%9c%b0%e7%9a%84%e8%8b%b9%e6%9e%9c&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（更多关于民科的了解可以查看“其他收录”中的民科小传一篇，其末尾还有本人的一些讨论）&lt;/p&gt;
+&lt;p&gt;我在想一个&lt;/p&gt;
+&lt;p&gt;$$
+\text{Scipop Paradox}:\\
+\frac{PseudoPaper_i}{Population_i} = \sum\limits_{t\in T} \beta_t \frac{ScipopWork_{i,t}}{Population_{i,t}} + \gamma^\prime\mathcal{X}_{i} + \alpha_i + u
+$$&lt;/p&gt;
+&lt;p&gt;$Scipop$ 指的是 science popularization，科普的一种翻译。但国外 scientific literacy 科学素养使用的更多（用此关键词搜索文章也与科普更为相关）。&lt;/p&gt;
+&lt;p&gt;这里采用省截面数据（$i$），$ScipopWork$ 指各省发行出版或流通的科普性质的作品量，$PseudoPaper$ 指民科的生产量——这从哪里来呢？把时间背景（$T$）放到上世纪80-90年代左右，中科院研究所每天都要收到大量信件宣称自己造出了永动机或解决了哥德巴赫猜想之类的……可以统计其寄件人的省份分布得到。（当然还有不少自费出版的民科书籍可以统计；再不济还能看新闻里的主人公来自哪里……）$\mathcal{X}$ 为控制变量，可能包含人均产出、城市化水平、科教院所数量等。我的 prediction 为：$\beta_t$ 在1978年“科学的春天”后的十余年里显著为正。亦即一个看上去像是悖论的命题：当时的科普风气越盛，民科数量反而越多。&lt;/p&gt;
+&lt;p&gt;进一步的 endogeneity concern or robustness 暂且略去。比如寻找 $ScipopWork$ 可能的工具变量；考虑 $ScipopAuthor$ 科普作者的地区分布；回归 $\frac{TruePaper}{Population}_i$ ，也许存在着负向关联放大悖论。&lt;/p&gt;
+&lt;p&gt;科普历来是争论的话题。在我眼里，就像 scientific literacy 一样，科普本身即应该定义为科学的末端，无非是让不了解此领域的人能以科学的视角和方法正式的纳入一些有关此领域的基础知识罢了。可这是需要基本的教育去提供基本的理性素养的。&lt;/p&gt;
+&lt;p&gt;而当下的科普不是去关注苹果落地后发生的事，却只着重宣传苹果掉落的瞬间。科学理论本身是理性且严肃的，其宣传却夹杂着浪漫与造神主义；美其名曰加入科学史和人文元素，却只剩下了科学史和人文元素。思而不学，不接受真正的科学普及而仅仅凭着一些类科普提供的模糊面貌和一些内心的激情与偏执大肆幻想，便成为了民科。&lt;/p&gt;
+&lt;p&gt;（虽然还没实证确定呢！）我想说的只是，这个看起来就很伪的悖论告诉大家：科普何以存在？没有坚实的教育和素质基础，没有合格的传播和内容关注，科普便会永远停留在伪命题上，apples will never on the ground。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Miller-Orr 结论推导</title>
+      <link>http://localhost:1313/haochen/essays/miller-orr/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/miller-orr/</guid>
+      <description>&lt;img src=&#34;./millerorr.jpg&#34; style=&#34;zoom:50%;&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Love in Evolution and Equilirium</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.03/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.03/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;暧昧：进化与均衡 
+    &lt;div id=&#34;暧昧进化与均衡&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9a%a7%e6%98%a7%e8%bf%9b%e5%8c%96%e4%b8%8e%e5%9d%87%e8%a1%a1&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本周分享的算是一个失败的建模，但话题有趣嘿嘿）&lt;/p&gt;
+&lt;p&gt;这个模型描述了两个个体（男女）在暧昧阶段的互动（博弈）。不过博弈可能给人感觉怪怪的——原因是我们这里假设两人都在努力最大化自己的关于爱的效用，并规划和调整自己的做法。&lt;/p&gt;
+&lt;p&gt;$t$ 时刻博弈双方的状态记作 $x(t)=(x_1(t), x_2(t)) \in [0,1]^2$ ，表示男方和女方的爱意。同时他们的行动（一些或直白或隐晦的示爱的方式）$a(t)=(a_1(t), a_2(t)) \in [0,1]^2$ ，其中 $0$ 代表没有示爱，$1$ 代表直球表白。当然对于未来，我们对时间价值做了一个折现率 $r$ 。&lt;/p&gt;
+&lt;p&gt;状态过程（dynamics）：&lt;/p&gt;
+&lt;p&gt;$$
+\dot{x_1} = (\frac{a_2}{a_1}-\delta)x_1 \\
+\dot{x_2} = (\frac{a_1}{a_2}-\delta)x_2
+$$&lt;/p&gt;
+&lt;p&gt;目标（optimal control）：&lt;/p&gt;
+&lt;p&gt;$$
+U_i = \max\limits_{a} \int_0^T x_i(t)e^{-rt}dt + D(x(T))
+$$&lt;/p&gt;
+&lt;p&gt;（理论上应加上 $\lim\limits_{T\rightarrow \infty}$；这样终态效用 $D$ 就比较直接，比如或许是一个狄拉克函数，只在未来能配对成功的 $(1,1)$ 点取到无穷）&lt;/p&gt;
+&lt;p&gt;但爱情真是一个复杂的东西（笑），高冷人设和舔狗人设的效用函数大概率是非常不一样的。我们这里仅仅设想一种 Platonic Love，有着逻辑清晰简单的个体爱意作为效用——即自我的爱意就是感受到的幸福。并且这个爱意随着双方对白的互动可以得到增强和减弱；从式子可以看到真正影响人的是比值 $\frac{a_1}{a_2}$，对方超额的行为才能进一步增加你的爱意并引发你的进一步互动（我经过深思熟虑认为导数比值 $\frac{\dot{a_1}}{\dot{a_2}}$ 更为合适，但接下来的解析将过于复杂）；同时设置了一个“折旧率” $\delta$ 作为没有足够互动之后与日俱减的爱情（想来有人会说……君子之交淡如水）。&lt;/p&gt;
+&lt;p&gt;好的那我们继续，构造哈密顿量&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{H} = \nabla_x V \cdot \dot{x}(t,x(t),a(t))+u_i(t,x(t),a(t))\\
+= x_1(\frac{a_2}{a_1}-\delta) \frac{\partial V}{\partial x_1}+x_2(\frac{a_1}{a_2}-\delta) \frac{\partial V}{\partial x_2}+x_i(t)e^{-rt}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Theory of Theory</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
+    &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%90%86%e8%ae%ba%e7%9a%84%e7%90%86%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我要讲的是“学科的学科”——虽然高中课本里哲学似乎便这么宣称——但这里讲的是言之有物的理论构建，而非关乎世界本质的基础支撑。&lt;/p&gt;
+&lt;p&gt;广义的理论（Theory）可以等同为知识（Knowledge），而知识被我分为 Experience、Analysis、Science 三种层级。Experience 指经验性的总结 Synthesize 和解释 Explain，例如我们可以对厕所的规划和使用形成学问，对什么样的音乐是好听的形成学问，但其来源都是已有事物的 Application，类似一个经验丰富的老技工。Analysis 指在一定抽象程度上建立的统一分析框架 Analytical Frame，大家在平常能见到的“XX学”都已经达到了这样的标准；但 Analysis 在现实中仍然有可能只能做解释或归纳性的预测。Science 被定义为 Modeling 模型化现实，给出考察对象之间的作用关联，其目的是预测 Predict 和控制 Control。我们这里的理论 Theory 便是狭义的理论，特指科学学科 Science。我给出的范式是：&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{X} \rightarrow X \rightarrow \boxed{\mathbb{T}} \rightarrow Y \rightarrow \mathcal{Y}
+$$&lt;/p&gt;
+&lt;p&gt;$\mathcal{X} \rightarrow X$ 和 $\mathcal{Y} \rightarrow Y$ 都是概念化 Conceptualize 的过程。$\mathcal{X}$ 和 $\mathcal{Y}$ 是现实世界的对象或情形，$X$ 和 $Y$ 是我们理论的输入和输出。（注意$X$可以不仅仅是某个数值变量“政府年度固定投资额”，还可以是“财政政策不变”这样更为抽象的输入或问询。）科学理论的核心是相关与因果。仅相关的关联性可以做到预测，而因果性（并不是一个容易论断的东西）可以做控制和应用。中间的模型机制 Laws or Theorems $T$ 和概念 Concepts $C$ 组成了一个完整的理论 $\mathbb{T}=\{T_1,\cdots,T_i,C_1,\cdots,C_j\}$ 。每个定理（或定理的一部分）都可以写成 $c = T(c_1,\cdots,c_n)$，其中 $c$ 是 $C$ 的具象输入。我们这里缺少了几个理论里常见的模块，但其实已经纳入机制 $T$ 内了，包括假设 Assumption 和公理 Axiom ——一种未经验证的假定的$C$之间的关联性；引理 Lemma 和推论 Corollary ——也是定理们特定的同义重复。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Knoid</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.06/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.06/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;知子网 
+    &lt;div id=&#34;知子网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%9f%a5%e5%ad%90%e7%bd%91&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;正好最近有同学想设计一个读书小组。其实我本来也有一个成立 workshop 的想法，但为什么没搞呢？一部分原因是觉得单纯的传统读书会或学术小团体的方式不够具有吸引力。这次顺着先前 23.8.25 里的想法，下面我将原创性的给出：（噢原本想叫知网，奈何已经被某数据库用了……）&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;知子网白皮书 Knoid White Paper&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.10.6.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;知子网是创造和交流知识（knowledge and idea, coined as &lt;em&gt;Knoid&lt;/em&gt; &amp;ndash; also means the tangible form of knowledge）的平台。我们不是某个组织，我们是元组织。我们秉持：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自由、开源、开放。无限参与，无限可能。&lt;/li&gt;
+&lt;li&gt;去中心化，自组织网络。让知识得到公平的交流，让权威不复存在。&lt;/li&gt;
+&lt;li&gt;任意形式的合约。在这里可以实现一切形式的学术交流活动。&lt;/li&gt;
+&lt;li&gt;共享、共评、共建。知识不是私人品。没有货币的逻辑，而有市场的价值。让好讲座得到听众，让好讨论得到加入，让好书得到阅读。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;每一个知子网中的人，都将拥有&lt;em&gt;知识&lt;/em&gt;（&lt;em&gt;Knowledge&lt;/em&gt;，abbreviated as &lt;em&gt;K&lt;/em&gt;）。新知识不会无限的喷涌，而由知子网的机制——一个特殊的活动 Creating 产生。&lt;/p&gt;
+&lt;p&gt;合约即是活动，合约可以调用合约。合约由创建者放出，设定有存续时间，位于一个节点地址（知识活动点）。合约能够接受多方的输入并产生输出，按事先安排好的流程触发、收纳知子、调配知子、调用 Creating 等一切代码能够实现的操作。当然，Creating 对每一个合约在单位时间段的生成请求存在上限。&lt;/p&gt;
+&lt;p&gt;每一个知子网中的人和合约点，都可以分享自己的见解，即&lt;em&gt;知子&lt;/em&gt;（&lt;em&gt;Knon&lt;/em&gt;）。每个人和合约点都有属于自己的不同的知子（Somebody&amp;rsquo;s Knon）。知识是平等的，知识因受到公认而变得重要。您的知子将被其他人持有、交换、参与合约。除了 Creating，任何合约不能创造知识，但所有人都可以任意创造自己的知子并通过合约发给其他参与者，代表分享自己最新学习研究的发现。&lt;/p&gt;
+&lt;p&gt;合约实现的交流形式多种多样，缺乏的只是想象力——lecture、seminar、tutorial、exam、project、book、paper……都可以被实现并得到关注。课堂、讨论可以让所有人交付知子，时间排他性的来参与，并据后续情况生成新的思想，无论线上还是线下。考试可以检验对应的知子按照成绩发放知识量。任何人都可以成立各种形式的组织并推广。&lt;/p&gt;
+&lt;p&gt;知识可以被复制，可以被传播。作者可以为自己的作品赋予复制的部分知识。书刊可以发行自己的知子，标记自己独一无二的内容并获得众人的认可和流传。&lt;/p&gt;
+&lt;p&gt;知子可以被标注。参与学术活动的人可以根据合约所示的知子的门类和内容进行参与。（同书籍一样，知识的架构关系可以通过设计 merge 功能的合约点充分实现。）&lt;/p&gt;
+&lt;p&gt;您还可以参与知识与知子的对换——一个特殊的节点 Exchanging 将完成这一点。给出你认为某知子的知识价值并进行兑换。整个网络将受广播，平均比率和方差将被计算，每一个该类对换的参与者都将共同助力形成公允的评价。&lt;/p&gt;
+&lt;p&gt;我们借鉴了以太坊（Etherum）的基础。所有行动将被广播，每经过固定时间将创建下一个提交，所有知识的拥有者都将写入一份同全网络历史一模一样的副本。知识的产权不容纂改。&lt;/p&gt;
+&lt;p&gt;网络可以本地化，大学等学术机构可以接入并构造属于自己内部的知识生态，这只需要若干合约。&lt;/p&gt;
+&lt;p&gt;知子网正在 Github 上启动。大信息时代的知识交流期待新的范式，期待您的参与。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The Limit of Handwritting</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.29/</link>
+      <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.29/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;书写有极限吗 
+    &lt;div id=&#34;书写有极限吗&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%b9%a6%e5%86%99%e6%9c%89%e6%9e%81%e9%99%90%e5%90%97&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;作为速记爱好者，我开发过不止一套自己的速记符号，期间的考虑无非是平衡简化程度与易学易辨的程度。本周突然想来思考一下手写本身的 physical bound 在哪里。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+\text{Systematic Process}:\\
+1.\ infor&amp;amp;mation\ flow\ (sounds\ etc.)\\
+&amp;amp; \downarrow compiling\ (handwritting\ system)\\
+2.\ gra&amp;amp;phic\ symbols\\
+&amp;amp; \downarrow handwritting\\
+3.\ &amp;amp;notes\\
+&amp;amp; \downarrow interpreting\\
+4.\ recov&amp;amp;ered\ information
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+&amp;amp; \text{Assumption}:\\
+&amp;amp; 1.\ Fluency: A\ constant\ speed\ \mathbf{v}\ of\ writting\ lines\ or\ curves.\\
+&amp;amp; 2.\ Smoothness: There\ is\ no\ sharp\ angles\ and\ writter^\primes\ acceleration\ can\ be\ infinity.
+\end{align}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Measure Design</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
+    &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%bb%ba%e7%ad%91%e8%ae%be%e8%ae%a1%e7%9a%84%e8%ae%a1%e9%87%8f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我记得有种说法：高度发达的文明其艺术品的设计往往开始做“减法”，不再不断地添加繁复的雕刻和装饰，而是有意的简化和突出。这让我想到当下大城市里开始涌现的现代建筑和后现代建筑，想来我们可以去计量一个地区的艺术水平——似乎有些困难？不如先从建筑设计的水平开始。&lt;/p&gt;
+&lt;p&gt;不是美是稀缺的，而是稀缺造就美。&lt;/p&gt;
+&lt;p&gt;审美的本质是什么恐怕不是一个能在这里简简单单就讨论完的东西。我现在比较武断的做出以上论断，是为了进一步发展指标。我倾向于认为是人类具有“审美的需求”——这个需求在日常的普遍的生活中没有得到满足——这正是稀缺性的意义。（我还要提到一个反驳的角度：这个价值与创造性价值尚有区分。如果我们纳入时间变量，那么富有创造性价值的事物在其之前极其稀缺，而在之后带动了大量的模仿者，或者说自己成为了开创者，那么它显然具有美的价值。但当这个事物的元素在生活中俯拾即是的时候，大家自然不再对其审美敏感。）&lt;/p&gt;
+&lt;p&gt;以此逻辑为基础，我们同时也需要一些事先由美学专家（建筑设计家）挑出的评价维度，它反映了人类共性的审美需求。例如建筑的几何外形、色彩、结构、纹理（$X_1, X_2, X_3, X_4, \ldots$）。借助计算机技术，我们可以获取一个街区的实景图，将各个建筑依照各个维度，进行数学上（计算机视觉上）的相似计算 $r_{ij1}, r_{ij2}, \ldots$ ，再按一定方式如加权得到一个合并的建筑 $i$ 和建筑 $j$ 的相似系数 $r_{ij} = f(r_{ij1}, r_{ij2}, \ldots)$ 。&lt;/p&gt;
+&lt;p&gt;我们定义一个建筑对于一整个要考察的建筑群（称背景或参考基）的设计价值（审美价值）$v_i$ 为&lt;/p&gt;
+&lt;p&gt;$$
+v_i = \sum_j \frac{r_{ij}}{v_j}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（$j$ 的遍历包括 $i$ 自身，需要自己给自己“壮胆”）（通过联立群体内全部建筑求解）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我未经严格考证的认为它确实具有 1. 给离群点赋以高值 2. 给群聚性缓慢提高值 等等合理的数学性质。&lt;/p&gt;
+&lt;p&gt;上述把稀缺性挂钩审美价值的作法受到质疑大概来自这两个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;日常的（普遍的）到底是什么？&lt;/li&gt;
+&lt;li&gt;古怪的垃圾品？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;建筑可以近乎完美的解决这两个问题，而绘画、音乐等艺术还需进一步考量。我们考虑全部的建筑具有一定的可行性，它们就是大家生活中接触到的建筑物的全集，那么一个标新立异的富有变异感的设计可以被视为高审美价值的。古怪的垃圾品鉴于建筑的规划、审批、施工需要层层把关实现，不大可能出现彻底的丑，何况不走寻常路可能本身就是艺术呢（比如争论中的行为艺术）。而画作、曲作的对比背景应该是人的日常生活，所以人们会喜欢欣赏画喜欢听音乐，我想这个指标可能需要做改进。&lt;/p&gt;
+&lt;p&gt;从这个指标出发，那么研究空间就大了。我抛砖引玉一个：&lt;/p&gt;
+&lt;p&gt;现在的城市建筑都由设计院、建筑事务所设计。最终整个城市或某个空间区域分布里的总设计度 $V = \sum v$ 与它们花费的总设计费用 $ C = \sum c$ 的比值 $ \zeta = \frac{V}{C}$ 表示了一单位费用下产生的艺术效用，称作 $ conservative\ factor \ \zeta$  保守度——因为建设过程是甲乙双方协商的结果，文化保守的地区在变异程度上要弱于开放的地区，可能也是人均 GDP 高的地区。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Can I Update in Time</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.15/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.15/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;更新之谜 
+    &lt;div id=&#34;更新之谜&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e4%b9%8b%e8%b0%9c&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（发现真是很久没有更新这么困难了！很难说是自己不去动脑思考了还是对内容的要求变高了……于是这周来试着模型化一下这件事，但我并未给出解答）&lt;/p&gt;
+&lt;p&gt;我们把 $T$ 记两个星期五之间的一个更新区间。idea 的到来视作 Poisson 过程，其参数为 $\lambda$ 。在产生一个 idea 之后，我会花费一定的时间思考以判断和调整其价值。我们假设 idea 们都具有一个 unknown 的 actual quality $g$ ，服从指数分布 $ f(g) = \frac{1}{g_e} e^{-\frac{g}{g_e}}， where\ g_e = E(g)$ 。（准确来说应该是两者独立，$dt$ 时间段内产生质量 $g$ 附近 $dg$ 元段的 idea 的概率是 $\lambda f(g)dtdg$ ）刚产生时我对它的认知为 $g(0)$，其后如果花的思考时间 $t_k$ 越多，对其的估计也能越准，即 $g(t) \sim \mathcal N(g, \sigma^2(t)),\ where\ \sigma^2(t)=\sigma_0^2e^{-\alpha t}$ （有待商榷，因为我的认知大概是连续光滑变动的，但或许我可以设计一个合适的随机过程使得累积量满足这样的正态分布）。我可以根据自己的 strategy 随时终止对此 idea 的思考和研究（要么感觉不错很有价值就写这个了，要么感觉价值很低算了算了）。如果没有达到标准，在 $t_1 + t_{k1}$（$t_1$ 为产生用时，满足指数衰减）之后我可以继续等待 $t_2$ ，并对其进行思考。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Theory of lazing in military training</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.01/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.01/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;军训偷懒学 
+    &lt;div id=&#34;军训偷懒学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%86%9b%e8%ae%ad%e5%81%b7%e6%87%92%e5%ad%a6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;欢迎你来看这篇军训偷懒指导！我想你心里已经为偷懒找好了理由甚至做出了哲学分析，那么我们这里抛开事实态度不谈，从技术的角度试着研究一下。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;原则：敌进我退，敌退我进。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;按照孙子“不战而屈人之兵”的理论，能在约架前一天用泥头车创死对方就绝不应约，能在军训训练前解决军训就绝不留到上场。应充分阅读请假和减训规则并最大化漏洞，还可以在训练中场休息时以各种名义一去不复返。&lt;/p&gt;
+&lt;p&gt;而训练过程中我将内容其分为三个门类：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;军训技巧学&lt;/em&gt;：1. 使用厚厚的鞋垫或用来垫的物体，还可以使用硬硬的东西避免踩鞋 2. 前倾，但是动态——指可以来回前后倾倒，甚至引发教官对你的关心 3. 利用观测漏洞动手动脚，例如双脚向外折开休息 4. 表现出很严肃对待但实在很愚笨的样子 5. 喊话时滥竽充数，即挤眉弄眼扯喉咙，表现出声嘶力竭的样子&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;军训观测学&lt;/em&gt;：来考虑一下当我们视野里没有教官的时候是否可以乱动。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.1%282%29.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（人眼具有约$\it 120^{\circ}$的视野张角）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;先假设所有人站成一个标准的方阵。我们把每个人看成一条线光源：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.1.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;（共 $m_f+m_b+1$ 行 $n_l+n_r+1$ 列）&lt;/p&gt;
+&lt;p&gt;简化起见我们认为教官没有离方队那么近，其视野能够覆盖整个方队且面向方队，即能捕捉到视野内的动态。鉴于光路可逆，我们不予讨论前向$120^{\circ}$内的视角。每个线光源的两端与我们观测点 $(x, y)$ 的连线的角度之间即是遮挡域，我们逐一计算出各个人的遮挡域并取出交集。&lt;/p&gt;
+&lt;p&gt;计算过程以伪代码展示：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for i,j in (-n\_l,-1)|(1,n\_r),(-m\_b,-1)|(1,m\_f): # 遍历其他所有人
+theta\_r = atan2(j*h-y,i*l+d/2-x) # 四象限反正切(0-2pi)
+theta\_l = atan2(j*h-y,i*l-d/2-x)
+thetas.append([theta\_l,theta\_r])
+
+thetas = integrate(thetas)
+prob = (countangle(thetas,0,pi/6)+countangle(thetas,5*pi/6,2*pi))*3/(4*pi) # 计算平均概率
+
+func integrate(): # 合并有重叠的区间
+sort the theta intervals by the left side and then exam if there is overlapping and integrate each by each.
+
+func countangle(): # 计算在指定范围内的区间们的总长
+calculate the length of each interval and add then together.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（可以预见，在具有一定人数且人靠内部的情况下，偷偷动动手是大概率不会发现的。一般教官要求的参数：$h=l=75cm$（左右转后一致），$l-d = 10cm\ 即\ d=65cm$。为了方便继续研究，$(x,y)$ 用以表示相对人中心一定偏移处的动作影响，如左手在腿边拨动手指应取 $(-32.5,0)$）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Choices at traffic lights</title>
+      <link>http://localhost:1313/haochen/essays/frivols/rglights/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/rglights/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;最简单的模型 
+    &lt;div id=&#34;最简单的模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9c%80%e7%ae%80%e5%8d%95%e7%9a%84%e6%a8%a1%e5%9e%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;假设城市的道路只有东南西北走向，起点与终点的方向固定。那么从起点到终点的所有最短路径长度都等于 1-范数，转过的角度必为 { 0, 左90, 右90 } 之一。&lt;/p&gt;
+&lt;p&gt;考虑所有红绿灯的计时是独立同分布。假设右转一直可行，直行与左转持续时间相同，为四分之一个周期。那么假设路上的左转数为 x，直行数为 y，右转数为 z，总共转过角度 p = 0/1/-1 for { 0, +90, -90 }，总共经过路口数 n 一定。有小学二年级的方程&lt;/p&gt;
+&lt;p&gt;$$
+\begin{array}{l}
+x - z = p \\
+x + y + z = n
+\end{array}
+$$&lt;/p&gt;
+&lt;p&gt;是一组不定方程。C(1， -2， 1)&lt;sup&gt;T&lt;/sup&gt; 是齐次方程的通解。我们希望总共的等待时间 $T = x + y$ 最小，就是希望 z 最大，x 最大，y 最小，得到一个显然但不是那么有用的结论：我们应该优先选择左转或右转，尽量减少直行。&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;过于理想化的因素 
+    &lt;div id=&#34;过于理想化的因素&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%bf%87%e4%ba%8e%e7%90%86%e6%83%b3%e5%8c%96%e7%9a%84%e5%9b%a0%e7%b4%a0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;然而城市的道路不总是四四方方，不同道路的容量、流量、路况各不相同，不同转向的绿灯持续时间、转向消耗时间、危险性等各不相同，何况红绿灯间未必独立，也未必同规律。因此在路面上常出现以下几种情况。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Meme Alive</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.28/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.28/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;流行的生命机制 
+    &lt;div id=&#34;流行的生命机制&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b5%81%e8%a1%8c%e7%9a%84%e7%94%9f%e5%91%bd%e6%9c%ba%e5%88%b6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我想用一个 Prevalence 流行这个名词来一网打尽所有与人有关会重复出现的事物。后来想起模因论本身就比较契合——可以仿照从生命的角度来解释，但概念可以推的比 meme 更广泛一点，不仅仅是从一个人脑复制到另一个人脑的文化或语言事物（韦氏词典 meme: an idea, behavior, style, or usage that spreads from one person to another in a culture）。 比如一个人经常使用某个梗或沉迷某件事，他会在时间维度上呈现一个流行从兴起到爆发再到衰落的过程，不妨也认为是某种‘流行基因’的增殖。例子可以非常广泛，包括但不限于一项新技术的传播、一首榜单流行歌曲、一个微博热搜、以及传统模因论域中的如 ikun……&lt;/p&gt;
+&lt;p&gt;模因论指出的三要素为保真性 Fidelity、长寿性 longevity、多产性 Fecundity。流行依靠复制而生存，从这点来说其繁殖和生存，与一般生物不同，是强正相关的。但这个繁殖亦即传播有两种，一是本人的重复，二是人与人之间的传播。保真性并不排斥变异，相反流行的不断筛选演变的包装也是其作为生命的一个体现。说是生命的角度本质上仍然源于其繁衍具有生物的形态和过程——如单流行下的逻辑斯蒂方程。同理还可以研究多个流行的竞争和迭代，类似于生态系统中种群的竞争和共存；纳入群体传播的因素和一些统计学上的假定还可以研究群体流行的强度分布、方差的演变，回归得到不同社群的因子参数等等。需要指出的是，完整的演变还应描述种群的衰退，这通常由于时间增长后其激励不足（腻烦）即正反馈下降，从而热搜下跌，流行退流。&lt;/p&gt;
+&lt;p&gt;（&lt;em&gt;实证研究也尚未做。下面是一个简单的开头&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.7.28.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.7.28%282%29.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] Richard Dawkins. The selfish gene. Oxford university press, 2016.&lt;/p&gt;
+&lt;p&gt;[2] Kleber A. Oliveira. Modelling meme popularity with networks. page 3558205 Bytes, 2023. Artwork Size: 3558205 Bytes Publisher: University of Limerick.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Semantic Information</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.14/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.14/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;语义信息量 
+    &lt;div id=&#34;语义信息量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%af%ad%e4%b9%89%e4%bf%a1%e6%81%af%e9%87%8f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;顺着语言统计学讲，自然而然想到一个问题：怎么考察语言风格？是用词、用句、章法结构、信息量吗？这里想讨论一下我们怎么评估一个句子的信息量。&lt;/p&gt;
+&lt;p&gt;一个微观的角度从句子出发：&lt;/p&gt;
+&lt;p&gt;$$
+I = I(主) I(谓) I(宾) + I(定) I(宾) + I(状) I(谓) + I(谓) I(补) + \cdots
+$$&lt;/p&gt;
+&lt;p&gt;这个定义方式保证同样的几个实词，分成两句说和一句说有相同的信息量。&lt;/p&gt;
+&lt;p&gt;虚词应该直接定义为信息量为 0 的词，如 $I(但)=0$ $I(也)=0$。这个角度来说，&amp;lsquo;是&amp;rsquo;不能算虚词。&lt;/p&gt;
+&lt;p&gt;目前认为 $I(是) = I(一定) = 1$、$I(有) = I(存在) = 1$ 而 $I(不是) =  I(一定不) = 0$、$I(可能) &amp;lt; 0$（到底多少还应细化可能的含义才可以确定）&lt;/p&gt;
+&lt;p&gt;以上关键词的信息量推导自众所周知的香农的概念，他的信息量无关语义，这里可以构造出对接的地方。我得到的是 $I(p) = p\log p + p$。&lt;/p&gt;
+&lt;p&gt;容我解释一下，这个负信息量是有一定道理的。&lt;/p&gt;
+&lt;p&gt;$$
+I(它不是红色) = 0 \left\{
+\begin{aligned}
+I(它可能是红色) &amp;lt; 0 \\
+I(而它不是红色) &amp;gt; 0
+\end{aligned}
+\right.
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hype Significance</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.23/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.23/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;显著你的显著 
+    &lt;div id=&#34;显著你的显著&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%98%be%e8%91%97%e4%bd%a0%e7%9a%84%e6%98%be%e8%91%97&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本周打算记录一个发生的小讨论，同时发表一点浅薄的见解）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：我来考你一个问题（双信封悖论）：两个盒子，一个盒子里装的钱是另一个两倍。现在挑了一个打开发现有100元。主持人问你，你要不要换？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：随便。直觉感觉没有差别。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：那我问你另一个盒子的期望是多少？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：(200+50)/2。看上去要换。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：等一下，这个期望是怎么来的，样本空间是什么？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：你说的不对，这个问题有问题。当你认为另一个盒子有50%是200元，50%是50元时候已经默认了（x,2x）是均匀出现的。可是这个问题无法存在一个先验分布。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：你说得对，无限的$\mathbb{Z}^+$上无法定义一个等概率的分布。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：但是你这么想，当两个盒子钱装好后（&lt;strong&gt;固定&lt;/strong&gt;），我随机选一个，那么(200+50)/2是解释的通的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：那我这么想，请问你看到100元获得了什么信息吗？那看到多少钱为什么能作为换不换的依据？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：从信息论的角度你不对。100确实没有用，但两个箱子有互信息，现在另一个箱子对我有一个条件熵。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：我不太理解，感觉不是问题的关键。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：总之我想概率首先并不是一个能简简单单定义下来的东西，这个题目缺失了整个机制发生的背景空间而产生了悖论。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：当你问出换不换时，肯定是想说哪个行动收益更高——这必须重复实验，那么&lt;strong&gt;如何重复&lt;/strong&gt;就成为了关键，可惜问题没说。比如当两个盒子钱装好后，我还是倾向于那个简单计算，换一个。如果是一个有限区域内随机装入钱，我想就是最开始的回答，没有区别（或者像有些回答套了全概率公式）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：我发现这个争论的本质极其类似于传统统计推断里的参数估计，带有哲学色彩。我们都知道有三大流派。如果放到一切（比如这个节目搞了好多遍）金额下，这是Bayes的角度，大家开始强调并追究先验分布。如果是贝叶斯，那我想没必要什么收不收敛，它就有概念叫”广义先验分布“，还经常取1。你的观点跟Fisher是一致的，他的信念学派类似于一个均匀的先验分布，根据测得统计量反导出一个所谓的”信念分布“，于是嚷嚷出了悖论。但，我们最常用的还是Pearson（奈-皮）的理论体系。它的置信区间假定了固定的$\mu$，重复的是构造区间的过程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：假设检验也一样。我必须假定零假设发生，假定盒子装好（x,2x）之后，我再来讨论统计量的分布。那么我想经过一次轮换和不经过不对称是有道理的，前者的比较起点是第一次手里的钱。但主要提出者Fisher并没有告诉我们零假设发生的概率是多少，就像95%的置信区间从来没说它有95%概率包含$\mu$一样。见下。&lt;/p&gt;
+&lt;p&gt;（知乎上也有不少讨论和更高的视角，可惜我（&lt;strong&gt;L&lt;/strong&gt;）现在不会测度论……）&lt;/p&gt;
+&lt;p&gt;我不认为完全搞懂了这个悖论，欢迎薄纱。不过这让我想到了之前在返朴公众号上看的一篇文章&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，正好也指出了&lt;strong&gt;L&lt;/strong&gt;所讲的这件事：How to use significance.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./graph/23.6.23.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;（&lt;em&gt;Nature上发表的联名评论，呼吁摈弃统计显著/不显著的二分思维&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;Mindless Statistics 很明显是危险的，公众号里表示其做过的一项调查显示所有受访人群均有80%-90%以上的人无法正确解读P值和CI。&lt;/p&gt;
+&lt;p&gt;P值无法给出原假设成立的概率，也不应仅仅依靠P值作下论断或判断模型的好坏。过分且片面的追求显著只会招致 p-hacking、publication bias 等等负面现象。&lt;/p&gt;
+&lt;p&gt;这个被忽视的局限性我想反映的跟双信封悖论相差不大。在Two Envelop Problem里大家cannot accept 125&amp;gt;100 with their Bayes&amp;rsquo; eyes，却在Hypothesis Testing里hype their significance p&amp;lt;0.05 like a Fisher。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://mp.weixin.qq.com/s/qBqnbgApI7Wuwv2zIu-8ww&#34;
+    target=&#34;_blank&#34;
+  &gt;https://mp.weixin.qq.com/s/qBqnbgApI7Wuwv2zIu-8ww&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>民科小传</title>
+      <link>http://localhost:1313/haochen/essays/folk-science/</link>
+      <pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/folk-science/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;此文为田松所作上海科学技术出版社 03 年出版的《永动机与哥德巴赫猜想》一书，由我收集文字并勘误，添加了附言与进一步资料。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;第1章 江湖科学在行动 
+    &lt;div id=&#34;第1章-江湖科学在行动&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ac%ac1%e7%ab%a0-%e6%b1%9f%e6%b9%96%e7%a7%91%e5%ad%a6%e5%9c%a8%e8%a1%8c%e5%8a%a8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;20世纪80年代初，我在吉林大学物理系读书时，曾经在一个实验室里看到一篇油印的文章。作者不畏权威，向爱因斯坦提出挑战。事隔已久，其中大部分内容已经忘了。但是，他有一个离奇的论证，令我至今不能忘记。大意如下：&lt;/p&gt;
+&lt;p&gt;爱因斯坦认为光是电磁波，（光是电磁波并不是爱因斯坦提出的——作者注）这是错的。大家知道，收音机是接收电磁波的。可是，用手电筒照射收音机，收音机却没有丝毫反应，这表明收音机没有接收到电磁波信号。（收音机是利用电磁波的中短波波段工作的，我们通常所说的光是指可见光，其波长范围与中短波毫无重叠。显然，作者对光和电磁波这两个概念完全不清楚。——作者注）所以光不是电磁波，所以爱因斯坦错了。&lt;/p&gt;
+&lt;p&gt;从这段文字可以看出，作者缺乏基本的物理常识。印象尤其深刻的是，作者竟然把爱因斯坦简称为“斯坦大师”。这篇文章及其作者一度成为我们宿舍的笑料，我们也称他为“斯坦大师”。但谁也没想到，为了宣传这样的理论，“斯坦大师”可能会付出一生的时间和精力。&lt;/p&gt;
+&lt;p&gt;答曰十年后，我在一家名为“青年科技”的杂志社客串时，编辑部接待了一位来自江西的W先生。W先生十分感激，跑了这么多家单位，终于有人愿意听他倾诉了。当时在场的都是文科出身，没人能听懂他的学说，但能听懂他的生活境遇。W先生在江西一个县城的房地产公司工作，生在1959年，小时候没读过多少书，文革后发奋自学，并在成人自修大学获得了马列主义基础理论专业的大专文凭。W先生热爱科学，把所有的收入都投入到“科学研究”之中。单位同事觉得他有病，家里人也觉得他有病。他很苦恼，然而有信念。编辑部的听众很同情他，觉得他很不容易。&lt;/p&gt;
+&lt;p&gt;由于我是杂志社唯一一位理工科出身的人，他留下的材料自然转到了我的手里。我认真地，艰难地翻阅了这部厚达50页的油印论文《从物质波子到引力子和引力波的研究与预测》。在我看来，他的物理只是还没有达到初中水平。多年以后，我不无嘲讽地写道：“我发现这是一个刻苦的人，一个爱思考的人，一个勇于为事业献身的人，一个对自己所献身的事业几乎一无所知的人。”他认真地从各个角度观察了一根在阳光或者灯光下的玻璃棒，也认真地通过一张纸上的圆孔观察了天空，并发现了很多“物质波子”；他知道很多物理系名词，但是不清楚这些名词的意义。然而，他敢于使用这些词，也敢于创造新名词，他把这些名词连成了句子，坚信这些句子有非凡的意义，比如：&lt;/p&gt;
+&lt;p&gt;在发现了物质波子、引力子、时空间波子、引力波以后，人类的直接理想就是应用他们来客观的。（光的属性在17世纪就曾引起物理学家的争论。牛顿认为光是一种粒子；惠更斯认为光是一种波动。从物质形态上看，波和粒子具有截然不同的特征，甚至可以说是水火不容。后来因为粒子说不能解释光的衍射，波动说被普遍接受。1864年，麦克斯韦提出麦克斯韦方程组，证明光是一种电磁波。1905年，爱因斯坦在解释光电效应时，重新把光描述为粒子。也就是说，光在不同的场合，表现出了不同的特性，有时像波，有时像粒子。这就是所谓的波粒二象性。1923年，法国物理学家路易·德布罗意（Louis de Brogile。1892-1987）提出，也可以用波来描述电子的行为。就是说，电子也具有波粒二象性，而电子是典型的粒子。德布罗意进一步提出，一切物质都具有波的属性。所谓的物质波的概念由此诞生。但是，物质无论是表现为粒子还是表现为波，都是基于物理方程的严格描述而定义的。至于W先生所说的“物质波子”以及“时空间波子”，是他本人虚构的概念。——作者注）科学的改造自身的生命和宇宙环境，据我个人的预见，我认为这些奇特的第四种状态的物质可以在人工设计或制造原素（物质）、生命科学、医药生物工程、宇宙科学、引力波通讯、国防科技以及工农业生产等各个领域掀起的一场真正令人鼓舞的科技与社会革命。这一伟大的科技社会革命的高潮必将在21世纪初期向全人类展示它的汹涌澎湃的巨大气势。为此，我们全人类的真正英雄群体——全世界的科学家们必须而且应该承担起促进这一科技社会革命在20世纪末就即将到来的光荣而艰巨的超时代的历史革命。（本书将引述若干民间科学爱好者的文本，这些文本的语气，行文和用词方式有很多共性，值得注意。——作者注）&lt;/p&gt;
+&lt;p&gt;W先生的观察很像是物理实验，他发现了很多引起他注意的细节，也对这些现象进行了认真的描述，但是他的解释与物理系毫不沾边。我当时很为他付出的精力感到惋惜，也感到困惑。一个人为什么有这么大的耐心和毅力在沙滩上盖楼？&lt;/p&gt;
+&lt;p&gt;现在，十年，二十年过去了，我不知道“斯坦大师”是否已经悬崖勒马，W先生是否找到了安身立命之所。然而，在中国，这样的人并非一个两个，而是成千上万。他们在他们所知道的科学的各个领域进行着顽强的钻研和拼搏，耗费了大量油墨、纸张、键盘、网络空间。他们的兴趣总是集中在一些具有重要话语地位的课题上，在物理学领域，他们关注相对论、量子论、宇宙论等问题，也有一些人热衷于永动机的研制与开发；在数学领域，有一支庞大的哥德巴赫猜想破解队伍；在生物学领域，很多人对进化论情有独钟；也有人致力于地学和心理学等方面的狂想。在所有这些领域，他们都提出超常的创见。他们的自信与无知，他们的刻苦与偏执，都远远地超出了我们的想象。&lt;/p&gt;
+&lt;p&gt;民间科学爱好者（对于这样一群人，我称之为“民间科学爱好者”，简称“民科”。所谓民间科学爱好者（民科），是指在科学共同体之外进行所谓科学研究的一个特殊人群，他们或者希望一举解决某个重大的科学问题，或者试图推翻某个著名的科学理论，或者致力于建立某种庞大的理论体系，但是他们却不接受也不了解科学共同体的基本范式，与科学共同体不能达成基本的交流。总的说来，他们的工作不具备科学意义上的价值。——作者注）在心理特征、行为方式和文本风格等各方面都存在着共性，而其核心的心理特征是偏执：&lt;br /&gt;
+◇坚信自己的所谓科学结论具有非同一般的价值和意义；&lt;br /&gt;
+◇不能与科学共同体甚至社会达成正常的交流；&lt;br /&gt;
+◇也会出现某种妄想的特征（比如把自己到处碰壁解释为权威对小人物的压制，把自己想象成正在被迫害的布鲁诺和伽利略）；&lt;br /&gt;
+◇由于偏执，他们表现出对精神的强烈追求，似乎是最坚定的理想主义者；&lt;br /&gt;
+◇生存能力普遍偏差，而生活的艰苦更加强了他们的悲壮感。&lt;/p&gt;
+&lt;p&gt;民间科学爱好者推广所谓学术成果的方式大体有如下方式：&lt;br /&gt;
+◇写信、上访（对象可能是学术机构、学术杂志、大众传媒、各级官员）；&lt;br /&gt;
+◇直接演讲（通常以大学校园为主要场地）；&lt;br /&gt;
+◇自费出书；&lt;br /&gt;
+◇自建研究所；&lt;br /&gt;
+◇上网。&lt;/p&gt;
+&lt;p&gt;他们的“学术论文”也有一些共性：&lt;br /&gt;
+◇新名词极多，并且这些新名词与科学共同体现有的术语没多少关系；&lt;br /&gt;
+◇逻辑混乱，不知所云；&lt;br /&gt;
+◇常常把一个不大的结论夸张成天大的好事；&lt;br /&gt;
+◇常常发表一些超越具体问题之上的议论，尤其喜欢表达爱国情怀；&lt;br /&gt;
+◇常常把结论建立在未来的可能性上，建立在现有科学不成立的前提上，建立在可能被某人尤其是可能被自己引发的未来科学革命上。&lt;/p&gt;
+&lt;p&gt;此外，从教育程度上看，他们往往没有接受过自己所献身领域的专业训练，也没有通过自学对那个领域达到深入的了解。&lt;/p&gt;
+&lt;p&gt;由于民间科学爱好者的共性，这一群体事实上已经成为现代社会学的研究对象。&lt;/p&gt;
+&lt;p&gt;目前大众媒体及学者对这个群体并没有一个一致的命名。有人称他们为“民间科学家”或者“业余科学家”，他们自己也愿意如此自称。在我看来，他们无论从哪种意义上都当不起“科学家”这个词。也有人开始接受“民间科学爱好者”这个说法，包括某些民间科学爱好者本人。当然，他们是以中性的甚至带有褒奖的含义来使用这个词的，而这个表面上中性的词在我的用法里则有一些嘲讽的味道，很抱歉，这是由于立场的不同。&lt;/p&gt;
+&lt;p&gt;作为一名旁观者，在对一个事件进行分析的时候，使用中性词应该是不言而喻的前提。但是，在讨论社会问题时，绝对的中性常常难以做到。比如医生和病人，“病人”意味着身体上存在异常，并且这些异常是缺陷而不是优点。由于医生本人也可能患病，所以不能说一声比病人优越。在这个意义上，可以认为“病人”是一个中性词。但如果是精神病人，情况则大不相同。这时的前提是：病人是精神异常的人，而医生必须有能力判断这种缺陷，并且本身没有缺陷。的确，在恐怖电影里，我们也经常能看到精神缺陷严重的医生，但是，我们看电影的人都能识别这种缺陷，也都不会认为他是一个合格的医生。事实上，我们都承认，精神疾病是一种不好的心理状态。在这里“精神病人”就不是一个中性词，普通病人通常能够知道自己有病，会主动看医生，而精神病人通常不认为自己有病，他甚至会认为医生有病。在这种情况下，我们每个人只能凭自己的常识判断，哪个是病人，哪个不是病人。&lt;/p&gt;
+&lt;p&gt;用精神病人做比，相信有很多人不赞成，很抱歉，这个比喻虽然极端，但是恰当。&lt;/p&gt;
+&lt;p&gt;在我看来，民间科学爱好者也是一种不好的状态。有些人可能会认为，这是因为我站在了压制他们的科学家的立场上。恰恰相反，我之所以反对，是出自一种真诚的善意。也就是说，如若我有亲戚朋友成了民间科学爱好者，我会竭力劝阻，甚至会痛恨那些支持他的人，因为那些支持和鼓励只会使他病得更重。&lt;/p&gt;
+&lt;p&gt;命名也是处于区分的需要。从表面上看，民间科学爱好者与另外一些人有很多相似之处，这些人也不是专业科学工作者，也喜欢在业余时间从事一些科学活动，但是他们尊重科学共同体的指导，不想一举成名，也不想推翻现有的科学基础，只是想踏踏实实地做一点基本的科学工作，我把这些人叫做“业余科学爱好者”。&lt;/p&gt;
+&lt;p&gt;从中文字面上看，“业余科学爱好者”与“民间科学爱好者”的词义有很多交叉，甚至难以区分。我不准备把它作为一个语文问题深入讨论，而是直接进行命名，就像对一对双胞胎进行命名一样。归根结底，这是对一个已经存在的特殊人群进行命名，而不是根据命名寻找与之相符合的对象。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Homomorphic Observation</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.16/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.16/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;观测同态 
+    &lt;div id=&#34;观测同态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%a7%82%e6%b5%8b%e5%90%8c%e6%80%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;上厕所时想到一个问题（另一个问题是为什么我在厕所有这么多问题&amp;hellip;）：&lt;/p&gt;
+&lt;p&gt;如果我是一个害羞的尿频患者，我不想让人发现我尿频，但我应该恐慌从而尽量减少去厕所的次数吗？如果别人能发现我尿频——那一定是常常在厕所看到我——那他为什么常常在厕所——他至少比我频。想到这里，害羞的尿频患者可能就长呼一口气放心的频频去厕所了。&lt;/p&gt;
+&lt;p&gt;这是我想说的观测同态。我能发现你经常去厕所的前提是我也经常去厕所。知道我半夜翻墙多半你半夜也在墙边图谋不轨。只有跟对方“一条道子”的人才看得到或者看得懂对方。&lt;/p&gt;
+&lt;p&gt;抽象概括起来，观测和被观测者需要经历同样的过程、要求或处于同样的状态。破解的办法有什么呢？可以寻找获取额外的 “迹 Trace”。比如我老是去上厕所需要走过某窗户边，那人在教室老是看到我上厕所自然就好奇我大致是尿频了。&lt;/p&gt;
+&lt;p&gt;由于经验不足，我暂时一下子想不到观测同态在社会、经济等其他方面的例子（笑），但大概存在更宏大、更富有意义的应用。（欢迎提出）&lt;/p&gt;
+&lt;p&gt;容我再形而上学的追思一下：为什么有观测同态？一个事物，它的了解（少量运作）和运作（大量运作）两个交互状态可能无法区分（也许它的了解具有门槛或需要一定运作，比如我必须进到厕所才能看到你）（运作就是使用、执行等发挥事物原本功能的概念集合体）。但由于缺乏区分身份的信息或 Trace，大家会根据自己所得（自己参与少量或大量运作所观测到的）把少量的人当作了解者而把大量的人自动视作运作者。好比案发现场，有你你就具有嫌疑。而你频频出现在杀人地点附近，你会被路人当作路人，被检查官当作杀人犯。（笑）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>行乞寺记</title>
+      <link>http://localhost:1313/haochen/essays/xingqisiji/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/xingqisiji/</guid>
+      <description>&lt;p&gt;行乞寺原微信寺 传由知州马云建也 为智甫长老主持 诵习功德数十载 香火绵盛 然此后至余已几近泯没 寺内仅一假僧名冯况者 德州人 盖余交游所识也 时暇日 步上肯山 山水钟秀 一寺蔽隐林中 辄异之而拾往 但见寺前手书一联 &amp;lsquo;肯得济过行乞寺 感快慰卧毋仕园&amp;rsquo; 旋况出 相谈甚欢 况言之曰行乞得济之寺 其原书生 后罢儒业 乃至此而安&lt;/p&gt;
+&lt;p&gt;延余入 寺屋三楹 后辟一空地 名为毋仕园 其中清谧 陶然而卧 诚乐也 况欣而邀余共食 行乞寺所享奇肴 呼曰&amp;rsquo;饕餐&amp;rsquo; 其乃何物耶 一曰鸡脍 一曰黍条 更有甚者 盖笔酣墨饱之时 挥毫弃箸 蘸之即食 曰酣饱包 况每言及必大笑 只此毋仕 尽享幽会饕餐也哉 然好景易逝 是筵难再 自余得举 奔波海内而不返焉&lt;/p&gt;
+&lt;p&gt;德基四年秋 余除江州通判 过德州 时人竟皆传行乞寺盛名 顾羁行匆匆 恨亡一见 又三年 迁德州府录事参军 忽而念之 径造其寺 全然一无 未闻况音也 后余访之再 苔蔓丛芜 垣墙不在 隳颓如此 不胜唏吁&lt;/p&gt;
+&lt;p&gt;于是余有叹焉 世之豁达者难寻矣 不得毋仕者芸芸矣 余久受礼俗之教 驰求不息 尚能坐飨一餐 快慰浮生 何其之幸哉 渭滨钓璜 傅岩梦筑 秦市赎羖 圯上神授 此命定之符也 然孔席不暇暖 墨突不俟黔 接淅而行齐 解带而弭楚 何复遑遑乎 濡迹匡时 干唾溺篑 望昆圃而悲窀夕 痛哉 世之格格 奈何因见桎与 紫衣终成土 青史尽作灰 玉簿何须叹 鸳牒只当焚 奈何为所伤乎&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dots and Boxes</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.09/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.09/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;划线围格 
+    &lt;div id=&#34;划线围格&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%88%92%e7%ba%bf%e5%9b%b4%e6%a0%bc&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;这是一个曾在我高中时流行的简单的纸笔小游戏。经过搜索叫做点格棋 Dots and Boxes，由法国数学家Lucas在1891年推出（原本以为没名字，自己取了中文名划线围格和英文名Grid Enclosing）（失望的发现已经是一个经典的Computer Games项目了，但还是坚持完成本篇吧）。游戏进程如下：有 $n \times n$ 大小的网格，双方玩家互相沿着某一条直线划线（一次划一个单位小格的边），当某块区域被合拢围起来时，内部格数归最后一笔合拢的玩家所有，此时该玩家必须再走一步棋（直至没有产生围格为止）。到最后棋面被完全瓜分成若干个完整区域（最外的边线也要一笔笔划上），计算玩家得分（所占格数）判断胜利。&lt;/p&gt;
+&lt;p&gt;这里简单介绍我的一小部分想法：将游戏局面转化为连接图。（便于计算机存储、处理并设计算法；目前网上可以搜到最好的程序是alpha-beta search）&lt;/p&gt;
+&lt;p&gt;从每个边界开口进去，经过所有奇性格（四边中只有两条边被划过的格子），到达一处格子（小于等于一条边被划过的），称为中心格。中心格用圈表示，圈之间用直线连接，线旁标上连接管的格子长度（0长可不写）。每一步都是cut off一段直线并把其上数字归为己有。若一个圈只有两条线连接了，它将消失并与两边的线联合起来成为新的更长的管。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.6.9.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（右上角笔误，斜线上写1）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;（原谅我有点懒，这之中还有很多定义和定理要详细证明，有时间单独发到research栏目里）&lt;/p&gt;
+&lt;p&gt;（图论及其矩阵的方式并不是很好，鉴于节点会消灭&amp;hellip;）&lt;/p&gt;
+&lt;p&gt;肯定有人想，这个想法很不错啊，为什么不继续？原因同开头——已经有人做过了！Elwyn R. Berlekamp 在[1]的前言中提到，自己在小时候便对点格棋产生了极大的兴趣，随后在当大学教授期间与学生Conway合作共同研究了相关理论[1] [2]。（有时间我再比较一下理论的异同）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;reference&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] Berlekamp, Elwyn R. &lt;em&gt;The dots and boxes game: sophisticated child&amp;rsquo;s play&lt;/em&gt;. CRC Press, 2000.&lt;/p&gt;
+&lt;p&gt;[2] Berlekamp, Elwyn R., John H. Conway, and Richard K. Guy. &lt;em&gt;Winning Ways for Your Mathematical Plays, Volume 3&lt;/em&gt;. CRC Press, 2018.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Introduction to Roll Theory</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.05.26/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.05.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;选课学导论 
+    &lt;div id=&#34;选课学导论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e9%80%89%e8%af%be%e5%ad%a6%e5%af%bc%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（或许可以更广一些，所有带有一定公开机制、多人参与、多个选项且选项非全同的 game 都属于摇号论 roll theory 的研究范围，如房地产摇号、购车摇号、升学摇号等等）&lt;/p&gt;
+&lt;p&gt;鉴于🥚的绩点制度（省略一万字），如何选好课对于🥚的学生来说显得尤为重要。按照我目前（完全不成熟）的理论，分为三轮的选课只讨论第一轮。第二轮主要是开始那一刻一哄而上（可以视为是一种无 opening 的 roll，roll 的是网速），跟第三轮一样都有容量人数限制，不存在 roll 的过程。&lt;/p&gt;
+&lt;p&gt;这里空间太小，我只分享一些最初的想法。我们把一轮选课的 roll 机制视作单次的等注的完全的可以无限更改的 roll（必修课的模型符合程度会更高，毕竟有些选修课可能最后直接就不上了），每个人有一个预先的知识/信息（这个老师怎么样？）$u_{0i}$ 表示$i$从1到n的所有 choices 的 priori scores，在 opening 即信息公开、众人博弈阶段的人数和课程容量分别为 $x_i$ 和 $c_i$，这个预选概率为 $p_i = c_i / x_i$（可以大于1），它同样对决策起到影响——信息既有自己找的，也有通过人数反映的（从众？）——很明显不同人对二者偏倚程度不同，给出一个 $s$ 以描述偏向 $p_i$ 的程度。那么 posteriori scores 可以是一个函数 $f(u_{0i},p_i,s)$ ，它带来的预期收益还要乘以roll上概率的作用——按照行为心理学（行为经济学），来一个概率加权函数 $P(p_i)$ 是比较合适的（具体形式自行参考），如果简便起见直接理性人假设（大学选课还算接近？）那么就等于 $p_i$。$f(u_{0i},p_i,s)$ 我暂时未经考证的猜测作 $f = u_{0i}^{1-s} p_i^s$。&lt;/p&gt;
+&lt;p&gt;那么每个人可以近似的认为追求效用最大化 $ u_i = f(u_{0i},p_i,s) P(p_i)$（注意乘法是未经考虑的），$\mathop{max}\limits_i \ u_i$ 的 choice $i = i^*$。进一步如果时间足够，可以解出群体的稳态解（或许不止一个）并视为达到稳态。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Moments Entropy</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.05.19/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.05.19/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;朋友圈熵 
+    &lt;div id=&#34;朋友圈熵&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9c%8b%e5%8f%8b%e5%9c%88%e7%86%b5&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;身边似乎有无数持续的或快或慢的 random number generator，朋友圈只是其中之一。它能够在 0-24h 内的时间中随机性的产生新的朋友圈——当然，这取决于不同人的偏好和他的好友的偏好（以及屏蔽某些好友朋友圈的偏好）。或许傍晚时分和饭点的朋友圈数量比较密集。于是乎每个人都可以给出自己的朋友圈（微分）熵 $H = \int p(t) \log p(t) dt$ 那么互信息 $I(x;y)$，不能说（几乎可以说）是两人共友的程度，也至少是别人朋友圈与你相仿的程度。还可以用相对熵量化各个朋友圈之间的距离，再做聚类，实现朋友圈画像的提取。（不过，以上并未考虑朋友圈的内容，我想可以增加一个维度的变量以表示朋友圈的各个类型，具体操作在此略去。）&lt;/p&gt;
+&lt;p&gt;（好吧，其实我觉得即使泊松过程也比这个好……）&lt;/p&gt;
+&lt;p&gt;还没完！这似乎是一个相当大且复杂的话题——一个邻接矩阵的有向图结构上附加了一定的发朋友圈概率发布和一定的刷朋友圈概率分布和因人而异的一定的点赞概率分布。例如研究点赞时间距朋友圈发出时间的分布（朋友圈点赞熵），别人给别人点赞后给你现在朋友圈点赞的概率分布……&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Style Guide for Python Code</title>
+      <link>http://localhost:1313/haochen/essays/pypep8/</link>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/pypep8/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1  Lines and Indentation 
+    &lt;div id=&#34;1--lines-and-indentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1--lines-and-indentation&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;每个语句独占一行  不要在行尾使用分号，不建议复合语句（用分号将几个命令放在同一行）&lt;br&gt;
+有时可以将极简单的 &lt;code&gt;if&lt;/code&gt; &lt;code&gt;for&lt;/code&gt; &lt;code&gt;while&lt;/code&gt; &lt;code&gt;def&lt;/code&gt; 等写在同一行上（无 &lt;code&gt;else&lt;/code&gt; 子句时）&lt;/p&gt;
+&lt;p&gt;行长不超过80个字符，以下情况除外：1.长的导入模块语句 2.注释里的URL&lt;/p&gt;
+&lt;p&gt;不应用反斜杠连接行；建议利用圆括号（包括方括号和花括号）隐式的连接行&lt;br&gt;
+若含有二元运算符，建议在其前断行&lt;br&gt;
+有结构的序列可以分行写（注意缩进），末尾括号可以选择齐平或不缩进&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;This is Python&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;s2&#34;&gt;&amp;#34;Then continue&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;s2&#34;&gt;&amp;#34;Do not use &amp;#39;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; at the end of each line&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;s2&#34;&gt;&amp;#34;Strings can add in this way, omitting the plus sign&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;income&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gross_wages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;taxable_interest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dividends&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qualified_dividends&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ira_deduction&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;student_loan_interest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;my_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Or it may be lined up under the first character of the line.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some_function_that_takes_arguments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;f&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当多个语句不能隐式连续时，反斜杠仍是可以接受的&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

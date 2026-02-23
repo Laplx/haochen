@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic System on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/dynamic-system/</link>
+    <description>Recent content in Dynamic System on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/dynamic-system/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Love in Evolution and Equilirium</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.03/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.03/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;暧昧：进化与均衡 
+    &lt;div id=&#34;暧昧进化与均衡&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9a%a7%e6%98%a7%e8%bf%9b%e5%8c%96%e4%b8%8e%e5%9d%87%e8%a1%a1&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本周分享的算是一个失败的建模，但话题有趣嘿嘿）&lt;/p&gt;
+&lt;p&gt;这个模型描述了两个个体（男女）在暧昧阶段的互动（博弈）。不过博弈可能给人感觉怪怪的——原因是我们这里假设两人都在努力最大化自己的关于爱的效用，并规划和调整自己的做法。&lt;/p&gt;
+&lt;p&gt;$t$ 时刻博弈双方的状态记作 $x(t)=(x_1(t), x_2(t)) \in [0,1]^2$ ，表示男方和女方的爱意。同时他们的行动（一些或直白或隐晦的示爱的方式）$a(t)=(a_1(t), a_2(t)) \in [0,1]^2$ ，其中 $0$ 代表没有示爱，$1$ 代表直球表白。当然对于未来，我们对时间价值做了一个折现率 $r$ 。&lt;/p&gt;
+&lt;p&gt;状态过程（dynamics）：&lt;/p&gt;
+&lt;p&gt;$$
+\dot{x_1} = (\frac{a_2}{a_1}-\delta)x_1 \\
+\dot{x_2} = (\frac{a_1}{a_2}-\delta)x_2
+$$&lt;/p&gt;
+&lt;p&gt;目标（optimal control）：&lt;/p&gt;
+&lt;p&gt;$$
+U_i = \max\limits_{a} \int_0^T x_i(t)e^{-rt}dt + D(x(T))
+$$&lt;/p&gt;
+&lt;p&gt;（理论上应加上 $\lim\limits_{T\rightarrow \infty}$；这样终态效用 $D$ 就比较直接，比如或许是一个狄拉克函数，只在未来能配对成功的 $(1,1)$ 点取到无穷）&lt;/p&gt;
+&lt;p&gt;但爱情真是一个复杂的东西（笑），高冷人设和舔狗人设的效用函数大概率是非常不一样的。我们这里仅仅设想一种 Platonic Love，有着逻辑清晰简单的个体爱意作为效用——即自我的爱意就是感受到的幸福。并且这个爱意随着双方对白的互动可以得到增强和减弱；从式子可以看到真正影响人的是比值 $\frac{a_1}{a_2}$，对方超额的行为才能进一步增加你的爱意并引发你的进一步互动（我经过深思熟虑认为导数比值 $\frac{\dot{a_1}}{\dot{a_2}}$ 更为合适，但接下来的解析将过于复杂）；同时设置了一个“折旧率” $\delta$ 作为没有足够互动之后与日俱减的爱情（想来有人会说……君子之交淡如水）。&lt;/p&gt;
+&lt;p&gt;好的那我们继续，构造哈密顿量&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{H} = \nabla_x V \cdot \dot{x}(t,x(t),a(t))+u_i(t,x(t),a(t))\\
+= x_1(\frac{a_2}{a_1}-\delta) \frac{\partial V}{\partial x_1}+x_2(\frac{a_1}{a_2}-\delta) \frac{\partial V}{\partial x_2}+x_i(t)e^{-rt}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

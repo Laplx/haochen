@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/misc/</link>
+    <description>Recent content in Miscellaneous on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Infinite Turing Machine</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
+    &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a0%e9%99%90%e5%9b%be%e7%81%b5%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本篇内容倒是很久以前就酝酿在脑子里了……只是一个乱七八糟的猜想，请当我是疯子罢……我发誓再也不搞了，这样下去要变民科叻）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./24.1.26.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;人类已经有很多关于超计算机的设想（超越图灵屏障），并对人脑是否可由机器模拟这类问题悬而未决。&lt;/p&gt;
+&lt;p&gt;我想试探性把可计算性和不可计算性（不完全地）对偶起来。我认为二者是可以互相涌现的。因此饼的右半部分需要定义一个新的称作无限图灵机 ITM（Infinite Turing Machine），它可以是有无限个带的图灵机、带有概率论意义上的随机的图灵机，或是无限个确定图灵机组成的网络（需要一个函数 $F$ 来刻画其中的输入输出连结关系），我认为它们是等价的（!）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Church-Turing Thesis:&lt;/strong&gt; A function can be calculated by an effective method if and only if it is computable by a Turing machine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dual Church-Turing Thesis:&lt;/strong&gt; A relation can be understanded by an effective way if and only if it is realized by a infinite Turing machine.&lt;/p&gt;
+&lt;p&gt;$RE$ 表示全部图灵可识别语言（Chomsky 形式语法 type-0），$TE$ 表示 Turing Emergenable（大概需要一个自然语言的语法层级），全部图灵可涌现识别的语言。对应通用图灵机 $\mathcal{U}$ 的为通用无限图灵机 $\tilde{\mathcal{U}}$。（由于至少一种图灵机 $M_\infty$ 有无限个，我们需要指明输入参数、算法指派的模式作为在无穷网络上的输入。）不仅 $ \tilde{\mathcal{U}} = F(\mathcal{U})$，$\mathcal{U} = F(\tilde{\mathcal{U}})$​ 亦成立。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Regression on Channel</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
+    &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%9e%e5%bd%92%e5%9c%a8%e4%bf%a1%e9%81%93%e4%b8%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（这是一个很蠢的想法……可以来抠一下是否成立或者说条件在哪里）&lt;/p&gt;
+&lt;p&gt;我们假想我们做的回归 $Y$ 对 $X$ 其实由一个高斯信道 $X\rightarrow Y$ 把控。如果事实上机制就是这样，那么估计的信道容量会趋向真实值 $\hat{C}\rightarrow C=-\frac{1}{2}\ln(1-R^2)$，这也是最大可能达到的码率——这里就有事了，我们正是依靠$X$的行为传递的信息去判别$Y$​。&lt;/p&gt;
+&lt;p&gt;若连续变量 $X$ 确实按照高斯分布，那么理论上我们能无限量的发出信息；但这并没有用，鉴于信道的限制，我们相当于以至少存在 $D_{min}=\sigma_X^2(1-R^2)$ 的均方误差进行测量。（$R(D)=\frac{1}{2}\ln\frac{\sigma_X^2}{D}&amp;lt;C$）&lt;/p&gt;
+&lt;p&gt;如果形式的分组（就像处理微分熵那样），那么我们有 $\lfloor \frac{1}{\sqrt{1-R^2}}\rfloor$ units。于是相关系数 $R\ge \frac{\sqrt{3}}{2}=0.866$ 尚才1个bit的定性判断。否则在样本量趋向于无穷时候，结果落在典型集中的概率会趋向于0，亦即此时用以预测其实跟打奖没什么区别呃呃。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Can I Update in Time</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.15/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.15/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;更新之谜 
+    &lt;div id=&#34;更新之谜&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9b%b4%e6%96%b0%e4%b9%8b%e8%b0%9c&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（发现真是很久没有更新这么困难了！很难说是自己不去动脑思考了还是对内容的要求变高了……于是这周来试着模型化一下这件事，但我并未给出解答）&lt;/p&gt;
+&lt;p&gt;我们把 $T$ 记两个星期五之间的一个更新区间。idea 的到来视作 Poisson 过程，其参数为 $\lambda$ 。在产生一个 idea 之后，我会花费一定的时间思考以判断和调整其价值。我们假设 idea 们都具有一个 unknown 的 actual quality $g$ ，服从指数分布 $ f(g) = \frac{1}{g_e} e^{-\frac{g}{g_e}}， where\ g_e = E(g)$ 。（准确来说应该是两者独立，$dt$ 时间段内产生质量 $g$ 附近 $dg$ 元段的 idea 的概率是 $\lambda f(g)dtdg$ ）刚产生时我对它的认知为 $g(0)$，其后如果花的思考时间 $t_k$ 越多，对其的估计也能越准，即 $g(t) \sim \mathcal N(g, \sigma^2(t)),\ where\ \sigma^2(t)=\sigma_0^2e^{-\alpha t}$ （有待商榷，因为我的认知大概是连续光滑变动的，但或许我可以设计一个合适的随机过程使得累积量满足这样的正态分布）。我可以根据自己的 strategy 随时终止对此 idea 的思考和研究（要么感觉不错很有价值就写这个了，要么感觉价值很低算了算了）。如果没有达到标准，在 $t_1 + t_{k1}$（$t_1$ 为产生用时，满足指数衰减）之后我可以继续等待 $t_2$ ，并对其进行思考。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Meme Alive</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.28/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.28/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;流行的生命机制 
+    &lt;div id=&#34;流行的生命机制&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b5%81%e8%a1%8c%e7%9a%84%e7%94%9f%e5%91%bd%e6%9c%ba%e5%88%b6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我想用一个 Prevalence 流行这个名词来一网打尽所有与人有关会重复出现的事物。后来想起模因论本身就比较契合——可以仿照从生命的角度来解释，但概念可以推的比 meme 更广泛一点，不仅仅是从一个人脑复制到另一个人脑的文化或语言事物（韦氏词典 meme: an idea, behavior, style, or usage that spreads from one person to another in a culture）。 比如一个人经常使用某个梗或沉迷某件事，他会在时间维度上呈现一个流行从兴起到爆发再到衰落的过程，不妨也认为是某种‘流行基因’的增殖。例子可以非常广泛，包括但不限于一项新技术的传播、一首榜单流行歌曲、一个微博热搜、以及传统模因论域中的如 ikun……&lt;/p&gt;
+&lt;p&gt;模因论指出的三要素为保真性 Fidelity、长寿性 longevity、多产性 Fecundity。流行依靠复制而生存，从这点来说其繁殖和生存，与一般生物不同，是强正相关的。但这个繁殖亦即传播有两种，一是本人的重复，二是人与人之间的传播。保真性并不排斥变异，相反流行的不断筛选演变的包装也是其作为生命的一个体现。说是生命的角度本质上仍然源于其繁衍具有生物的形态和过程——如单流行下的逻辑斯蒂方程。同理还可以研究多个流行的竞争和迭代，类似于生态系统中种群的竞争和共存；纳入群体传播的因素和一些统计学上的假定还可以研究群体流行的强度分布、方差的演变，回归得到不同社群的因子参数等等。需要指出的是，完整的演变还应描述种群的衰退，这通常由于时间增长后其激励不足（腻烦）即正反馈下降，从而热搜下跌，流行退流。&lt;/p&gt;
+&lt;p&gt;（&lt;em&gt;实证研究也尚未做。下面是一个简单的开头&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.7.28.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.7.28%282%29.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] Richard Dawkins. The selfish gene. Oxford university press, 2016.&lt;/p&gt;
+&lt;p&gt;[2] Kleber A. Oliveira. Modelling meme popularity with networks. page 3558205 Bytes, 2023. Artwork Size: 3558205 Bytes Publisher: University of Limerick.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Homomorphic Observation</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.16/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.16/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;观测同态 
+    &lt;div id=&#34;观测同态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%a7%82%e6%b5%8b%e5%90%8c%e6%80%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;上厕所时想到一个问题（另一个问题是为什么我在厕所有这么多问题&amp;hellip;）：&lt;/p&gt;
+&lt;p&gt;如果我是一个害羞的尿频患者，我不想让人发现我尿频，但我应该恐慌从而尽量减少去厕所的次数吗？如果别人能发现我尿频——那一定是常常在厕所看到我——那他为什么常常在厕所——他至少比我频。想到这里，害羞的尿频患者可能就长呼一口气放心的频频去厕所了。&lt;/p&gt;
+&lt;p&gt;这是我想说的观测同态。我能发现你经常去厕所的前提是我也经常去厕所。知道我半夜翻墙多半你半夜也在墙边图谋不轨。只有跟对方“一条道子”的人才看得到或者看得懂对方。&lt;/p&gt;
+&lt;p&gt;抽象概括起来，观测和被观测者需要经历同样的过程、要求或处于同样的状态。破解的办法有什么呢？可以寻找获取额外的 “迹 Trace”。比如我老是去上厕所需要走过某窗户边，那人在教室老是看到我上厕所自然就好奇我大致是尿频了。&lt;/p&gt;
+&lt;p&gt;由于经验不足，我暂时一下子想不到观测同态在社会、经济等其他方面的例子（笑），但大概存在更宏大、更富有意义的应用。（欢迎提出）&lt;/p&gt;
+&lt;p&gt;容我再形而上学的追思一下：为什么有观测同态？一个事物，它的了解（少量运作）和运作（大量运作）两个交互状态可能无法区分（也许它的了解具有门槛或需要一定运作，比如我必须进到厕所才能看到你）（运作就是使用、执行等发挥事物原本功能的概念集合体）。但由于缺乏区分身份的信息或 Trace，大家会根据自己所得（自己参与少量或大量运作所观测到的）把少量的人当作了解者而把大量的人自动视作运作者。好比案发现场，有你你就具有嫌疑。而你频频出现在杀人地点附近，你会被路人当作路人，被检查官当作杀人犯。（笑）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Moments Entropy</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.05.19/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.05.19/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;朋友圈熵 
+    &lt;div id=&#34;朋友圈熵&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%9c%8b%e5%8f%8b%e5%9c%88%e7%86%b5&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;身边似乎有无数持续的或快或慢的 random number generator，朋友圈只是其中之一。它能够在 0-24h 内的时间中随机性的产生新的朋友圈——当然，这取决于不同人的偏好和他的好友的偏好（以及屏蔽某些好友朋友圈的偏好）。或许傍晚时分和饭点的朋友圈数量比较密集。于是乎每个人都可以给出自己的朋友圈（微分）熵 $H = \int p(t) \log p(t) dt$ 那么互信息 $I(x;y)$，不能说（几乎可以说）是两人共友的程度，也至少是别人朋友圈与你相仿的程度。还可以用相对熵量化各个朋友圈之间的距离，再做聚类，实现朋友圈画像的提取。（不过，以上并未考虑朋友圈的内容，我想可以增加一个维度的变量以表示朋友圈的各个类型，具体操作在此略去。）&lt;/p&gt;
+&lt;p&gt;（好吧，其实我觉得即使泊松过程也比这个好……）&lt;/p&gt;
+&lt;p&gt;还没完！这似乎是一个相当大且复杂的话题——一个邻接矩阵的有向图结构上附加了一定的发朋友圈概率发布和一定的刷朋友圈概率分布和因人而异的一定的点赞概率分布。例如研究点赞时间距朋友圈发出时间的分布（朋友圈点赞熵），别人给别人点赞后给你现在朋友圈点赞的概率分布……&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

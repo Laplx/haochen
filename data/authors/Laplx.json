@@ -1,0 +1,14 @@
+{
+    "name": "Laplx",
+    "image" : "images/authors/Laplx.jpg",
+    "bio": "几乎处处不可实现",
+    "social": [
+        { "email": "mailto:laplx@foxmail.com" },
+        { "X-twitter": "https://twitter.com/Xaplace" },
+        { "github": "https://github.com/Laplx" },
+        { "stack-overflow": "https://stackoverflow.com/users/30927852/laplx" },
+        { "zhihu": "https://zhihu.com/people/laplace-24-31" },
+        { "reddit": "https://reddit.com/user/Top-Trip-9486" },
+        { "quora": "https://quora.com/profile/Laplace-Xenot" }
+    ]
+}

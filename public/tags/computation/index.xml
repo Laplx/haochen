@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computation on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/computation/</link>
+    <description>Recent content in Computation on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Sun, 14 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/computation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>计算理论</title>
+      <link>http://localhost:1313/haochen/notes/computation/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/computation/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Automaton and Language 
+    &lt;div id=&#34;1-automaton-and-language&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-automaton-and-language&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;computation model, finite automation, &lt;strong&gt;FDA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;transition function&lt;/strong&gt; $\delta:Q\times \Sigma\rightarrow Q$, accept state, languge $L(M)=A$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular language&lt;/strong&gt;, &lt;strong&gt;regular operation&lt;/strong&gt;: union $\cup$, concatenation $\circ$, star $^*$&lt;/p&gt;
+&lt;p&gt;nondeterministic $\epsilon$ &lt;strong&gt;NFA&lt;/strong&gt; $\delta:Q\times \Sigma_\epsilon \rightarrow \mathcal{P}(Q)$&lt;/p&gt;
+&lt;p&gt;$NFA=DFA$&lt;/p&gt;
+&lt;p&gt;$REG$ is closure under regular operation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular expression&lt;/strong&gt; $REX$: $R = a\in \Sigma \text{ or } \epsilon \text{ or } \varnothing \text{ or } R_1\cup R_2  \text{ or } R_1\circ R_2  \text{ or } R_1^*$​&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Infinite Turing Machine</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
+    &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a0%e9%99%90%e5%9b%be%e7%81%b5%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本篇内容倒是很久以前就酝酿在脑子里了……只是一个乱七八糟的猜想，请当我是疯子罢……我发誓再也不搞了，这样下去要变民科叻）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./24.1.26.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;人类已经有很多关于超计算机的设想（超越图灵屏障），并对人脑是否可由机器模拟这类问题悬而未决。&lt;/p&gt;
+&lt;p&gt;我想试探性把可计算性和不可计算性（不完全地）对偶起来。我认为二者是可以互相涌现的。因此饼的右半部分需要定义一个新的称作无限图灵机 ITM（Infinite Turing Machine），它可以是有无限个带的图灵机、带有概率论意义上的随机的图灵机，或是无限个确定图灵机组成的网络（需要一个函数 $F$ 来刻画其中的输入输出连结关系），我认为它们是等价的（!）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Church-Turing Thesis:&lt;/strong&gt; A function can be calculated by an effective method if and only if it is computable by a Turing machine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dual Church-Turing Thesis:&lt;/strong&gt; A relation can be understanded by an effective way if and only if it is realized by a infinite Turing machine.&lt;/p&gt;
+&lt;p&gt;$RE$ 表示全部图灵可识别语言（Chomsky 形式语法 type-0），$TE$ 表示 Turing Emergenable（大概需要一个自然语言的语法层级），全部图灵可涌现识别的语言。对应通用图灵机 $\mathcal{U}$ 的为通用无限图灵机 $\tilde{\mathcal{U}}$。（由于至少一种图灵机 $M_\infty$ 有无限个，我们需要指明输入参数、算法指派的模式作为在无穷网络上的输入。）不仅 $ \tilde{\mathcal{U}} = F(\mathcal{U})$，$\mathcal{U} = F(\tilde{\mathcal{U}})$​ 亦成立。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

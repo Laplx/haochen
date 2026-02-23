@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/data/</link>
+    <description>Recent content in Data on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>打卡软件 Swarm 数据分析报告</title>
+      <link>http://localhost:1313/haochen/essays/swarm/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
+&lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;
+&lt;p&gt;各城市的签到数据包括 8 个字段：用户 id，本地/外地，签到地点 id， 地点类型，地点类型 id，地点经度、纬度，签到时间。
+各城市对应签到的用 户数据包括 6 个字段：用户 id，本地/外地，男/女，签到发布数，照片发布数，好友数。&lt;/p&gt;
+&lt;p&gt;众所周知位置信息具有非常巨大的商业价值。本文仅作了一些初步的整理和观察。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;打卡的对数正态分布&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./SwarmTex/qq.png&#34;&gt;
+&lt;p&gt;&lt;strong&gt;用户偏好的因子模型&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./SwarmTex/fac2_oblique.png&#34;&gt;
+&lt;img src=&#34;./SwarmTex/group.png&#34;&gt;
+&lt;p&gt;&lt;strong&gt;判别本地还是外来&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./SwarmTex/disc.png&#34;&gt;
+&lt;img src=&#34;./SwarmTex/err_f.png&#34;&gt;
+&lt;hr&gt;
+&lt;p&gt;下载链接：&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./SwarmData.zip&#34;&gt;原数据集&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./Swarm.pdf&#34;&gt;完整报告&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./SwarmMatlab.zip&#34;&gt;源码&lt;/a&gt;
+（MATLAB，包含实时脚本、函数及工作区快照）&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

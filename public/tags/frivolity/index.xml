@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frivolity on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/frivolity/</link>
+    <description>Recent content in Frivolity on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/frivolity/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Theory of lazing in military training</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.01/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.01/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;军训偷懒学 
+    &lt;div id=&#34;军训偷懒学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%86%9b%e8%ae%ad%e5%81%b7%e6%87%92%e5%ad%a6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;欢迎你来看这篇军训偷懒指导！我想你心里已经为偷懒找好了理由甚至做出了哲学分析，那么我们这里抛开事实态度不谈，从技术的角度试着研究一下。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;原则：敌进我退，敌退我进。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;按照孙子“不战而屈人之兵”的理论，能在约架前一天用泥头车创死对方就绝不应约，能在军训训练前解决军训就绝不留到上场。应充分阅读请假和减训规则并最大化漏洞，还可以在训练中场休息时以各种名义一去不复返。&lt;/p&gt;
+&lt;p&gt;而训练过程中我将内容其分为三个门类：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;军训技巧学&lt;/em&gt;：1. 使用厚厚的鞋垫或用来垫的物体，还可以使用硬硬的东西避免踩鞋 2. 前倾，但是动态——指可以来回前后倾倒，甚至引发教官对你的关心 3. 利用观测漏洞动手动脚，例如双脚向外折开休息 4. 表现出很严肃对待但实在很愚笨的样子 5. 喊话时滥竽充数，即挤眉弄眼扯喉咙，表现出声嘶力竭的样子&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;军训观测学&lt;/em&gt;：来考虑一下当我们视野里没有教官的时候是否可以乱动。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.1%282%29.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（人眼具有约$\it 120^{\circ}$的视野张角）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;先假设所有人站成一个标准的方阵。我们把每个人看成一条线光源：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.9.1.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;（共 $m_f+m_b+1$ 行 $n_l+n_r+1$ 列）&lt;/p&gt;
+&lt;p&gt;简化起见我们认为教官没有离方队那么近，其视野能够覆盖整个方队且面向方队，即能捕捉到视野内的动态。鉴于光路可逆，我们不予讨论前向$120^{\circ}$内的视角。每个线光源的两端与我们观测点 $(x, y)$ 的连线的角度之间即是遮挡域，我们逐一计算出各个人的遮挡域并取出交集。&lt;/p&gt;
+&lt;p&gt;计算过程以伪代码展示：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for i,j in (-n\_l,-1)|(1,n\_r),(-m\_b,-1)|(1,m\_f): # 遍历其他所有人
+theta\_r = atan2(j*h-y,i*l+d/2-x) # 四象限反正切(0-2pi)
+theta\_l = atan2(j*h-y,i*l-d/2-x)
+thetas.append([theta\_l,theta\_r])
+
+thetas = integrate(thetas)
+prob = (countangle(thetas,0,pi/6)+countangle(thetas,5*pi/6,2*pi))*3/(4*pi) # 计算平均概率
+
+func integrate(): # 合并有重叠的区间
+sort the theta intervals by the left side and then exam if there is overlapping and integrate each by each.
+
+func countangle(): # 计算在指定范围内的区间们的总长
+calculate the length of each interval and add then together.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（可以预见，在具有一定人数且人靠内部的情况下，偷偷动动手是大概率不会发现的。一般教官要求的参数：$h=l=75cm$（左右转后一致），$l-d = 10cm\ 即\ d=65cm$。为了方便继续研究，$(x,y)$ 用以表示相对人中心一定偏移处的动作影响，如左手在腿边拨动手指应取 $(-32.5,0)$）&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

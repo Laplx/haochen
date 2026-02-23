@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}数据背景与分析思路}{2}{}%
+\contentsline {subsection}{\numberline {1.1}数据背景介绍}{2}{}%
+\contentsline {subsection}{\numberline {1.2}数据加工方式与代码介绍}{2}{}%
+\contentsline {subsection}{\numberline {1.3}简要分析思路}{2}{}%
+\contentsline {section}{\numberline {2}签到数据分析}{3}{}%
+\contentsline {subsection}{\numberline {2.1}签到数与地点类型}{3}{}%
+\contentsline {subsection}{\numberline {2.2}签到数与时间段}{4}{}%
+\contentsline {subsection}{\numberline {2.3}签到地点类型与时间段关系}{7}{}%
+\contentsline {subsection}{\numberline {2.4}签到地理热度与时空间距}{9}{}%
+\contentsline {section}{\numberline {3}用户数据分析}{11}{}%
+\contentsline {subsection}{\numberline {3.1}用户特征数分布}{11}{}%
+\contentsline {subsection}{\numberline {3.2}用户特征数与签到地点类型、小时段的相关性}{16}{}%
+\contentsline {subsection}{\numberline {3.3}用户签到特征因子分析}{19}{}%
+\contentsline {subsection}{\numberline {3.4}用户签到特征聚类}{22}{}%
+\contentsline {subsection}{\numberline {3.5}本地与外地用户判别}{22}{}%
+\contentsline {section}{\numberline {4}小结}{23}{}%

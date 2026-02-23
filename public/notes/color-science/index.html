@@ -1,0 +1,1658 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>色彩科学 &middot; Hao Chen&#39;s Blog</title>
+  <meta name="title" content="色彩科学 &middot; Hao Chen&#39;s Blog" />
+  
+  
+  <meta name="keywords" content="Color, Math, Physics, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/haochen/notes/color-science/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/haochen/css/main.bundle.min.782d2421d5c5317cdc02c61f82155e525a77a614c5fa1a9a7b869224bc8a4b5f82f2dfbaf303aec25835bc45f2accef2bacb96ecbb8ce23893017be37ad53294.css"
+    integrity="sha512-eC0kIdXFMXzcAsYfghVeUlp3phTF&#43;hqae4aSJLyKS1&#43;C8t&#43;68wOuwlg1vEXyrM7yusuW7LuM4jiTAXvjetUylA==" />
+  
+  
+  <script type="text/javascript" src="/haochen/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/haochen/js/main.bundle.min.0cc2c97290116f4d497b3ff680f6ed75d78c3f208c3fb6b7b4b7285cb1f711fb0eb48555c3b0c4e25317aee2a5abddb4abae6373e6cc4b824cd2952ee434f30c.js"
+    integrity="sha512-DMLJcpARb01Jez/2gPbtddeMPyCMP7a3tLcoXLH3EfsOtIVVw7DE4lMXruKlq920q65jc&#43;bMS4JM0pUu5DTzDA==" data-copy="复制" data-copied="已复制"></script>
+  
+  
+  
+  <script src="/haochen/lib/zoom/zoom.min.3530c2657381259433194af312ec3d322a97a2ad85661810299757fe793b24c3b8e07ab97fa8e5cf96cff1208f271e75394b6eaa56c2e39e7e2c3ca49fb1921c.js" integrity="sha512-NTDCZXOBJZQzGUrzEuw9MiqXoq2FZhgQKZdX/nk7JMO44Hq5f6jlz5bP8SCPJx51OUtuqlbC455&#43;LDykn7GSHA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/haochen/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/haochen/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/haochen/favicon-16x16.png" />
+  <link rel="manifest" href="/haochen/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/haochen/notes/color-science/">
+  <meta property="og:site_name" content="Hao Chen&#39;s Blog">
+  <meta property="og:title" content="色彩科学">
+  <meta property="og:description" content="Luminance #我们看到颜色是因为物体发出或反射了光。颜色是光在频率和功率上的分布特征。我们知道可见光波段是 380nm - 780nm，由紫经过蓝、绿、黄至红，这是单个波长光在人眼产生的响应。一些物体的颜色是因为它发出了对应波长范围的光，如烧红的铁水、白炽灯丝，它们是热辐射，服从 Kirchhoff 的辐射定律（理想黑体则是 Planck 公式）；此外 LED 显示屏、荧光灯、激光均非热辐射，能量来自于电能、化学反应、跃迁等。更多的物体是吸引了其他波段而反射了特定的颜色；彩色玻璃则是只留下特定颜色的光通过。
+色温指发出与此光相似的光的黑体所具有的温度，根据 Planck 算得黑体辐射光谱，100K - 12000K 大概是红 - 橙 - 黄 - 白 - 浅蓝，因此讨论绿色等颜色的色温是无意义的。常见的有 2800K 白炽灯、5500K 平均日光（如出版）、6500K 国际标准日光白（如显示）等。
+人眼通过视网膜上的视锥细胞（S、M、L，对应峰值响应波长蓝、绿、红）和视杆细胞（Rod）感知光线。人眼有局部适应性，一个颜色缓慢轻微调暗并不一定能察觉；Weber 定律表明，$\frac{\Delta I}{I} \approx \text{Const.}$（1% – 2% 在明视觉下），即变化的感知阈值与背景相关。此外还有亮度适应与色度适应（色恒常性），前者指视杆细胞和视锥细胞会动态调整敏感度，暗处时视杆细胞主导，明处时视锥细胞主导；后者指视锥细胞对特定波长光的敏感性随时间减弱，大脑会自动校正颜色感知，如走到略昏黄的房间里一会后可能会将照得略黄的墙壁认作白色，或长时间看红色东西后转向白墙会看到青色的补色块。
+对于光亮度感知，显然看起来不可能（同功率下）各个波长都一样。因此我们实验测定了明视觉亮度函数（视效函数）$V(\lambda)$，在 $2\degree$视角、明视觉条件下平均人眼匹配不同波长光的明暗感觉得到。这个函数在约 555nm 处取到最大视效 $V_m = V(555\text{ nm}) = 683 \text{ lm/W}$（故人眼对绿光最敏感）；如果我们除以 $V_m$，将该点置一就得到我们常用的视见函数，仍记作 $V(\lambda)$（自然可见是否带这个常数因子不重要，后面自行知道即可）。（暗视觉 $V^\prime_m = V^\prime(507\text{ nm}) = 1700 \text{ lm/W}$）">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="notes">
+    <meta property="article:published_time" content="2025-07-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-12T00:00:00+00:00">
+    <meta property="article:tag" content="Color">
+    <meta property="article:tag" content="Math">
+    <meta property="article:tag" content="Physics">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="色彩科学">
+  <meta name="twitter:description" content="Luminance #我们看到颜色是因为物体发出或反射了光。颜色是光在频率和功率上的分布特征。我们知道可见光波段是 380nm - 780nm，由紫经过蓝、绿、黄至红，这是单个波长光在人眼产生的响应。一些物体的颜色是因为它发出了对应波长范围的光，如烧红的铁水、白炽灯丝，它们是热辐射，服从 Kirchhoff 的辐射定律（理想黑体则是 Planck 公式）；此外 LED 显示屏、荧光灯、激光均非热辐射，能量来自于电能、化学反应、跃迁等。更多的物体是吸引了其他波段而反射了特定的颜色；彩色玻璃则是只留下特定颜色的光通过。
+色温指发出与此光相似的光的黑体所具有的温度，根据 Planck 算得黑体辐射光谱，100K - 12000K 大概是红 - 橙 - 黄 - 白 - 浅蓝，因此讨论绿色等颜色的色温是无意义的。常见的有 2800K 白炽灯、5500K 平均日光（如出版）、6500K 国际标准日光白（如显示）等。
+人眼通过视网膜上的视锥细胞（S、M、L，对应峰值响应波长蓝、绿、红）和视杆细胞（Rod）感知光线。人眼有局部适应性，一个颜色缓慢轻微调暗并不一定能察觉；Weber 定律表明，$\frac{\Delta I}{I} \approx \text{Const.}$（1% – 2% 在明视觉下），即变化的感知阈值与背景相关。此外还有亮度适应与色度适应（色恒常性），前者指视杆细胞和视锥细胞会动态调整敏感度，暗处时视杆细胞主导，明处时视锥细胞主导；后者指视锥细胞对特定波长光的敏感性随时间减弱，大脑会自动校正颜色感知，如走到略昏黄的房间里一会后可能会将照得略黄的墙壁认作白色，或长时间看红色东西后转向白墙会看到青色的补色块。
+对于光亮度感知，显然看起来不可能（同功率下）各个波长都一样。因此我们实验测定了明视觉亮度函数（视效函数）$V(\lambda)$，在 $2\degree$视角、明视觉条件下平均人眼匹配不同波长光的明暗感觉得到。这个函数在约 555nm 处取到最大视效 $V_m = V(555\text{ nm}) = 683 \text{ lm/W}$（故人眼对绿光最敏感）；如果我们除以 $V_m$，将该点置一就得到我们常用的视见函数，仍记作 $V(\lambda)$（自然可见是否带这个常数因子不重要，后面自行知道即可）。（暗视觉 $V^\prime_m = V^\prime(507\text{ nm}) = 1700 \text{ lm/W}$）">
+
+    
+  
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Notes",
+    "name": "色彩科学",
+    "headline": "色彩科学",
+    
+    "abstract": "\u003ch3 class=\u0022relative group\u0022\u003eLuminance \r\n    \u003cdiv id=\u0022luminance\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#luminance\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e我们看到颜色是因为物体发出或反射了光。颜色是光在频率和功率上的分布特征。我们知道可见光波段是 380nm - 780nm，由紫经过蓝、绿、黄至红，这是单个波长光在人眼产生的响应。一些物体的颜色是因为它发出了对应波长范围的光，如烧红的铁水、白炽灯丝，它们是热辐射，服从 Kirchhoff 的辐射定律（理想黑体则是 Planck 公式）；此外 LED 显示屏、荧光灯、激光均非热辐射，能量来自于电能、化学反应、跃迁等。更多的物体是吸引了其他波段而反射了特定的颜色；彩色玻璃则是只留下特定颜色的光通过。\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e色温指发出与此光相似的光的黑体所具有的温度，根据 Planck 算得黑体辐射光谱，100K - 12000K 大概是红 - 橙 - 黄 - 白 - 浅蓝，因此讨论绿色等颜色的色温是无意义的。常见的有 2800K 白炽灯、5500K 平均日光（如出版）、6500K 国际标准日光白（如显示）等。\u003c\/p\u003e\n\u003cp\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003cfigure\u003e\r\n    \u003cimg class=\u0022my-0 rounded-md\u0022 loading=\u0022lazy\u0022 alt=\u0022色温\u0022 src=\u0022.\/%E8%89%B2%E6%B8%A9.png\u0022\u003e\r\n\r\n  \r\n\u003c\/figure\u003e\r\n\u003c\/p\u003e\u003c\/blockquote\u003e\n\u003cp\u003e人眼通过视网膜上的视锥细胞（S、M、L，对应峰值响应波长蓝、绿、红）和视杆细胞（Rod）感知光线。人眼有局部适应性，一个颜色缓慢轻微调暗并不一定能察觉；Weber 定律表明，$\\frac{\\Delta I}{I} \\approx \\text{Const.}$（1% – 2% 在明视觉下），即变化的感知阈值与背景相关。此外还有亮度适应与色度适应（色恒常性），前者指视杆细胞和视锥细胞会动态调整敏感度，暗处时视杆细胞主导，明处时视锥细胞主导；后者指视锥细胞对特定波长光的敏感性随时间减弱，大脑会自动校正颜色感知，如走到略昏黄的房间里一会后可能会将照得略黄的墙壁认作白色，或长时间看红色东西后转向白墙会看到青色的补色块。\u003c\/p\u003e\n\u003cp\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003cfigure\u003e\r\n    \u003cimg class=\u0022my-0 rounded-md\u0022 loading=\u0022lazy\u0022 alt=\u0022光强\u0022 src=\u0022.\/%E5%85%89%E5%BC%BA.png\u0022\u003e\r\n\r\n  \r\n\u003c\/figure\u003e\r\n\u003c\/p\u003e\n\u003cp\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003cfigure\u003e\r\n    \u003cimg class=\u0022my-0 rounded-md\u0022 loading=\u0022lazy\u0022 alt=\u0022人类\u0022 src=\u0022.\/%E4%BA%BA%E7%B1%BB.png\u0022\u003e\r\n\r\n  \r\n\u003c\/figure\u003e\r\n\u003c\/p\u003e\n\u003cp\u003e对于光亮度感知，显然看起来不可能（同功率下）各个波长都一样。因此我们实验测定了明视觉亮度函数（视效函数）$V(\\lambda)$，在 $2\\degree$视角、明视觉条件下平均人眼匹配不同波长光的明暗感觉得到。这个函数在约 555nm 处取到最大视效 $V_m = V(555\\text{ nm}) = 683 \\text{ lm\/W}$（故人眼对绿光最敏感）；如果我们除以 $V_m$，将该点置一就得到我们常用的视见函数，仍记作 $V(\\lambda)$（自然可见是否带这个常数因子不重要，后面自行知道即可）。（暗视觉 $V^\\prime_m = V^\\prime(507\\text{ nm}) = 1700 \\text{ lm\/W}$）\u003c\/p\u003e",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/haochen\/notes\/color-science\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hao Chen"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-12T00:00:00\u002b00:00",
+    "datePublished": "2025-07-12T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-07-12T00:00:00\u002b00:00",
+    
+    "keywords": ["Color","Math","Physics"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1454"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Hao Chen" />
+  
+  
+  
+  
+  <link href="laplx@foxmail.com" rel="me" />
+  
+  
+  
+  
+  <link href="https://github.com/Laplx/haochen" rel="me" />
+  
+  
+  
+  
+  
+
+<script src="/haochen/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/haochen/lib/katex/katex.min.33db995186a4f895643c57d5be16f59f520ffd0f0be5c9cb08ef158536fabdd3581893d7305846a7c83e495376021081ca5d4ad00a44bfe4d640c4917f087a9e.css"
+    integrity="sha512-M9uZUYak&#43;JVkPFfVvhb1n1IP/Q8L5cnLCO8VhTb6vdNYGJPXMFhGp8g&#43;SVN2AhCByl1K0ApEv&#43;TWQMSRfwh6ng==">
+  
+  
+  <script defer src="/haochen/lib/katex/katex.min.cadd45c1af1f44bdaf196dc9b104f1daeb29043f0dc59155ffe22847510a04390a0b7a859400d420a626204f7fc5ddb07c19311de1c66b25e19c2559d3e126a8.js" integrity="sha512-yt1Fwa8fRL2vGW3JsQTx2uspBD8NxZFV/&#43;IoR1EKBDkKC3qFlADUIKYmIE9/xd2wfBkxHeHGayXhnCVZ0&#43;EmqA=="></script>
+  
+  
+  <script
+    defer
+    src="/haochen/lib/katex/auto-render.min.e9b2833d28623d18c071d78ef13e9c79d695122d296af3dbcee7bf1bf6518b0565bab59939267fbc8f5faf696193c20f5caef3e7501969cfb306f6738032730d.js"
+    integrity="sha512-6bKDPShiPRjAcdeO8T6cedaVEi0pavPbzue/G/ZRiwVlurWZOSZ/vI9fr2lhk8IPXK7z51AZac&#43;zBvZzgDJzDQ=="
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+    ], throwOnError: false,
+    trust: true,  // 允许信任命令
+    });"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+  
+  
+  <meta name="theme-color"/>
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a
+      >
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px] z-index-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 padding-main-menu">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/haochen/" class="text-base font-medium text-gray-500 hover:text-gray-900">Hao Chen&rsquo;s Blog</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a
+  href="/haochen/notes/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Notes">
+    Notes
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/papers/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Papers">
+    Papers
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/essays/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Essays">
+    Essays
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/tags/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Tags">
+    Tags
+  </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 padding-top-[5px]">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/notes/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Notes">
+      Notes
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/papers/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Papers">
+      Papers
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/essays/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Essays">
+      Essays
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/tags/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Tags">
+      Tags
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/background-blur.min.4812321520cc2e4cd52bf9137015a55bb6c0b5e66a6b2c96b8654c0ec99be59e8e6425dd838a6fd9bac54000586f37f4a9680bbefaa2aee4601a69e188005cf6.js"
+  integrity="sha512-SBIyFSDMLkzVK/kTcBWlW7bAteZqayyWuGVMDsmb5Z6OZCXdg4pv2brFQABYbzf0qWgLvvqiruRgGmnhiABc9g=="
+  data-target-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/"
+      >Hao Chen&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/notes/"
+      >Notes</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/notes/color-science/"
+      >色彩科学</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        色彩科学
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-12T00:00:00&#43;00:00">July 12, 2025</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/zen-mode.min.2a0a1375509c03daf41c53a9831aa2d560895b7a2528c3eb3b56e7b11a135c7529e49727162a053b6193be8340270a8342f42c69f3d7e262ae54bc248eaac8f5.js"
+  integrity="sha512-KgoTdVCcA9r0HFOpgxqi1WCJW3olKMPrO1bnsRoTXHUp5JcnFioFO2GTvoNAJwqDQvQsafPX4mKuVLwkjqrI9Q=="></script>
+
+<span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title=""
+    data-title-i18n-disable=""
+    data-title-i18n-enable="">
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    
+      <div class="flex flex-row flex-wrap items-center">
+        
+          
+            
+          
+        
+          
+            
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/color/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Color
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/math/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Math
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/physics/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Physics
+  </span>
+</span>
+
+                </span>
+              
+            
+          
+        
+      </div>
+    
+
+    
+    
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row lg:gap-12">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-12 rtl:lg:pr-12 lg:min-w-[240px]">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#luminance">Luminance</a></li>
+        <li><a href="#chromaticity">Chromaticity</a></li>
+        <li><a href="#simple-questions">Simple Questions</a></li>
+        <li><a href="#answers">Answers</a></li>
+        <li><a href="#acknowledgements--further-reading">Acknowledgements &amp; Further Reading</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#luminance">Luminance</a></li>
+        <li><a href="#chromaticity">Chromaticity</a></li>
+        <li><a href="#simple-questions">Simple Questions</a></li>
+        <li><a href="#answers">Answers</a></li>
+        <li><a href="#acknowledgements--further-reading">Acknowledgements &amp; Further Reading</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-screen-lg">
+        
+
+
+
+        <div class="article-content max-w-screen-lg mb-20">
+          
+
+
+<h3 class="relative group">Luminance 
+    <div id="luminance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#luminance" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>我们看到颜色是因为物体发出或反射了光。颜色是光在频率和功率上的分布特征。我们知道可见光波段是 380nm - 780nm，由紫经过蓝、绿、黄至红，这是单个波长光在人眼产生的响应。一些物体的颜色是因为它发出了对应波长范围的光，如烧红的铁水、白炽灯丝，它们是热辐射，服从 Kirchhoff 的辐射定律（理想黑体则是 Planck 公式）；此外 LED 显示屏、荧光灯、激光均非热辐射，能量来自于电能、化学反应、跃迁等。更多的物体是吸引了其他波段而反射了特定的颜色；彩色玻璃则是只留下特定颜色的光通过。</p>
+<blockquote>
+<p>色温指发出与此光相似的光的黑体所具有的温度，根据 Planck 算得黑体辐射光谱，100K - 12000K 大概是红 - 橙 - 黄 - 白 - 浅蓝，因此讨论绿色等颜色的色温是无意义的。常见的有 2800K 白炽灯、5500K 平均日光（如出版）、6500K 国际标准日光白（如显示）等。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="色温" src="./%E8%89%B2%E6%B8%A9.png">
+
+  
+</figure>
+</p></blockquote>
+<p>人眼通过视网膜上的视锥细胞（S、M、L，对应峰值响应波长蓝、绿、红）和视杆细胞（Rod）感知光线。人眼有局部适应性，一个颜色缓慢轻微调暗并不一定能察觉；Weber 定律表明，$\frac{\Delta I}{I} \approx \text{Const.}$（1% – 2% 在明视觉下），即变化的感知阈值与背景相关。此外还有亮度适应与色度适应（色恒常性），前者指视杆细胞和视锥细胞会动态调整敏感度，暗处时视杆细胞主导，明处时视锥细胞主导；后者指视锥细胞对特定波长光的敏感性随时间减弱，大脑会自动校正颜色感知，如走到略昏黄的房间里一会后可能会将照得略黄的墙壁认作白色，或长时间看红色东西后转向白墙会看到青色的补色块。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="光强" src="./%E5%85%89%E5%BC%BA.png">
+
+  
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="人类" src="./%E4%BA%BA%E7%B1%BB.png">
+
+  
+</figure>
+</p>
+<p>对于光亮度感知，显然看起来不可能（同功率下）各个波长都一样。因此我们实验测定了明视觉亮度函数（视效函数）$V(\lambda)$，在 $2\degree$视角、明视觉条件下平均人眼匹配不同波长光的明暗感觉得到。这个函数在约 555nm 处取到最大视效 $V_m = V(555\text{ nm}) = 683 \text{ lm/W}$（故人眼对绿光最敏感）；如果我们除以 $V_m$，将该点置一就得到我们常用的视见函数，仍记作 $V(\lambda)$（自然可见是否带这个常数因子不重要，后面自行知道即可）。（暗视觉 $V^\prime_m = V^\prime(507\text{ nm}) = 1700 \text{ lm/W}$）</p>
+<p>因此我们讲到光的“强度”时本质上存在两套单位系统，物理的和人感知的（radiometric - photometric）。</p>
+<table>
+  <thead>
+      <tr>
+          <th>能量</th>
+          <th>光量</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>J</td>
+          <td>lm·s</td>
+      </tr>
+      <tr>
+          <td>W</td>
+          <td>lm</td>
+      </tr>
+      <tr>
+          <td>W/sr</td>
+          <td>cd</td>
+      </tr>
+      <tr>
+          <td>W/(sr·m²)</td>
+          <td>cd/m², nit</td>
+      </tr>
+      <tr>
+          <td>W/m²</td>
+          <td>lx</td>
+      </tr>
+  </tbody>
+</table>
+<p>关于强度还要提的是 Gamma 校正。我们对信号施加非线性变换 $V_{out} = V_{in}^{\gamma}$。Weber 定律表示，如果我们不矫正，数位或者带宽的利用是不均的，人眼的 $\gamma\approx 0.45$，因此早期 CRT（阴极射线管）显示器设计时实际亮度 $L_{CRT}\sim V_{CRT}^{\gamma_{CRT}}, \gamma_{CRT} = \frac{1}{\gamma}\approx 2.2$。尽管现在使用的 LCD、OLED 等为非 CRT 显示器，内部仍然做了伪 Gamma 仿真，兼容使用近似 $\gamma = 1/2.4$ 幂函数的 sRGB（实为分段函数）的 JPEG、PNG 等图像。</p>
+<p>对于更常见的混合光，我们用 SPD（光谱功率分布，Spectral Power Distribution）$\Phi(\lambda)$ 记录其不同 $\lambda$ 的成分。光通量则可由积分 $\int \Phi(\lambda) V(\lambda) d\lambda$ 得到。</p>
+<p>注意上式有个隐含的假定，实际上可以推的更广，就是 Grassmann 定律：色彩知觉具有线性性，同样的颜色感知可以通过多个光谱的线性组合得到。换句话说，如果两束光在 RGB 下分别是 $(R_1,G_1,B_1)^\prime,(R_2,G_2,B_2)^\prime$，那么他们混合的颜色便为 $(R_1+R_2,G_1+G_2,B_1+B_2)^\prime$。这直接保证了颜色空间是线性空间，因此我们才可以用函数空间内积的方式定义在基色上的坐标 $R = \int \Phi(\lambda) \bar{r}(\lambda) d\lambda$，其中基函数 $\bar{r}(\lambda)$ 记录 $\lambda$ 光对某基色所分配的色度系数。以及注意 Weber 定律反映的是人高层感知上的非线性，Grassmann 仅描述色匹配上线性组合的底层等价性。</p>
+<p>尽管 SPD 的函数空间很大，但我们的视觉只能得到里面三个维度（与三种视锥细胞的响应做内积），这奠定了主流色彩模型是三通道。考虑到部分人可能存在认识的误区，需要指出同样的频谱分布但是光强度不同（SPD 乘一常数倍）的话，是不同的颜色（回想一下自己看晴朗正午时的树叶和阴天傍晚的树叶）。因此很多模型会选择亮度这一维度，而剩下两维便是色度，在 HSV 空间里我们可以很清晰的理解这一点。（有些时候色度被视作饱和度的同义词，有时候颜色甚至指色度，但本文将避免。）</p>
+<p>RGB 空间是我们最熟悉的，分别代理了人眼对三原色的响应。下面这个色环较常用：</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="色环" src="./color_wheel.png">
+
+  
+</figure>
+</p>
+<p>$0\degree, 120\degree, 240\degree$ 为 R、G、B 三个方向，对应的补色 $60\degree, 180\degree, 300\degree$ 分别为 Y（黄色 Yellow）、C（青色 Cyan）、M（Magenta 品红）。印刷普遍使用的 CMYK 模型便是如此，K（Key）为黑色；鉴于其他三色混不出完全的黑且黑色文字较彩图格外多，所以还要使用 K。为什么用 CMYK？注意到  RGB 作为加色模型，适合显示屏通过直接调整三色灯的值发光；而印刷的油墨应吸收各自对应的原色来叠加，即减色模型。转换的步骤如下：如果 RGB 是 $[0,255]$ 先归一化到 $[0,1]$，而后 $C_0 = 1- R, M_0 = 1- G, Y_0 = 1-B$，$K=\min\{C_0,G_0,Y_0\}$，再缩放 $C=\frac{C_0-K}{1-K},G=\frac{G_0-K}{1-K},Y=\frac{Y_0-K}{1-K}$（$K=1$ 则 $C=M=Y=0$）。</p>
+<p>HSV 模型三个坐标分别表示色相/色调（Hue）、饱和度（Saturation）、明度/对比度（Value）。从下面的锥体可以马上理解它的表达方式，每个圆截面都类似一个色环，中轴没有颜色，由黑到白，色环的颜色也逐步变亮。公式为 $V=\max\{R,G,B\},S=1-\frac{\min\{R,G,B\}}{V}$（$R=G=B$ 时 $S=0$），$H$ 则用色环上的向量加法反推角度，可自行查阅。</p>
+<img src="./HSV.png" alt="HSV" style="zoom:40%;">
+<p>注意这里 V 和前面所讲的亮度并不相等；同样还有 HSI、HSL 模型，（Intensity）$I=\frac{R+G+B}{3}$，或 （Lightness）$L=\frac{\max\{R,G,B\}+\min\{R,G,B\}}{2}$；$S$ 的分母也相应改动。</p>
+<blockquote>
+<p>除此之外，视频常用 YUV 格式，介绍可以参见文末的小题目里。</p></blockquote>
+<p>空间是绝对的（由混合光的 SPD 决定每个点），我们对色的定义是相对的。（虽然没人也没必要把大家看着红红的东西重命名为蓝。）你可以指着我看着有点米黄的颜色表示这才是纯白，这样子我们对红绿蓝混成白的红到底需要有多红可能存在分歧，关于同一种光的三色坐标自然也不一样，甚至我们所能表达的空间也不尽相同。</p>
+<p>上面提及的一个问题是基色到底怎么定义（红色应该多红；波长定了强度也要定）？严格的颜色模型需要定义白点基准，白点就是基色各一单位混合而成的颜色，如 $R=255,G=255,B=255$，它到底该是什么颜色决定了各基色的强度。在相机或 Photoshop 里修改白点也被叫做白平衡，常调动 a-b 轴（红 - 蓝轴）和 g-m 轴（绿 - 品红轴），前者（不绝对）$R=R_0(1-\delta),B=B_0(1+\delta)$ 移动色温（常因背景白光打光变化），后者弥补 R 和 B 整体上产生的偏移。</p>
+<blockquote>
+<p>为什么选白色作参考？大概因为其不含色度，对偏色更敏感。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./%E7%99%BD%E5%B9%B3%E8%A1%A1.png">
+
+  
+</figure>
+</p>
+<p>现在的白平衡算法很多，可以参考图像处理的相关资料。最简单的有完美反射（White Patch），假设图中最亮区域为白色，对 $R$ 通道乘以增益 $k_R = \frac{\max\{R,G,B\}}{R_{\max}}$，其余同理；灰度世界（Grey World），假设整幅图的三通道平均值趋于相等，$\text{gray} = \frac{R_{\text{avg}}+G_{\text{avg}}+B_{\text{avg}}}{3}, k_R = \frac{\text{gray}}{R_{\text{avg}}}$，其余同理。</p></blockquote>
+
+<h3 class="relative group">Chromaticity 
+    <div id="chromaticity" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#chromaticity" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>我们想要找到一种方式彻底解决任何颜色的表示问题。前面说的 RGB 并没有清楚的解决，因为我们没有指出各个波长、各种混合光分布在哪里坐标多少（甚至还没指出基色），无论如何进行实验是必要的。</p>
+<p>需要的是颜色匹配实验。$\lambda$ 光到底是什么颜色，我们希望看它由多少量的各基色光构成（至少人眼分不出来为止）。历史：20 世纪 20 年代末，W. D. Wright 和 J. Guild 各做过一次颜色匹配实验；两次实验均独立进行，但结果却惊人的一致。Guild 合并了两个实验的数据，并做了一系列数据增强操作（插值和平滑等），由此产生的色度数据构成了 CIE（国际照明委员会）1931 的一系列决议。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./%E5%AE%9E%E9%AA%8C%E7%A4%BA%E6%84%8F.jpg">
+
+  
+</figure>
+</p>
+<p>上图反映了所讲的颜色匹配的思想。简要概括一下流程：首先确定参考白光，当时使用 NPL（英国国家实验室）的标准白光，它应该由各一个单位的基色组成，我们先匹配它；由此可定义基色单位，注意我们后面只需要得到光圈孔径角的比值即可。接下来用测试光匹配三基色，记录它们的光圈读数；测试光的绝对数量不重要。转换到单位并归一就得到了该测试光的色度系数。</p>
+<p>最终得到了光谱色度系数 $r(\lambda),g(\lambda),b(\lambda)$（且 $r(\lambda)+g(\lambda)+b(\lambda)=1$），Wright 的曲线原稿见图。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./Wright_%E5%8E%9F%E5%A7%8B.png">
+
+  
+</figure>
+</p>
+<p>注意负数是因为我们发现有些颜色光靠相加无法匹配，故在测试光这一侧添加一定基色光以进行匹配，移项后记负值。</p>
+<blockquote>
+<p>事实上，WG 二人原始使用的基色均不为 NPL 标准基色（$\lambda_r$ = 700 nm 的红光，$\lambda_g$ = 546.1nm 的绿光，$\lambda_b$ = 435.8 nm 的蓝光，他们通过一点合成变换的方式让实验近似为 NPL 标准基色做的那样（感兴趣可参考 [1-3]）。</p>
+<p>为什么选这三个做标准基色？$\lambda_g$ 和 $\lambda_b$ 是汞灯谱线，易于生产；人眼在 700 nm 附近一定范围内不敏感，误差较小。</p></blockquote>
+<p>之后还有一件事要讨论，就是 scale/标准化。后面 CIE 1931 使用了 EEW（Euqal-Energy White 等能量白光/理想白光）作为参考白光，它的 SPD 在各波长取常值。那么我们需要做个尺度变换来调整白点。首先引入我们的颜色匹配函数 CMF（Color Matching Functions）：</p>
+<p>$\bar{r}(\lambda)=U(\lambda)r(\lambda),\ \bar{g}(\lambda)=U(\lambda)g(\lambda),\ \bar{b}(\lambda)=U(\lambda)b(\lambda)$</p>
+<p>其中 $U(\lambda)=\frac{V(\lambda)}{L^r r(\lambda)+L^g g(\lambda)+L^b b(\lambda)}$，$L^r, L^g, L^b$ 为三个基色光的单位亮度。可以发现颜色匹配函数的值定义为匹配一单位 $\lambda$ 波长的光的亮度需要多少单位的 r/g/b 基色光。相较于最开始的比例（色度系数）$r = \frac{\bar{r}}{\bar{r}+\bar{g}+\bar{b}}$，这里把总份额重新算进来了。</p>
+<p>利用 Grassmann 定律我们知道任何混合光的坐标（匹配量）$R = \int \Phi(\lambda)\bar{r}(\lambda)d\lambda,\ G = \int \Phi(\lambda)\bar{g}(\lambda)d\lambda,\ B = \int \Phi(\lambda)\bar{b}(\lambda)d\lambda$。</p>
+<p>scale 希望调整 $L^r \rightarrow W_rL^r,\ L^g \rightarrow W_gL^g,\ L^b \rightarrow W_bL^b$，使得新基色光混成 EEW。理解上根据 $\bar{r}$ 的定义，如果单位的亮度扩大了 $W_r$ 倍，那么 $\bar{r}$ 应缩小 $W_r$ 倍，即
+$$
+\bar{r}^\prime = \frac{\bar{r}}{W_r} = \frac{V(\lambda)\frac{r(\lambda)}{W_r}}{W_rL^r \frac{r(\lambda)}{W_r}+W_gL^g \frac{g(\lambda)}{W_g}+W_bL^b \frac{b(\lambda)}{W_b}} = \frac{V(\lambda)r^\prime(\lambda)}{L^{r^\prime} r^\prime(\lambda)+L^{g\prime} g^\prime(\lambda)+L^{b\prime} b^\prime(\lambda)}
+$$
+中间的式子直接告诉我们 scale 色度系数的方法：$r^\prime(\lambda)=\frac{\frac{r(\lambda)}{W_r}}{\frac{r(\lambda)}{W_r}+\frac{g(\lambda)}{W_g}+\frac{b(\lambda)}{W_b}}$，其余同理；本质就添了归一化的分母。EEW 的定义等价于 $\int \bar{r}^\prime(\lambda)d\lambda = \int \bar{g}^\prime(\lambda)d\lambda = \int \bar{b}^\prime(\lambda)d\lambda$，所以匹配函数下方面积的标准化即为理想参考白点的变换。代入这个面积相等方程，或者直接理解便知道 $W_r,W_g,W_b$ 应取 EEW 在旧基色光单位下的分量（只需要三者的比）。如此 scale 后得到的 CMF 即为 CIE 1931 RGB CMF。</p>
+<p>Guild 的实验里他测算的 NPL 标准基色的亮度系数 $L^r_0:L^g_0:L^b_0 = 1:4.404:0.047$，转换后 $L^r:L^g:L^b = 1:4.591:0.060$；下图为 EEW scale 过的色度系数曲线和 CMF 曲线。</p>
+<blockquote>
+<p>实际上 Guild 1931 年论文 [3] 里的值是 $L^r_0:L^g_0:L^b_0 = 1:4.410:0.052$。Broadbent [5] 发现 WG 当时犯了错，500nm 附近存在明显偏差（可能是数据处理技巧的错误），后来他们应该在 CIE 1931 时又订正了但并未公开发表，Broadent 通过逆向工程完整重建了包括平滑、插值、拟合、变换在内的处理过程。</p></blockquote>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./rgb_lambda.png">
+
+  
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./cmf.png">
+
+  
+</figure>
+</p>
+<p>因此我们想测出 Normalized CMF 描述的系数需要设置 rgb 源亮度比 $1:4.591:0.060$，这也等价于设置源功率比 $\frac{L^r}{V(\lambda_r)}:\frac{L^g}{V(\lambda_g)}:\frac{L^b}{V(\lambda_b)} = 72.096 : 1.379 : 1$。</p>
+<blockquote>
+<p>这就解释了 Wiki 里 CIE 1931 color space 词条中莫名其妙冒出的一句 &ldquo;&hellip; the resulting normalized color matching functions are then scaled in the r:g:b ratio of 1:4.5907:0.0601 for source luminance and 72.0962:1.3791:1 for source radiance to reproduce the true color matching functions.&rdquo;</p>
+<p>但 then scaled 和 reproduce true CMF 表意不明，scale CMF and chromaticity functions 的方法我们讲过了，复现的就是这一个 CMF，normalized 就已经 scaled，更不知道 true 和 false CMF 指什么。</p></blockquote>
+<p>小问题：能根据上段得出 ${\bar{r}(\lambda_r)}:{\bar{g}(\lambda_g)}:{\bar{b}(\lambda_b)}$ 吗？</p>
+<blockquote>
+<p>答案：将前式 $72.096 : 1.379 : 1$ 取倒数得到 $0.0041:0.215:0.291$（可自行查表验证）。回顾一下定义，我们其实已经回答了（第一眼看上去会问的）为什么各 CMF 在其基色波长处不等于 1。</p></blockquote>
+<p>$\bar{r},\bar{g},\bar{b}$ 的定义里也可以乘以一常数倍（只在整体缩放三个基向量 $\hat{R},\hat{G},\hat{B}$ 而已），如 $L^r+L^g+L^b$，因为我们常取 $\int \bar{r}(\lambda)d\lambda = \int \bar{g}(\lambda)d\lambda = \int \bar{b}(\lambda)d\lambda = \int V(\lambda)d\lambda$。这是有道理的，乘上之后类似标准化除去了基色亮度的单位，只受 V 的单位影响。第二个好处是此时有 $\frac{L^r}{L^r+L^g+L^b}\bar{r}(\lambda)+\frac{L^g}{L^r+L^g+L^b}\bar{g}(\lambda)+\frac{L^b}{L^r+L^g+L^b}\bar{b}(\lambda)=V(\lambda)$，系数归一，也相当于在亮度上 scale 到了一起。</p>
+<p>注意到 $L^r \bar{r}+L^g\bar{g}+L^b\bar{b} \propto V$，$L^r:L^g:L^b$ 历史上 CIE 真正的做法便是最小二乘把三条 CMF 向 $V(\lambda)$ 拟合得到。</p>
+<blockquote>
+<p>Yuhao Zhu 的博文在这一部分（最后一节）对 Fairman 论文 [4] 的解读出错（此外在论文考古方面也有事实错误）。如果要拟合，总得有以 EEW 为白点的 $\bar{r},\bar{g},\bar{b}$，无论是直接测定还是先测定 $r,g,b$，不可能一开始基色就匹配理想白点（是的话更不需要算了），那么一定要经过 scale 的过程，按他的逻辑这就循环了。所以拟合只是后来者节省精力和误差，而不是本质性的基色光亮度的获取方法。</p>
+<p>并且该节指鹿为马，写的明明是解面积相等方程的内容。即便解方程，如果硬用没有 scale 的 $r,g,b$，列出 $\int \frac{V(\lambda)r(\lambda)}{L^r r(\lambda)+L^g g(\lambda)+L^b b(\lambda)}d\lambda = \int \frac{V(\lambda)g(\lambda)}{L^r r(\lambda)+L^g g(\lambda)+L^b b(\lambda)}d\lambda = \int \frac{V(\lambda)b(\lambda)}{L^r r(\lambda)+L^g g(\lambda)+L^b b(\lambda)}d\lambda$，这个解出来的 L 缺乏意义，因为 $r,g,b$ 根本不是在这一套 L 下测定的。</p></blockquote>
+<blockquote>
+<p>总之上述流程的 scale 或者白点变换一定要做，至于是在 WG 手上已经做了还是 CIE-XYZ 时候做的并不重要，事实我倾向于这是同一件事：Guild 的那篇文章和实验结果于 1931 年才发表，提出 XYZ 方案的 CIE 1931 会议里 Guild 本来就是核心人物。</p></blockquote>
+<p>接下来我们取 $r=\frac{R}{R+G+B},g=\frac{G}{R+G+B},b=\frac{B}{R+G+B}=1-r-g$。对于色度/色品图，我们不关心亮度，因此取占比的坐标是合理的（或者说所以才叫色度图）。</p>
+<blockquote>
+<p>当然，$r \neq \int \Phi(\lambda)r(\lambda)d\lambda$，里面被调整了一个 $\frac{U(\lambda)}{\int \Phi(\lambda)U(\lambda)d\lambda}$。</p></blockquote>
+<p>下图的蓝线为光谱轨迹（spectrum locus），反映了 380nm - 780nm 各单色光的 rgb 坐标，我们将其投影到 rg 平面得到 rg 色度图。</p>
+<img src="./光谱色度轨迹.webp" style="zoom:55%;">
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./rg_chroma.png">
+
+  
+</figure>
+</p>
+<p>注意到有相当一部分区域 $r$ 取负值；色域的下沿刚好位于 r 轴上，这正是 $\bar{g}(\lambda)$ 几乎始终大于 0 的结果。同时图中呈现一个马蹄形，这也告诉我们想用类似 RGB $[0,1]$ 表示全部可见颜色是没戏的（其颜色空间只为内部的一个三角形）；鉴于任意两个可见颜色的凸组合一定也可见，因此人的色域一定为凸集。光谱轨迹通过 $(r,g)=(0,0)$ 于 $\lambda_b$ 435.8 nm，$(0,1)$ 于 $\lambda_g$ 546.1 nm，$(1,0)$ 于 $\lambda_r$ 700 nm；且均等能量点 EEW 位于 $(\frac{1}{3},\frac{1}{3})$。（380nm - 435.8nm 区间 $r$ 和 $g$ 基本无响应，故聚集在原点上。）</p>
+<p>现在我们希望变换一个坐标架，克服负值等数值规格上的缺点；即设计新的三个基函数 $\bar{x},\bar{y},\bar{z}$，$\begin{bmatrix} \bar{x}(\lambda) \\  \bar{y}(\lambda) \\  \bar{z}(\lambda)  \end{bmatrix} = M \cdot  \begin{bmatrix} \bar{r}(\lambda) \\  \bar{g}(\lambda) \\  \bar{b}(\lambda)  \end{bmatrix}$，则 $\begin{bmatrix} X \\  Y \\  Z  \end{bmatrix} = M \cdot  \begin{bmatrix} R \\  G \\  B  \end{bmatrix}$，使得具有如下性质：（同样取 $x=\frac{X}{X+Y+Z},y=\frac{Y}{X+Y+Z},z=1-x-y$，上图中 $C_r,C_g,C_b$ 分别记 $\hat{x},\hat{y},\hat{z}$）</p>
+<ul>
+<li>色域完全包含于 $\hat{x}(1,0),\hat{y}(0,1),\hat{z}(0,0)$ 围成的三角形里。</li>
+<li>$Y$ 表示亮度，即 $\bar{y}(\lambda)=V(\lambda)$。</li>
+<li>EEW 位于 $x=y=z=\frac{1}{3}$。</li>
+<li>设置 $\bar{z}(650\text{ nm})=0$，即 $\hat{x}, \hat{y}$ 连线在此处相切。</li>
+</ul>
+<blockquote>
+<p>上面的罗列概括自 Wiki。关于最后一条，Judd 注意到当时有机会设置 $\bar{z}$ 函数的长波段尾部全为 0，因为 $\hat{g}, \hat{r}$ 连线几乎完全贴合了光谱轨迹，尤其 620 nm - 680 nm。但实际上蓝光在这一段有轻微的负值，故其实是凸出 $-45\degree$直线外的。不过前面提到过人红端分辨率很低，这一节省工作量的替代方法带来的误差不大。</p>
+<p>关于 CIE 1931 决议的记载和 Fairman [4] 并未直接表示这一条件，只是说 $-\frac{100}{99}$ 斜率足以在要求的精度下包围光谱轨迹；同时鉴于精度有限（$\bar{b}$ 的单数字位被舍入误差严重影响）使得 $\bar{z} = 0$ 在一个可考的红波长范围内，这就够了。650 nm 相切的框架可能是后人根据当时（没有计算机）选择的斜率重新确定的结果。</p></blockquote>
+<p>首先我们根据等亮度画出表示 $\bar{y}(\lambda)=\text{Const.}$ 的直线（线性性），其中经过原点的线亮度几乎为 0，称作 alychne（ἄλυχνος，means &ldquo;no light&rdquo; and is coined by Schrodinger）。我们前面已经强调过 $V = L^r \bar{r}+L^g\bar{g}+L^b\bar{b}$（或放缩一个倍数，把尺寸放入 CMF 中）和拟合的方式；准确来讲，alychne 不经过 $(r,g)=(0,0)$，其定义的 $Y=0$ 线为 $0=0.177 r + 0.812 g + 0.011 b$（即系数 $L^r,L^g,L^b$ 归一），代入 $b = 1-r-g$ 即 $0.166r + 0.802g + 0.011 = 0$ 为连接 $\hat{x},\hat{z}$ 的边。选择亮度方程为 $\hat{Y}$ 基色后另两个基色 $\hat{X},\hat{Z}$ 必然在这条线上（故不含亮度）。</p>
+<p>注意直线直接确定了新匹配函数或其乘以一常数。接着再由切线的条件确定第二条边 $\hat{x},\hat{y}$。如果第三条边确定，那么三个交点也随之确定，且均在色域外，完全为数学虚拟。注意 rg 色度图是和为 1 的斜面向 rg 平面的投影，三个基色当然不能线性相关。并且此时自由度并未完全耗尽，直线确定的基函数还各有一个自由度，而亮度 Y 由于直接被定死，系数将直接调节 X 和 Z 满足白点条件即面积相等，从而确定三基色。那么我们（尚有两个自由度）选择第三条边 YZ 尽量接近光谱轨迹，在 r 负值极限 505 nm 附近贴近，不过实际并未切上，留有小的误差空间。（具体选择了 alychne 上 $r = -0.743$ 的点和 $\hat{x},\hat{y}$ 连线上 $r = -1.74$ 的点为交点。）</p>
+<blockquote>
+<p>从矩阵角度来看，9 个未知元，第二行 Y 首先被固定，其次使用 EEW 标准化，则 $M_{11}+M_{12}+M_{13}=M_{31}+M_{32}+M_{33}=1$，还剩 4 个自由度。650 nm 相切的条件（包含一个零阶和一阶条件）再用掉 2 个。</p></blockquote>
+<p>最终得到的变换矩阵为 $M = \begin{bmatrix} 0.49000 &amp; 0.31000 &amp; 0.20000 \\ 0.17697 &amp; 0.81240 &amp; 0.01063 \\ 0.00000 &amp; 0.01000 &amp; 0.99000 \\ \end{bmatrix}$。我们既可以用 $(X,Y,Z)$ 也可以用 $(x,y,Y)$ 等其他常见的坐标系；注意下面是 xy 图，一般默认第三坐标是亮度 Y。把黑体辐射轨迹（Planckian locus）按公式计算后画出来便如图所示，在色度图中从红经过白再到蓝，但不会到达 alychne。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./PlanckianLocus.png">
+
+  
+</figure>
+</p>
+<p>小问题：把若干色度坐标为 $(x_i,y_i)$，亮度为 $L_i$ 的光（$i=1,\dots,n$）混合得到的光色度坐标为？</p>
+<blockquote>
+<p>答案：$x_{\text{mix}} = \frac{\frac{x_{1}}{y_{1}} L_{1} + \frac{x_{2}}{y_{2}} L_{2} + \cdots + \frac{x_{n}}{y_{n}} L_{n}}{\frac{L_{1}}{y_{1}} + \frac{L_{2}}{y_{2}} + \cdots + \frac{L_{n}}{y_{n}}},\  y_{\text{mix}} = \frac{L_{1} + L_{2} + \cdots + L_{n}}{\frac{L_{1}}{y_{1}} + \frac{L_{2}}{y_{2}} + \cdots + \frac{L_{n}}{y_{n}}}$。</p></blockquote>
+<img src="./sRGB.webp" style="zoom:50%">
+<p>可以看到各个颜色围绕 EEW 的排布与常见的色环基本一致。对于现实中的各类色彩模型（如计算机使用的 standard RGB)，严格定义需要给出原色色度坐标 $(x_R,y_R),(x_G,y_G),(x_B,y_B)$、白点 $(x_W,y_W)$（如 sRGB 为 D65，模拟日光，名字来源于其色温 6500K）、Gamma 曲线，以及色域映射（Gamut mapping，将超出色彩空间的颜色映射进来，有 clip, compression 等方式）等（可见于 .icc 配置文件）。</p>
+<blockquote>
+<p>CIE-LAB/CIE L*a*b* 解决了 XYZ 刻画颜色差异的弱点，在其基础上借鉴 MacAdam 椭圆的颜色差异度量，使相同欧式距离有相同的 MacAdam 色差（感知均匀，但并未完全消除扭曲问题）。比如左上方的绿区，标准差椭圆（实验通过观察者将别的颜色调制到认为与测试光相同测定）较大，人眼等距离的分辨力不强，而左下的蓝区椭圆则较小。LCh 是其圆柱表示版。</p>
+<p>L* 表示亮度，a* 轴反映绿色 - 红色，b* 轴反映蓝色 - 黄色；它对 XYZ 进行了非线性变换，具体公式可自行查阅 Wiki。</p></blockquote>
+
+<h3 class="relative group">Simple Questions 
+    <div id="simple-questions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#simple-questions" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="cmfcompare" src="./cmfcompare.png">
+
+  
+</figure>
+</p>
+<p><strong>1.</strong> 上图为 CIE 与 Wright-Guild 测定的颜色匹配函数，WG 使用了 NPL 标准白光作为参考白点，设该白色在 CIE-xyY 下前两个坐标为 $(x,y)$，则其应该符合哪个关系？</p>
+<p>A. $x &gt; \frac{1}{3},\ y &gt; \frac{1}{3}$ B. $x &lt; \frac{1}{3},\ y &lt; \frac{1}{3}$ C. $x &lt; \frac{1}{3},\ y &gt; \frac{1}{3}$</p>
+<p><strong>2.</strong> 人们常使用 YUV 色彩格式（常见于电视和流媒体的视频编码中，YCbCr/YCC 为其数字版），下面是 BT.709 标准（HDTV、Youtube 等）规定的与 sRGB 的转换公式：
+$$
+Y = 0.213 R + 0.715 G + 0.072 B,\ U = \frac{B-Y}{1.856},\ V = \frac{R-Y}{1.575}
+$$
+亦即
+$$
+\begin{bmatrix} R \\ G \\ B \end{bmatrix} = \begin{bmatrix} 1 &amp; 0 &amp; 1.575 \\ 1 &amp; -0.187 &amp; -0.468 \\ 1 &amp; 1.856 &amp; 0 \end{bmatrix} \begin{bmatrix} Y \\ U \\ V \end{bmatrix},\ \begin{bmatrix} Y \\ U \\ V \end{bmatrix} = \begin{bmatrix} 0.213 &amp; 0.715 &amp; 0.072 \\ -0.115 &amp; -0.385 &amp; 0.5 \\ 0.5 &amp; -0.454 &amp; -0.046 \end{bmatrix} \begin{bmatrix} R \\ G \\ B \end{bmatrix}
+$$</p>
+<p>其中 $Y$ 同 CIE-XYZ 一样被设计为亮度，$U$ 和 $V$ 分别为蓝差与红差。关于 YUV 和 XYZ 两个模型在 $Y$ 方向上的基向量 $\hat{Y}$，下面哪句是正确的？</p>
+<p>A. 两个 $\hat{Y}$ 相同，且均不可见，但仅 YUV 的 $\hat{Y}$ 现实中存在</p>
+<p>B. 两个 $\hat{Y}$ 不同，YUV 的可见，XYZ 的不可见，但两者的 $\hat{Y}$ 现实中均存在</p>
+<p>C. 两个 $\hat{Y}$ 不同，YUV 的可见，XYZ 的不可见，但仅 YUV 的 $\hat{Y}$ 现实中存在</p>
+<p><strong>3.</strong> 一个因绿视锥细胞部分缺陷而有红绿色盲症状的人，之前在户外拍摄，当走到白炽灯照明的室内环境后，相机所调整的白平衡会有什么问题？</p>
+<p>A. 照片偏冷青 B. 照片偏暗红 C. 照片偏暖黄</p>
+<p><strong>4.</strong> 鸟类较人多一种视锥细胞（UV 紫外某波段为其响应峰值），现在我们打算制作给鸟看的海报，下面哪句是正确的？</p>
+<p>A. 印刷时仍可以使用 CMYK，只要再补充一种其他吸收性质的油墨</p>
+<p>B. 鸟类色域画在 CIE 色度图里会是一个包含人类色域的更大的凸形，且白点几乎重合</p>
+<p>C. 图像设计时仍需对 UV 通道另外进行 Gamma 校正</p>
+
+<h3 class="relative group">Answers 
+    <div id="answers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#answers" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>1.A 2.C 3.A 4.C</p>
+<p>解答：</p>
+<p>1：参考白点是各一单位基色的混合，由于 WG 的 $\bar{b}(\lambda)$ 较 CIE 的高许多，则 WG 白光的 SPD 曲线应该在蓝光段偏低，亦即偏其补色黄色，故位于理想白的右上方。事实上我们在正文里讲到标准化时故意没有给出 EEW 白光在旧系下分量 $W_r,W_g,W_b$ 的具体数值（等于新旧基色光亮度比值，前文数据可验证），现在可以给出来 $W_r:W_g:W_b = 0.301:0.314:0.385$。可以看到蓝光需要扩大的最多。</p>
+<p>2：包含三个问题：Y 的基向量相等（基色相同）吗？不是的，因为另外两个维度差别挺大。注意存在不同的坐标架但是某方向的分量值一直相等。U 和 V 的基向量均无 CIE-Y 分量（当然，说明它们不可见），故 YUV 的 $\hat{Y}$ 应直接穿过 EEW 的三等分点。YUV 的 $\hat{Y}$ 可见吗？它是 RGB 基色的凸组合，一定可见。XYZ 的 $\hat{Y}$ 已经说过，来自数学虚拟。现实存在吗？当然不可能存在，XYZ 是建立在人感知上的，谁知道那个超绿色的点是什么东西，自然造不出来。顺带一提，从变换式来说 YUV 的单纯形和 sRGB 的单纯形相互交叉，但显然 YUV 的后两坐标会允许负值，故仍与显示器所用的 RGB 保持转换关系（但是 Gamma 不同，YUV 看起来要暗一点）。下图 W、B-W、R-W 分别代表 Y、U、V。</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./XYZ-YUV-RGB.png">
+
+  
+</figure>
+</p>
+<p>3：色温降低，白点黄移，而由于绿色感知的缺陷，摄像者会看到过度的偏红，因此 ab 轴会过度蓝移，同时 gm 轴也可能会补偿不足，残留绿色，故照片偏青和冷色调。</p>
+<p>4：A 选项：CMYK 没有明确它们对紫外频道的吸收性，直接使用该减色模型会出现错乱。B 选项：鸟的色域画不在人的颜色空间里（低一维的狗倒可以），即便是截面，也无法确定依赖人视觉的坐标。并且在更大的波段考虑，人的白点远超鸟类。C 选项：这是显然的。鸟的视细胞也服从刺激的 Weber 定律，但不一定数值与人相同。我们需要对 RGB 再次进行补偿校正，同时紫外新通道也需要按鸟类的 Gamma 做矫正。</p>
+
+<h3 class="relative group">Acknowledgements &amp; Further Reading 
+    <div id="acknowledgements--further-reading" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#acknowledgements--further-reading" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>Papers：</p>
+<blockquote>
+<p>[1] Wright W D. A re-determination of the trichromatic coefficients of the spectral colours[J]. Transactions of the Optical Society, 1929, 30(4): 141.</p>
+<p>[2] Wright W D. A re-determination of the mixture curves of the spectrum[J]. Transactions of the Optical Society, 1930, 31(4): 201.</p>
+<p><strong>[3]</strong> Guild J. The colorimetric properties of the spectrum[J]. Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character, 1931, 230(681-693): 149-187.</p>
+<p><strong>[4]</strong> Fairman H S, Brill M H, Hemmendinger H. How the CIE 1931 color‐matching functions were derived from Wright‐Guild data[J]. Color Research &amp; Application, 1997, 22(1): 11-23.</p>
+<p><strong>[5]</strong> Broadbent A D. A critical review of the development of the CIE1931 RGB color‐matching functions[J]. Color Research &amp; Application, 2004, 29(4): 267-272.</p>
+<p>[6] Broadbent A. Calculation from the original experimental data of the CIE 1931 RGB standard observer spectral chromaticity coordinates and color matching functions[J]. Québec, Canada: Département de génie chimique, Université de Sherbrooke, 2008: 1-17.</p></blockquote>
+<p>Books：</p>
+<blockquote>
+<p><strong>[7]</strong> Akenine-Moller T, Haines E, Hoffman N. Real-time rendering[M]. AK Peters/crc Press, 2019.</p>
+<p>[8] Wright W D. The measurement of colour[J]. 1944.</p></blockquote>
+<p>Misc：</p>
+<blockquote>
+<p>[9] The Colour &amp; Vision Research laboratory and database. <a
+  href="http://www.cvrl.org/"
+    target="_blank"
+  >http://www.cvrl.org/</a>
+</p>
+<p><strong>[10]</strong> How the CIE 1931 RGB Color Matching Functions Were Developed from the Initial Color Matching Experiments. Yuhao Zhu. 2020. <a
+  href="https://yuhaozhu.com/blog/cmf.html"
+    target="_blank"
+  >https://yuhaozhu.com/blog/cmf.html</a>
+</p>
+<p><strong>[11]</strong> A Beginner’s Guide to (CIE) Colorimetry. Chandler Abraham. 2016. <a
+  href="https://medium.com/hipster-color-science/a-beginners-guide-to-colorimetry-401f1830b65a"
+    target="_blank"
+  >https://medium.com/hipster-color-science/a-beginners-guide-to-colorimetry-401f1830b65a</a>
+</p></blockquote>
+<p>尽管我们希望彻底讲清逻辑，但是为了理解仍然会和历史有少许出入。如果对理论的构建过程有特别需求，建议阅读 [4]。</p>
+<p>图片来自 [9-11], Wiki。</p>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/haochen/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
+          integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
+          data-oid="views_notes\color-science\index.md"
+          data-oid-likes="likes_notes\color-science\index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/haochen/notes/game/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >博弈论</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-09-25T00:00:00&#43;00:00">September 25, 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/haochen/notes/numerical/cg/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >共轭梯度法</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-05-20T00:00:00&#43;00:00">May 20, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/share/"
+                title="分享">
+                
+                分享
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/about/"
+                title="关于">
+                
+                关于
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hao Chen
+      </p>
+    
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/haochen/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+    <style>
+    .small-gray-text {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+</style>
+
+
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
+  data-url="http://localhost:1313/haochen/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,91 @@
+/* @font-face {
+    font-family: font;
+    src: url('/fonts/font.ttf');
+} */
+
+/* 更窄的中英文字体优先级：先用拉丁窄体，再回退中文系统字体 */
+html {
+    font-family: "Inter", "SF Pro Text", "Segoe UI", "Hiragino Sans GB",
+        "PingFang SC", "Microsoft YaHei",
+        "Noto Sans SC", "WenQuanYi Micro Hei", sans-serif;
+    font-variant-numeric: proportional-nums;
+    font-variant-east-asian: proportional-width;
+}
+
+body {
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 适度减轻标题和导航字重 */
+#single_header h1,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 700; /* 主题原为 800/900，这里调轻一点 */
+}
+
+header nav a,
+header .menu a,
+header .site-title {
+  font-weight: 500; /* 导航从粗体降一级 */
+  /* font-size: 1.2rem; 见下行 */
+}
+.main-menu nav a { font-size: 1.05rem; font-weight: 500; }
+
+/* 列表页顶层标题（notes/papers/causerie 等）减轻字重 */
+main h1.text-4xl.font-extrabold {
+  font-weight: 700;
+}
+
+/* 列表页（文章卡片/条目）标题再轻一些 */
+.article a .font-bold,
+.article .font-bold {
+  font-weight: 500;
+}
+
+body, .bg-neutral { background-color: #fdfded; }
+
+html.dark body,
+  html.dark .bg-neutral {
+    background-color: #1E293B;
+  }
+
+/* seperating lines */
+hr,
+.prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+border-color: #bfdbfe;
+border-top-width: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+hr,
+.prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    border-color: #bfdbfe;
+}
+}
+
+/* 仅桌面端调宽 & 拉开正文与 TOC 间距，并加分隔线 */
+@media (min-width: 1024px) {
+  /* 主体+TOC 容器的横向间距 */
+  article > section.flex.lg\:flex-row {
+    gap: 2.5rem;            /* 约 40px，按需调大 */
+  }
+
+  /* 右侧 TOC 面板 */
+  .toc {
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    /* border-left: 1px solid rgba(var(--color-neutral-200), 1); */
+  }
+  .dark .toc {
+    border-color: rgba(var(--color-neutral-700), 1);
+  }
+
+  /* 正文最大宽度再放宽一点，避免被 TOC 挤压 */
+  .article-content {
+    max-width: min(1100px, 96vw);
+  }
+}

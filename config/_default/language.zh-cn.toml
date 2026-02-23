@@ -1,0 +1,18 @@
+title = "Hao Chen's Blog"
+
+languageCode = 'zh-cn'
+languageName = '中文'
+
+[params]
+  displayName = '简体中文'
+
+[params.author]
+  name = "Hao Chen"
+  email = "laplx@foxmail.com"
+  # image = "images/authors/author.png"
+  # headline = ""
+  links = [
+    { email = "laplx@foxmail.com" },
+    # { X-twitter = "https://twitter.com/SphereMirror" },
+    { github = "https://github.com/Laplx/haochen" },
+  ]

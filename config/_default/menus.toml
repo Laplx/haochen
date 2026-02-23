@@ -1,0 +1,52 @@
+[[main]]
+  name = "Notes"
+  pageRef = "notes"
+  weight = 10
+
+[[main]]
+  name = "Papers"
+  pageRef = "papers"
+  weight = 20
+
+[[main]]
+  name = "Essays"
+  pageRef = "essays"
+  weight = 30
+
+[[main]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 40
+
+# [[main]]
+#   name = "标签"
+#   parent = "分类"
+  
+#   weight = 31
+
+# [[main]]
+#   name = "作者"
+#   parent = "分类"
+#   pageRef = "authors"
+#   weight = 32
+
+# [[main]]
+#   identifier = "github"
+#   pre = "github"
+#   url = "https://github.com/Laplx/Haochen"
+#   weight = 40
+
+[[footer]]
+  name = "分享"
+  pageRef = "share"
+  weight = 10
+
+[[footer]]
+  name = "关于"
+  pageRef = "about"
+  weight = 20
+
+# [[footer]]
+#   name = "友链"
+#   pageRef = "friends"
+#   weight = 30

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EMW on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/emw/</link>
+    <description>Recent content in EMW on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/emw/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Stokes 公式</title>
+      <link>http://localhost:1313/haochen/notes/stokes/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/stokes/</guid>
+      <description>&lt;p&gt;
+
+假设某界面上下有四束平面电磁波，介质 1 中入射与出射电磁波为 $\vec{E}_{1}, \vec{E}_{1}^{\prime}$，介质 2 中入射与出射电磁波为 $\vec{E}_{2}, \vec{E}_{2}^{\prime}$。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;图片&#34; src=&#34;./graph/Stokes1.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;$$
+\begin{array}{l}
+\vec{E}_{1} = \mathrm{Re}{( \vec{E}_{1} e^{ i \vec{k}_{1} \cdot \vec{r} - i \omega t } )} \\
+\vec{E}_{1}^{\prime} = \mathrm{Re}{( \vec{E}_{1}^{\prime} e^{ i \vec{k}_{1}^{\prime} \cdot \vec{r} - i \omega t } )} \\
+\vec{E}_{2} = \mathrm{Re}{( \vec{E}_{2} e^{ i \vec{k}_{2} \cdot \vec{r} - i \omega t } )} \\
+\vec{E}_{2}^{\prime} = \mathrm{Re}{( \vec{E}_{2}^{\prime} e^{ i \vec{k}_{2}^{\prime} \cdot \vec{r} - i \omega t } )}
+\end{array}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

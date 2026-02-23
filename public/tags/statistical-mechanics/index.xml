@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistical Mechanics on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/statistical-mechanics/</link>
+    <description>Recent content in Statistical Mechanics on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/statistical-mechanics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>大模型与统计力学</title>
+      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
+&lt;p&gt;$$
+\arg\min_{\theta\in \Theta}\int L(x,\theta)d\hat{F}(x) \triangleq \hat{\theta}\\
+\int L(x,\hat{\theta})dF(x) \triangleq \mathcal{L}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\hat{F}$ 为采样 cdf，样本量记 $m$。定义 $S(\theta,x)\triangleq \frac{\partial L(x,\theta)}{\partial \theta},\ S(\theta)\triangleq \mathbb{E}S(\theta,x)$.&lt;/p&gt;
+&lt;p&gt;由 CLT 有
+$$
+\frac{1}{m}\sum\lim_{i=1}^m S(\theta,x_i) \overset{\text{a.}}{\sim} \mathcal{N}(S(\theta_0),\frac{1}{m}V(S(\theta_0,x)))
+$$&lt;/p&gt;
+&lt;p&gt;同时将损失 Taylor 展开
+$$
+\mathcal{L} -\mathcal{L}_{\min} \overset{\text{a.}}{\sim} \frac{\mathbb{E}\frac{\partial^2 L(x,\theta)}{\partial \theta^2}}{2} (\theta-\theta_0)^2
+$$&lt;/p&gt;
+&lt;p&gt;可以得到&lt;strong&gt;损失服从一个 Gamma 分布&lt;/strong&gt; $\mathcal{L} -\mathcal{L}_{\min} \overset{\text{a.}}{\sim} \text{Gamma}(\frac{1}{2},\beta)$，其中
+$$
+\beta = m \frac{\mathbb{E}\frac{\partial^2 L(x,\theta)}{\partial \theta^2}}{\mathbb{E}(\frac{\partial L(x,\theta)}{\partial \theta})^2}
+$$&lt;/p&gt;
+&lt;p&gt;（可将 $m$ 类比为 $\frac{1}{T}$，第二项为 $\frac{1}{k}$）&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

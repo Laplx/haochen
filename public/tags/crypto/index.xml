@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/crypto/</link>
+    <description>Recent content in Crypto on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Knoid</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.06/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.06/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;知子网 
+    &lt;div id=&#34;知子网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%9f%a5%e5%ad%90%e7%bd%91&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;正好最近有同学想设计一个读书小组。其实我本来也有一个成立 workshop 的想法，但为什么没搞呢？一部分原因是觉得单纯的传统读书会或学术小团体的方式不够具有吸引力。这次顺着先前 23.8.25 里的想法，下面我将原创性的给出：（噢原本想叫知网，奈何已经被某数据库用了……）&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;知子网白皮书 Knoid White Paper&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.10.6.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;知子网是创造和交流知识（knowledge and idea, coined as &lt;em&gt;Knoid&lt;/em&gt; &amp;ndash; also means the tangible form of knowledge）的平台。我们不是某个组织，我们是元组织。我们秉持：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自由、开源、开放。无限参与，无限可能。&lt;/li&gt;
+&lt;li&gt;去中心化，自组织网络。让知识得到公平的交流，让权威不复存在。&lt;/li&gt;
+&lt;li&gt;任意形式的合约。在这里可以实现一切形式的学术交流活动。&lt;/li&gt;
+&lt;li&gt;共享、共评、共建。知识不是私人品。没有货币的逻辑，而有市场的价值。让好讲座得到听众，让好讨论得到加入，让好书得到阅读。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;每一个知子网中的人，都将拥有&lt;em&gt;知识&lt;/em&gt;（&lt;em&gt;Knowledge&lt;/em&gt;，abbreviated as &lt;em&gt;K&lt;/em&gt;）。新知识不会无限的喷涌，而由知子网的机制——一个特殊的活动 Creating 产生。&lt;/p&gt;
+&lt;p&gt;合约即是活动，合约可以调用合约。合约由创建者放出，设定有存续时间，位于一个节点地址（知识活动点）。合约能够接受多方的输入并产生输出，按事先安排好的流程触发、收纳知子、调配知子、调用 Creating 等一切代码能够实现的操作。当然，Creating 对每一个合约在单位时间段的生成请求存在上限。&lt;/p&gt;
+&lt;p&gt;每一个知子网中的人和合约点，都可以分享自己的见解，即&lt;em&gt;知子&lt;/em&gt;（&lt;em&gt;Knon&lt;/em&gt;）。每个人和合约点都有属于自己的不同的知子（Somebody&amp;rsquo;s Knon）。知识是平等的，知识因受到公认而变得重要。您的知子将被其他人持有、交换、参与合约。除了 Creating，任何合约不能创造知识，但所有人都可以任意创造自己的知子并通过合约发给其他参与者，代表分享自己最新学习研究的发现。&lt;/p&gt;
+&lt;p&gt;合约实现的交流形式多种多样，缺乏的只是想象力——lecture、seminar、tutorial、exam、project、book、paper……都可以被实现并得到关注。课堂、讨论可以让所有人交付知子，时间排他性的来参与，并据后续情况生成新的思想，无论线上还是线下。考试可以检验对应的知子按照成绩发放知识量。任何人都可以成立各种形式的组织并推广。&lt;/p&gt;
+&lt;p&gt;知识可以被复制，可以被传播。作者可以为自己的作品赋予复制的部分知识。书刊可以发行自己的知子，标记自己独一无二的内容并获得众人的认可和流传。&lt;/p&gt;
+&lt;p&gt;知子可以被标注。参与学术活动的人可以根据合约所示的知子的门类和内容进行参与。（同书籍一样，知识的架构关系可以通过设计 merge 功能的合约点充分实现。）&lt;/p&gt;
+&lt;p&gt;您还可以参与知识与知子的对换——一个特殊的节点 Exchanging 将完成这一点。给出你认为某知子的知识价值并进行兑换。整个网络将受广播，平均比率和方差将被计算，每一个该类对换的参与者都将共同助力形成公允的评价。&lt;/p&gt;
+&lt;p&gt;我们借鉴了以太坊（Etherum）的基础。所有行动将被广播，每经过固定时间将创建下一个提交，所有知识的拥有者都将写入一份同全网络历史一模一样的副本。知识的产权不容纂改。&lt;/p&gt;
+&lt;p&gt;网络可以本地化，大学等学术机构可以接入并构造属于自己内部的知识生态，这只需要若干合约。&lt;/p&gt;
+&lt;p&gt;知子网正在 Github 上启动。大信息时代的知识交流期待新的范式，期待您的参与。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

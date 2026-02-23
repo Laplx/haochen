@@ -1,0 +1,1549 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>国际金融危机的分析框架 &middot; Hao Chen&#39;s Blog</title>
+  <meta name="title" content="国际金融危机的分析框架 &middot; Hao Chen&#39;s Blog" />
+  
+  <meta name="description" content="Financial Crisis, Liquidity, and the International Monetary System" />
+  <meta name="keywords" content="Finance, International, Liquidity, Monetary, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/haochen/essays/tirole/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/haochen/css/main.bundle.min.782d2421d5c5317cdc02c61f82155e525a77a614c5fa1a9a7b869224bc8a4b5f82f2dfbaf303aec25835bc45f2accef2bacb96ecbb8ce23893017be37ad53294.css"
+    integrity="sha512-eC0kIdXFMXzcAsYfghVeUlp3phTF&#43;hqae4aSJLyKS1&#43;C8t&#43;68wOuwlg1vEXyrM7yusuW7LuM4jiTAXvjetUylA==" />
+  
+  
+  <script type="text/javascript" src="/haochen/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/haochen/js/main.bundle.min.0cc2c97290116f4d497b3ff680f6ed75d78c3f208c3fb6b7b4b7285cb1f711fb0eb48555c3b0c4e25317aee2a5abddb4abae6373e6cc4b824cd2952ee434f30c.js"
+    integrity="sha512-DMLJcpARb01Jez/2gPbtddeMPyCMP7a3tLcoXLH3EfsOtIVVw7DE4lMXruKlq920q65jc&#43;bMS4JM0pUu5DTzDA==" data-copy="复制" data-copied="已复制"></script>
+  
+  
+  
+  <script src="/haochen/lib/zoom/zoom.min.3530c2657381259433194af312ec3d322a97a2ad85661810299757fe793b24c3b8e07ab97fa8e5cf96cff1208f271e75394b6eaa56c2e39e7e2c3ca49fb1921c.js" integrity="sha512-NTDCZXOBJZQzGUrzEuw9MiqXoq2FZhgQKZdX/nk7JMO44Hq5f6jlz5bP8SCPJx51OUtuqlbC455&#43;LDykn7GSHA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/haochen/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/haochen/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/haochen/favicon-16x16.png" />
+  <link rel="manifest" href="/haochen/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/haochen/essays/tirole/">
+  <meta property="og:site_name" content="Hao Chen&#39;s Blog">
+  <meta property="og:title" content="国际金融危机的分析框架">
+  <meta property="og:description" content="Financial Crisis, Liquidity, and the International Monetary System">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="essays">
+    <meta property="article:published_time" content="2025-07-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-04T00:00:00+00:00">
+    <meta property="article:tag" content="Finance">
+    <meta property="article:tag" content="International">
+    <meta property="article:tag" content="Liquidity">
+    <meta property="article:tag" content="Monetary">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="国际金融危机的分析框架">
+  <meta name="twitter:description" content="Financial Crisis, Liquidity, and the International Monetary System">
+
+    
+  
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Essays",
+    "name": "国际金融危机的分析框架",
+    "headline": "国际金融危机的分析框架",
+    "description": "Financial Crisis, Liquidity, and the International Monetary System",
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e介绍 \r\n    \u003cdiv id=\u0022介绍\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e4%bb%8b%e7%bb%8d\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch3 class=\u0022relative group\u0022\u003eEM 新兴市场危机 \r\n    \u003cdiv id=\u0022em-新兴市场危机\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#em-%e6%96%b0%e5%85%b4%e5%b8%82%e5%9c%ba%e5%8d%b1%e6%9c%ba\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\r\n\u003ch4 class=\u0022relative group\u0022\u003e危机前 \r\n    \u003cdiv id=\u0022危机前\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%8d%b1%e6%9c%ba%e5%89%8d\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h4\u003e\r\n\u003cp\u003e大规模资本流入；资本账户脆弱：\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e货币体制\u003c\/strong\u003e 固定汇率\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e宏观经济\u003c\/strong\u003e 经常账户赤字，财政赤字\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e金融部门\u003c\/strong\u003e 银行规制与风控缺乏\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e通货和偿还期错配\u003c\/strong\u003e 短期政府贷款、外债\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e制度建设与治理\u003c\/strong\u003e e.g. 投资保护，关联借贷，执行无效率，不良会计\u003c\/li\u003e\n\u003c\/ul\u003e\n\r\n\u003ch4 class=\u0022relative group\u0022\u003e危机 \r\n    \u003cdiv id=\u0022危机\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%8d%b1%e6%9c%ba\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h4\u003e\r\n\u003cp\u003e\u003cem\u003e表征\u003c\/em\u003e：\u003c\/p\u003e",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/haochen\/essays\/tirole\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hao Chen"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-04T00:00:00\u002b00:00",
+    "datePublished": "2025-07-04T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-07-04T00:00:00\u002b00:00",
+    
+    "keywords": ["Finance","International","Liquidity","Monetary"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "175"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Hao Chen" />
+  
+  
+  
+  
+  <link href="laplx@foxmail.com" rel="me" />
+  
+  
+  
+  
+  <link href="https://github.com/Laplx/haochen" rel="me" />
+  
+  
+  
+  
+  
+
+<script src="/haochen/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/haochen/lib/katex/katex.min.33db995186a4f895643c57d5be16f59f520ffd0f0be5c9cb08ef158536fabdd3581893d7305846a7c83e495376021081ca5d4ad00a44bfe4d640c4917f087a9e.css"
+    integrity="sha512-M9uZUYak&#43;JVkPFfVvhb1n1IP/Q8L5cnLCO8VhTb6vdNYGJPXMFhGp8g&#43;SVN2AhCByl1K0ApEv&#43;TWQMSRfwh6ng==">
+  
+  
+  <script defer src="/haochen/lib/katex/katex.min.cadd45c1af1f44bdaf196dc9b104f1daeb29043f0dc59155ffe22847510a04390a0b7a859400d420a626204f7fc5ddb07c19311de1c66b25e19c2559d3e126a8.js" integrity="sha512-yt1Fwa8fRL2vGW3JsQTx2uspBD8NxZFV/&#43;IoR1EKBDkKC3qFlADUIKYmIE9/xd2wfBkxHeHGayXhnCVZ0&#43;EmqA=="></script>
+  
+  
+  <script
+    defer
+    src="/haochen/lib/katex/auto-render.min.e9b2833d28623d18c071d78ef13e9c79d695122d296af3dbcee7bf1bf6518b0565bab59939267fbc8f5faf696193c20f5caef3e7501969cfb306f6738032730d.js"
+    integrity="sha512-6bKDPShiPRjAcdeO8T6cedaVEi0pavPbzue/G/ZRiwVlurWZOSZ/vI9fr2lhk8IPXK7z51AZac&#43;zBvZzgDJzDQ=="
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+    ], throwOnError: false,
+    trust: true,  // 允许信任命令
+    });"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+  
+  
+  <meta name="theme-color"/>
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a
+      >
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px] z-index-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 padding-main-menu">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/haochen/" class="text-base font-medium text-gray-500 hover:text-gray-900">Hao Chen&rsquo;s Blog</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a
+  href="/haochen/notes/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Notes">
+    Notes
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/papers/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Papers">
+    Papers
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/essays/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Essays">
+    Essays
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/tags/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Tags">
+    Tags
+  </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 padding-top-[5px]">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/notes/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Notes">
+      Notes
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/papers/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Papers">
+      Papers
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/essays/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Essays">
+      Essays
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/tags/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Tags">
+      Tags
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/background-blur.min.4812321520cc2e4cd52bf9137015a55bb6c0b5e66a6b2c96b8654c0ec99be59e8e6425dd838a6fd9bac54000586f37f4a9680bbefaa2aee4601a69e188005cf6.js"
+  integrity="sha512-SBIyFSDMLkzVK/kTcBWlW7bAteZqayyWuGVMDsmb5Z6OZCXdg4pv2brFQABYbzf0qWgLvvqiruRgGmnhiABc9g=="
+  data-target-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/"
+      >Hao Chen&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/essays/"
+      >Essays</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/essays/tirole/"
+      >国际金融危机的分析框架</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        国际金融危机的分析框架
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-04T00:00:00&#43;00:00">July 4, 2025</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/zen-mode.min.2a0a1375509c03daf41c53a9831aa2d560895b7a2528c3eb3b56e7b11a135c7529e49727162a053b6193be8340270a8342f42c69f3d7e262ae54bc248eaac8f5.js"
+  integrity="sha512-KgoTdVCcA9r0HFOpgxqi1WCJW3olKMPrO1bnsRoTXHUp5JcnFioFO2GTvoNAJwqDQvQsafPX4mKuVLwkjqrI9Q=="></script>
+
+<span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title=""
+    data-title-i18n-disable=""
+    data-title-i18n-enable="">
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    
+      <div class="flex flex-row flex-wrap items-center">
+        
+          
+            
+          
+        
+          
+            
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/finance/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Finance
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/international/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    International
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/liquidity/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Liquidity
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/monetary/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Monetary
+  </span>
+</span>
+
+                </span>
+              
+            
+          
+        
+      </div>
+    
+
+    
+    
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row lg:gap-12">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-12 rtl:lg:pr-12 lg:min-w-[240px]">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#介绍">介绍</a>
+      <ul>
+        <li><a href="#em-新兴市场危机">EM 新兴市场危机</a></li>
+      </ul>
+    </li>
+    <li><a href="#框架">框架</a>
+      <ul>
+        <li><a href="#分析">分析</a></li>
+        <li><a href="#公司金融">公司金融</a></li>
+        <li><a href="#国内">国内</a></li>
+        <li><a href="#债务国与公司的区别">债务国与公司的区别</a></li>
+        <li><a href="#观点">观点</a></li>
+      </ul>
+    </li>
+    <li><a href="#内涵">内涵</a>
+      <ul>
+        <li><a href="#市场失灵识别">市场失灵识别</a></li>
+        <li><a href="#制度-imf">制度 IMF</a></li>
+        <li><a href="#结论">结论</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#介绍">介绍</a>
+      <ul>
+        <li><a href="#em-新兴市场危机">EM 新兴市场危机</a></li>
+      </ul>
+    </li>
+    <li><a href="#框架">框架</a>
+      <ul>
+        <li><a href="#分析">分析</a></li>
+        <li><a href="#公司金融">公司金融</a></li>
+        <li><a href="#国内">国内</a></li>
+        <li><a href="#债务国与公司的区别">债务国与公司的区别</a></li>
+        <li><a href="#观点">观点</a></li>
+      </ul>
+    </li>
+    <li><a href="#内涵">内涵</a>
+      <ul>
+        <li><a href="#市场失灵识别">市场失灵识别</a></li>
+        <li><a href="#制度-imf">制度 IMF</a></li>
+        <li><a href="#结论">结论</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-screen-lg">
+        
+
+
+
+        <div class="article-content max-w-screen-lg mb-20">
+          
+
+
+<h2 class="relative group">介绍 
+    <div id="介绍" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e4%bb%8b%e7%bb%8d" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">EM 新兴市场危机 
+    <div id="em-新兴市场危机" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#em-%e6%96%b0%e5%85%b4%e5%b8%82%e5%9c%ba%e5%8d%b1%e6%9c%ba" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">危机前 
+    <div id="危机前" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%8d%b1%e6%9c%ba%e5%89%8d" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>大规模资本流入；资本账户脆弱：</p>
+<ul>
+<li><strong>货币体制</strong> 固定汇率</li>
+<li><strong>宏观经济</strong> 经常账户赤字，财政赤字</li>
+<li><strong>金融部门</strong> 银行规制与风控缺乏</li>
+<li><strong>通货和偿还期错配</strong> 短期政府贷款、外债</li>
+<li><strong>制度建设与治理</strong> e.g. 投资保护，关联借贷，执行无效率，不良会计</li>
+</ul>
+
+<h4 class="relative group">危机 
+    <div id="危机" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%8d%b1%e6%9c%ba" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p><em>表征</em>：</p>
+<ul>
+<li><strong>私人</strong> 资本流逆转</li>
+<li><strong>银行和资产</strong> 信用紧缩（银行重建）；证券和房地产价格下跌</li>
+<li><strong>货币</strong> 贬值</li>
+<li><strong>蔓延</strong> 原因 e.g. 资产组合重新配置，贸易关联，共同冲击，预期改变</li>
+<li><strong>官方</strong> 投资者套牢，债务重组；（IMF）拯救方案与条件制约性</li>
+</ul>
+<p><em>观点</em>：消除货币和偿还期错配；加强制度建设、规制执行；国家透明度（担保与表外负债）；套牢；避免固定汇率制</p>
+<p><em>冲突</em>：<strong>事前激励</strong>与<strong>事后有效性</strong> e.g. IMF 流动性供给（LOLR），IMF 条件制约性，资本控制（e.g. 短期国外投资征税），有序解决方案（外债重新谈判）</p>
+<p><em>理论</em>：</p>
+<ul>
+<li>
+<p><strong>基本面观点</strong> 政府部门 债务人道德风险（隐性担保），债权人道德风险（转移危机负担）；私人部门 汇率保险不足（国内金融市场不完备）</p>
+</li>
+<li>
+<p><strong>恐慌观点</strong> 短期贷款撤资（防止工具 e.g. 控制外流、设立准备金；消除错配，终止、债转股；IMF 或私人金融机构提供信用额度）</p>
+</li>
+</ul>
+
+<h2 class="relative group">框架 
+    <div id="框架" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%a1%86%e6%9e%b6" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">分析 
+    <div id="分析" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%88%86%e6%9e%90" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><em>基本目标</em>：识别市场失灵</p>
+<p>标准借方问题（融资安排 e.g. 控制权、流动性和风险管理），<strong>双重代理</strong>与<strong>共同代理</strong>问题（来自政府的广泛控制权与偏向激励机制）</p>
+<p><em>评估</em>：IMF 等机构作为投资者利益的授权监督者，与政府签订合同平衡代理问题，并使借款国受益</p>
+
+<h3 class="relative group">公司金融 
+    <div id="公司金融" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%85%ac%e5%8f%b8%e9%87%91%e8%9e%8d" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>确保给投资者带来回报的公司收入的有效管理：制度和行为，e.g. 偿债比率、流动性需求、信用额度、持久性分析、通货匹配、公司治理与监督、破产与清算程序</p>
+<p><em>原理</em>：创造的价值 = <strong>可保证收入</strong> + 代理成本（内部人激励和谋私利）</p>
+<ul>
+<li>
+<p><strong>受益人</strong> 在竞争资本市场中，投资者的竞争消除了保护带来的利益，借方直接受益；投资增长提高了均衡回报率，投资者同样间接受益</p>
+</li>
+<li>
+<p><strong>权衡</strong> 借方面临可保证收入与资产价值（NPV）之间的权衡 e.g. <strong>公司治理</strong>，<strong>积极监督</strong>与<strong>投机性/消极监督</strong>，<strong>控制权</strong>（投票权力、董事会权力和清算权力，e.g. 抵押担保，长期投资，风险管理，分红政策，管理层回报）</p>
+</li>
+<li>
+<p><strong>相对需求</strong> 投资者应被赋予具有最高相对支付意愿的资产控制权</p>
+</li>
+<li>
+<p><strong>条件依赖性</strong> 现金流、流动性和控制权的分配依据借方状况（e.g. EBIT、资本净值、证券售价、商业计划）相机而定（e.g. 风险资本转股）（Carrot and Stick 激励）（名义控制 由于信息不对称）</p>
+</li>
+<li>
+<p><strong>软预算约束</strong> 最优合同安排不一定具有时间一致性 e.g. 业绩不良惩罚条款再协商</p>
+</li>
+<li>
+<p><strong>流动性和风险管理</strong> 通过承诺部分的保险以防范信用配给的威胁，借方能从中获益（A-D 框架、MM定理下，不会出现信用配给，经营和投资政策将理性预期，无需流动性储备和风险管理）（不必要完全保险 由于成本，道德风险，防范总量冲击需要支付风险溢价 e.g. CAPM）</p>
+</li>
+<li>
+<p><strong>共同代理问题</strong> 投资者间的外部性危害融资；财务透明度，代表制度，证券设计等可部分有效的解决合同外部性，集体行动，索取权差异等问题</p>
+</li>
+</ul>
+
+<h3 class="relative group">国内 
+    <div id="国内" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%9b%bd%e5%86%85" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在各实体冲击独立、恰当分配（保险中介）时私人部门流动性供给能充分满足需求；国内的外部流动性，国外的外部流动性</p>
+<p><em>原因</em>：消费者无法抵押未来的人力资本，为公司提供信用额度（直接保险）；国家的广泛控制权</p>
+<p><em>方式</em>：</p>
+<ul>
+<li>
+<p><strong>政府债券</strong> 注意大量赤字降低了国债流动性溢价，同时企业税收负担预期会削弱流动性资本的创造</p>
+</li>
+<li>
+<p><strong>货币政策</strong> （反周期）降低短期利率，增加未到期债券拥有者的财富</p>
+</li>
+<li>
+<p><strong>最后贷方</strong> 向银行 审慎的偿债延期，贴现窗口；（非周期）公共储蓄保险</p>
+</li>
+<li>
+<p><strong>公共保险</strong> 向公司 e.g. 社保、失业保险</p>
+</li>
+<li>
+<p><strong>征税</strong> 消费者间接为企业提供流动性</p>
+</li>
+</ul>
+<p>（<strong>司法体系</strong> e.g. 高治理环境能增发新股，有效的破产程序 也影响流动性供给）</p>
+
+<h3 class="relative group">债务国与公司的区别 
+    <div id="债务国与公司的区别" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%80%ba%e5%8a%a1%e5%9b%bd%e4%b8%8e%e5%85%ac%e5%8f%b8%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>不可交易品</strong> 东道国隐形收益；借贷受制于国际抵押资产</li>
+<li><strong>有限制裁</strong> e.g. 无法清算或使出局、搭便车（WTO）、低效率（再谈判）</li>
+<li><strong>不存在国际最终贷方</strong>（ILOLR）</li>
+</ul>
+
+<h3 class="relative group">观点 
+    <div id="观点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e8%a7%82%e7%82%b9" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><em>双重代理</em>：（团队道德风险）</p>
+<ul>
+<li>投资者没有跟政府签订合同并暂时分享控制权</li>
+<li><strong>激励机制</strong> 不会积极保护国外投资者利益；e.g. 私人部门俘获、迎合国内投资者、国际声誉</li>
+<li><strong>控制权</strong> 影响可交易品与不可交易品的交换（汇率等）e.g. 鼓励不动产业投资，耗尽国际储备金，出口收税，鼓励通货贬值，公共债务延期；及一般控制权（事后可能国内较国外有利）e.g. 制度建设，流动性资本供给，税务劳工法律</li>
+</ul>
+<p><em>讨论</em>：封闭经济中投资者福利内在化，且不影响汇率；基本面观点主要认为政府政策受害人是国内纳税人，没有考虑负外部性（被套牢的国外投资者、外部官方救援）；道德风险重要吗（政治成本）；主权可以侵犯吗</p>
+<p><em>共同代理</em>：在国际金融范畴同样更为重要</p>
+
+<h2 class="relative group">内涵 
+    <div id="内涵" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%86%85%e6%b6%b5" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">市场失灵识别 
+    <div id="市场失灵识别" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%b8%82%e5%9c%ba%e5%a4%b1%e7%81%b5%e8%af%86%e5%88%ab" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><em>代表假设</em>：引入<strong>授权监督</strong>（注意信誉的建立）缓解代理问题</p>
+<ul>
+<li>对称信息，风险管理</li>
+<li>合约设计（遵守相对支付意愿）<strong>所有权</strong>和<strong>条件制约性</strong></li>
+<li>危机下控制权向债权人转移</li>
+</ul>
+<p><em>政策分析</em>：负债面值；负债期限；汇率体制（固定制可作通货坚挺的信号）</p>
+<p>试图调整私人融资安排结构的政策应考虑其对政府行为的影响（e.g. 以国内通货借贷加剧政府道德风险的顾虑，消耗国际储备的通货贬值政策较冒险）</p>
+<p><em>ILOLR</em>（在商业贷款人不再愿意提供资金时向国家提供清偿能力的机构）：需求弱 国际债务抵押品有限为主要限制</p>
+
+<h3 class="relative group">制度 IMF 
+    <div id="制度-imf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%88%b6%e5%ba%a6-imf" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><em>任务</em>：<strong>委托监控组织</strong>（主权国家与国外投资者间不完全契约的替代品），因此帮助新兴市场经济充分享受资本账户自由化（更多优质金融资源）；<strong>危机管理</strong>：</p>
+<ul>
+<li><strong>实证</strong> 不一定具备（互换报价和集体行动条款）；短期援助换取条件制约的再谈判机会</li>
+<li><strong>规范</strong> 冲突法则；解决方案的事后收益比事前成本高吗（经验问题）</li>
+</ul>
+<p><em>治理</em>：高度异质下的协同；责任制下的迎合（不透明化、独立化）；焦点目标（国际代理人的分工（外部性解决、集体行动、服务提供）与跨部门争论）；其他代理人、私人或官方贷款人执行（难竞争、激励混乱且合作不可靠）</p>
+
+<h3 class="relative group">结论 
+    <div id="结论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e7%bb%93%e8%ae%ba" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>IMF 缺乏明确目标，人们应更关注无序性的本质，对市场失灵进行识别</strong></li>
+<li><strong>失灵原因是尽管政府有多种手段影响国外投资者的收益，它们无法签约</strong></li>
+<li><strong>为了国家获得更多更好的贷款，国外投资者需要代理人，因此 IMF 成为授权的监督机构，平衡双重和共同代理问题</strong></li>
+<li><strong>IMF 会扮演托管者，特别是危机管理者，而最终贷方的作用有限</strong></li>
+<li><strong>处置无序性现象而非本质的政策可能误导</strong></li>
+</ul>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/haochen/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
+          integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
+          data-oid="views_essays\tirole\index.md"
+          data-oid-likes="likes_essays\tirole\index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/haochen/essays/frivols/24.01.05/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >CC Theorem</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-01-05T00:00:00&#43;00:00">January 5, 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/haochen/essays/newton/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Newton 力学纲要</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-06-28T00:00:00&#43;00:00">June 28, 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/share/"
+                title="分享">
+                
+                分享
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/about/"
+                title="关于">
+                
+                关于
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hao Chen
+      </p>
+    
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/haochen/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+    <style>
+    .small-gray-text {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+</style>
+
+
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
+  data-url="http://localhost:1313/haochen/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

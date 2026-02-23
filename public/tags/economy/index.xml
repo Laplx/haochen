@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economy on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/economy/</link>
+    <description>Recent content in Economy on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/economy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ludology</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.07.12/</link>
+      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.07.12/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;游戏论 
+    &lt;div id=&#34;游戏论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b8%b8%e6%88%8f%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;之前与同学聊到怎么算第一性原理出发的视角，他的观点大概是“演绎而非归纳”；于是正好实操一下，打算选取三个事物，以它们为对象展开论述。这是第一篇（后续有时间再写），就来试试游戏吧。（可惜我玩过的游戏并不多，甚至很缺乏经验，最可笑的是也没去游戏公司了解过，却在这里夸夸其谈起来了……）&lt;/p&gt;
+&lt;p&gt;我把游戏论分成三个部分，游戏理论 game theory、游戏设计 game design、游戏产业 game industry；后两者算是应用，限于精力不会有很多笔墨。Game theory 也是博弈论，因为我把游戏也放到一个博弈的框架里去。&lt;/p&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;Game Theory 
+    &lt;div id=&#34;game-theory&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#game-theory&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;在开头首先完成两件大事，给游戏下定义和给游戏分类。（目前没有任何公认的定义和体系一点的分类；对一个比较日常化的词语下定义本身就需要摒弃一些东西、规范一些东西，不过只要这个方式合理且好用即可。）&lt;/p&gt;
+&lt;p&gt;大部分已有的某些人士（Roger Caillois, Bernard Suits, Elliot Avedon, etc.）所述的定义较为狭窄，可以被下面所容纳；另一部分的论述过于简单宽泛（Eric Zimmerman, etc.），且含糊不清或偏颇，有些是从人的感受角度来谈的，更不方便于定义操作。我借鉴了 Chris Crawford 的定义（但他的过于复杂）：（分三步走）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一个娱乐活动。It&amp;rsquo;s a recreational activity. 活动表示它需要专门付出独立的时间投入；娱乐一词仍然较口语化，其表示它通过内部虚拟的经历给予人体验，亦即用 inner rewards 替代外部真实生活经历当中的 rewards。如果不具备这个性质，那么它只是一个活动（如真实世界中的博弈）。&lt;/li&gt;
+&lt;li&gt;有互动。It has interactions. (Or it&amp;rsquo;s changing.) 在这种情况下我们才称之为玩耍 playing；否则如漫画书、电影，它们是没有互动的娱乐活动，它们不是游戏。&lt;/li&gt;
+&lt;li&gt;有目标/内部奖励。It has goals or inner rewards. 否则我们称其为玩具 toys。玩具不会因为你的小球滚到了恰当位置就给你吐出游戏币。这里需要提到一个特殊的游戏分类$【C】$ creation games，其中一大子类为 Sandbox 沙盒游戏，e.g. Minecraft 我的世界、Simcity 模拟城市；它们本质上应属于玩具，鉴于没有任何内置的奖励和要达成的目标（不考虑任务、成就的话）；但由于习惯原因，大家通常仍称作游戏。除此之外，存在 inner rewards 的，才被称为游戏 games。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意道具 props 是游戏进行需要使用的辅助物体存在；从玩家上分，游戏可以分作$【P】$player-machine 单人的、$【MP】$multi-players 多人的（是否单机还是多机联机并不如参与者数量来的重要）；从形式上分，可以分作$【E】$electronic 电子的（包括 video games 电子游戏，还有 handheld、standalone system games，e.g. Slot machine 老虎机）、$【NE】$physical 物质的，其中 physical games 可能会使用道具。$【NE】$可进一步分为 Tabletop 桌面游戏（e.g. Go 围棋、Tic-tac-toe 井字棋、Avalon 阿瓦隆、Catan 卡坦岛）和 Motion 运动游戏（e.g. Hide-and-seek 捉迷藏），区别在于玩家的物理动作是否对游戏的 rewarding 产生影响。我们会比较关注电子游戏。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Model for the Nations</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.24/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.24/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;国际关系模型 
+    &lt;div id=&#34;国际关系模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%bd%e9%99%85%e5%85%b3%e7%b3%bb%e6%a8%a1%e5%9e%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我想依葫芦画瓢构建一个类似于凯恩斯框架下的简单模型去描述国际关系，方法就是把最原始的宏观经济模型稍作无厘头的扩展。$r_{ij}$ 表示国家 $i$ 和国家 $j$ 的国际出清关系（International Clearing Relationship，ICR），$r$ 越大（姑且作一标量）关系越正面。（这也许可以计量，比如通过文本分析和情感分析，可以构造并量化国家之间官方媒体互相报道或高层互动事件的一个关系指数）&lt;/p&gt;
+&lt;p&gt;我们要多引入一些将被考虑的内生和外生变量，它们有一些类似于模块化拼装，可以纳入也可能在考察后认为不足轻重而舍去。除了熟知的 $Y$ 产出、$A$ 技术（这里将科教研究水平与技术合一视之了）、$C$ 消费、$P$ 价格水平、$T$ 税收（及其它强制扭曲）等总量以外，我们还有 $D$ 文化富合度（Cultural Affluence）（正面反映了闲暇和文娱时间；同时负向描述了种族、宗教冲突的程度）、$W$ 民众福利（Welfare）、$M$ 武装力量（Millitary Power）、$U$ 意识介度（Consciousness Dissemination）（指出社会意见和思想的传播程度或多元程度；同时一定的反映政权或宣传机器的把控力量）等。还要介绍的有 $ID$ 政治位移（Ideology），不称意识形态的原因是它可以不仅仅是衡量左右，而是一个可以在设定的多个意识评价标准下的多维空间里移动的一个矢量，其决定了政治和经济制度，特别反映在产权组织 $PI(ID)$ 上（跟政府架构等有关，但核心归于 $ID$）。$PI$（Property Inequality）将政治光谱（空间）划分开来（或连续化），表示了“生产关系”（比如可以粗分为资本主义、社会主义等）及其导致的分配关系。再如 $U$ 应该也与 $ID$ 有关。&lt;/p&gt;
+&lt;p&gt;模型的假设（缺陷）包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;市场化（may not be free markets but there must exists an adjusting power not controlling）&lt;/li&gt;
+&lt;li&gt;不考虑预期，且无理性预期（no long-term expectation）&lt;/li&gt;
+&lt;li&gt;仅宏观政策（macroscopic open actions 即没有微观或暗面的操作，如针对个别企业的制裁或间谍行为）&lt;/li&gt;
+&lt;li&gt;无随机扰动（no stochastic terms 不包含概率成分，没有影响国际关系的黑天鹅事件）&lt;/li&gt;
+&lt;li&gt;不考虑能源、移民、生态环境等其他重要因素（only has political interest and economic interest / no key mesoscopic factors 不考虑关键中观领域的作用）&lt;/li&gt;
+&lt;li&gt;无阶层分化（no hierarchy 尽管有 PI 且纳入了分配结构，但并未分群体建模）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;影响国家决策的无非是两个方面：一边讲发展，一边要安全（就像投资决策的 $\mu$ 和 $\sigma$ 那样）。或者说，国际关系无非是 Benefit 和 Security 的综合作用（Inner &amp;amp; Outer）。不过我们这里要把原来的 IS-LM-BP model 说的详细一些，把 $NX$ 拆开写为 $NX_{ij}(e_{ij},Y_i,Y_j,r_{ij})$ 表示 $i$ 国向 $j$ 国的净出口。即有 $NX_{ij}(e_{ij},Y_i,Y_j,r_{ij})$ $=$ $KF_{ij}(i_i,i_j,K_i,K_j,r_{ij})$。注意实际上我们应分写进口 $IM$ 和出口 $EX$ 函数，鉴于双向大量贸易和几乎不贸易在净值上无法区别。总而言之：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The Apple that Never Lands</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.17/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.17/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;永不落地的苹果 
+    &lt;div id=&#34;永不落地的苹果&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b0%b8%e4%b8%8d%e8%90%bd%e5%9c%b0%e7%9a%84%e8%8b%b9%e6%9e%9c&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（更多关于民科的了解可以查看“其他收录”中的民科小传一篇，其末尾还有本人的一些讨论）&lt;/p&gt;
+&lt;p&gt;我在想一个&lt;/p&gt;
+&lt;p&gt;$$
+\text{Scipop Paradox}:\\
+\frac{PseudoPaper_i}{Population_i} = \sum\limits_{t\in T} \beta_t \frac{ScipopWork_{i,t}}{Population_{i,t}} + \gamma^\prime\mathcal{X}_{i} + \alpha_i + u
+$$&lt;/p&gt;
+&lt;p&gt;$Scipop$ 指的是 science popularization，科普的一种翻译。但国外 scientific literacy 科学素养使用的更多（用此关键词搜索文章也与科普更为相关）。&lt;/p&gt;
+&lt;p&gt;这里采用省截面数据（$i$），$ScipopWork$ 指各省发行出版或流通的科普性质的作品量，$PseudoPaper$ 指民科的生产量——这从哪里来呢？把时间背景（$T$）放到上世纪80-90年代左右，中科院研究所每天都要收到大量信件宣称自己造出了永动机或解决了哥德巴赫猜想之类的……可以统计其寄件人的省份分布得到。（当然还有不少自费出版的民科书籍可以统计；再不济还能看新闻里的主人公来自哪里……）$\mathcal{X}$ 为控制变量，可能包含人均产出、城市化水平、科教院所数量等。我的 prediction 为：$\beta_t$ 在1978年“科学的春天”后的十余年里显著为正。亦即一个看上去像是悖论的命题：当时的科普风气越盛，民科数量反而越多。&lt;/p&gt;
+&lt;p&gt;进一步的 endogeneity concern or robustness 暂且略去。比如寻找 $ScipopWork$ 可能的工具变量；考虑 $ScipopAuthor$ 科普作者的地区分布；回归 $\frac{TruePaper}{Population}_i$ ，也许存在着负向关联放大悖论。&lt;/p&gt;
+&lt;p&gt;科普历来是争论的话题。在我眼里，就像 scientific literacy 一样，科普本身即应该定义为科学的末端，无非是让不了解此领域的人能以科学的视角和方法正式的纳入一些有关此领域的基础知识罢了。可这是需要基本的教育去提供基本的理性素养的。&lt;/p&gt;
+&lt;p&gt;而当下的科普不是去关注苹果落地后发生的事，却只着重宣传苹果掉落的瞬间。科学理论本身是理性且严肃的，其宣传却夹杂着浪漫与造神主义；美其名曰加入科学史和人文元素，却只剩下了科学史和人文元素。思而不学，不接受真正的科学普及而仅仅凭着一些类科普提供的模糊面貌和一些内心的激情与偏执大肆幻想，便成为了民科。&lt;/p&gt;
+&lt;p&gt;（虽然还没实证确定呢！）我想说的只是，这个看起来就很伪的悖论告诉大家：科普何以存在？没有坚实的教育和素质基础，没有合格的传播和内容关注，科普便会永远停留在伪命题上，apples will never on the ground。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Measure Design</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
+    &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%bb%ba%e7%ad%91%e8%ae%be%e8%ae%a1%e7%9a%84%e8%ae%a1%e9%87%8f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我记得有种说法：高度发达的文明其艺术品的设计往往开始做“减法”，不再不断地添加繁复的雕刻和装饰，而是有意的简化和突出。这让我想到当下大城市里开始涌现的现代建筑和后现代建筑，想来我们可以去计量一个地区的艺术水平——似乎有些困难？不如先从建筑设计的水平开始。&lt;/p&gt;
+&lt;p&gt;不是美是稀缺的，而是稀缺造就美。&lt;/p&gt;
+&lt;p&gt;审美的本质是什么恐怕不是一个能在这里简简单单就讨论完的东西。我现在比较武断的做出以上论断，是为了进一步发展指标。我倾向于认为是人类具有“审美的需求”——这个需求在日常的普遍的生活中没有得到满足——这正是稀缺性的意义。（我还要提到一个反驳的角度：这个价值与创造性价值尚有区分。如果我们纳入时间变量，那么富有创造性价值的事物在其之前极其稀缺，而在之后带动了大量的模仿者，或者说自己成为了开创者，那么它显然具有美的价值。但当这个事物的元素在生活中俯拾即是的时候，大家自然不再对其审美敏感。）&lt;/p&gt;
+&lt;p&gt;以此逻辑为基础，我们同时也需要一些事先由美学专家（建筑设计家）挑出的评价维度，它反映了人类共性的审美需求。例如建筑的几何外形、色彩、结构、纹理（$X_1, X_2, X_3, X_4, \ldots$）。借助计算机技术，我们可以获取一个街区的实景图，将各个建筑依照各个维度，进行数学上（计算机视觉上）的相似计算 $r_{ij1}, r_{ij2}, \ldots$ ，再按一定方式如加权得到一个合并的建筑 $i$ 和建筑 $j$ 的相似系数 $r_{ij} = f(r_{ij1}, r_{ij2}, \ldots)$ 。&lt;/p&gt;
+&lt;p&gt;我们定义一个建筑对于一整个要考察的建筑群（称背景或参考基）的设计价值（审美价值）$v_i$ 为&lt;/p&gt;
+&lt;p&gt;$$
+v_i = \sum_j \frac{r_{ij}}{v_j}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（$j$ 的遍历包括 $i$ 自身，需要自己给自己“壮胆”）（通过联立群体内全部建筑求解）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我未经严格考证的认为它确实具有 1. 给离群点赋以高值 2. 给群聚性缓慢提高值 等等合理的数学性质。&lt;/p&gt;
+&lt;p&gt;上述把稀缺性挂钩审美价值的作法受到质疑大概来自这两个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;日常的（普遍的）到底是什么？&lt;/li&gt;
+&lt;li&gt;古怪的垃圾品？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;建筑可以近乎完美的解决这两个问题，而绘画、音乐等艺术还需进一步考量。我们考虑全部的建筑具有一定的可行性，它们就是大家生活中接触到的建筑物的全集，那么一个标新立异的富有变异感的设计可以被视为高审美价值的。古怪的垃圾品鉴于建筑的规划、审批、施工需要层层把关实现，不大可能出现彻底的丑，何况不走寻常路可能本身就是艺术呢（比如争论中的行为艺术）。而画作、曲作的对比背景应该是人的日常生活，所以人们会喜欢欣赏画喜欢听音乐，我想这个指标可能需要做改进。&lt;/p&gt;
+&lt;p&gt;从这个指标出发，那么研究空间就大了。我抛砖引玉一个：&lt;/p&gt;
+&lt;p&gt;现在的城市建筑都由设计院、建筑事务所设计。最终整个城市或某个空间区域分布里的总设计度 $V = \sum v$ 与它们花费的总设计费用 $ C = \sum c$ 的比值 $ \zeta = \frac{V}{C}$ 表示了一单位费用下产生的艺术效用，称作 $ conservative\ factor \ \zeta$  保守度——因为建设过程是甲乙双方协商的结果，文化保守的地区在变异程度上要弱于开放的地区，可能也是人均 GDP 高的地区。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

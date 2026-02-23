@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Literature on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/literature/</link>
+    <description>Recent content in Literature on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/literature/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>语言统计学下的红楼梦续作问题</title>
+      <link>http://localhost:1313/haochen/essays/hlm/</link>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
+      <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
+&lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
+我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
+&lt;img src=&#34;./scatterplot.jpg&#34; style=&#34;zoom:40%;&#34;&gt;
+&lt;p&gt;&lt;em&gt;P1 以 120 回每回作为观测数据，以 44 个虚词和句长为特征，对应变换后在主平面的投影&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+      &lt;img
+    class=&#34;my-0 rounded-md&#34;
+    loading=&#34;lazy&#34;
+    decoding=&#34;async&#34;
+    fetchpriority=&#34;low&#34;
+    alt=&#34;&#34;
+    srcset=&#34;
+      /haochen/essays/hlm/clustering_hu_43f3a4b4ede02f58.png  330w,
+      /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
+      /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
+    &#34;
+    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;P2 以类卡方距离度量，类平均法递归的系统聚类图&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以看到两部分点有明显的分隔——前 80 回与后 40 回很可能出自截然不同的手笔。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;争议极大的 1-5 回（“曹第五次批阅说”）、17-18 回、53 回都得到了一定的支持。&lt;/p&gt;
+&lt;p&gt;细分来看前 80 与后 40 均非浑然一体，某些学者曾给出许多激进的论断：前 80 由佚名《石头记》经曹雪芹《风月宝鉴》插入；及三次增删的具体回目；后 40 并非胡适所说高鹗一人而由曹家据遗稿补写，程刊高校而成；均能得到映证。但此结果同时回避了脂砚斋、曹頫等说的疑问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下载链接：&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./text.zip&#34;&gt;红楼梦文本&lt;/a&gt;
+（网站文本、电子书转换的较脏文本，包含庚辰本、程乙本、当代校注本、脂评汇校本）&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;./code.zip&#34;&gt;处理代码&lt;/a&gt;
+（Python，包含爬虫、分析、变量数据）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;相关文献：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[1] 李贤平. (1987). 《红楼梦》成书新说. Fu Dan Xue Bao. She Hui Ke Xue Ban, (5), 3-16.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[2] 施建军. (2010). 关于以《红楼梦》120回为样本进行其作者聚类分析的可信度问题研究. Hong Lou Meng Xue Kan, (5), 318-335.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Geometric Hermeneutics</title>
+      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
+    &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%af%ad%e8%a8%80%e7%9a%84%e5%87%a0%e4%bd%95%e5%ad%a6%e9%98%90%e9%87%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./25.1.10.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;Meaning 
+    &lt;div id=&#34;meaning&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#meaning&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;我们不能理解完全不依靠&lt;strong&gt;现实&lt;/strong&gt;的意义。（现实指的不一定就是真实存在发生的，而是一种类似生活经验的东西）所有的意思（意义，关于另外一种 “意义” 见下一小节）都指代了一系列可能的现实世界过程（称作&lt;strong&gt;宇宙&lt;/strong&gt; $u$）。某一时刻的宇宙 $u(t)$ 称作世界，是一系列状态信息的集合（能想象到的所有信息都可以如此纳入）$\{\pi^1,\pi^2,\dots\}$（暂时先把不可数的打包在一起，写成可数的形式；注意我们可以想象虚空中的抽象状态，但它仍然是一个与其他事实状态无二的东西）。一个半宇宙（前向/后向宇宙）指 $\{u_t\}_{t\ge 0}$ 或 $\{u_t\}_{t\le 0}$，包含一个给定的始终点 $u_0$。注意我们目前没说 $u(t)$ 随时间的变化满足一定的规律（比如 Newton&amp;rsquo;s Law），它允许了一切天马行空的假设与想象力。所有这些平行宇宙的集合 $\mathcal{O}$ 称作&lt;strong&gt;客观集&lt;/strong&gt;，鉴于它们都是思考的对象（因此可能可以认为启蒙运动是在扩展客观集）。建模时状态是&lt;strong&gt;外禀&lt;/strong&gt;的；例如总有人知道电场的存在，有人的世界里是不知道的（“因为太愚昧或太聪明而获得自由的幻象” 亨利·詹姆斯《使节》）。对于某个读者来说，他所能理解的一切宇宙集合记作&lt;strong&gt;知识域&lt;/strong&gt; $\mathcal{K}=\hat{\mathcal{O}}$。但这里面有一些宇宙大概是符合一些规律的，我们把符合该规律的集合称作&lt;strong&gt;真域&lt;/strong&gt; $\mathcal{T}$；同样，比方说或许有人眼里 Newton&amp;rsquo;s Law 和大家的不一样，故每个读者都有自己认为的真域 $\mathcal{U}=\hat{\mathcal{T}}$。&lt;strong&gt;意思空间&lt;/strong&gt; $\mathcal{M}=\mathcal{P}(\mathcal{O})$，真理空间 $\mathcal{M}_T=\mathcal{P}(\mathcal{T})$。意思之间存在包含关系 $m_1\subset m_2$；空/&lt;strong&gt;无知&lt;/strong&gt;意思点 $0\in \mathcal{M}$ 表示全集背景，无穷远/&lt;strong&gt;未知&lt;/strong&gt;意思点 $\infty$ 代表空集，其没有任何可理解的意义。&lt;/p&gt;
+&lt;p&gt;我们可以对意思之间进行简单的运算，包括&lt;strong&gt;反义&lt;/strong&gt; $m^c$、&lt;strong&gt;且（独立）&lt;/strong&gt;$m_1\cap m_2$、&lt;strong&gt;或&lt;/strong&gt; $m_1\cup m_2$。如果 $m_1, m_2$ 对应的文本是 $w_1, w_2$，总文本 $w=w_1w_2$ 对应的（作者的）意思是 $m$，$m$ 不一定是 $m_1\cap m_2$。&lt;strong&gt;顺序和&lt;/strong&gt; $m_1+m_2$，我们需要定义嵌入映射 $\phi:u \mapsto u^+/u^-$ 将时间压缩进半宇宙内，以实现时间上的先后关系，故 $m_1+m_2$ $=\{u\in m_1\cap m_2: \exists \phi_1,\phi_2,u_1\in m_1,u_2\in m_2 \text{ s.t. }u=\phi_1(u_1)+\phi_2(u_2)\}$ 对应于顺叙的文本 $w$。（对于始终点的衔接问题，设想一群在 $T$ 后就暂停演化的宇宙；即使受到真视域的限制，注意到人脑中状态序列的有限性和模糊性，这一点仍然可以成立。）&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

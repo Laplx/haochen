@@ -1,11 +1,1070 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on Laplace&#39;s Blog</title>
-    <link>http://localhost:1313/notes/</link>
-    <description>Recent content in Notes on Laplace&#39;s Blog</description>
+    <title>Notes on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/notes/</link>
+    <description>Recent content in Notes on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>强化学习</title>
+      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
+    &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#tables-in-rl-for-llm&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Algorithm&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Token Advantage $\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=0}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE with KL trick&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=t}^{T_{i j-1}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE ++&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=t}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$ with global batch normalization&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RLOO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$R_{i j}-\frac{1}{M-1} \sum_{l \neq j} R_{i j}$, where $R_{i j}:=r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=0}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REMAX&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-r\left(x_i, \hat{y}_i\right)-\beta \sum_{t^{\prime}=t}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$, where $\hat{y}_i$ is sampled from greedy policy of $\theta_k$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\begin{aligned} &amp;amp; \sum_{t^{\prime}=t}^{T_{i j}-1}(\lambda \gamma)^{t^{\prime}-t} \delta_{t^{\prime}}^{(i j)} \text { where } \delta_t^{(i j)}=\mathbb{I}\left\{t=T_{i j}-1\right\} \cdot r\left(x_i, y_{i j}\right)- \ &amp;amp; \beta \log \frac{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}+\gamma V_\phi\left(s_{t+1}^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right) \end{aligned}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ORZ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-V_\phi\left(s_t^{(i j)}\right)$ (PPO with $\lambda=\gamma=1, \beta=0$ )&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (origin verson)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{T_{i j}}\left[\frac{r\left(x_i, y_{i j}\right)-\text { mean }\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}+\beta\left(\frac{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}-1\right)\right]$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (R1 verson)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{r\left(x_i, y_{i j}\right)-\text { mean }\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}+\beta\left(\frac{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}-1\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DAPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\hat{T}_i}\left[\frac{r\left(x_i, y_{i j}\right)-\operatorname{mean}\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}\right]$, where $\hat{T}_i=\frac{1}{M} \sum_{j=1}^M T_{i j}$.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DR.GRPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\operatorname{mean}\left(\mathbb{R}_i\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Algorithm&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Token Advantage $\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;br /&gt;$(r(x_i,y_{ij})\in \{0,1\},\ \beta = 0)$&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Expectation of Token Advantage $\mathbb{E}\left[\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right) \mid\left(s_t^{(i j)}, a_t^{(i j)}\right)\right]$&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Expectation of the Gradient of Policy Loss $\mathbb{E}_{\mathbb{X}, \mathbb{Y}}\left[\nabla_\theta \hat{\mathcal{L}}\left(\theta_k\right)\right]$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE ++&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\operatorname{std}(\mathbb{R})}\left[r\left(x_i, y_{i j}\right)-\operatorname{mean}(\mathbb{R})\right]$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\sigma_k}\left(Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-\mu_k\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\frac{1}{\sigma_k} \nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $NM$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RLOO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\frac{1}{M-1} \sum_{l \neq j} r\left(x_i, y_{i l}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\pi_{\theta_k}}\left(x_i\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REMAX&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-r\left(x_i, \hat{y}_i\right)$, where $\hat{y}_i$ is sampled from the greedy policy of $\hat{\pi}_{\theta_k}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\hat{\pi}_{\theta_k}}\left(x_i\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\begin{aligned} &amp;amp; (\lambda \gamma)^{T_{i j}-1-t} r\left(x_i, y_{i j}\right)+ \ &amp;amp; \sum_{t^{\prime}=t+1}^{T_{i j}-1}\left(\frac{1}{\lambda}-1\right)(\lambda \gamma)^{t^{\prime}-t} V_\phi\left(s_{t^{\prime}}^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right) \end{aligned}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$A_{\lambda, \gamma}^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$. If $V_\phi=V^{\pi_{\theta_k}}$ and $\gamma=1, A_{\lambda, \gamma}^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)= A^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ If $V_\phi=V^{\pi_{\theta_k}}$ and $\gamma=1$.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ORZ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-V_\phi\left(s_t^{(i j)}\right)$ (PPO with $\lambda=\gamma=1$ )&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (origin version)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{T_{i j}}\left[\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}\right]$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Hard to analyze due to the length normalization term $\frac{1}{T_{i j}}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}}(\cdot \mid x)\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{T \sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq$ &lt;br&gt; $-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (R1 version)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-p_{\theta_k}\left(x_i\right)}{ \sqrt{p_{\theta_k}\left(x_i\right) (1-p_{\theta_k}\left(x_i\right))}}$ asymptotically as $M$ is large enough&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}}(\cdot \mid x)\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{\sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq$ &lt;br&gt; $-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DAPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\hat{T}_i}\left[\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}\right]$, where $\hat{T}_i=\frac{1}{M} \sum_{j=1}^M T_{i j}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-p_{\theta_k}\left(x_i\right)}{T_{\theta_k}\left(x_i\right) \sqrt{p_{\theta_k}\left(x_i\right) (1-p_{\theta_k}\left(x_i\right))}}$ asymptotically as $M$ is large enough&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}(\cdot \mid x)}\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{T_{\theta_k}(x) \cdot \sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq -\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DR.GRPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\hat{p}_i$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{M-1}{M}\left(Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\pi_{\theta_k}}\left(x_i\right)\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\frac{M-1}{M} \nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;REINFORCE ++ 和 DR. GRPO 隐式的采用了自适应的学习率。REINFORCE++ 是由于 global batch normalization，DR.GRPO 是由于没有留一。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>数值</title>
+      <link>http://localhost:1313/haochen/notes/numerical/linalg/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/numerical/linalg/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;小结 
+    &lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%b0%8f%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;{对于开篇提出的三大类基础数值问题，第二类最小二乘的大纲放入线性方程组中}&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;线性方程组 $Ax=b$ 
+    &lt;div id=&#34;线性方程组-axb&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84-axb&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;直接&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LU
+&lt;ul&gt;
+&lt;li&gt;Gauss 消去&lt;/li&gt;
+&lt;li&gt;Doolittle/Crout，Cholesky（或 LDL&amp;rsquo;）&lt;/li&gt;
+&lt;li&gt;Pivoting（PLU）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;QR
+&lt;ul&gt;
+&lt;li&gt;GS 正交化（经典col/修正row）CGS, MGS, CGS2&lt;/li&gt;
+&lt;li&gt;Householder&lt;/li&gt;
+&lt;li&gt;Givens&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SVD&lt;/li&gt;
+&lt;li&gt;稀疏直接法&lt;/li&gt;
+&lt;li&gt;特殊（Toeplitz，FFT，块）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;迭代&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定常&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分裂（$A=M-N, \rho(M^{-1}N)&amp;lt;1$，（弱）正则分裂，M-阵/H-阵）
+&lt;ul&gt;
+&lt;li&gt;Jacobi&lt;/li&gt;
+&lt;li&gt;Gauss-Seidel&lt;/li&gt;
+&lt;li&gt;SOR（或 SSOR）相容次序（Young&amp;rsquo;s Thm）&lt;/li&gt;
+&lt;li&gt;Richardson&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交替方向 e.g. ADI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Krylov 子空间&lt;/p&gt;
+&lt;p&gt;对称&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CG（PCG）&lt;/li&gt;
+&lt;li&gt;MINRES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非对称&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GMRES&lt;/li&gt;
+&lt;li&gt;BiCG，QMR（$\in$ Petrov-Galerkin）&lt;/li&gt;
+&lt;li&gt;CG^2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正规&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>优化</title>
+      <link>http://localhost:1313/haochen/notes/optimization/</link>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/optimization/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;笔记 
+    &lt;div id=&#34;笔记&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ac%94%e8%ae%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./optim_notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./optim_notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;重要算法示例 
+    &lt;div id=&#34;重要算法示例&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e9%87%8d%e8%a6%81%e7%ae%97%e6%b3%95%e7%a4%ba%e4%be%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;次梯度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;subgradient_method&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;subgrad_f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step_size_rule&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;constant&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k_max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k_max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;subgrad_f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step_size_rule&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;constant&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;alpha&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;step_size_rule&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Polyak&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;fk&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;alpha&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fk&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f_star&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;norm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;alpha&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;project_to_C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;近端梯度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;proximal_gradient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grad_f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prox_h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k_max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k_max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prox_h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;grad_f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Proximal Operators&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;prox_l1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sign&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;prox_l2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;prox_indicators&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;project_to_C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;prox_group_lasso&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;x_new&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;norm_g&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;norm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;norm_g&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;x_new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gamma&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;norm_g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;x_new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x_new&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;FISTA&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>信息论</title>
+      <link>http://localhost:1313/haochen/notes/information/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
+    &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-entropy&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;entropy&lt;/strong&gt; $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;joint entropy&lt;/strong&gt;, &lt;strong&gt;conditional entropy&lt;/strong&gt;  $H(X,Y)=H(X)+H(Y|X)$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $H(X|Y) \neq H(X|Y=y)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;relative entropy(KL distance)&lt;/strong&gt; $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $D(p\|q) \neq D(q\|p)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mutual inforamtion&lt;/strong&gt; $I(X;Y)=D(p(x,y)\|p(x)p(y))$&lt;/p&gt;
+&lt;p&gt;$I(X;Y)=H(X)+H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$&lt;br&gt;
+Venn diagram&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;chain rule&lt;/strong&gt; $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>计算理论</title>
+      <link>http://localhost:1313/haochen/notes/computation/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/computation/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Automaton and Language 
+    &lt;div id=&#34;1-automaton-and-language&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-automaton-and-language&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;computation model, finite automation, &lt;strong&gt;FDA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;transition function&lt;/strong&gt; $\delta:Q\times \Sigma\rightarrow Q$, accept state, languge $L(M)=A$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular language&lt;/strong&gt;, &lt;strong&gt;regular operation&lt;/strong&gt;: union $\cup$, concatenation $\circ$, star $^*$&lt;/p&gt;
+&lt;p&gt;nondeterministic $\epsilon$ &lt;strong&gt;NFA&lt;/strong&gt; $\delta:Q\times \Sigma_\epsilon \rightarrow \mathcal{P}(Q)$&lt;/p&gt;
+&lt;p&gt;$NFA=DFA$&lt;/p&gt;
+&lt;p&gt;$REG$ is closure under regular operation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular expression&lt;/strong&gt; $REX$: $R = a\in \Sigma \text{ or } \epsilon \text{ or } \varnothing \text{ or } R_1\cup R_2  \text{ or } R_1\circ R_2  \text{ or } R_1^*$​&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>随机分析</title>
+      <link>http://localhost:1313/haochen/notes/stochastic-analysis/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/stochastic-analysis/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;要点 
+    &lt;div id=&#34;要点&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%a6%81%e7%82%b9&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;img src=&#34;./recap1.jpg&#34;&gt;
+&lt;img src=&#34;./recap2.jpg&#34;&gt;
+&lt;img src=&#34;./recap3.jpg&#34;&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;讲义 
+    &lt;div id=&#34;讲义&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%ae%b2%e4%b9%89&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./stoana_notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./stoana_notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>拓扑</title>
+      <link>http://localhost:1313/haochen/notes/topology/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/topology/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
+    &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a4%a7%e7%ba%b2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Part 1 
+    &lt;div id=&#34;part-1&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#part-1&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;邻域系 $\mathcal{N}(x)$  Kuratowski 闭包公理  导集 完全集  子基 局部基&lt;/p&gt;
+&lt;p&gt;积拓扑与盒拓扑 $\mathscr{S}={p^{-1}_\lambda(U_\lambda)|U_\lambda\in \mathscr{S}_\lambda,\lambda\in \Lambda }$  有向集 网的收敛 $\forall x \in \bar{A},\ \exist {x_\alpha|\alpha\in D}\rightarrow x$&lt;/p&gt;
+&lt;p&gt;可数公理 分离公理 ($C_1$: 序列 ex. 度量；$C_2$: 可分 ex. 可分度量) ($T_1$: 单点闭；$T_2$: 网收敛于同一点；$T_4$: ex. 度量)&lt;/p&gt;
+&lt;p&gt;正规空间与 Urysohn 引理、Tietze 扩张 (闭集)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>生成模型</title>
+      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
+    &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#vae&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Settings and Loss 
+    &lt;div id=&#34;settings-and-loss&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#settings-and-loss&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+x \underset{q_\phi(z|x)}{\xrightarrow{\text{enc.}}} z \underset{p_\theta(x|z)}{\xrightarrow{\text{dec.}}} \hat{x}
+$$&lt;/p&gt;
+&lt;p&gt;Encoder (approximate posterior): $q_{\phi}(z\mid x)$&lt;br&gt;
+Decoder (likelihood model): $p_{\theta}(x\mid z)$&lt;/p&gt;
+&lt;p&gt;AE: deterministic in $z, \hat{x}$, $f_\theta$ acts like a corset, $\mathcal{L}_{\text{recons.}} = |x - \hat{x}|^2$&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{L}=-\mathbb{E}_{z \sim q_{\phi}(z\mid x)}\left[\log p_{\theta}(x\mid z)\right]+\beta \cdot \mathrm{KL}\bigl(q_{\phi}(z\mid x)|p(z)\bigr)
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>量子力学的形式理论</title>
+      <link>http://localhost:1313/haochen/notes/quantum-form/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/quantum-form/</guid>
+      <description>&lt;p&gt;
+
+系统的运动状态&lt;strong&gt;由 Hilbert 空间（所有平方可积函数构成的线性空间）中的一个矢量 $\ket{ \mathfrak{I} }$ 描述&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$\ket{ \mathfrak{I} } \in \mathcal{H}$ ， $\mathcal{H}$ 可以为分立维空间，也可以为连续维空间。 $\bra{I} \in \mathcal{H}^{ * }$ 为其对偶矢量，把矢量映射为一个数。对分立维矢量，其对应的左矢看作其 Hermitian 的左乘；对连续维矢量（函数），看作一个对积分的指定 $\int f^{ * }(x) [ \dots ] \mathrm{~d}^{3} x$ 。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;可测力学量与 Hermitian 算符一一对应&lt;/strong&gt;，对可测力学量的观测结果必为其对应算符的本征值之一。将态矢 $\ket{ \mathfrak{ I } }$ 按照其本征函数集做线性展开，得到的&lt;strong&gt;系数取模方即为测得对应本征态的概率。测量过后态矢坍缩为对应本征态&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hermitian 算符为 Hilbert 空间中的线性变换，且对应的矩阵为 Hermitian 矩阵（转置共轭等于自身）。由此可以证明，Hermitian 算符的本征值必为实数，属于不同本征值的本征函数必定正交。Dirac 取公理为，可测力学量对应的 Hermitian 算符必有一个正交完备的本征函数集。&lt;/p&gt;
+&lt;p&gt;利用归一基 $\ket{a}$ 对应的算符 $\hat{P} = \ket{a} \bra{a}$ 可以求得态矢在其方向上的投影。类似地，可以将态矢按照本征函数集展开。&lt;/p&gt;
+&lt;p&gt;$$
+\ket{ \mathfrak{I} } = \sum_{a} \ket{a} \braket{ a | \mathfrak{I} }
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>数据库及实现</title>
+      <link>http://localhost:1313/haochen/notes/database/</link>
+      <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/database/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 系统概论 
+    &lt;div id=&#34;1-系统概论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-%e7%b3%bb%e7%bb%9f%e6%a6%82%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DBS：硬件；软件（应用系统，&lt;strong&gt;DBMS&lt;/strong&gt;，OS）；DB；人（用户，管理员）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DBS 结构：三级模式 &lt;strong&gt;Schema&lt;/strong&gt;，二级映像&lt;/p&gt;
+&lt;p&gt;子模式（外模式）、&lt;strong&gt;（概念）模式&lt;/strong&gt;、内模式；物理独立性与逻辑独立性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外部结构：单用户式、分布式和并行、客户机/服务器、浏览器/服务器（SaaS、PaaS、IaaS）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据模型&lt;/strong&gt;三要素：数据结构，数据操作，完整性约束&lt;/p&gt;
+&lt;p&gt;数据定义语言 &lt;strong&gt;DDL&lt;/strong&gt;，数据操纵语言 &lt;strong&gt;DML&lt;/strong&gt;（描述式的查询意图）&lt;/p&gt;
+&lt;p&gt;（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;E-R&lt;/strong&gt; 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen/Crow）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;层次（树）、网状（有向图）、关系（二维表：元组/属性；查询效率偏低）、面向对象（维护困难）&lt;/p&gt;
+&lt;p&gt;向量、图（知识图谱）；数据仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;2 关系 
+    &lt;div id=&#34;2-关系&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-%e5%85%b3%e7%b3%bb&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）&lt;/p&gt;
+&lt;p&gt;超键、候选键（码，能唯一标识元组的最小属性组）、&lt;strong&gt;主键&lt;/strong&gt;（主码）、&lt;strong&gt;外键&lt;/strong&gt;、代理键（DBMS 分配）；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主属性&lt;/strong&gt;/非主属性，单码、全码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系运算：&lt;br&gt;
+集合运算符 $\cap,\ \cup,\ -,\ \times$；逻辑与比较运算符 $\land,\ \vee,\ \neg$；&lt;br&gt;
+专用运算符 &lt;strong&gt;选择&lt;/strong&gt; $\sigma_{\theta}$，&lt;strong&gt;投影&lt;/strong&gt; $\Pi$，&lt;strong&gt;连接&lt;/strong&gt; $\bowtie_{\theta},\ \bowtie$（一般连接、&lt;strong&gt;自然连接&lt;/strong&gt;；内连接、左/右/全外连接 ⟕, ⟖, ⟗、反连接 $\rhd_\theta,\ \rhd$），&lt;strong&gt;除法&lt;/strong&gt; $\div$（$R\div S ={t|t\in \pi_X(R) \wedge t\times\pi_Y(S)\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），&lt;strong&gt;重命名&lt;/strong&gt; $\rho_{B\leftarrow A}(R),\ \rho_{S}(R),\ \rho_{S(A_1,\dots,A_n)}(R)$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
+    &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#attetion--transformer&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./attention.jpg&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>实分析</title>
+      <link>http://localhost:1313/haochen/notes/real-analysis/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/real-analysis/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
+    &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a4%a7%e7%ba%b2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./realana_guide.jpg&#34; style=&#34;zoom:80%;&#34;&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;笔记 
+    &lt;div id=&#34;笔记&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ac%94%e8%ae%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./Zhi_notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./Zhi_notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;0 Set and Topology 
+    &lt;div id=&#34;0-set-and-topology&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#0-set-and-topology&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;1 Measures 
+    &lt;div id=&#34;1-measures&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-measures&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;2 Integration 
+    &lt;div id=&#34;2-integration&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-integration&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;3 Signed Measures and Differentiation 
+    &lt;div id=&#34;3-signed-measures-and-differentiation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#3-signed-measures-and-differentiation&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;4 Functional Analysis, Lp Space and Radon measures 
+    &lt;div id=&#34;4-functional-analysis-lp-space-and-radon-measures&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#4-functional-analysis-lp-space-and-radon-measures&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>二十世纪的十余个算法</title>
+      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;1 MC 
+    &lt;div id=&#34;1-mc&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-mc&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+\int fp \leftrightarrow \mathbb{E}f \leftrightarrow \frac{1}{n}\sum\limits^n_{i=1} f_i \text{ sampling}
+$$&lt;/p&gt;
+&lt;p&gt;Variance Control：$\mathbb{E}f(x) = \mathbb{E}(f(x)+c(g(x)-\mathbb{E}g(x)))$，$c^*=-\frac{\text{Cov}(f,g)}{\text{V} (g)}$&lt;/p&gt;
+&lt;p&gt;Importance Sampling：$\mathbb{E}_Xf(x)=\mathbb{E}_Y\frac{f(y)p(y)}{q(y)}$，$q^*(y)=\frac{\vert f(y)\vert p(y)}{\mathbb{E}_Xf(x)}$（not computable）&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;2 Simplex 
+    &lt;div id=&#34;2-simplex&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-simplex&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\text{(LP)} &amp;amp; \min\limits_{x\in \mathbb{R}^n} c^\prime x\\
+\text{s.t.} &amp;amp; Ax=b,\\ &amp;amp; x\ge 0
+\end{aligned}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>ODE 解的存在性</title>
+      <link>http://localhost:1313/haochen/notes/diff-eqs/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/diff-eqs/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;ODE 解的存在性 
+    &lt;div id=&#34;ode-解的存在性&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#ode-%e8%a7%a3%e7%9a%84%e5%ad%98%e5%9c%a8%e6%80%a7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我们考虑初值问题
+$$
+\frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0
+$$&lt;/p&gt;
+&lt;p&gt;设矩形区域 $ R = \{(t, y) \in \mathbb{R}^2 : |t - t_0| \le a, \ |y - y_0| \le b\} $，其中 $a, b &amp;gt; 0$。若函数 $ f: R \to \mathbb{R} $ 在 $R$ 上满足某些良好的连续性质，则存在性定理希望保证：至少存在一个解 $y(t)$ 定义在区间 $|t - t_0| \le h$ 上，其中
+$$
+h = \min\left\{a, \ \frac{b}{M}\right\}, \quad M = \max_{(t, y)\in R} |f(t, y)|
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>共轭梯度法</title>
+      <link>http://localhost:1313/haochen/notes/numerical/cg/</link>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/numerical/cg/</guid>
+      <description>&lt;p&gt;
+
+如果初始点的选择不好或者函数行为不好时，最速下降法可能并不理想。我们先从几何和直觉上展示共轭梯度法，同时可以在后文理清数学逻辑后再来看看这两张图。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;CG&#34; src=&#34;./CG.jpg&#34;&gt;
+
+  
+    &lt;figcaption&gt;CG Sketch for memory&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;对于精确线搜索，最速下降法的前后两步的下降方向必定是垂直的，从而导致了可能的 zigzag 现象。共轭梯度法所选择的共轭方向 $p_i$ 更加具备全局性；例如图中的二次函数 $f=\frac{1}{2}x^\prime Ax-b^\prime x,\ \nabla f = Ax-b$，第二步的方向一定指向最优点 $Ax^*=b$。右图可见共轭方向并不一定垂直，而是 $A$ 意义下的垂直：$p_i^\prime Ap_j = 0,\ i\neq j$。注意到对于 $A\in \mathbb{S}_+$，易证这一组 $\{p_i\}_{i=1}^n$ 线性独立，我们希望逐步获得 $x^*$ 在这组基上的表示。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我们先考虑线性版本（即上面的 $f$）。&lt;/p&gt;
+&lt;p&gt;$$
+\dots \overset{p_{i-1}}{\longrightarrow} x_i \overset{p_{i}}{\longrightarrow} \dots
+$$&lt;/p&gt;
+&lt;p&gt;假装我们能获取每一步的搜索方向 $p_i$，那么由精确线搜索知 $p_i \perp -\nabla f_{i+1}$，其中 $\nabla f_{i+1} := \nabla f(x_{i+1})$，且 $x_i = x_0 + \sum_{j=0}^{i-1}\alpha_j p_j$，$\alpha_i$ 记步长。&lt;/p&gt;
+&lt;p&gt;同时我们可以直接得到一个关于搜索步长的表达式，对 $f(x_i + \alpha_i p_i) = g(\alpha_i),\ g^\prime (\alpha_i) = 0$ 得到&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>色彩科学</title>
+      <link>http://localhost:1313/haochen/notes/color-science/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/color-science/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Luminance 
+    &lt;div id=&#34;luminance&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#luminance&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我们看到颜色是因为物体发出或反射了光。颜色是光在频率和功率上的分布特征。我们知道可见光波段是 380nm - 780nm，由紫经过蓝、绿、黄至红，这是单个波长光在人眼产生的响应。一些物体的颜色是因为它发出了对应波长范围的光，如烧红的铁水、白炽灯丝，它们是热辐射，服从 Kirchhoff 的辐射定律（理想黑体则是 Planck 公式）；此外 LED 显示屏、荧光灯、激光均非热辐射，能量来自于电能、化学反应、跃迁等。更多的物体是吸引了其他波段而反射了特定的颜色；彩色玻璃则是只留下特定颜色的光通过。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;色温指发出与此光相似的光的黑体所具有的温度，根据 Planck 算得黑体辐射光谱，100K - 12000K 大概是红 - 橙 - 黄 - 白 - 浅蓝，因此讨论绿色等颜色的色温是无意义的。常见的有 2800K 白炽灯、5500K 平均日光（如出版）、6500K 国际标准日光白（如显示）等。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;色温&#34; src=&#34;./%E8%89%B2%E6%B8%A9.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;人眼通过视网膜上的视锥细胞（S、M、L，对应峰值响应波长蓝、绿、红）和视杆细胞（Rod）感知光线。人眼有局部适应性，一个颜色缓慢轻微调暗并不一定能察觉；Weber 定律表明，$\frac{\Delta I}{I} \approx \text{Const.}$（1% – 2% 在明视觉下），即变化的感知阈值与背景相关。此外还有亮度适应与色度适应（色恒常性），前者指视杆细胞和视锥细胞会动态调整敏感度，暗处时视杆细胞主导，明处时视锥细胞主导；后者指视锥细胞对特定波长光的敏感性随时间减弱，大脑会自动校正颜色感知，如走到略昏黄的房间里一会后可能会将照得略黄的墙壁认作白色，或长时间看红色东西后转向白墙会看到青色的补色块。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;光强&#34; src=&#34;./%E5%85%89%E5%BC%BA.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;人类&#34; src=&#34;./%E4%BA%BA%E7%B1%BB.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;对于光亮度感知，显然看起来不可能（同功率下）各个波长都一样。因此我们实验测定了明视觉亮度函数（视效函数）$V(\lambda)$，在 $2\degree$视角、明视觉条件下平均人眼匹配不同波长光的明暗感觉得到。这个函数在约 555nm 处取到最大视效 $V_m = V(555\text{ nm}) = 683 \text{ lm/W}$（故人眼对绿光最敏感）；如果我们除以 $V_m$，将该点置一就得到我们常用的视见函数，仍记作 $V(\lambda)$（自然可见是否带这个常数因子不重要，后面自行知道即可）。（暗视觉 $V^\prime_m = V^\prime(507\text{ nm}) = 1700 \text{ lm/W}$）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>博弈论</title>
+      <link>http://localhost:1313/haochen/notes/game/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/game/</guid>
+      <description>&lt;p&gt;传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。&lt;/p&gt;
+&lt;p&gt;下面的讲义为本人重新基于 belief 概念整理后的形式化理论，并借鉴拓扑的思路分析不同博弈中的不变性。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;讲义 
+    &lt;div id=&#34;讲义&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%ae%b2%e4%b9%89&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;演化博弈论大纲 
+    &lt;div id=&#34;演化博弈论大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%bc%94%e5%8c%96%e5%8d%9a%e5%bc%88%e8%ae%ba%e5%a4%a7%e7%ba%b2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;img src=&#34;./evol_game.jpg&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>智能引论</title>
+      <link>http://localhost:1313/haochen/notes/ai-basics/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/ai-basics/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;0 Intro 
+    &lt;div id=&#34;0-intro&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#0-intro&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;智能计算的方法： 
+    &lt;div id=&#34;智能计算的方法&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%99%ba%e8%83%bd%e8%ae%a1%e7%ae%97%e7%9a%84%e6%96%b9%e6%b3%95&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;推理（符号主义），包括归纳、演绎、因果，e.g. 专家系统&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;搜索（问题求解），包括无信息（深/广度优先）、有信息（启发式）、对抗（e.g. Minimax, alpha-beta, MCT）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;机器学习（数据驱动），包括&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;监督：判别式 $P(y|x)$（e.g. 回归, 提升, SVM, DecisionTree）与生成式 $P(X,Y)$（e.g. LDA, HMM）&lt;/li&gt;
+&lt;li&gt;无监督：聚类（e.g K-means, 层次, 谱）、降维（线性（e.g. PCA, LDA/FDA, CCA）与非线性 i.e. 流形学习）、EM&lt;/li&gt;
+&lt;li&gt;半监督等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;强化学习（行为主义），MDP，exploration-exploitation tradeoff，MARL {博弈论可以提供多智能体环境下结果的刻画，或寻找合理解的非启发的方式，但不认为是核心}&lt;/p&gt;
+&lt;p&gt;esp. 深度学习（联结主义）作为监督学习方法，并和强化学习结合（如拟合 Q 函数）；类脑计算&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;AI 发展技术形态： 
+    &lt;div id=&#34;ai-发展技术形态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#ai-%e5%8f%91%e5%b1%95%e6%8a%80%e6%9c%af%e5%bd%a2%e6%80%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;从数据到知识到决策的大数据智能、多模态智能、群体智能、人机混合的增强智能、机器人的智能自主系统
+{总而言之是大量的具备学习探索能力、独立交互各类信息、人在回路的融合社会}&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Stokes 公式</title>
+      <link>http://localhost:1313/haochen/notes/stokes/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/stokes/</guid>
+      <description>&lt;p&gt;
+
+假设某界面上下有四束平面电磁波，介质 1 中入射与出射电磁波为 $\vec{E}_{1}, \vec{E}_{1}^{\prime}$，介质 2 中入射与出射电磁波为 $\vec{E}_{2}, \vec{E}_{2}^{\prime}$。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;图片&#34; src=&#34;./graph/Stokes1.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;$$
+\begin{array}{l}
+\vec{E}_{1} = \mathrm{Re}{( \vec{E}_{1} e^{ i \vec{k}_{1} \cdot \vec{r} - i \omega t } )} \\
+\vec{E}_{1}^{\prime} = \mathrm{Re}{( \vec{E}_{1}^{\prime} e^{ i \vec{k}_{1}^{\prime} \cdot \vec{r} - i \omega t } )} \\
+\vec{E}_{2} = \mathrm{Re}{( \vec{E}_{2} e^{ i \vec{k}_{2} \cdot \vec{r} - i \omega t } )} \\
+\vec{E}_{2}^{\prime} = \mathrm{Re}{( \vec{E}_{2}^{\prime} e^{ i \vec{k}_{2}^{\prime} \cdot \vec{r} - i \omega t } )}
+\end{array}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>统计</title>
+      <link>http://localhost:1313/haochen/notes/statistics/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/statistics/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;统计推断 
+    &lt;div id=&#34;统计推断&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%bb%9f%e8%ae%a1%e6%8e%a8%e6%96%ad&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;多元统计 
+    &lt;div id=&#34;多元统计&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a4%9a%e5%85%83%e7%bb%9f%e8%ae%a1&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./multistat_o.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./multistat_o.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;因果推断 
+    &lt;div id=&#34;因果推断&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%a0%e6%9e%9c%e6%8e%a8%e6%96%ad&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./intro_causalinfer.jpg&#34;&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;非参数统计 
+    &lt;div id=&#34;非参数统计&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e9%9d%9e%e5%8f%82%e6%95%b0%e7%bb%9f%e8%ae%a1&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./nonpara.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./nonpara.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;</description>
+      
+    </item>
+    
   </channel>
 </rss>

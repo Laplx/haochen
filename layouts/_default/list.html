@@ -1,45 +1,140 @@
-{{ define "head" }}
-{{ $options := dict "transpiler" "dartsass" "targetPath" "css/list.css" }}
-{{ with resources.Get "sass/layouts/list.scss" | toCSS $options | postCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-{{ end }}
-{{ end }}
-
 {{ define "main" }}
-<main id="main" class="archive">
-  {{ if .Site.Params.enableDuckDuckGoSearchBox }}
-  <div id="searchbox">
-    <form method="get" id="ddgSearch" target="_blank" action="https://duckduckgo.com/">
-        <input type="hidden" name="sites" value="{{ .Site.BaseURL }}"/>
-        <input type="hidden" name="kf" value="-1"> <!-- no favicons -->
-        <input type="hidden" name="kh" value="1"> <!-- https -->
-        <input type="hidden" name="kae" value="d" > <!-- dark theme -->
-        <input type="hidden" name="k1" value="-1" > <!-- no ads -->
-        <input type="text" name="q" placeholder="Search…" aria-label="Search michaelneuper.com on DuckDuckGo"/>
-        <button type="submit">
-            <svg aria-hidden="true" height="1rem" viewBox="0 0 16 16" version="1.1" width="1rem" data-view-component="true" class="octicon octicon-search Button-visual">
-            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
-            </svg>
-          </button>
-    </form>
-  </div>
-  {{ end }}  
-  {{ $pages := where .Data.Pages "Type" "posts" }}
-  {{ range $pages.GroupByDate "2006-01" }}
-  <div class="post-group">
-    <h3>{{ dateFormat "January 2006" (printf "%s-01" .Key) }}</h3>
-    <ul>
-      {{ range .Pages }}
-      <li>
-        <a class="link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <time>{{ .PublishDate.Format .Site.Params.dateFormat }}</time>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
-  <div class="post-group">
-    <h3>...</h3>
-  </div>
-</main>
+
+{{ .Scratch.Set "scope" "list" }}
+{{ if .Site.Params.list.showHero | default false }}
+{{ $heroStyle := print "hero/" .Site.Params.list.heroStyle ".html" }}
+{{ if templates.Exists ( printf "partials/%s" $heroStyle ) }}
+{{ partial $heroStyle . }}
+{{ else }}
+{{ partial "hero/basic.html" . }}
 {{ end }}
+{{- end -}}
+
+{{ $toc := and (.Params.showTableOfContents | default (.Site.Params.list.showTableOfContents | default false)) (in
+.TableOfContents "<ul") }} <header>
+  {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+  {{ partial "breadcrumbs.html" . }}
+  {{ end }}
+  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+    {{ partial "article-meta/list.html" (dict "context" . "scope" "single") }}
+  </div>
+  {{ $translations := .AllTranslations }}
+  {{ with .File }}
+    {{ $path := .Path }}
+    {{range $translations}}
+      {{ $lang := print "."  .Lang  ".md" }}
+      {{ $path = replace $path $lang ".md" }}
+    {{end}}
+  {{ $jsPage := resources.Get "js/page.js" }}
+  {{ $jsPage = $jsPage | resources.Minify | resources.Fingerprint ($.Site.Params.fingerprintAlgorithm | default "sha512") }}
+  <script type="text/javascript" src="{{ $jsPage.RelPermalink }}" integrity="{{ $jsPage.Data.Integrity }}" data-oid="views_{{ $path }}" data-oid-likes="likes_{{ $path }}"></script>
+  {{ end }}
+  </header>
+  <section class="{{ if $toc -}}
+      mt-12
+    {{- else -}}
+      mt-0
+    {{- end }} prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
+    {{ if $toc }}
+    <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 lg:sticky {{ if hasPrefix .Site.Params.header.layout "fixed" -}}
+      lg:top-[140px]{{ else }}lg:top-10{{ end }}">
+        {{ partial "toc.html" . }}
+      </div>
+    </div>
+    {{ end }}
+    <div class="min-w-0 min-h-0 max-w-prose">
+      {{ .Content }}
+    </div>
+
+
+
+
+  </section>
+  {{ if gt .Pages 0 }}
+
+    {{ $cardView := .Params.cardView | default (.Site.Params.list.cardView | default false) }}
+    {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (.Site.Params.list.cardViewScreenWidth | default false) }}
+    {{ $groupByYear := .Params.groupByYear | default ($.Site.Params.list.groupByYear | default false) }}
+    {{ $orderByWeight := .Params.orderByWeight | default ($.Site.Params.list.orderByWeight | default false) }}
+    {{ $groupByYear := and (not $orderByWeight) $groupByYear }}
+    {{/* order pages: weight 优先，其余按时间倒序 */}}
+    {{ $pagesOrdered := .Pages }}
+    {{ if $orderByWeight }}
+      {{ $weighted := where .Pages "Weight" "gt" 0 }}
+      {{ $unweighted := where .Pages "Weight" "le" 0 }}
+      {{ $pagesOrdered = union $weighted.ByWeight $unweighted.ByDate.Reverse }}
+    {{ else }}
+      {{ $pagesOrdered = .Pages.ByDate.Reverse }}
+    {{ end }}
+
+    {{ if not $cardView }}
+
+    <section class="space-y-10 w-full">
+      {{ if not $orderByWeight }}
+        {{ range (.Paginate ($pagesOrdered.GroupByDate "2006")).PageGroups }}
+        {{ if $groupByYear }}
+        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+          {{ .Key }}
+        </h2>
+        {{ end }}
+        {{ range .Pages }}
+        {{ partial "article-link/simple.html" . }}
+        {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ range (.Paginate $pagesOrdered).Pages }}
+        {{ partial "article-link/simple.html" . }}
+        {{ end }}
+      {{ end }}
+    </section>
+
+    {{ else }}
+
+      {{ if $groupByYear }}
+
+      {{ range (.Paginate ($pagesOrdered.GroupByDate "2006")).PageGroups }}
+        {{ if $cardViewScreenWidth }}
+        <div class="relative w-screen max-w-[1600px] px-[30px] center-relative-left">
+        {{ end }}
+          <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+            {{ .Key }}
+          </h2>
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 {{ if $cardViewScreenWidth }} xl:grid-cols-4 2xl:grid-cols-5 {{ end }}">
+          {{ range .Pages }}
+          {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </section>
+        {{ if $cardViewScreenWidth }} </div> {{ end }}
+      {{ end }}
+
+      {{ else }}
+
+        {{ if $cardViewScreenWidth }}
+        <div class="relative w-screen max-w-[1600px] px-[30px] center-relative-left">
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+        {{ else }}
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        {{ end }}
+        {{ range (.Paginate $pagesOrdered).Pages }}
+          {{ partial "article-link/card.html" . }}
+        {{ end }}
+        </section>
+        {{ if $cardViewScreenWidth }} </div> {{ end }}
+
+    {{ end }}
+
+    {{end}}
+
+  {{ else }}
+  <section class="mt-10 prose dark:prose-invert">
+    <p class="py-8 border-t">
+      <em>{{ i18n "list.no_articles" | emojify }}</em>
+    </p>
+  </section>
+  {{ end }}
+
+    {{ partial "pagination.html" . }}
+
+  {{ end }}

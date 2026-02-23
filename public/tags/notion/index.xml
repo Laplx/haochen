@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notion on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/notion/</link>
+    <description>Recent content in Notion on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/notion/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Geometric Hermeneutics</title>
+      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
+    &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%af%ad%e8%a8%80%e7%9a%84%e5%87%a0%e4%bd%95%e5%ad%a6%e9%98%90%e9%87%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./25.1.10.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;Meaning 
+    &lt;div id=&#34;meaning&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#meaning&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;我们不能理解完全不依靠&lt;strong&gt;现实&lt;/strong&gt;的意义。（现实指的不一定就是真实存在发生的，而是一种类似生活经验的东西）所有的意思（意义，关于另外一种 “意义” 见下一小节）都指代了一系列可能的现实世界过程（称作&lt;strong&gt;宇宙&lt;/strong&gt; $u$）。某一时刻的宇宙 $u(t)$ 称作世界，是一系列状态信息的集合（能想象到的所有信息都可以如此纳入）$\{\pi^1,\pi^2,\dots\}$（暂时先把不可数的打包在一起，写成可数的形式；注意我们可以想象虚空中的抽象状态，但它仍然是一个与其他事实状态无二的东西）。一个半宇宙（前向/后向宇宙）指 $\{u_t\}_{t\ge 0}$ 或 $\{u_t\}_{t\le 0}$，包含一个给定的始终点 $u_0$。注意我们目前没说 $u(t)$ 随时间的变化满足一定的规律（比如 Newton&amp;rsquo;s Law），它允许了一切天马行空的假设与想象力。所有这些平行宇宙的集合 $\mathcal{O}$ 称作&lt;strong&gt;客观集&lt;/strong&gt;，鉴于它们都是思考的对象（因此可能可以认为启蒙运动是在扩展客观集）。建模时状态是&lt;strong&gt;外禀&lt;/strong&gt;的；例如总有人知道电场的存在，有人的世界里是不知道的（“因为太愚昧或太聪明而获得自由的幻象” 亨利·詹姆斯《使节》）。对于某个读者来说，他所能理解的一切宇宙集合记作&lt;strong&gt;知识域&lt;/strong&gt; $\mathcal{K}=\hat{\mathcal{O}}$。但这里面有一些宇宙大概是符合一些规律的，我们把符合该规律的集合称作&lt;strong&gt;真域&lt;/strong&gt; $\mathcal{T}$；同样，比方说或许有人眼里 Newton&amp;rsquo;s Law 和大家的不一样，故每个读者都有自己认为的真域 $\mathcal{U}=\hat{\mathcal{T}}$。&lt;strong&gt;意思空间&lt;/strong&gt; $\mathcal{M}=\mathcal{P}(\mathcal{O})$，真理空间 $\mathcal{M}_T=\mathcal{P}(\mathcal{T})$。意思之间存在包含关系 $m_1\subset m_2$；空/&lt;strong&gt;无知&lt;/strong&gt;意思点 $0\in \mathcal{M}$ 表示全集背景，无穷远/&lt;strong&gt;未知&lt;/strong&gt;意思点 $\infty$ 代表空集，其没有任何可理解的意义。&lt;/p&gt;
+&lt;p&gt;我们可以对意思之间进行简单的运算，包括&lt;strong&gt;反义&lt;/strong&gt; $m^c$、&lt;strong&gt;且（独立）&lt;/strong&gt;$m_1\cap m_2$、&lt;strong&gt;或&lt;/strong&gt; $m_1\cup m_2$。如果 $m_1, m_2$ 对应的文本是 $w_1, w_2$，总文本 $w=w_1w_2$ 对应的（作者的）意思是 $m$，$m$ 不一定是 $m_1\cap m_2$。&lt;strong&gt;顺序和&lt;/strong&gt; $m_1+m_2$，我们需要定义嵌入映射 $\phi:u \mapsto u^+/u^-$ 将时间压缩进半宇宙内，以实现时间上的先后关系，故 $m_1+m_2$ $=\{u\in m_1\cap m_2: \exists \phi_1,\phi_2,u_1\in m_1,u_2\in m_2 \text{ s.t. }u=\phi_1(u_1)+\phi_2(u_2)\}$ 对应于顺叙的文本 $w$。（对于始终点的衔接问题，设想一群在 $T$ 后就暂停演化的宇宙；即使受到真视域的限制，注意到人脑中状态序列的有限性和模糊性，这一点仍然可以成立。）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Infinite Turing Machine</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
+    &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a0%e9%99%90%e5%9b%be%e7%81%b5%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本篇内容倒是很久以前就酝酿在脑子里了……只是一个乱七八糟的猜想，请当我是疯子罢……我发誓再也不搞了，这样下去要变民科叻）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./24.1.26.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;人类已经有很多关于超计算机的设想（超越图灵屏障），并对人脑是否可由机器模拟这类问题悬而未决。&lt;/p&gt;
+&lt;p&gt;我想试探性把可计算性和不可计算性（不完全地）对偶起来。我认为二者是可以互相涌现的。因此饼的右半部分需要定义一个新的称作无限图灵机 ITM（Infinite Turing Machine），它可以是有无限个带的图灵机、带有概率论意义上的随机的图灵机，或是无限个确定图灵机组成的网络（需要一个函数 $F$ 来刻画其中的输入输出连结关系），我认为它们是等价的（!）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Church-Turing Thesis:&lt;/strong&gt; A function can be calculated by an effective method if and only if it is computable by a Turing machine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dual Church-Turing Thesis:&lt;/strong&gt; A relation can be understanded by an effective way if and only if it is realized by a infinite Turing machine.&lt;/p&gt;
+&lt;p&gt;$RE$ 表示全部图灵可识别语言（Chomsky 形式语法 type-0），$TE$ 表示 Turing Emergenable（大概需要一个自然语言的语法层级），全部图灵可涌现识别的语言。对应通用图灵机 $\mathcal{U}$ 的为通用无限图灵机 $\tilde{\mathcal{U}}$。（由于至少一种图灵机 $M_\infty$ 有无限个，我们需要指明输入参数、算法指派的模式作为在无穷网络上的输入。）不仅 $ \tilde{\mathcal{U}} = F(\mathcal{U})$，$\mathcal{U} = F(\tilde{\mathcal{U}})$​ 亦成立。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Regression on Channel</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
+    &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%9e%e5%bd%92%e5%9c%a8%e4%bf%a1%e9%81%93%e4%b8%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（这是一个很蠢的想法……可以来抠一下是否成立或者说条件在哪里）&lt;/p&gt;
+&lt;p&gt;我们假想我们做的回归 $Y$ 对 $X$ 其实由一个高斯信道 $X\rightarrow Y$ 把控。如果事实上机制就是这样，那么估计的信道容量会趋向真实值 $\hat{C}\rightarrow C=-\frac{1}{2}\ln(1-R^2)$，这也是最大可能达到的码率——这里就有事了，我们正是依靠$X$的行为传递的信息去判别$Y$​。&lt;/p&gt;
+&lt;p&gt;若连续变量 $X$ 确实按照高斯分布，那么理论上我们能无限量的发出信息；但这并没有用，鉴于信道的限制，我们相当于以至少存在 $D_{min}=\sigma_X^2(1-R^2)$ 的均方误差进行测量。（$R(D)=\frac{1}{2}\ln\frac{\sigma_X^2}{D}&amp;lt;C$）&lt;/p&gt;
+&lt;p&gt;如果形式的分组（就像处理微分熵那样），那么我们有 $\lfloor \frac{1}{\sqrt{1-R^2}}\rfloor$ units。于是相关系数 $R\ge \frac{\sqrt{3}}{2}=0.866$ 尚才1个bit的定性判断。否则在样本量趋向于无穷时候，结果落在典型集中的概率会趋向于0，亦即此时用以预测其实跟打奖没什么区别呃呃。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Theory of Theory</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
+    &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%90%86%e8%ae%ba%e7%9a%84%e7%90%86%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我要讲的是“学科的学科”——虽然高中课本里哲学似乎便这么宣称——但这里讲的是言之有物的理论构建，而非关乎世界本质的基础支撑。&lt;/p&gt;
+&lt;p&gt;广义的理论（Theory）可以等同为知识（Knowledge），而知识被我分为 Experience、Analysis、Science 三种层级。Experience 指经验性的总结 Synthesize 和解释 Explain，例如我们可以对厕所的规划和使用形成学问，对什么样的音乐是好听的形成学问，但其来源都是已有事物的 Application，类似一个经验丰富的老技工。Analysis 指在一定抽象程度上建立的统一分析框架 Analytical Frame，大家在平常能见到的“XX学”都已经达到了这样的标准；但 Analysis 在现实中仍然有可能只能做解释或归纳性的预测。Science 被定义为 Modeling 模型化现实，给出考察对象之间的作用关联，其目的是预测 Predict 和控制 Control。我们这里的理论 Theory 便是狭义的理论，特指科学学科 Science。我给出的范式是：&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{X} \rightarrow X \rightarrow \boxed{\mathbb{T}} \rightarrow Y \rightarrow \mathcal{Y}
+$$&lt;/p&gt;
+&lt;p&gt;$\mathcal{X} \rightarrow X$ 和 $\mathcal{Y} \rightarrow Y$ 都是概念化 Conceptualize 的过程。$\mathcal{X}$ 和 $\mathcal{Y}$ 是现实世界的对象或情形，$X$ 和 $Y$ 是我们理论的输入和输出。（注意$X$可以不仅仅是某个数值变量“政府年度固定投资额”，还可以是“财政政策不变”这样更为抽象的输入或问询。）科学理论的核心是相关与因果。仅相关的关联性可以做到预测，而因果性（并不是一个容易论断的东西）可以做控制和应用。中间的模型机制 Laws or Theorems $T$ 和概念 Concepts $C$ 组成了一个完整的理论 $\mathbb{T}=\{T_1,\cdots,T_i,C_1,\cdots,C_j\}$ 。每个定理（或定理的一部分）都可以写成 $c = T(c_1,\cdots,c_n)$，其中 $c$ 是 $C$ 的具象输入。我们这里缺少了几个理论里常见的模块，但其实已经纳入机制 $T$ 内了，包括假设 Assumption 和公理 Axiom ——一种未经验证的假定的$C$之间的关联性；引理 Lemma 和推论 Corollary ——也是定理们特定的同义重复。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Knoid</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.06/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.06/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;知子网 
+    &lt;div id=&#34;知子网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%9f%a5%e5%ad%90%e7%bd%91&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;正好最近有同学想设计一个读书小组。其实我本来也有一个成立 workshop 的想法，但为什么没搞呢？一部分原因是觉得单纯的传统读书会或学术小团体的方式不够具有吸引力。这次顺着先前 23.8.25 里的想法，下面我将原创性的给出：（噢原本想叫知网，奈何已经被某数据库用了……）&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;知子网白皮书 Knoid White Paper&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.10.6.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;知子网是创造和交流知识（knowledge and idea, coined as &lt;em&gt;Knoid&lt;/em&gt; &amp;ndash; also means the tangible form of knowledge）的平台。我们不是某个组织，我们是元组织。我们秉持：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自由、开源、开放。无限参与，无限可能。&lt;/li&gt;
+&lt;li&gt;去中心化，自组织网络。让知识得到公平的交流，让权威不复存在。&lt;/li&gt;
+&lt;li&gt;任意形式的合约。在这里可以实现一切形式的学术交流活动。&lt;/li&gt;
+&lt;li&gt;共享、共评、共建。知识不是私人品。没有货币的逻辑，而有市场的价值。让好讲座得到听众，让好讨论得到加入，让好书得到阅读。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;每一个知子网中的人，都将拥有&lt;em&gt;知识&lt;/em&gt;（&lt;em&gt;Knowledge&lt;/em&gt;，abbreviated as &lt;em&gt;K&lt;/em&gt;）。新知识不会无限的喷涌，而由知子网的机制——一个特殊的活动 Creating 产生。&lt;/p&gt;
+&lt;p&gt;合约即是活动，合约可以调用合约。合约由创建者放出，设定有存续时间，位于一个节点地址（知识活动点）。合约能够接受多方的输入并产生输出，按事先安排好的流程触发、收纳知子、调配知子、调用 Creating 等一切代码能够实现的操作。当然，Creating 对每一个合约在单位时间段的生成请求存在上限。&lt;/p&gt;
+&lt;p&gt;每一个知子网中的人和合约点，都可以分享自己的见解，即&lt;em&gt;知子&lt;/em&gt;（&lt;em&gt;Knon&lt;/em&gt;）。每个人和合约点都有属于自己的不同的知子（Somebody&amp;rsquo;s Knon）。知识是平等的，知识因受到公认而变得重要。您的知子将被其他人持有、交换、参与合约。除了 Creating，任何合约不能创造知识，但所有人都可以任意创造自己的知子并通过合约发给其他参与者，代表分享自己最新学习研究的发现。&lt;/p&gt;
+&lt;p&gt;合约实现的交流形式多种多样，缺乏的只是想象力——lecture、seminar、tutorial、exam、project、book、paper……都可以被实现并得到关注。课堂、讨论可以让所有人交付知子，时间排他性的来参与，并据后续情况生成新的思想，无论线上还是线下。考试可以检验对应的知子按照成绩发放知识量。任何人都可以成立各种形式的组织并推广。&lt;/p&gt;
+&lt;p&gt;知识可以被复制，可以被传播。作者可以为自己的作品赋予复制的部分知识。书刊可以发行自己的知子，标记自己独一无二的内容并获得众人的认可和流传。&lt;/p&gt;
+&lt;p&gt;知子可以被标注。参与学术活动的人可以根据合约所示的知子的门类和内容进行参与。（同书籍一样，知识的架构关系可以通过设计 merge 功能的合约点充分实现。）&lt;/p&gt;
+&lt;p&gt;您还可以参与知识与知子的对换——一个特殊的节点 Exchanging 将完成这一点。给出你认为某知子的知识价值并进行兑换。整个网络将受广播，平均比率和方差将被计算，每一个该类对换的参与者都将共同助力形成公允的评价。&lt;/p&gt;
+&lt;p&gt;我们借鉴了以太坊（Etherum）的基础。所有行动将被广播，每经过固定时间将创建下一个提交，所有知识的拥有者都将写入一份同全网络历史一模一样的副本。知识的产权不容纂改。&lt;/p&gt;
+&lt;p&gt;网络可以本地化，大学等学术机构可以接入并构造属于自己内部的知识生态，这只需要若干合约。&lt;/p&gt;
+&lt;p&gt;知子网正在 Github 上启动。大信息时代的知识交流期待新的范式，期待您的参与。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Measure Design</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
+    &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%bb%ba%e7%ad%91%e8%ae%be%e8%ae%a1%e7%9a%84%e8%ae%a1%e9%87%8f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我记得有种说法：高度发达的文明其艺术品的设计往往开始做“减法”，不再不断地添加繁复的雕刻和装饰，而是有意的简化和突出。这让我想到当下大城市里开始涌现的现代建筑和后现代建筑，想来我们可以去计量一个地区的艺术水平——似乎有些困难？不如先从建筑设计的水平开始。&lt;/p&gt;
+&lt;p&gt;不是美是稀缺的，而是稀缺造就美。&lt;/p&gt;
+&lt;p&gt;审美的本质是什么恐怕不是一个能在这里简简单单就讨论完的东西。我现在比较武断的做出以上论断，是为了进一步发展指标。我倾向于认为是人类具有“审美的需求”——这个需求在日常的普遍的生活中没有得到满足——这正是稀缺性的意义。（我还要提到一个反驳的角度：这个价值与创造性价值尚有区分。如果我们纳入时间变量，那么富有创造性价值的事物在其之前极其稀缺，而在之后带动了大量的模仿者，或者说自己成为了开创者，那么它显然具有美的价值。但当这个事物的元素在生活中俯拾即是的时候，大家自然不再对其审美敏感。）&lt;/p&gt;
+&lt;p&gt;以此逻辑为基础，我们同时也需要一些事先由美学专家（建筑设计家）挑出的评价维度，它反映了人类共性的审美需求。例如建筑的几何外形、色彩、结构、纹理（$X_1, X_2, X_3, X_4, \ldots$）。借助计算机技术，我们可以获取一个街区的实景图，将各个建筑依照各个维度，进行数学上（计算机视觉上）的相似计算 $r_{ij1}, r_{ij2}, \ldots$ ，再按一定方式如加权得到一个合并的建筑 $i$ 和建筑 $j$ 的相似系数 $r_{ij} = f(r_{ij1}, r_{ij2}, \ldots)$ 。&lt;/p&gt;
+&lt;p&gt;我们定义一个建筑对于一整个要考察的建筑群（称背景或参考基）的设计价值（审美价值）$v_i$ 为&lt;/p&gt;
+&lt;p&gt;$$
+v_i = \sum_j \frac{r_{ij}}{v_j}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;（$j$ 的遍历包括 $i$ 自身，需要自己给自己“壮胆”）（通过联立群体内全部建筑求解）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我未经严格考证的认为它确实具有 1. 给离群点赋以高值 2. 给群聚性缓慢提高值 等等合理的数学性质。&lt;/p&gt;
+&lt;p&gt;上述把稀缺性挂钩审美价值的作法受到质疑大概来自这两个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;日常的（普遍的）到底是什么？&lt;/li&gt;
+&lt;li&gt;古怪的垃圾品？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;建筑可以近乎完美的解决这两个问题，而绘画、音乐等艺术还需进一步考量。我们考虑全部的建筑具有一定的可行性，它们就是大家生活中接触到的建筑物的全集，那么一个标新立异的富有变异感的设计可以被视为高审美价值的。古怪的垃圾品鉴于建筑的规划、审批、施工需要层层把关实现，不大可能出现彻底的丑，何况不走寻常路可能本身就是艺术呢（比如争论中的行为艺术）。而画作、曲作的对比背景应该是人的日常生活，所以人们会喜欢欣赏画喜欢听音乐，我想这个指标可能需要做改进。&lt;/p&gt;
+&lt;p&gt;从这个指标出发，那么研究空间就大了。我抛砖引玉一个：&lt;/p&gt;
+&lt;p&gt;现在的城市建筑都由设计院、建筑事务所设计。最终整个城市或某个空间区域分布里的总设计度 $V = \sum v$ 与它们花费的总设计费用 $ C = \sum c$ 的比值 $ \zeta = \frac{V}{C}$ 表示了一单位费用下产生的艺术效用，称作 $ conservative\ factor \ \zeta$  保守度——因为建设过程是甲乙双方协商的结果，文化保守的地区在变异程度上要弱于开放的地区，可能也是人均 GDP 高的地区。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Meme Alive</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.28/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.28/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;流行的生命机制 
+    &lt;div id=&#34;流行的生命机制&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%b5%81%e8%a1%8c%e7%9a%84%e7%94%9f%e5%91%bd%e6%9c%ba%e5%88%b6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我想用一个 Prevalence 流行这个名词来一网打尽所有与人有关会重复出现的事物。后来想起模因论本身就比较契合——可以仿照从生命的角度来解释，但概念可以推的比 meme 更广泛一点，不仅仅是从一个人脑复制到另一个人脑的文化或语言事物（韦氏词典 meme: an idea, behavior, style, or usage that spreads from one person to another in a culture）。 比如一个人经常使用某个梗或沉迷某件事，他会在时间维度上呈现一个流行从兴起到爆发再到衰落的过程，不妨也认为是某种‘流行基因’的增殖。例子可以非常广泛，包括但不限于一项新技术的传播、一首榜单流行歌曲、一个微博热搜、以及传统模因论域中的如 ikun……&lt;/p&gt;
+&lt;p&gt;模因论指出的三要素为保真性 Fidelity、长寿性 longevity、多产性 Fecundity。流行依靠复制而生存，从这点来说其繁殖和生存，与一般生物不同，是强正相关的。但这个繁殖亦即传播有两种，一是本人的重复，二是人与人之间的传播。保真性并不排斥变异，相反流行的不断筛选演变的包装也是其作为生命的一个体现。说是生命的角度本质上仍然源于其繁衍具有生物的形态和过程——如单流行下的逻辑斯蒂方程。同理还可以研究多个流行的竞争和迭代，类似于生态系统中种群的竞争和共存；纳入群体传播的因素和一些统计学上的假定还可以研究群体流行的强度分布、方差的演变，回归得到不同社群的因子参数等等。需要指出的是，完整的演变还应描述种群的衰退，这通常由于时间增长后其激励不足（腻烦）即正反馈下降，从而热搜下跌，流行退流。&lt;/p&gt;
+&lt;p&gt;（&lt;em&gt;实证研究也尚未做。下面是一个简单的开头&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.7.28.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.7.28%282%29.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] Richard Dawkins. The selfish gene. Oxford university press, 2016.&lt;/p&gt;
+&lt;p&gt;[2] Kleber A. Oliveira. Modelling meme popularity with networks. page 3558205 Bytes, 2023. Artwork Size: 3558205 Bytes Publisher: University of Limerick.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hype Significance</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.23/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.23/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;显著你的显著 
+    &lt;div id=&#34;显著你的显著&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%98%be%e8%91%97%e4%bd%a0%e7%9a%84%e6%98%be%e8%91%97&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（本周打算记录一个发生的小讨论，同时发表一点浅薄的见解）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：我来考你一个问题（双信封悖论）：两个盒子，一个盒子里装的钱是另一个两倍。现在挑了一个打开发现有100元。主持人问你，你要不要换？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：随便。直觉感觉没有差别。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：那我问你另一个盒子的期望是多少？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：(200+50)/2。看上去要换。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：等一下，这个期望是怎么来的，样本空间是什么？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：你说的不对，这个问题有问题。当你认为另一个盒子有50%是200元，50%是50元时候已经默认了（x,2x）是均匀出现的。可是这个问题无法存在一个先验分布。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：你说得对，无限的$\mathbb{Z}^+$上无法定义一个等概率的分布。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：但是你这么想，当两个盒子钱装好后（&lt;strong&gt;固定&lt;/strong&gt;），我随机选一个，那么(200+50)/2是解释的通的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：那我这么想，请问你看到100元获得了什么信息吗？那看到多少钱为什么能作为换不换的依据？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：从信息论的角度你不对。100确实没有用，但两个箱子有互信息，现在另一个箱子对我有一个条件熵。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;：我不太理解，感觉不是问题的关键。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：总之我想概率首先并不是一个能简简单单定义下来的东西，这个题目缺失了整个机制发生的背景空间而产生了悖论。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：当你问出换不换时，肯定是想说哪个行动收益更高——这必须重复实验，那么&lt;strong&gt;如何重复&lt;/strong&gt;就成为了关键，可惜问题没说。比如当两个盒子钱装好后，我还是倾向于那个简单计算，换一个。如果是一个有限区域内随机装入钱，我想就是最开始的回答，没有区别（或者像有些回答套了全概率公式）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：我发现这个争论的本质极其类似于传统统计推断里的参数估计，带有哲学色彩。我们都知道有三大流派。如果放到一切（比如这个节目搞了好多遍）金额下，这是Bayes的角度，大家开始强调并追究先验分布。如果是贝叶斯，那我想没必要什么收不收敛，它就有概念叫”广义先验分布“，还经常取1。你的观点跟Fisher是一致的，他的信念学派类似于一个均匀的先验分布，根据测得统计量反导出一个所谓的”信念分布“，于是嚷嚷出了悖论。但，我们最常用的还是Pearson（奈-皮）的理论体系。它的置信区间假定了固定的$\mu$，重复的是构造区间的过程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;：假设检验也一样。我必须假定零假设发生，假定盒子装好（x,2x）之后，我再来讨论统计量的分布。那么我想经过一次轮换和不经过不对称是有道理的，前者的比较起点是第一次手里的钱。但主要提出者Fisher并没有告诉我们零假设发生的概率是多少，就像95%的置信区间从来没说它有95%概率包含$\mu$一样。见下。&lt;/p&gt;
+&lt;p&gt;（知乎上也有不少讨论和更高的视角，可惜我（&lt;strong&gt;L&lt;/strong&gt;）现在不会测度论……）&lt;/p&gt;
+&lt;p&gt;我不认为完全搞懂了这个悖论，欢迎薄纱。不过这让我想到了之前在返朴公众号上看的一篇文章&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，正好也指出了&lt;strong&gt;L&lt;/strong&gt;所讲的这件事：How to use significance.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./graph/23.6.23.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;（&lt;em&gt;Nature上发表的联名评论，呼吁摈弃统计显著/不显著的二分思维&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;Mindless Statistics 很明显是危险的，公众号里表示其做过的一项调查显示所有受访人群均有80%-90%以上的人无法正确解读P值和CI。&lt;/p&gt;
+&lt;p&gt;P值无法给出原假设成立的概率，也不应仅仅依靠P值作下论断或判断模型的好坏。过分且片面的追求显著只会招致 p-hacking、publication bias 等等负面现象。&lt;/p&gt;
+&lt;p&gt;这个被忽视的局限性我想反映的跟双信封悖论相差不大。在Two Envelop Problem里大家cannot accept 125&amp;gt;100 with their Bayes&amp;rsquo; eyes，却在Hypothesis Testing里hype their significance p&amp;lt;0.05 like a Fisher。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://mp.weixin.qq.com/s/qBqnbgApI7Wuwv2zIu-8ww&#34;
+    target=&#34;_blank&#34;
+  &gt;https://mp.weixin.qq.com/s/qBqnbgApI7Wuwv2zIu-8ww&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Homomorphic Observation</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.16/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.16/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;观测同态 
+    &lt;div id=&#34;观测同态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%a7%82%e6%b5%8b%e5%90%8c%e6%80%81&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;上厕所时想到一个问题（另一个问题是为什么我在厕所有这么多问题&amp;hellip;）：&lt;/p&gt;
+&lt;p&gt;如果我是一个害羞的尿频患者，我不想让人发现我尿频，但我应该恐慌从而尽量减少去厕所的次数吗？如果别人能发现我尿频——那一定是常常在厕所看到我——那他为什么常常在厕所——他至少比我频。想到这里，害羞的尿频患者可能就长呼一口气放心的频频去厕所了。&lt;/p&gt;
+&lt;p&gt;这是我想说的观测同态。我能发现你经常去厕所的前提是我也经常去厕所。知道我半夜翻墙多半你半夜也在墙边图谋不轨。只有跟对方“一条道子”的人才看得到或者看得懂对方。&lt;/p&gt;
+&lt;p&gt;抽象概括起来，观测和被观测者需要经历同样的过程、要求或处于同样的状态。破解的办法有什么呢？可以寻找获取额外的 “迹 Trace”。比如我老是去上厕所需要走过某窗户边，那人在教室老是看到我上厕所自然就好奇我大致是尿频了。&lt;/p&gt;
+&lt;p&gt;由于经验不足，我暂时一下子想不到观测同态在社会、经济等其他方面的例子（笑），但大概存在更宏大、更富有意义的应用。（欢迎提出）&lt;/p&gt;
+&lt;p&gt;容我再形而上学的追思一下：为什么有观测同态？一个事物，它的了解（少量运作）和运作（大量运作）两个交互状态可能无法区分（也许它的了解具有门槛或需要一定运作，比如我必须进到厕所才能看到你）（运作就是使用、执行等发挥事物原本功能的概念集合体）。但由于缺乏区分身份的信息或 Trace，大家会根据自己所得（自己参与少量或大量运作所观测到的）把少量的人当作了解者而把大量的人自动视作运作者。好比案发现场，有你你就具有嫌疑。而你频频出现在杀人地点附近，你会被路人当作路人，被检查官当作杀人犯。（笑）&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

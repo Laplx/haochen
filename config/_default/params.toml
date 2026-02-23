@@ -1,69 +1,161 @@
-title="Laplace's Blog"
-author = "Hao Chen"
-description = ""
-footnote = """
-Powered by  <a class=link href=https://gohugo.io target=_blank rel=noopener>Hugo</a> | 
-Theme <a class=link href=https://github.com/michaelneuper/hugo-texify3 target=_blank rel=noopener>TeXify3</a>
-"""
+colorScheme = "blowfish"
 
-customCSS = []
-customJS = []
-dateFormat = "2 January 2006"
-keywords = ["blog", "personal", "math", "computer science", "technology", "artificial intelligence", "programming"]
-since = "2023"
+enableSearch = true
+enableCodeCopy = true
 
-emphasisWithDots = true
-toc = true
-rootFontSize = "105%"
-math = true
-enableDuckDuckGoSearchBox = true
-numberedSubtitles = true
-enableInlineShortcodes = true
-showWordCount = true
-showReadingTime = true
+replyByEmail = false
 
-[commentEngine]
-code = """
-<script src="https://giscus.app/client.js"
-    data-repo="michaelneuper/website"
-    data-repo-id="R_kgDOIjPNaQ"
-    data-category="General"
-    data-category-id="DIC_kwDOIjPNac4CaklA"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="gruvbox"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
-</script>
-"""
+defaultBackgroundImage = ""
+defaultFeaturedImage = ""
+# defaultSocialImage = 
 
-# [buymeacoffee]
-# code = """
-# <script data-name="BMC-Widget" 
-#     data-cfasync="true" 
-#     src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
-#     data-id="michaelneuper" 
-#     data-description="Like what I do? Buy me a coffee!" 
-#     data-message="" 
-#     data-color="#d79921" 
-#     data-position="Right" 
-#     data-x_margin="18" 
-#     data-y_margin="18"
-#     crossorigin="anonymous">
-# </script>
-# """
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
 
-[sharingbuttons]
-facebook = true
-twitter = true
-email = true
-linkedin = true
-# reddit = true
-# whatsapp = true
-# hackernews = true
-# telegram = true
+mainSections = ["notes"]
+
+[homepage]
+  layout = "page" # valid options: page, profile, hero, card, background, custom
+  # homepageImage = "/img/iceland.jpg" # used in: hero, and card
+
+  showRecent = false
+  # showMoreLink = true
+  # showMoreLinkDest = "notes"
+
+  cardView = false
+  cardViewScreenWidth = false
+
+  layoutBackgroundBlur = true # only used when layout equals background
+  disableHeroImageFilter = false # only used when layout equals hero
+
+[header]
+  layout = "fixed" # valid options: basic(default), fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[article]
+  showDate = true
+  showViews = false # need Firebase
+  showLikes = false # need Firebase
+  showComments = false
+
+  showDateOnlyInArticle = true
+  showDateUpdated = false
+
+  showAuthor = false
+  showAuthorBottom = false
+
+  showHero = false
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+
+  layoutBackgroundBlur = true # only used when heroStyle equals background
+  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+
+  showBreadcrumbs = true
+  showDraftLabel = true
+
+  showEdit = false
+  editURL = "https://github.com/Laplx/blogo/tree/main/content"
+  editAppendPath = true
+
+  seriesOpened = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+
+  showReadingTime = true
+
+  showTableOfContents = true
+  showRelatedContent = false
+  relatedContentLimit = 3
+
+  showTaxonomies = true
+  showAuthorsBadges = false # requires the setup of multiple authors and the authors taxonomy
+  showWordCount = false # enable hasCJKLanguage in hugo.toml
+
+  # sharingLinks = ["email", "twitter", "facebook", "telegram", "reddit", "whatsapp", "linkedin"] # , "bluesky", "pinterest", "line"
+  showZenMode = true
+
+[list]
+  showHero = false
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # only used when heroStyle equals background
+  layoutBackgroundHeaderSpace = false
+
+  showBreadcrumbs = false
+  showSummary = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+
+  showCards = false
+  orderByWeight = true
+  groupByYear = false
+
+  cardView = false
+  cardViewScreenWidth = false
+  constrainItemsWidth = false
+
+[sitemap]
+  excludedKinds = []
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+
+  cardView = false
+
+[term]
+  showHero = false
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+
+  groupByYear = false
+
+  cardView = false
+  cardViewScreenWidth = false
+  
+[firebase]
+  # apiKey = 
+  # authDomain = 
+  # projectId = 
+  # storageBucket = 
+  # messagingSenderId = 
+  # appId = 
+  # measurementId = 
+
+[buymeacoffee]
+  # identifier = 
+  # globalWidget = true
+  # globalWidgetMessage = ""
+  # globalWidgetColor = "#FFDD00"
+  # globalWidgetPosition = "Right"
+
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""
+
+[rssnext]
+  # feedId = ""
+  # userId = ""
+
+[advertisement]
+  # adsense = ""

@@ -1,0 +1,1587 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>信息论 &middot; Hao Chen&#39;s Blog</title>
+  <meta name="title" content="信息论 &middot; Hao Chen&#39;s Blog" />
+  
+  
+  <meta name="keywords" content="Information, CS, Math, Communication, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/haochen/notes/information/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/haochen/css/main.bundle.min.782d2421d5c5317cdc02c61f82155e525a77a614c5fa1a9a7b869224bc8a4b5f82f2dfbaf303aec25835bc45f2accef2bacb96ecbb8ce23893017be37ad53294.css"
+    integrity="sha512-eC0kIdXFMXzcAsYfghVeUlp3phTF&#43;hqae4aSJLyKS1&#43;C8t&#43;68wOuwlg1vEXyrM7yusuW7LuM4jiTAXvjetUylA==" />
+  
+  
+  <script type="text/javascript" src="/haochen/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/haochen/js/main.bundle.min.0cc2c97290116f4d497b3ff680f6ed75d78c3f208c3fb6b7b4b7285cb1f711fb0eb48555c3b0c4e25317aee2a5abddb4abae6373e6cc4b824cd2952ee434f30c.js"
+    integrity="sha512-DMLJcpARb01Jez/2gPbtddeMPyCMP7a3tLcoXLH3EfsOtIVVw7DE4lMXruKlq920q65jc&#43;bMS4JM0pUu5DTzDA==" data-copy="复制" data-copied="已复制"></script>
+  
+  
+  
+  <script src="/haochen/lib/zoom/zoom.min.3530c2657381259433194af312ec3d322a97a2ad85661810299757fe793b24c3b8e07ab97fa8e5cf96cff1208f271e75394b6eaa56c2e39e7e2c3ca49fb1921c.js" integrity="sha512-NTDCZXOBJZQzGUrzEuw9MiqXoq2FZhgQKZdX/nk7JMO44Hq5f6jlz5bP8SCPJx51OUtuqlbC455&#43;LDykn7GSHA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/haochen/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/haochen/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/haochen/favicon-16x16.png" />
+  <link rel="manifest" href="/haochen/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/haochen/notes/information/">
+  <meta property="og:site_name" content="Hao Chen&#39;s Blog">
+  <meta property="og:title" content="信息论">
+  <meta property="og:description" content="1 Entropy #1.1 #entropy $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$
+joint entropy, conditional entropy $H(X,Y)=H(X)&#43;H(Y|X)$
+note: usually $H(X|Y) \neq H(X|Y=y)$
+relative entropy(KL distance) $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$
+note: usually $D(p\|q) \neq D(q\|p)$
+mutual inforamtion $I(X;Y)=D(p(x,y)\|p(x)p(y))$
+$I(X;Y)=H(X)&#43;H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$
+Venn diagram
+chain rule $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="notes">
+    <meta property="article:published_time" content="2024-03-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-27T00:00:00+00:00">
+    <meta property="article:tag" content="Information">
+    <meta property="article:tag" content="CS">
+    <meta property="article:tag" content="Math">
+    <meta property="article:tag" content="Communication">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="信息论">
+  <meta name="twitter:description" content="1 Entropy #1.1 #entropy $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$
+joint entropy, conditional entropy $H(X,Y)=H(X)&#43;H(Y|X)$
+note: usually $H(X|Y) \neq H(X|Y=y)$
+relative entropy(KL distance) $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$
+note: usually $D(p\|q) \neq D(q\|p)$
+mutual inforamtion $I(X;Y)=D(p(x,y)\|p(x)p(y))$
+$I(X;Y)=H(X)&#43;H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$
+Venn diagram
+chain rule $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$">
+
+    
+  
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Notes",
+    "name": "信息论",
+    "headline": "信息论",
+    
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e1 Entropy \r\n    \u003cdiv id=\u00221-entropy\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#1-entropy\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch4 class=\u0022relative group\u0022\u003e1.1 \r\n    \u003cdiv id=\u002211\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#11\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h4\u003e\r\n\u003cp\u003e\u003cstrong\u003eentropy\u003c\/strong\u003e $H(X) = - \\sum\\limits_{x\\in \\mathcal{X}} p(x)logp(x) = -Elogp(X)$\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003ejoint entropy\u003c\/strong\u003e, \u003cstrong\u003econditional entropy\u003c\/strong\u003e  $H(X,Y)=H(X)\u002bH(Y|X)$\u003cbr\u003e\n\u003cem\u003enote:\u003c\/em\u003e usually $H(X|Y) \\neq H(X|Y=y)$\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003erelative entropy(KL distance)\u003c\/strong\u003e $D(p\\|q)=- \\sum\\limits_{x\\in \\mathcal{X}} p(x)log\\frac{p(x)}{q(x)} = -Elog\\frac{p(X)}{q(X)}$\u003cbr\u003e\n\u003cem\u003enote:\u003c\/em\u003e usually $D(p\\|q) \\neq D(q\\|p)$\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003emutual inforamtion\u003c\/strong\u003e $I(X;Y)=D(p(x,y)\\|p(x)p(y))$\u003c\/p\u003e\n\u003cp\u003e$I(X;Y)=H(X)\u002bH(Y)-H(X,Y)=H(X)-H(X|Y),\\ I(X;X)=H(X)$\u003cbr\u003e\nVenn diagram\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003echain rule\u003c\/strong\u003e $H(X_1,\\cdots,X_n)=\\sum\\limits_{i=1}^nH(X_i|X_{i-1},\\cdots,X_1),\\ I(X_1,\\cdots,X_n;Y)=\\sum\\limits_{i=1}^nI(X_i;Y|X_{i-1},\\cdots,X_1)$\u003c\/p\u003e",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/haochen\/notes\/information\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hao Chen"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-03-27T00:00:00\u002b00:00",
+    "datePublished": "2024-03-27T00:00:00\u002b00:00",
+    
+    "dateModified": "2024-03-27T00:00:00\u002b00:00",
+    
+    "keywords": ["Information","CS","Math","Communication"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2283"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Hao Chen" />
+  
+  
+  
+  
+  <link href="laplx@foxmail.com" rel="me" />
+  
+  
+  
+  
+  <link href="https://github.com/Laplx/haochen" rel="me" />
+  
+  
+  
+  
+  
+
+<script src="/haochen/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/haochen/lib/katex/katex.min.33db995186a4f895643c57d5be16f59f520ffd0f0be5c9cb08ef158536fabdd3581893d7305846a7c83e495376021081ca5d4ad00a44bfe4d640c4917f087a9e.css"
+    integrity="sha512-M9uZUYak&#43;JVkPFfVvhb1n1IP/Q8L5cnLCO8VhTb6vdNYGJPXMFhGp8g&#43;SVN2AhCByl1K0ApEv&#43;TWQMSRfwh6ng==">
+  
+  
+  <script defer src="/haochen/lib/katex/katex.min.cadd45c1af1f44bdaf196dc9b104f1daeb29043f0dc59155ffe22847510a04390a0b7a859400d420a626204f7fc5ddb07c19311de1c66b25e19c2559d3e126a8.js" integrity="sha512-yt1Fwa8fRL2vGW3JsQTx2uspBD8NxZFV/&#43;IoR1EKBDkKC3qFlADUIKYmIE9/xd2wfBkxHeHGayXhnCVZ0&#43;EmqA=="></script>
+  
+  
+  <script
+    defer
+    src="/haochen/lib/katex/auto-render.min.e9b2833d28623d18c071d78ef13e9c79d695122d296af3dbcee7bf1bf6518b0565bab59939267fbc8f5faf696193c20f5caef3e7501969cfb306f6738032730d.js"
+    integrity="sha512-6bKDPShiPRjAcdeO8T6cedaVEi0pavPbzue/G/ZRiwVlurWZOSZ/vI9fr2lhk8IPXK7z51AZac&#43;zBvZzgDJzDQ=="
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+    ], throwOnError: false,
+    trust: true,  // 允许信任命令
+    });"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+  
+  
+  
+  <meta name="theme-color"/>
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a
+      >
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px] z-index-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 padding-main-menu">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/haochen/" class="text-base font-medium text-gray-500 hover:text-gray-900">Hao Chen&rsquo;s Blog</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a
+  href="/haochen/notes/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Notes">
+    Notes
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/papers/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Papers">
+    Papers
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/essays/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Essays">
+    Essays
+  </p>
+</a>
+
+
+
+            
+            
+  <a
+  href="/haochen/tags/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Tags">
+    Tags
+  </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 padding-top-[5px]">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/notes/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Notes">
+      Notes
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/papers/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Papers">
+      Papers
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/essays/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Essays">
+      Essays
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+  <a
+    href="/haochen/tags/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Tags">
+      Tags
+    </p>
+  </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/background-blur.min.4812321520cc2e4cd52bf9137015a55bb6c0b5e66a6b2c96b8654c0ec99be59e8e6425dd838a6fd9bac54000586f37f4a9680bbefaa2aee4601a69e188005cf6.js"
+  integrity="sha512-SBIyFSDMLkzVK/kTcBWlW7bAteZqayyWuGVMDsmb5Z6OZCXdg4pv2brFQABYbzf0qWgLvvqiruRgGmnhiABc9g=="
+  data-target-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/"
+      >Hao Chen&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/notes/"
+      >Notes</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/haochen/notes/information/"
+      >信息论</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        信息论
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-27T00:00:00&#43;00:00">March 27, 2024</time><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+<script
+  type="text/javascript"
+  src="/haochen/js/zen-mode.min.2a0a1375509c03daf41c53a9831aa2d560895b7a2528c3eb3b56e7b11a135c7529e49727162a053b6193be8340270a8342f42c69f3d7e262ae54bc248eaac8f5.js"
+  integrity="sha512-KgoTdVCcA9r0HFOpgxqi1WCJW3olKMPrO1bnsRoTXHUp5JcnFioFO2GTvoNAJwqDQvQsafPX4mKuVLwkjqrI9Q=="></script>
+
+<span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title=""
+    data-title-i18n-disable=""
+    data-title-i18n-enable="">
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    
+      <div class="flex flex-row flex-wrap items-center">
+        
+          
+            
+          
+        
+          
+            
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/information/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Information
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/cs/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    CS
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/math/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Math
+  </span>
+</span>
+
+                </span>
+              
+                <span
+                  class="mr-2 margin-top-[0.5rem]"
+                  onclick="window.open(&#34;/haochen/tags/communication/&#34;,'_self');return false;">
+                  <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Communication
+  </span>
+</span>
+
+                </span>
+              
+            
+          
+        
+      </div>
+    
+
+    
+    
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row lg:gap-12">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-12 rtl:lg:pr-12 lg:min-w-[240px]">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-entropy">1 Entropy</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#2--coding-statistics-and-investment">2  Coding, Statistics and Investment</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#3--communication">3  Communication</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-entropy">1 Entropy</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#2--coding-statistics-and-investment">2  Coding, Statistics and Investment</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#3--communication">3  Communication</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-screen-lg">
+        
+
+
+
+        <div class="article-content max-w-screen-lg mb-20">
+          
+
+
+<h2 class="relative group">1 Entropy 
+    <div id="1-entropy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-entropy" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+<h4 class="relative group">1.1 
+    <div id="11" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#11" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p><strong>entropy</strong> $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$</p>
+<p><strong>joint entropy</strong>, <strong>conditional entropy</strong>  $H(X,Y)=H(X)+H(Y|X)$<br>
+<em>note:</em> usually $H(X|Y) \neq H(X|Y=y)$</p>
+<p><strong>relative entropy(KL distance)</strong> $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$<br>
+<em>note:</em> usually $D(p\|q) \neq D(q\|p)$</p>
+<p><strong>mutual inforamtion</strong> $I(X;Y)=D(p(x,y)\|p(x)p(y))$</p>
+<p>$I(X;Y)=H(X)+H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$<br>
+Venn diagram</p>
+<p><strong>chain rule</strong> $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$</p>
+<p><strong>Jesen Ineq</strong>: $\text{convex func. }f\text{ and a RV }X,\ Ef(X)\geq f(EX)$</p>
+<p><strong>Info. Ineq</strong>: $D(p\|q)\geq 0,\text{ eq. iff }p=q$  $I(X;Y)\geq 0, \text{ eq. iff }X\ id.\ Y$</p>
+<p>$H(X)\leq log|\mathcal{X}|$  $H(X_1,\cdots,X_n)\leq \sum\limits_{i=1}^nH(X_i)$</p>
+<p><strong>log-sum Ineq</strong>: $\sum_{i=1}^n a_i \log \frac{a_i}{b_i} \geq\left(\sum_{i=1}^n a_i\right) \log \frac{\sum_{i=1}^n a_i}{\sum_{i=1}^n b_i}$  $D(p\|q)$ is convex about $(p,q)$ and $H(p)$ is concave about $p$.</p>
+<p>Markov chain $X\rightarrow Y\rightarrow Z,\ I(X;Z|Y)=0$<br>
+<strong>Data Processing Ineq</strong>: $I(X;Y)\geq I(X;Z),\text{ eq. iff }I(X;Y|Z)=0$</p>
+<p>$\theta \rightarrow X \rightarrow T(X)$ <strong>sufficient statistics</strong> $I(\theta ;X)=I(\theta ;T(X))$ or $X\ id.\ \theta\text{ when }T(X)\text{ is given}$<br>
+<strong>minimal suf. stat.</strong> $\theta \rightarrow T(X) \rightarrow U(X) \rightarrow X$</p>
+<p><strong>Fano Ineq</strong>: $X\rightarrow Y \rightarrow \hat{X},\ P_e=Pr(X\neq \hat{X}),\ H_e = -P_elogP_e -(1-P_e)log(1-P_e),\\ H(X|Y)\leq H(X|\hat{X})\leq H_e + P_eH(X)\leq  H_e + P_elog|\mathcal{X}|$</p>
+<p>$X \sim p(x),\ Y \sim q(y),\ Pr(X=Y)\geq 2^{-H(p)-D(p\|q)}$​</p>
+
+<h4 class="relative group">1.2 
+    <div id="12" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#12" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>(weak)LLN, <strong>asymptotic equipartition property AEP</strong>: $X_1,\cdots,X_n \overset{iid.}{\sim}p(x),\ -\frac{1}{n}logp(X_1,\cdots,X_n) \overset{p}{\rightarrow} H(X)$</p>
+<p><strong>typical set</strong> $A^n_\epsilon \subset \mathcal{X}^n$  $\text{large }n,\ Pr(A^n_\epsilon) &gt; 1-\epsilon,\ (1-\epsilon)2^{n(H(X)-\epsilon)} \leq |A^n_\epsilon| \leq 2^{n(H(X)+\epsilon)}$ (In short, $A^n_\epsilon$ has roughly $2^{nH}$ elements with equal prob. $2^{-nH}$.)</p>
+<p>Nearly $nH$ bits can express sequence $X^n$.(typical set $n(H+\epsilon)+1$ bit and nontypical $nlog|\mathcal{X}|+1$ bit)</p>
+<p>In the sense of first-order exponent, among all sets that have $Pr&gt;1-\epsilon$，$A^n_\epsilon$​ is the minimal.</p>
+<p>stationary stochastic process, stationary Markov chain</p>
+<p><strong>entropy rate</strong> of a sto. $\{X_i\}$: $H(\mathcal{X}) = \lim\limits_{n\rightarrow \infty}\frac{1}{n}H(X_1,\cdots,X_n)$(if limit exists)</p>
+<p>for stn. sto. $\text{also } = \lim\limits_{n\rightarrow \infty}H(X_n|X_{n-1},\cdots,X_1)$ <em>proof: Stolz-Cesaro Means Thm.</em></p>
+<p>for stn. MC of trans. mt $P$ and stn. dis. $\mu = P\mu$, $H(\mathcal{X}) = H(X_2|X_1) = -\sum\limits_{ij}\mu_iP_{ij}logP_{ij}$</p>
+<p><strong>Second law of thermodynamics</strong>: as time $n\uparrow$,
+$$
+D(\mu_n\|\mu^\prime_n)\downarrow,\text{ esp. }D(\mu_n\|\mu);\\ \text{if stn. dis. is uni.(equal a priori prob. principle) } H(X_n)\uparrow;\\ \text{for stn. MC }H(X_n|X_1)\uparrow;\\ \text{operator(e.g. shuffling) }T\ id.\ X,\ H(TX)\geq H(X)
+$$</p>
+<p>$\text{stn. MC }\{X_n\},\ Y_i = \phi(X_i),\ H(\mathcal{Y})=\lim\limits_{n\rightarrow \infty}H(Y_n|Y_{n-1},\cdots,Y_1)=\lim\limits_{n\rightarrow \infty}H(Y_n|Y_{n-1},\cdots,Y_1,X_1)$</p>
+<p><strong>Shannon-McMillan-Breiman(general AEP) Thm.</strong>: $H$ is the entropy rate of a finite ergodic sto. ${X_n}$, $-\frac{1}{n}logp(X_0,\cdots,X_{n-1}) \overset{a.s.}{\rightarrow} H$​  <em>proof: Sandwich Thm.</em></p>
+
+<h4 class="relative group">1.3 
+    <div id="13" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#13" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p><strong>differential entropy</strong> $h(X)= -\int_Sf(x)logf(x)dx$ ($S$ is the support set of RV $X$​)</p>
+<p>joint diff. ent., conditional diff. ent., relative ent., MI, AEP are in the same way.</p>
+<p><em>example:</em> $h(\mathcal{N}(\mu,\Sigma))=\frac{n}{2}+\frac{1}{2}log(2\pi)^n|\Sigma|$; for bivar. $\mathcal{N}_2$, $I(X_1;X_2)=-\frac{1}{2}log(1-\rho^2)$​</p>
+<p>$h(aX)=h(X)+log|a|,\ h(AX)=h(X)+log|detA|$</p>
+<p>Among all dis. with $\Sigma=EXX^\prime$, Gauss dis. has max ent. $h(X)\le \frac{1}{2}log(2\pi e)^n|\Sigma|$ <em>proof: $D(f\|N)\geq 0,\ \int flogN = \int NlogN$</em></p>
+<p>estimation error (if have side info. $Y$) $E(X-\hat{X})^2\geq \frac{1}{2\pi e}e^{2h(X|Y)}$</p>
+<p>Similarly, $A^n_\epsilon = \{x\in S^n:-\frac{1}{n}logp(x)-h(X)|\leq \epsilon\}$. While in discrete case we use cardinal $|A^n_\epsilon| \overset{\cdot}{=} 2^{nH}$, in continuous case we use volume $V(A^n_\epsilon)\overset{\cdot}{=} 2^{nh}$ (like a cube with side length $2^h$).</p>
+<p>relation with discrete ent: dis. $p(x)$ is Riemann integrable, $X$ is partitioned as $X^\Delta$ by intervals with length $\Delta$, then $\lim\limits_{\Delta \rightarrow 0} H(X^\Delta)+log\Delta = h(X)$. Thus a $n$ bit quantized cont. RV $X$ has a ent. of $h(X)+n$.</p>
+<p><em>more:</em> several ineq. about det can be derived thru ent. of a multivar ndis. <em>e.g.</em> Hadamard ineq: $\prod\limits_i \Sigma_{ii} \geq |\Sigma|\geq \prod\limits_i \sigma^2_i$ where $\sigma^2_i$ is the cond. variance of $X_i$ given other $X_j$, or $\sigma^2_n = \frac{|\Sigma_n|}{|\Sigma_{n-1}|}$</p>
+
+<h4 class="relative group">1.4 
+    <div id="14" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#14" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p><strong>Maximun entropy dis./princ./estimation</strong><br>
+$\max\limits_f h(f)\text{ s.t. }f(x)\geq 0,\ \int_Sf(x)dx = 1,\ \int_S f(x)r_i(x)dx = \alpha_i$</p>
+<p>$f^*(x)=e^{\lambda_0+\sum\limits_i \lambda_i r_i(x)}=\frac{e^{\sum\limits_i\lambda r_i(x)}}{\int_S e^{\sum\limits_i\lambda r_i(x)}dx}$ <em>proof: Lagrange; Info ineq.</em></p>
+<p><em>example:</em> Boltzmann dis. $S=[0,+\infty),\ EX=\mu,\ f(x)=\frac{1}{\mu}e^{-\frac{x}{\mu}}$</p>
+<p>$S=(-\infty,+\infty),\ EX=\alpha_1,\ EX^2=\alpha_2,\ f(x)=\mathcal{N}(\alpha_1,\alpha_2-\alpha_1^2)$ but when we have third moment constraint, $\lambda_3$ needs to be $0$ to aviod $\int^{+\infty}_{-\infty}f=\infty$, and therefore this method may be out of work. However we can add some carefully devised perturbation onto the original $\mathcal{N}$ to get whatever $\alpha_3$ while holding $\alpha_1$ and $\alpha_2$. Thus $\sup h(f)=h(\mathcal{N}(\alpha_1,\alpha_2-\alpha_1^2))=\frac{1}{2}\ln2\pi e(\alpha_2-\alpha_1^2)$, the max ent. is only $\epsilon$-reachable.</p>
+<p><strong>diff. ent. rate</strong> $h(\mathcal{X})=\lim\limits_{n\rightarrow \infty}\frac{1}{n}h(X_1,\cdots,X_n) \overset{stn.}{=} \lim\limits_{n\rightarrow \infty} h(X_n|X^{n-1})$</p>
+<p>for Gauss stno. $h(\mathcal{X})=\frac{1}{2}log2\pi e+\frac{1}{4\pi}\int^\pi_{-\pi}logS(\lambda)d\lambda$, $\sigma^2_\infty = \frac{1}{2\pi e}2^{2h}$(best em. error given inf. history)</p>
+<p>AR model, <strong>autocorrelation func.</strong> $R(k)=EX_iX_{i+k}$  <strong>power spectral density PSD</strong> $S(\lambda) = \mathcal{F}(R(k))$</p>
+<p><strong>Burg Thm.</strong>:
+$$
+p\text{ order Gaussian-Markov autoreg. sto.}\\ X_i=\sum_{j=1}^p a_j X_{i-j}+Z_i,\ Z_i\overset{iid.}{\sim}\mathcal{N}(0,\sigma^2)\\ \text{attains the max ent. rate among all sto. satisfying the conditions}\\ E X_i X_{i+k}=\alpha_k, 1 \leq k \leq p,\forall i
+$$</p>
+<p>$a_i,\sigma^2$ can be solved from Yule-Walker equations: $R(m)=\sum\limits_{k=1}^p a_k R(m-k)+\sigma^2 \delta_{m, 0},1 \leq m \leq p$​</p>
+
+<h2 class="relative group">2  Coding, Statistics and Investment 
+    <div id="2--coding-statistics-and-investment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2--coding-statistics-and-investment" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+<h4 class="relative group">2.1 
+    <div id="21" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#21" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>source coding $C: \mathcal{X}\rightarrow \mathcal{D}^*,\ l(x)=|C(x)|,\ L(C)=El(X)$ (alphabet $\mathcal{D}=\{1,\dots,D-1\}$)</p>
+<p><strong>nonsigular $\supset$ uniquely decodable $\supset$ instantaneous/prefix</strong></p>
+<p><strong>Kraft ineq</strong>: for inst. code on D, codeword length $l_1,\dots$, $\sum\limits_i D^{-l_i}\leq 1$ <em>proof: all codewords&rsquo; son sets disjoint.</em></p>
+<p>optimal code  $H_D(X)\le L&lt; H_D(X)+1,\text{ eq. iff. }D^{-l_i}=p_i$ D-adic dis. <em>proof: Shannon coding by Lagrange</em></p>
+<p><strong>Shannon coding</strong>: $l_i=\lceil log_D \frac{1}{p_i}\rceil$ (to prove the upper bound)</p>
+<p>for stno. $\{X_n\}$, $L\rightarrow H(\mathcal{X})$<br>
+<strong>Shannon First Thm. (Noiseless Coding Thm.)</strong>: $H(\mathcal{X})\le L\le H(\mathcal{X})+\frac{1}{n}$</p>
+<p>for wrong code(using $q(x)$), the length will increase by $D(p\|q)$</p>
+<p><em>note</em>: actually all uni. decodable codes satisfy Kraft ineq.(McMillian ineq.) so they are no better than prefix codes.</p>
+<p><strong>Huffman coding</strong> $C_{H}$​ is optimal.</p>
+<p><strong>Shannon-Fano-Elias coding</strong> length $\lceil log_D \frac{1}{p_i}\rceil+1$(Elias) with codewords assigned by binary expansion of each symbol&rsquo;s prob. midpoint (not Fano&rsquo;s sorting).</p>
+<p>Shannon coding is competitive optimal $Pr(l(X)\ge l^\prime(X)+c)\le \frac{1}{2^{c-1}}$​</p>
+<p>(refer to <em>5.5</em> for Kolmogorov complexity)</p>
+<p><strong>2.2</strong></p>
+<p>prob. simplex $\mathcal{P}$  type $P_x$ on $\mathcal{X}$, type class $T(P)=\{x\in \mathcal{X}^n:P_x=P\},\ P\in \mathcal{P}^n$</p>
+<p>$1.\ |\mathcal{P}^n|\le (n+1)^{|\mathcal{X}^|}\\ 2.\ Q^n(x)=2^{-n(D(P_x\|Q)+H(P_x))}\\ 3.\ |T(P)|\overset{\cdot}{=} 2^{nH(P)}\\ 4.\ Q^n(T(P))\overset{\cdot}{=} 2^{-nD(P\|Q)}$</p>
+<p>($x=\{x_1,\dots,x_n\},\ X_i \overset{iid.}{\sim}Q(x)$​)</p>
+<p><strong>seq. typical set</strong> $T_\epsilon^{Q^n}=\{x:D(P_x\|Q)\le \epsilon\},\ Pr(T_\epsilon^{Q^n})\rightarrow 1,\ D(P_x\|Q)\overset{a.s.}{\rightarrow}0$​</p>
+<p>Large deviation theory, <strong>Sanov Thm.</strong>:
+$$
+\text{subset }E\subset \mathcal{P},\ Q^n(E)\le (n+1)^{|\mathcal{X}|}2^{-nD^*},\ D^*=\min\limits_{P\in E}D(P\|Q);\\ \text{if }E\text{ is the closure of its interior, }-\frac{1}{n}logQ^n(E) \rightarrow  D^*
+$$</p>
+<p>if constraints $E=\{P:\sum\limits_xP(x)g_i(x)\ge \alpha_i\}$, we can get $P^*(x)=\frac{Q(x)e^{\sum\limits_i\lambda g_i(x)}}{\sum\limits_{x\in \mathcal{X}}Q(x)e^{\sum\limits_i\lambda g_i(x)}}$​ using Lagrange.​</p>
+<p><strong>jointly typical set</strong> $A^n_\epsilon = \{(x^n,y^n)\in \mathcal{X}^n\times \mathcal{Y}^n: \left|-\frac{1}{n} \log p\left(x^n\right)-H(X)\right|&lt;\epsilon,\ \left|-\frac{1}{n} \log p\left(y^n\right)-H(Y)\right|&lt;\epsilon,\\ \left|-\frac{1}{n} \log p\left(x^n, y^n\right)-H(X, Y)\right|&lt;\epsilon\},\ Pr(A^n_\epsilon)\rightarrow 1$</p>
+<p>$(\tilde{X}^n,\tilde{Y}^n)\sim p(x^n)p(y^n),\ Pr((\tilde{X}^n,\tilde{Y}^n)\in A^n_\epsilon)\rightarrow2^{-nI(X;Y)}$ <em>proof: Sanov Thm.</em></p>
+<p>$\text{closed convex set }E \subset \mathcal{P},\ Q\notin E,\ P^* = \arg\min\limits_{P\in E}D(P\|Q),\ \forall P\in E,\ D(P\|Q)\ge D(P\|P^*)+D(P^*\|Q)$</p>
+<p><strong>Conditional Limit Thm.</strong>: $\text{seq. }X^n\overset{iid.}{\sim}Q,\ n\rightarrow \infty,\ Pr(X_i=x|P_{X^n}\in E)\overset{p}{\rightarrow}P^*(x)$ (i.e. type $P^*$ represents the whole set)  <em>proof: $D(P_1\|P_2)\ge \frac{1}{2\ln2}\|P_1-P_2\|^2_1$, D&rsquo;s convergence implies $\mathcal{L_1}$ norm&rsquo;s convergence. (Taylor: $D(P_1\|P_2)= \frac{1}{2}\chi^2_{P_1,P_2}+\ldots$)</em></p>
+<p>Hypo test $X_i \overset{iid.}{\sim}Q(x),\ H_1:Q=P_1,\ H_2:Q=P_2$, <strong>Neyman-Pearson Lem.</strong>: likelihood ratio $T\ge 0$, acceptance region $A_n(T)=\{x^n:\frac{P_1(x^n)}{P_2(x^n)}&gt;T\},\ \alpha^*=P^n_1(A^c_n(T)),\ \beta^*=P^n_2(A_n(T)),\\ \text{ other regions with }\alpha\le \alpha^*\text{ must have }\beta\ge \beta^*$</p>
+<p>$\frac{P_1(X^n)}{P_2(X^n)}&gt;T$ equals to $D(P_{X^n}\|P_2)-D(P_{X^n}\|P_1)&gt;\frac{1}{n}logT$, under this constraint we minimize $D(P\|P_2)$(also $D(P\|P_1)$) using Lagrange and get $P_\lambda = \frac{P^\lambda_1(x)P^{1-\lambda}_2(x)}{\sum\limits_{x\in \mathcal{X}} P^\lambda_1(x)P^{1-\lambda}_2(x)}$ to estimate $\alpha_n \overset{\cdot}{=}2^{-nD(P_\lambda\|P_1)}$, $\beta_n \overset{\cdot}{=}2^{-nD(P_\lambda\|P_2)}$. ($\lambda$ can be determined by $D(P_{X^n}\|P_2)-D(P_{X^n\|P_1})=\frac{1}{n}logT$​​.)</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./info.jpg">
+
+  
+</figure>
+</p>
+<p><strong>relative ent. AEP</strong>: $X_1,\cdots,X_n \overset{iid.}{\sim}P_1(x),\ \forall P_2(x),\ -\frac{1}{n}log\frac{P_1(X_1,\cdots,X_n)}{P_2(X_1,\cdots,X_n)} \overset{p}{\rightarrow} D(P_1\|P_2)$</p>
+<p><strong>relative ent. typical set</strong> $P_1(A^n_\epsilon(P_1\|P_2))&gt;1-\epsilon,\ P_2(A^n_\epsilon(P_1\|P_2))\rightarrow 2^{-nD(P_1\|P_2)}$</p>
+<p><strong>Chernoff-Stein Lem.</strong>: $\alpha_n=P^n_1(A^c_n),\ \beta_n=P^n_2(A_n),\ \beta^\epsilon_n =\min\limits_{A_n\subset \mathcal{X},\alpha_n&lt;\epsilon}\beta_n,\ \lim\limits_{n\rightarrow \infty}\frac{1}{n}log\beta^\epsilon_n=-D(P_1\|P_2)$</p>
+<p>when Bayesian weighted $D^*=\min\limits_{A_n} \lim\limits_{n\rightarrow \infty}-\frac{1}{n}log(\pi_1\alpha_n+\pi_2\beta_n)$, <strong>Chernoff Info.</strong> $C(P_1,P_2)=D^*=D(P_\lambda\|P_1)=D(P_\lambda\|P_2)$ or $C(P_1,P_2)=-\min\limits_{0\le\lambda\le 1} log(\sum\limits_xP^\lambda_1(x)P^{1-\lambda}_2(x))$</p>
+<p>(<em>note:</em> $D^*$ is not related to $\pi_1,\pi_2$ since large sample will eliminate a priori knowledge $\frac{\pi_1}{\pi_2}\frac{P_1(X_n)}{P_2(X_n)}\overset{?}{\sim}T$​)</p>
+<p>Score func. $V=\frac{\partial}{\partial\theta}\ln f(X;\theta),\ EV=0$<br>
+<strong>Fisher Info.</strong> $J(\theta)=EV^2=-E\frac{\partial^2}{\partial\theta^2}\ln f(X;\theta)$  $J_n(\theta)=nJ(\theta)$</p>
+<p><strong>Cramer-Rao Ineq</strong>: $\text{unbiased stat. }T(X)\text{ of }\theta,\ \Sigma(T)\ge J^{-1}(\theta)$ (for multivar. it means mt $\Sigma-J^{-1}$​ is semipositive.) (Similarly, for biased stat. we have $b_T(\theta)=ET-\theta,\ E(T-\theta)^2\ge \frac{(1+b^\prime_T(\theta))^2}{J(\theta)}+b^2_T(\theta)$.)</p>
+<p><em>proof: Cauchy-Schwarz Ineq. for $V-EV$ and $T-ET$.</em></p>
+<p>some senses:
+for para. dis. family $\{p_\theta(x)\}$, $\theta\rightarrow \theta^\prime,\ D(p_\theta\|p_\theta^\prime)\sim \frac{J(\theta)}{2}$;<br>
+<strong>de Brujin Ineq</strong> $Z\ id.\ X,\ Z\sim \mathcal{N}(0,1),\ \frac{\partial}{\partial t}h(X+\sqrt{t}Z)=\frac{1}{2}J(X+\sqrt{t}Z),\text{ if limit exists, }\frac{\partial}{\partial t}h(X+\sqrt{t}Z)\big|_{t=0}=\frac{1}{2}J(X)$ ($h$&rsquo;s base is $e$);<br>
+Just like ent. power $2^{nH(X)}$ can be seemed as the volume of typical set, Fisher info. $J(X)$ can be seemed as the surface area, where $J(X)=\int \frac{(\frac{\partial f}{\partial x})^2}{f}dx$;<br>
+<strong>Fisher info&rsquo;s convolution ineq</strong> $\frac{1}{J(X+Y)}\ge \frac{1}{J(X)}+\frac{1}{J(Y)}$</p>
+<p><strong>ent. power Ineq</strong>: $X\ id.\ Y,\ \dim X=\dim Y=n,\ 2^{\frac{2}{n}h(X+Y)}\ge 2^{\frac{2}{n}h(X)}+2^{\frac{2}{n}h(Y)}$ or $h(X+Y)\ge h(X^\prime+Y^\prime)$, where $X^\prime,Y^\prime\sim \mathcal{N},\ X^\prime\ id.\ Y^\prime,\ h(X^\prime)=h(X),\ h(Y^\prime)=h(Y)$</p>
+<p><strong>2.3</strong></p>
+<p><strong>Kelly game</strong>  $b^*=p$<br>
+<strong>Gambling conservation Thm.</strong>: $W^*+H=logm$​ (for uniform fair oppo. game)</p>
+<p>estimation of entropy of English (Shannon letter guessing game)</p>
+<p>potfolio $\mathcal{B}=\{b\in \mathcal{R}^m:b_i\ge 0, \sum\limits_{i=1}^m b_i =1\}$ $X\sim F(x),\ S=b^\prime X$</p>
+<p>first and second moment method: Sharpe-Markowitz theory, CAPM</p>
+<p>growth rate $W(b,F)=\int logS dF = Elogb^\prime X$  $S_n = \prod\limits_{i=1}^n S_i,\ \frac{1}{n}logS_n \overset{a.s.}{\rightarrow}W,\ S_n\overset{\cdot}{=} 2^{nW}$</p>
+<p>log optimal porfolio $W^*(F)=\max\limits_b W(b,F)$</p>
+<p>$W(b,F)$ is concave about $b$, linear about $F$, and $W^*(F)$ is convex about $F$​.</p>
+<p>$b^*$&rsquo;s KT condition: $E(\frac{b^\prime X}{{b^{*}}^\prime X})\le 1,\ E(\frac{X_i}{{b^*}^\prime X})=1\text{ if }b^*_i&gt;0,\le 1\text{ if }b^*_i=0$</p>
+<p>causal portfolio $b_i:\mathcal{R}_+^{m(i-1)}\rightarrow \mathcal{B}$  log optimal is the best. $ElogS^*_n = nW^*\ge ElogS_n$</p>
+<p>Side info. raises growth rate. $\Delta W=\int_y f(y) \Delta W_{Y=y}\le I(X;Y)$</p>
+<p>$W^*_{\infty}=\lim\limits_{n\rightarrow \infty}\frac{1}{n}W^*(X_1,\cdots,X_n) \overset{stn.}{=} \lim\limits_{n\rightarrow \infty} W^*(X_n|X^{n-1})$</p>
+<p>$\frac{S_n}{S^*_n}\text{ is a supermartingale, }\overset{a.s.}{\rightarrow}V,\ EV\le 1,\ Pr(\sup\limits_n\frac{S_n}{S^*_n}\ge t)\le \frac{1}{t}$</p>
+<p><strong>universal portfolio</strong>: $S^*_n(x^n)=\max\limits_b \prod\limits_{i=1}^nb^\prime x_i,\ \hat{S_n}(x^n)=\prod\limits_{i=1}^n\hat{b}^\prime _i(x^{i-1})x_i,\ \max\limits_{\hat{b}}\min\limits_{x^n}\frac{S_n(x^n)}{S^*_n(x^n)}=V_n,\\ V_n=(\sum\limits_{n_1+\dots+n_m=n}\binom{n}{n_1,\dots,n_m}2^{-nH(\frac{n_1}{n},\dots,\frac{n_m}{n})})^{-1}\sim n^{-\frac{m-1}{2}}$</p>
+<p>$\hat{b}_{n+1}(x^i)=\frac{\int_\mathcal{B}bS_i(b,x^i)d\mu(b)}{\int_\mathcal{B}S_i(b,x^i)d\mu(b)},\ \hat{S}_n(x^n)=\int_\mathcal{B}S_n(b,x^n)d\mu(b)$​</p>
+
+<h2 class="relative group">3  Communication 
+    <div id="3--communication" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3--communication" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>3.1</strong></p>
+<p>discrete channel $(\mathcal{X},p(y|x),\mathcal{Y})$<br>
+<strong>DMC</strong>, n-th extension $p(y_k|x^k,y^{k-1})=p(y_k|x_k)$, non-feedback $p(x_k|x^{k-1},y^{k-1})=p(x_k|x^{k-1})$, thus $p(y^n|x^n)=\prod\limits_i p(y_i|x_i)$​</p>
+<p>$(M,n)$ code of channel: message index set $W\in \mathcal{W}=\{1,\dots,M\}$, coding func. $X^n:\mathcal{W}\rightarrow \mathcal{X}^n$ and codebook $\mathcal{C}=\{x^n(1),\dots,x^n(M)\}$, decoding func. $g:\mathcal{Y}\rightarrow \mathcal{W}$</p>
+<p>$W\rightarrow X^n(W) \rightarrow Y^n \rightarrow \hat{W}$</p>
+<p>conditional, maximum, average prob. of error $\lambda_i = \sum\limits_{y^n}p(y^n|x^n(i))I(g(y^n)\neq i),\ \lambda=\max\limits_i \lambda_i,\ P^n_e=\bar{\lambda_i}$</p>
+<p><strong>rate</strong> $R=\frac{logM}{n}$ bit/trans.<br>
+achievable rate $n\rightarrow\infty,\ \lambda\rightarrow 0$</p>
+<p><strong>channel capacity</strong> $C=\max\limits_{p(x)}I(X;Y)$  $0\le C=\max\limits_{p(x)} H(Y)-H(Y|X)\le \min (log|\mathcal{X}|,log|\mathcal{Y}|)$</p>
+<p><em>note:</em> we use max not sup here since $I(X;Y)$ is a concave func. on convex set of $p(x)$ and several algo. can compute this maximum.</p>
+<p>direct understanding: For each typical seq. $X^n$ there are roughly $2^{nH(Y|X)}$ seq. of $Y^n$ corresponding to it, and the total number of $Y^n$ (typical) is $2^{nH(Y)}$, so nearly $2^{nI(X;Y)}$ disjointed image sets of diff. inputs $X^n$ can be seperated in one transmission. (or think of jointly typical $Pr=2^{-nI}$​)</p>
+<p><em>example:</em> BSC $C=1-H(p)$, BEC $C=1-\alpha$<br>
+symmetric channel</p>
+<p><strong>Channel Coding Thm. (Shannon Second Thm.)</strong>: $\text{DMC, }\forall R&lt;C,\ \exist (2^{nR},n)\text{ code, }\lambda\rightarrow 0;\text{ Conversely, }\forall (2^{nR},n)\text{ code with }\lambda\rightarrow 0\text{ must has }R\le C$</p>
+<p><em>proof: randomly generated codebook, jointly typical decoding, so error comes from either not jointly typical $Y^n$ or other possible inputs that are jointly typical with: $Pr(V^n\neq \hat{V}^n)=Pr((X^n(i),Y^n)\notin A^n_\epsilon)+$$\sum\limits_{j\neq i}Pr((X^n(j),Y^n)\in A^n_\epsilon)$; for converse th, Fano ineq. and Data-processing ineq. lead to $nR=H(W^{uni.})\le 1+P^n_e nR+nC$.</em> (strong converse edition: $R&lt;C,\ P^n_e \rightarrow 0;\ R&gt;C,\  P^n_e \rightarrow 1$)</p>
+<p><em>note:</em> equality needs 1. coding $X^n(W)$ and decoding $\hat{W}$ are sufficient(all diff.); 2. $Y_i\ id.$; 3. $X_i$&rsquo;s dis. is $p^*(x)$.</p>
+<p><strong>Hamming code</strong>, <strong>error-detecting code</strong><br>
+minimum weight and minimun distance (equal in linear code)<br>
+parity check mt. $H(c+e_i)=He_i$<br>
+systematic code $(n,k,d)$  $\text{e.g. Hamming } r(H)=l,\ n=2^l-1,\ k=2^l-l-1,\ d=3$<br>
+block code and convolutional code<br>
+<em>more:</em> BCH code, LDPC code, turbo code.</p>
+<p><strong>feedback code</strong> $x_i(W,Y^{i-1})$, feedback capacity $C_{FB}=C$ (feedback can simplify coding but cannot enlarge capacity of DMC.)</p>
+<p><strong>Source-Channel Seperation Thm.</strong>: ($Pr(V^n\neq \hat{V}^n)=\sum\limits_{v^n}p(v^n)\lambda_{v^n}$)</p>
+<p>$\{V^n\}\text{ satisfies AEP (ergodic stno.)},\ H(\mathcal{V})&lt;C,\ \exist \text{ source-channel code},\ Pr(V^n\neq \hat{V}^n)\rightarrow 0,\text{ vice versa}$</p>
+<p>Thus two-step way is equally efficient. First we do data compressing (from AEP): nearly all prob. is in a seq. set with size $2^{nH}$, and we can use $R&gt;H$ code to express this info. source with little error. Second we do data transmitting (from Joint AEP): for large grouping length $n$, nearly all inputs and outputs are jointly typical with $2^{-nI}$ prob. of exception, and we can use $R&lt;\max I=C$ code to keep error prob. low. This Thm. $H&lt;C$ combines the two, telling that we can devise source code(exprssing efficiently) and channel code(confronting noise) seperatedly.</p>
+<p><strong>3.2</strong></p>
+<p><strong>Gaussian channel</strong> $Y_i = X_i +Z_i,\ Z_i \sim \mathcal{N}(0,N)$  power constraint $\frac{1}{n}\sum\limits_i x_i^2 \le P$</p>
+<p>$C=\max\limits_{f(x):EX^2\le P}I(X;Y)=\frac{1}{2}log(1+\frac{P}{N})$ bit/trans.</p>
+<p><em>proof: $EY^2=P+N,\ I(X;Y)=h(Y)-h(Z),\text{ when }Y\sim \mathcal{N}(0,P+N)\text{ i.e. }X\sim \mathcal{N}(0,P) \text{ max}$</em></p>
+<p>Similarly, code $(2^{nR},n)$ with $R&lt;C$ is achievable. (Each decoding ball&rsquo;s radius is $\sqrt{nN}$ and outputs&rsquo; $\sqrt{n(P+N)}$, so the number of disjointed balls is no more than $(\frac{P+N}{N})^{\frac{n}{2}}$​.)</p>
+<p>finite bandwidth $W$, <strong>Nyquist-Shannon Sampling Thm.</strong>: signal $f(t)$ with maximum cut-off freq. $W$ can be completely determined by sampling seq. of $\frac{1}{2W}$ s time interval. Thus it can be seemed as a vec. in $2WT$ dof/dim space.</p>
+<p>bandwidth $W$, noise psd $\frac{N_0}{2}$, noise power $N_0W$ (spherical ndis. with covarmt $\frac{N_0}{2}I$)  <strong>AWGN channel</strong></p>
+<p>$C=Wlog(1+\frac{P}{N_0W})$​ bit/s (Shannon Formula)  $W\rightarrow \infty,\ C=W\cdot SNR=\frac{P}{N_0}$ nat/s</p>
+<p><strong>parallel Gaussian channel</strong> $\sum EX^2\le P,\ C=\max I(X^k;Y^k)$  max power allocation: $P_i=(v-N_i)^+,\ \sum (v-N_i)^+=P$​ (water-filling)</p>
+<p><strong>correlated noise</strong> (memory channel can also convert to this) $\frac{1}{n}tr(\Sigma_X)\le P,\ C_n=\max \frac{1}{2n}log\frac{|\Sigma_X+\Sigma_Z|}{|\Sigma_Z|}$, also sloved by water filling onto $\Sigma_Z$&rsquo;s eigen values $\lambda_i$. $C_n=\frac{1}{2n}\sum\limits_{i=1}^n log(1+\frac{(\lambda-\lambda_i)^+}{\lambda_i}),\ \sum\limits_{i=1}^n(\lambda-\lambda_i)^+=nP$</p>
+<p><em>more:</em> for stno, covarmt is Toeplitz mt, when $n\rightarrow \infty$ the envelop of its eigenvalues approaches the power spectral $N(f)$ of this stno. ; feedback Gaussian channel $C_{n,FB}=\max\limits_{tr(\Sigma_X)\le nP}\frac{1}{2n}log\frac{|\Sigma_{X+Z}|}{|\Sigma_Z|}$, $X^n$ is no longer id. with $Z^n$ and $X=BZ+V$ miximizes. $C_{n,FB}\le \min (C_n+\frac{1}{2},2C_n)$ is only slightly higher than $C_n$.</p>
+<p><strong>3.3</strong></p>
+<p><strong>reproduction/code point</strong> $\hat{X}(X)$, <strong>Dirichlet partition</strong><br>
+Lloyd algo.(i.e. K-means)</p>
+<p><strong>distortion measure</strong> $d(x,\hat{x})$​  Hamming distortion, squared error distortion</p>
+<p>$(2^{nR},n)$ rate distortion code  $(R,D)$ achievable $\lim\limits_{n\rightarrow \infty}Ed(X^n,g_n(f_n(X^n)))\le D$</p>
+<p>rator. func. $R(D)=\inf\limits_D \text{achi.}R=\min \limits_{p(\hat{x}|x):D}I(X;\hat{X})$ (Shannon Third Thm. $R\ge R(D_0)\Leftrightarrow D\le D_0$)</p>
+<p><em>example:</em><br>
+(Ham. distortion, $R(D)=0$ at other large $D$) $B(p)$ source: $R(D)=H(p)-H(D),\ 0\le D\le \min(p,1-p)$;<br>
+$\mathcal{N}(0,\sigma^2)$ source: $R(D)=\frac{1}{2}log\frac{\sigma^2}{D},\ 0\le D\le \sigma^2$ (similarly, ball of radius $\sqrt{nD}$ filling in ball of radius $\sqrt{n\sigma^2}$, the number of codewords equals to $2^{nR(D)}$);<br>
+parallel(multindis.) source: $R(D)=\sum\limits_i\frac{1}{2}log\frac{\sigma^2_i}{D_i},\ D_i=\min (\lambda,\sigma^2_i),\ \sum\limits_i D_i=D$ (i.e. anti-waterfilling on the spectral)</p>
+<p>Similarly, for combined source and channel coding, $D=\frac{1}{n}\sum\limits_{i=1}^n Ed(V_i,\hat{V_i})$ can be achieved iff $C&gt;R(D)$.</p>
+<p><em>more:</em> rator. is achi. when grouping length $n$​ is enough.(so put them together to describe will have less distortion than considering seperatedly)<br>
+distortion typical set, strong typical set<br>
+Blahut-Arimoto algo. for computing rator. func.</p>
+<p><strong>universal source code</strong>: $\exist (2^{nR},n)\text{ code, }\forall \text{ source }Q\text{ with }H(Q)&lt;R,\ P^n_e \rightarrow 0$​</p>
+<p><em>more:</em> minimax redundancy, Lemple-Ziv(LZ) coding</p>
+<p>multiaccess channel, broadcast channel, relay channel, interference channel</p>
+<p><strong>multiaccess</strong>: <em>example:</em> binary addition and multiplication channel<br>
+capacity region $\pmb{R}\in\mathcal{C}$ i.e. convex hull of $R(S)=\sum\limits_{i\in S} R_i,\ X(S)=\{X_i:\in S\},\ \forall S\subset \{1,\dots,m\},\ R(S)\le I(X(S);Y|X(S^c))\Leftrightarrow P^n_e\rightarrow 0$<br>
+onion-peeling at corner points</p>
+<p>for Gausssion, denote $C(x)=\frac{1}{2}log(1+x)$, $\sum\limits_{i\in S} R_i \le C(\frac{\sum\limits_{i\in S}P_i}{N})$; total code-rate $C(\frac{mP}{N})$ will approach infty when $m\rightarrow \infty$ but mean of each sender will approach $0$​​​.<br>
+CDMA(the polyline), FDMA and TDMA(the curve)</p>
+<p>for source coding, <strong>Slepian-Wolf Thm.</strong>: $\forall S\subset \{1,\dots,m\},\ R(S)&gt; H(X(S)|X(S^c))\Leftrightarrow P^n_e\rightarrow 0$</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="" src="./channel.jpg">
+
+  
+</figure>
+</p>
+<p><em>digest</em>: Shannon&rsquo;s three theorems.</p>
+<ol>
+<li>non-distortion/lossless length-variable source-coding: (unidecodable) $R&gt;H$ ($L$ is rate $R$)</li>
+<li>noisy channel-coding: $R&lt;C$ (AWGN $C=B\log(1+\frac{S}{N})$)</li>
+<li>fidelity-criteria/lossy source-coding: $R&gt;R(D)$</li>
+</ol>
+<hr>
+<p>参考书目：</p>
+<ul>
+<li>Thomas M. Cover &amp; Joy A. Thomas, <em>Elements of Information Theory (2e)</em></li>
+<li></li>
+</ul>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/haochen/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
+          integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
+          data-oid="views_notes\information\index.md"
+          data-oid-likes="likes_notes\information\index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/haochen/notes/computation/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >计算理论</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-04-14T00:00:00&#43;00:00">April 14, 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/haochen/notes/optimization/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >优化</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-06-11T00:00:00&#43;00:00">June 11, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/share/"
+                title="分享">
+                
+                分享
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/haochen/about/"
+                title="关于">
+                
+                关于
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hao Chen
+      </p>
+    
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/haochen/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+    <style>
+    .small-gray-text {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+</style>
+
+
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
+  data-url="http://localhost:1313/haochen/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

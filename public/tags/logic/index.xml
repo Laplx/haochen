@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logic on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/logic/</link>
+    <description>Recent content in Logic on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Sun, 14 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/logic/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>计算理论</title>
+      <link>http://localhost:1313/haochen/notes/computation/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/computation/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Automaton and Language 
+    &lt;div id=&#34;1-automaton-and-language&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-automaton-and-language&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;computation model, finite automation, &lt;strong&gt;FDA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;transition function&lt;/strong&gt; $\delta:Q\times \Sigma\rightarrow Q$, accept state, languge $L(M)=A$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular language&lt;/strong&gt;, &lt;strong&gt;regular operation&lt;/strong&gt;: union $\cup$, concatenation $\circ$, star $^*$&lt;/p&gt;
+&lt;p&gt;nondeterministic $\epsilon$ &lt;strong&gt;NFA&lt;/strong&gt; $\delta:Q\times \Sigma_\epsilon \rightarrow \mathcal{P}(Q)$&lt;/p&gt;
+&lt;p&gt;$NFA=DFA$&lt;/p&gt;
+&lt;p&gt;$REG$ is closure under regular operation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular expression&lt;/strong&gt; $REX$: $R = a\in \Sigma \text{ or } \epsilon \text{ or } \varnothing \text{ or } R_1\cup R_2  \text{ or } R_1\circ R_2  \text{ or } R_1^*$​&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

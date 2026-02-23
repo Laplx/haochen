@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Numerical on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/numerical/</link>
+    <description>Recent content in Numerical on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/numerical/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>数值</title>
+      <link>http://localhost:1313/haochen/notes/numerical/linalg/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/numerical/linalg/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;小结 
+    &lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%b0%8f%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;{对于开篇提出的三大类基础数值问题，第二类最小二乘的大纲放入线性方程组中}&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;线性方程组 $Ax=b$ 
+    &lt;div id=&#34;线性方程组-axb&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84-axb&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;直接&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LU
+&lt;ul&gt;
+&lt;li&gt;Gauss 消去&lt;/li&gt;
+&lt;li&gt;Doolittle/Crout，Cholesky（或 LDL&amp;rsquo;）&lt;/li&gt;
+&lt;li&gt;Pivoting（PLU）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;QR
+&lt;ul&gt;
+&lt;li&gt;GS 正交化（经典col/修正row）CGS, MGS, CGS2&lt;/li&gt;
+&lt;li&gt;Householder&lt;/li&gt;
+&lt;li&gt;Givens&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SVD&lt;/li&gt;
+&lt;li&gt;稀疏直接法&lt;/li&gt;
+&lt;li&gt;特殊（Toeplitz，FFT，块）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;迭代&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定常&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分裂（$A=M-N, \rho(M^{-1}N)&amp;lt;1$，（弱）正则分裂，M-阵/H-阵）
+&lt;ul&gt;
+&lt;li&gt;Jacobi&lt;/li&gt;
+&lt;li&gt;Gauss-Seidel&lt;/li&gt;
+&lt;li&gt;SOR（或 SSOR）相容次序（Young&amp;rsquo;s Thm）&lt;/li&gt;
+&lt;li&gt;Richardson&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交替方向 e.g. ADI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Krylov 子空间&lt;/p&gt;
+&lt;p&gt;对称&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CG（PCG）&lt;/li&gt;
+&lt;li&gt;MINRES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非对称&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GMRES&lt;/li&gt;
+&lt;li&gt;BiCG，QMR（$\in$ Petrov-Galerkin）&lt;/li&gt;
+&lt;li&gt;CG^2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正规&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>二十世纪的十余个算法</title>
+      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;1 MC 
+    &lt;div id=&#34;1-mc&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-mc&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+\int fp \leftrightarrow \mathbb{E}f \leftrightarrow \frac{1}{n}\sum\limits^n_{i=1} f_i \text{ sampling}
+$$&lt;/p&gt;
+&lt;p&gt;Variance Control：$\mathbb{E}f(x) = \mathbb{E}(f(x)+c(g(x)-\mathbb{E}g(x)))$，$c^*=-\frac{\text{Cov}(f,g)}{\text{V} (g)}$&lt;/p&gt;
+&lt;p&gt;Importance Sampling：$\mathbb{E}_Xf(x)=\mathbb{E}_Y\frac{f(y)p(y)}{q(y)}$，$q^*(y)=\frac{\vert f(y)\vert p(y)}{\mathbb{E}_Xf(x)}$（not computable）&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;2 Simplex 
+    &lt;div id=&#34;2-simplex&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-simplex&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\text{(LP)} &amp;amp; \min\limits_{x\in \mathbb{R}^n} c^\prime x\\
+\text{s.t.} &amp;amp; Ax=b,\\ &amp;amp; x\ge 0
+\end{aligned}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>共轭梯度法</title>
+      <link>http://localhost:1313/haochen/notes/numerical/cg/</link>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/numerical/cg/</guid>
+      <description>&lt;p&gt;
+
+如果初始点的选择不好或者函数行为不好时，最速下降法可能并不理想。我们先从几何和直觉上展示共轭梯度法，同时可以在后文理清数学逻辑后再来看看这两张图。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;CG&#34; src=&#34;./CG.jpg&#34;&gt;
+
+  
+    &lt;figcaption&gt;CG Sketch for memory&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;对于精确线搜索，最速下降法的前后两步的下降方向必定是垂直的，从而导致了可能的 zigzag 现象。共轭梯度法所选择的共轭方向 $p_i$ 更加具备全局性；例如图中的二次函数 $f=\frac{1}{2}x^\prime Ax-b^\prime x,\ \nabla f = Ax-b$，第二步的方向一定指向最优点 $Ax^*=b$。右图可见共轭方向并不一定垂直，而是 $A$ 意义下的垂直：$p_i^\prime Ap_j = 0,\ i\neq j$。注意到对于 $A\in \mathbb{S}_+$，易证这一组 $\{p_i\}_{i=1}^n$ 线性独立，我们希望逐步获得 $x^*$ 在这组基上的表示。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我们先考虑线性版本（即上面的 $f$）。&lt;/p&gt;
+&lt;p&gt;$$
+\dots \overset{p_{i-1}}{\longrightarrow} x_i \overset{p_{i}}{\longrightarrow} \dots
+$$&lt;/p&gt;
+&lt;p&gt;假装我们能获取每一步的搜索方向 $p_i$，那么由精确线搜索知 $p_i \perp -\nabla f_{i+1}$，其中 $\nabla f_{i+1} := \nabla f(x_{i+1})$，且 $x_i = x_0 + \sum_{j=0}^{i-1}\alpha_j p_j$，$\alpha_i$ 记步长。&lt;/p&gt;
+&lt;p&gt;同时我们可以直接得到一个关于搜索步长的表达式，对 $f(x_i + \alpha_i p_i) = g(\alpha_i),\ g^\prime (\alpha_i) = 0$ 得到&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/cs/</link>
+    <description>Recent content in CS on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>强化学习</title>
+      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
+    &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#tables-in-rl-for-llm&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Algorithm&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Token Advantage $\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=0}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE with KL trick&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=t}^{T_{i j-1}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE ++&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=t}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$ with global batch normalization&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RLOO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$R_{i j}-\frac{1}{M-1} \sum_{l \neq j} R_{i j}$, where $R_{i j}:=r\left(x_i, y_{i j}\right)-\beta \sum_{t^{\prime}=0}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REMAX&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-r\left(x_i, \hat{y}_i\right)-\beta \sum_{t^{\prime}=t}^{T_{i j}-1} \log \frac{\pi_{\theta_k}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}{\pi_{\text {ref }}\left(a_{t^{\prime}}^{(i j)} \mid s_{t^{\prime}}^{(i j)}\right)}$, where $\hat{y}_i$ is sampled from greedy policy of $\theta_k$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\begin{aligned} &amp;amp; \sum_{t^{\prime}=t}^{T_{i j}-1}(\lambda \gamma)^{t^{\prime}-t} \delta_{t^{\prime}}^{(i j)} \text { where } \delta_t^{(i j)}=\mathbb{I}\left\{t=T_{i j}-1\right\} \cdot r\left(x_i, y_{i j}\right)- \ &amp;amp; \beta \log \frac{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}+\gamma V_\phi\left(s_{t+1}^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right) \end{aligned}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ORZ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-V_\phi\left(s_t^{(i j)}\right)$ (PPO with $\lambda=\gamma=1, \beta=0$ )&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (origin verson)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{T_{i j}}\left[\frac{r\left(x_i, y_{i j}\right)-\text { mean }\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}+\beta\left(\frac{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}-1\right)\right]$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (R1 verson)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{r\left(x_i, y_{i j}\right)-\text { mean }\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}+\beta\left(\frac{\pi_{\text {ref }}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}{\pi_{\theta_k}\left(a_t^{(i j)} \mid s_t^{(i j)}\right)}-1\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DAPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\hat{T}_i}\left[\frac{r\left(x_i, y_{i j}\right)-\operatorname{mean}\left(\mathbb{R}_i\right)}{\operatorname{std}\left(\mathbb{R}_i\right)}\right]$, where $\hat{T}_i=\frac{1}{M} \sum_{j=1}^M T_{i j}$.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DR.GRPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\operatorname{mean}\left(\mathbb{R}_i\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Algorithm&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Token Advantage $\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;br /&gt;$(r(x_i,y_{ij})\in \{0,1\},\ \beta = 0)$&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Expectation of Token Advantage $\mathbb{E}\left[\hat{A}_k\left(s_t^{(i j)}, a_t^{(i j)}\right) \mid\left(s_t^{(i j)}, a_t^{(i j)}\right)\right]$&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Expectation of the Gradient of Policy Loss $\mathbb{E}_{\mathbb{X}, \mathbb{Y}}\left[\nabla_\theta \hat{\mathcal{L}}\left(\theta_k\right)\right]$&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REINFORCE ++&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\operatorname{std}(\mathbb{R})}\left[r\left(x_i, y_{i j}\right)-\operatorname{mean}(\mathbb{R})\right]$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\sigma_k}\left(Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-\mu_k\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\frac{1}{\sigma_k} \nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $NM$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RLOO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\frac{1}{M-1} \sum_{l \neq j} r\left(x_i, y_{i l}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\pi_{\theta_k}}\left(x_i\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;REMAX&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-r\left(x_i, \hat{y}_i\right)$, where $\hat{y}_i$ is sampled from the greedy policy of $\hat{\pi}_{\theta_k}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\hat{\pi}_{\theta_k}}\left(x_i\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\begin{aligned} &amp;amp; (\lambda \gamma)^{T_{i j}-1-t} r\left(x_i, y_{i j}\right)+ \ &amp;amp; \sum_{t^{\prime}=t+1}^{T_{i j}-1}\left(\frac{1}{\lambda}-1\right)(\lambda \gamma)^{t^{\prime}-t} V_\phi\left(s_{t^{\prime}}^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right) \end{aligned}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$A_{\lambda, \gamma}^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$. If $V_\phi=V^{\pi_{\theta_k}}$ and $\gamma=1, A_{\lambda, \gamma}^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)= A^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ If $V_\phi=V^{\pi_{\theta_k}}$ and $\gamma=1$.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ORZ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-V_\phi\left(s_t^{(i j)}\right)$ (PPO with $\lambda=\gamma=1$ )&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V_\phi\left(s_t^{(i j)}\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (origin version)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{T_{i j}}\left[\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}\right]$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Hard to analyze due to the length normalization term $\frac{1}{T_{i j}}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}}(\cdot \mid x)\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{T \sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq$ &lt;br&gt; $-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GRPO (R1 version)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-p_{\theta_k}\left(x_i\right)}{ \sqrt{p_{\theta_k}\left(x_i\right) (1-p_{\theta_k}\left(x_i\right))}}$ asymptotically as $M$ is large enough&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}}(\cdot \mid x)\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{\sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq$ &lt;br&gt; $-\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DAPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{1}{\hat{T}_i}\left[\frac{r\left(x_i, y_{i j}\right)-\hat{p}_i}{\sqrt{\hat{p}_i\left(1-\hat{p}_i\right)}}\right]$, where $\hat{T}_i=\frac{1}{M} \sum_{j=1}^M T_{i j}$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-p_{\theta_k}\left(x_i\right)}{T_{\theta_k}\left(x_i\right) \sqrt{p_{\theta_k}\left(x_i\right) (1-p_{\theta_k}\left(x_i\right))}}$ asymptotically as $M$ is large enough&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_{\theta_k}(\cdot \mid x)}\left[\frac{r(x, y) \nabla_\theta \log \pi_{\theta_k}(x, y)}{T_{\theta_k}(x) \cdot \sqrt{p_{\theta_k}(x)\left(1-p_{\theta_k}(x)\right)}}\right] \neq -\nabla_\theta \mathcal{J}\left(\theta_k\right)$ asymptotically as $M$ is large enough&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;DR.GRPO&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$r\left(x_i, y_{i j}\right)-\hat{p}_i$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$\frac{M-1}{M}\left(Q^{\pi_{\theta_k}}\left(s_t^{(i j)}, a_t^{(i j)}\right)-V^{\pi_{\theta_k}}\left(x_i\right)\right)$&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;$-\frac{M-1}{M} \nabla_\theta \mathcal{J}\left(\theta_k\right)$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;REINFORCE ++ 和 DR. GRPO 隐式的采用了自适应的学习率。REINFORCE++ 是由于 global batch normalization，DR.GRPO 是由于没有留一。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>信息论</title>
+      <link>http://localhost:1313/haochen/notes/information/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
+    &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-entropy&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;entropy&lt;/strong&gt; $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;joint entropy&lt;/strong&gt;, &lt;strong&gt;conditional entropy&lt;/strong&gt;  $H(X,Y)=H(X)+H(Y|X)$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $H(X|Y) \neq H(X|Y=y)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;relative entropy(KL distance)&lt;/strong&gt; $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $D(p\|q) \neq D(q\|p)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mutual inforamtion&lt;/strong&gt; $I(X;Y)=D(p(x,y)\|p(x)p(y))$&lt;/p&gt;
+&lt;p&gt;$I(X;Y)=H(X)+H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$&lt;br&gt;
+Venn diagram&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;chain rule&lt;/strong&gt; $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>计算理论</title>
+      <link>http://localhost:1313/haochen/notes/computation/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/computation/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Automaton and Language 
+    &lt;div id=&#34;1-automaton-and-language&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-automaton-and-language&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;computation model, finite automation, &lt;strong&gt;FDA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;transition function&lt;/strong&gt; $\delta:Q\times \Sigma\rightarrow Q$, accept state, languge $L(M)=A$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular language&lt;/strong&gt;, &lt;strong&gt;regular operation&lt;/strong&gt;: union $\cup$, concatenation $\circ$, star $^*$&lt;/p&gt;
+&lt;p&gt;nondeterministic $\epsilon$ &lt;strong&gt;NFA&lt;/strong&gt; $\delta:Q\times \Sigma_\epsilon \rightarrow \mathcal{P}(Q)$&lt;/p&gt;
+&lt;p&gt;$NFA=DFA$&lt;/p&gt;
+&lt;p&gt;$REG$ is closure under regular operation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;regular expression&lt;/strong&gt; $REX$: $R = a\in \Sigma \text{ or } \epsilon \text{ or } \varnothing \text{ or } R_1\cup R_2  \text{ or } R_1\circ R_2  \text{ or } R_1^*$​&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>生成模型</title>
+      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
+    &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#vae&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Settings and Loss 
+    &lt;div id=&#34;settings-and-loss&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#settings-and-loss&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+x \underset{q_\phi(z|x)}{\xrightarrow{\text{enc.}}} z \underset{p_\theta(x|z)}{\xrightarrow{\text{dec.}}} \hat{x}
+$$&lt;/p&gt;
+&lt;p&gt;Encoder (approximate posterior): $q_{\phi}(z\mid x)$&lt;br&gt;
+Decoder (likelihood model): $p_{\theta}(x\mid z)$&lt;/p&gt;
+&lt;p&gt;AE: deterministic in $z, \hat{x}$, $f_\theta$ acts like a corset, $\mathcal{L}_{\text{recons.}} = |x - \hat{x}|^2$&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{L}=-\mathbb{E}_{z \sim q_{\phi}(z\mid x)}\left[\log p_{\theta}(x\mid z)\right]+\beta \cdot \mathrm{KL}\bigl(q_{\phi}(z\mid x)|p(z)\bigr)
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>数据库及实现</title>
+      <link>http://localhost:1313/haochen/notes/database/</link>
+      <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/database/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 系统概论 
+    &lt;div id=&#34;1-系统概论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-%e7%b3%bb%e7%bb%9f%e6%a6%82%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DBS：硬件；软件（应用系统，&lt;strong&gt;DBMS&lt;/strong&gt;，OS）；DB；人（用户，管理员）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DBS 结构：三级模式 &lt;strong&gt;Schema&lt;/strong&gt;，二级映像&lt;/p&gt;
+&lt;p&gt;子模式（外模式）、&lt;strong&gt;（概念）模式&lt;/strong&gt;、内模式；物理独立性与逻辑独立性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外部结构：单用户式、分布式和并行、客户机/服务器、浏览器/服务器（SaaS、PaaS、IaaS）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据模型&lt;/strong&gt;三要素：数据结构，数据操作，完整性约束&lt;/p&gt;
+&lt;p&gt;数据定义语言 &lt;strong&gt;DDL&lt;/strong&gt;，数据操纵语言 &lt;strong&gt;DML&lt;/strong&gt;（描述式的查询意图）&lt;/p&gt;
+&lt;p&gt;（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;E-R&lt;/strong&gt; 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen/Crow）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;层次（树）、网状（有向图）、关系（二维表：元组/属性；查询效率偏低）、面向对象（维护困难）&lt;/p&gt;
+&lt;p&gt;向量、图（知识图谱）；数据仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;2 关系 
+    &lt;div id=&#34;2-关系&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-%e5%85%b3%e7%b3%bb&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）&lt;/p&gt;
+&lt;p&gt;超键、候选键（码，能唯一标识元组的最小属性组）、&lt;strong&gt;主键&lt;/strong&gt;（主码）、&lt;strong&gt;外键&lt;/strong&gt;、代理键（DBMS 分配）；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主属性&lt;/strong&gt;/非主属性，单码、全码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系运算：&lt;br&gt;
+集合运算符 $\cap,\ \cup,\ -,\ \times$；逻辑与比较运算符 $\land,\ \vee,\ \neg$；&lt;br&gt;
+专用运算符 &lt;strong&gt;选择&lt;/strong&gt; $\sigma_{\theta}$，&lt;strong&gt;投影&lt;/strong&gt; $\Pi$，&lt;strong&gt;连接&lt;/strong&gt; $\bowtie_{\theta},\ \bowtie$（一般连接、&lt;strong&gt;自然连接&lt;/strong&gt;；内连接、左/右/全外连接 ⟕, ⟖, ⟗、反连接 $\rhd_\theta,\ \rhd$），&lt;strong&gt;除法&lt;/strong&gt; $\div$（$R\div S ={t|t\in \pi_X(R) \wedge t\times\pi_Y(S)\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），&lt;strong&gt;重命名&lt;/strong&gt; $\rho_{B\leftarrow A}(R),\ \rho_{S}(R),\ \rho_{S(A_1,\dots,A_n)}(R)$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
+    &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#attetion--transformer&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./attention.jpg&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>二十世纪的十余个算法</title>
+      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;1 MC 
+    &lt;div id=&#34;1-mc&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-mc&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+\int fp \leftrightarrow \mathbb{E}f \leftrightarrow \frac{1}{n}\sum\limits^n_{i=1} f_i \text{ sampling}
+$$&lt;/p&gt;
+&lt;p&gt;Variance Control：$\mathbb{E}f(x) = \mathbb{E}(f(x)+c(g(x)-\mathbb{E}g(x)))$，$c^*=-\frac{\text{Cov}(f,g)}{\text{V} (g)}$&lt;/p&gt;
+&lt;p&gt;Importance Sampling：$\mathbb{E}_Xf(x)=\mathbb{E}_Y\frac{f(y)p(y)}{q(y)}$，$q^*(y)=\frac{\vert f(y)\vert p(y)}{\mathbb{E}_Xf(x)}$（not computable）&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;2 Simplex 
+    &lt;div id=&#34;2-simplex&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-simplex&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\text{(LP)} &amp;amp; \min\limits_{x\in \mathbb{R}^n} c^\prime x\\
+\text{s.t.} &amp;amp; Ax=b,\\ &amp;amp; x\ge 0
+\end{aligned}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

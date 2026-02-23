@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Finance on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/finance/</link>
+    <description>Recent content in Finance on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 04 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/finance/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Astrofinance</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.19/</link>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.19/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;天体金融学 
+    &lt;div id=&#34;天体金融学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a4%a9%e4%bd%93%e9%87%91%e8%9e%8d%e5%ad%a6&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（这个名字大概也不恰当……呃但是我总是沿用最开始的称呼）（其实这周的内容是某种异世界的构想……在我能搜索到的范围内未发现有人研究了这方面嘎嘎）&lt;/p&gt;
+&lt;p&gt;假设未来的有一天人类已经发展到了整个庞大的星系，星球相互之间的距离甚至要以光年来计算，同时人类开发出了可以与光速量级比拟的高速飞船进行交通；自然会出现很多跨星公司，也需要一个星际的金融系统。让我们来明确一下其运行的逻辑。&lt;/p&gt;
+&lt;p&gt;首先需要刻画一下这个星际系统。我想所有人类社会依存或居住的地方都可以分为三类状态：静止 static，旋转 rotating，交通 transporting（即从A星系往B星系去）。（总之不能无限制跑远吧）（可以相对于自身所处的参考系而言，也可以统一对于如地球而言）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./24.1.19.jpg&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;假设琉球 Rover 负责在地球 Earth 和天狼星 Sirius 之间往复运输，它可能是个飞船（那也应该是相当巨大的社会生态系统了），或者人们已经能够熟练的操纵星球来回流浪……&lt;/p&gt;
+&lt;p&gt;鉴于相对论的效应，不同速度下的时间流逝是不同的。如果将来的体系仍以地球为中心（也许不是了），我们可以这样来表示 Rover 系的状态：用运行正方向在天球上的指向加上其速度 $\gamma$ 值，Sirius $\gamma=\frac{5}{4}$（或 $\alpha\ CMa\ 1.25$）；准确可写为 (06h45m08.9173s, −16°42′58.017″, 1.25)，使用赤经赤纬（GEI Celestial Coordinates）。不同星球上都有着自己正常运转的社会，有自己正常的时间历法，但为了自由大市场，均统一采用年-月-日-时-分-秒的形式。一般来说可以从出发星体处共时开始用历，但重要的只是差值。在同一个系内，各星理论上应同时为好（可以尽量协调，比如成立 ITCA 啥的——指 Interstellar Time-Coordinating Association）。&lt;/p&gt;
+&lt;p&gt;既然物理定律在所有参考系皆等价成立，不妨猜想所有星球都有相近的生产能力和无风险利率 $r$ 。即使我们的证券等金融手段为本星结算，套利也会出现：（$T = 2*8.6/0.6 = 28.67$）&lt;/p&gt;
+&lt;p&gt;我们在 Rover 出发时在 Earth 买入并在 Rover 卖出等额的零息债，无论我本人跟随 Rover 还是留在 Earth，在其回来的时候必然存在 $e^{rT}$ 和 $e^{r\frac{T}{\gamma}}$ 的差别。&lt;/p&gt;
+&lt;p&gt;解决方法可以是考虑货币的作用。我们假设存在美元 USD 和琉球美元 RVD。其汇率 $e$ 在不同时刻会不同，以使上述利差为 0。具体来说，应有 $\frac{e_t}{e_0} = e^{-r(1-\frac{1}{\gamma})}$，$e_t$ 为 $t$ 时刻美元的间接汇率。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>国际金融危机的分析框架</title>
+      <link>http://localhost:1313/haochen/essays/tirole/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/tirole/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;介绍 
+    &lt;div id=&#34;介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%8b%e7%bb%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;EM 新兴市场危机 
+    &lt;div id=&#34;em-新兴市场危机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#em-%e6%96%b0%e5%85%b4%e5%b8%82%e5%9c%ba%e5%8d%b1%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;危机前 
+    &lt;div id=&#34;危机前&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%8d%b1%e6%9c%ba%e5%89%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;大规模资本流入；资本账户脆弱：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;货币体制&lt;/strong&gt; 固定汇率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;宏观经济&lt;/strong&gt; 经常账户赤字，财政赤字&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;金融部门&lt;/strong&gt; 银行规制与风控缺乏&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通货和偿还期错配&lt;/strong&gt; 短期政府贷款、外债&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;制度建设与治理&lt;/strong&gt; e.g. 投资保护，关联借贷，执行无效率，不良会计&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;危机 
+    &lt;div id=&#34;危机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%8d%b1%e6%9c%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;表征&lt;/em&gt;：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CC Theorem</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.05/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.05/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;CC 定理 
+    &lt;div id=&#34;cc-定理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#cc-%e5%ae%9a%e7%90%86&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（感谢 Y. S. Cao 的邀请！正好我也姓C，依葫芦画瓢搞了个搞笑版的 CC 定理）&lt;/p&gt;
+&lt;p&gt;我们打算评判一个学生的期末价值。这个价值为整学期知识流的折现和，但这里的知识流仅仅是针对考试的‘有用’，因此都可以通过期末考卷评估，最后被GPA所衡量。那么影响这个价值的有哪些因素呢？可以是多种结构的作用，如融课结构和时序结构，等等。（融课结构指学生选择的水硬课杠杆，时序结构指不同课考试时间的安排——这对期末复/预习的精力分配及最终的成绩异常重要）&lt;/p&gt;
+&lt;p&gt;$$
+\text{ courses } \left\{\begin{array}{l}
+\text{ hard } H \text{ with honor tax } \tau\\
+\text{ easy } E
+\end{array} \right.
+$$&lt;/p&gt;
+&lt;p&gt;这个荣誉税 honor tax 指的是某些荣誉课每周加一些事情的现象，而且这些事情对期末成绩几乎没有影响，纯纯占用学习时间罢了（注意我们这里在功利的评判期末价值）。因此相当于上交了一定比例的精力（若用之学习带来的知识流的机会成本）。在不考虑荣誉税，且学生可以自由退选课以最大化绩点的情形下有：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+&amp;amp;\text{ CC Theorem 1:} \\
+&amp;amp;\quad V = H + E = \frac{K}{r} \\
+&amp;amp;\text{ Proposition: Free Course Market }
+\end{align}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dividend Signaling Model</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.12.15/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.12.15/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;一个股利信号模型 
+    &lt;div id=&#34;一个股利信号模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%b8%80%e4%b8%aa%e8%82%a1%e5%88%a9%e4%bf%a1%e5%8f%b7%e6%a8%a1%e5%9e%8b&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;来尝试做一个可以解释正向 / 反向股利信号的模型。我这里叫正向指的是公告发放股利后，公司股价上升的情况，即投资者认为是公司盈利好、富裕现金多的信号；反向信号即公告后股价下跌。&lt;/p&gt;
+&lt;p&gt;模型的设定如下：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;&#34; src=&#34;./23.12.15.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;我们纳入代理问题的考量。存在投资者（外部股权）和内部代理人（经理，可能持有股份）两方，公司正在经营一个新项目。这里关键的假设有：风险中性（贝叶斯均衡）；风险项目的产出简化为两点分布，以一定概率 $\alpha$ 获得现值 $R$，$1-\alpha$ 概率亏空为 $0$；私人收益线性函数（见下）。&lt;/p&gt;
+&lt;p&gt;当下第一期实现了收入 $R_0$，但之后仍然存在风险：好项目获得 $R$ 的概率为 $\alpha_H - \tau \theta$（$0$ 的概率为 $1-\alpha_H+ \tau \theta$），坏项目获得 $R$ 的概率为 $\alpha_L - \tau \theta$，且 $\alpha_H &amp;gt; \alpha_L$。其中 $\theta$ 为经理的偷懒程度，$\theta \in [0,1]$，$\theta = 0$ 为认真工作；$\tau$ 表示了偷懒对项目经营的危险程度。&lt;/p&gt;
+&lt;p&gt;这里的信息不对称表现为外部投资者不清楚 $\alpha$ 并赋以 $\alpha_H$ 概率 $\gamma$（$\alpha_L$ 概率 $1-\gamma$），而经理知道自己是 $\alpha_H$ 还是 $\alpha_L$。经理决定股利分配政策，实施发放股利 $D$，为市场所观测。之后由董事会（投资者控制）决定经理报酬方案 $R^a$（根据信号 $D$ 和未来项目收入 $R$ 获得报酬，即 $R^a(D,R)$ 且默认失败没有补偿 $R^a(D,0) = 0$）。最后项目执行，经理选择 $\theta$ 并最终依概率得到 $R$ 或 $0$。（流程可见上图）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Miller-Orr 结论推导</title>
+      <link>http://localhost:1313/haochen/essays/miller-orr/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/miller-orr/</guid>
+      <description>&lt;img src=&#34;./millerorr.jpg&#34; style=&#34;zoom:50%;&#34;&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

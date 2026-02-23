@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analysis on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/analysis/</link>
+    <description>Recent content in Analysis on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>数值</title>
+      <link>http://localhost:1313/haochen/notes/numerical/linalg/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/numerical/linalg/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;小结 
+    &lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%b0%8f%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;{对于开篇提出的三大类基础数值问题，第二类最小二乘的大纲放入线性方程组中}&lt;/p&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;线性方程组 $Ax=b$ 
+    &lt;div id=&#34;线性方程组-axb&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84-axb&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;直接&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LU
+&lt;ul&gt;
+&lt;li&gt;Gauss 消去&lt;/li&gt;
+&lt;li&gt;Doolittle/Crout，Cholesky（或 LDL&amp;rsquo;）&lt;/li&gt;
+&lt;li&gt;Pivoting（PLU）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;QR
+&lt;ul&gt;
+&lt;li&gt;GS 正交化（经典col/修正row）CGS, MGS, CGS2&lt;/li&gt;
+&lt;li&gt;Householder&lt;/li&gt;
+&lt;li&gt;Givens&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SVD&lt;/li&gt;
+&lt;li&gt;稀疏直接法&lt;/li&gt;
+&lt;li&gt;特殊（Toeplitz，FFT，块）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;迭代&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;定常&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分裂（$A=M-N, \rho(M^{-1}N)&amp;lt;1$，（弱）正则分裂，M-阵/H-阵）
+&lt;ul&gt;
+&lt;li&gt;Jacobi&lt;/li&gt;
+&lt;li&gt;Gauss-Seidel&lt;/li&gt;
+&lt;li&gt;SOR（或 SSOR）相容次序（Young&amp;rsquo;s Thm）&lt;/li&gt;
+&lt;li&gt;Richardson&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交替方向 e.g. ADI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Krylov 子空间&lt;/p&gt;
+&lt;p&gt;对称&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CG（PCG）&lt;/li&gt;
+&lt;li&gt;MINRES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非对称&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GMRES&lt;/li&gt;
+&lt;li&gt;BiCG，QMR（$\in$ Petrov-Galerkin）&lt;/li&gt;
+&lt;li&gt;CG^2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正规&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>随机分析</title>
+      <link>http://localhost:1313/haochen/notes/stochastic-analysis/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/stochastic-analysis/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;要点 
+    &lt;div id=&#34;要点&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%a6%81%e7%82%b9&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;img src=&#34;./recap1.jpg&#34;&gt;
+&lt;img src=&#34;./recap2.jpg&#34;&gt;
+&lt;img src=&#34;./recap3.jpg&#34;&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;讲义 
+    &lt;div id=&#34;讲义&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%ae%b2%e4%b9%89&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./stoana_notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./stoana_notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>实分析</title>
+      <link>http://localhost:1313/haochen/notes/real-analysis/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/real-analysis/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
+    &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a4%a7%e7%ba%b2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;img src=&#34;./realana_guide.jpg&#34; style=&#34;zoom:80%;&#34;&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;笔记 
+    &lt;div id=&#34;笔记&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ac%94%e8%ae%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./Zhi_notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./Zhi_notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;0 Set and Topology 
+    &lt;div id=&#34;0-set-and-topology&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#0-set-and-topology&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;1 Measures 
+    &lt;div id=&#34;1-measures&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-measures&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;2 Integration 
+    &lt;div id=&#34;2-integration&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#2-integration&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;3 Signed Measures and Differentiation 
+    &lt;div id=&#34;3-signed-measures-and-differentiation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#3-signed-measures-and-differentiation&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;4 Functional Analysis, Lp Space and Radon measures 
+    &lt;div id=&#34;4-functional-analysis-lp-space-and-radon-measures&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#4-functional-analysis-lp-space-and-radon-measures&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>ODE 解的存在性</title>
+      <link>http://localhost:1313/haochen/notes/diff-eqs/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/diff-eqs/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;ODE 解的存在性 
+    &lt;div id=&#34;ode-解的存在性&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#ode-%e8%a7%a3%e7%9a%84%e5%ad%98%e5%9c%a8%e6%80%a7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;我们考虑初值问题
+$$
+\frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0
+$$&lt;/p&gt;
+&lt;p&gt;设矩形区域 $ R = \{(t, y) \in \mathbb{R}^2 : |t - t_0| \le a, \ |y - y_0| \le b\} $，其中 $a, b &amp;gt; 0$。若函数 $ f: R \to \mathbb{R} $ 在 $R$ 上满足某些良好的连续性质，则存在性定理希望保证：至少存在一个解 $y(t)$ 定义在区间 $|t - t_0| \le h$ 上，其中
+$$
+h = \min\left\{a, \ \frac{b}{M}\right\}, \quad M = \max_{(t, y)\in R} |f(t, y)|
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>博弈论</title>
+      <link>http://localhost:1313/haochen/notes/game/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/game/</guid>
+      <description>&lt;p&gt;传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。&lt;/p&gt;
+&lt;p&gt;下面的讲义为本人重新基于 belief 概念整理后的形式化理论，并借鉴拓扑的思路分析不同博弈中的不变性。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;讲义 
+    &lt;div id=&#34;讲义&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%ae%b2%e4%b9%89&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div class=&#34;pdf-full&#34; style=&#34;margin:1rem 0;&#34;&gt;
+  &lt;iframe src=&#34;./notes.pdf&#34;
+          width=&#34;100%&#34;
+          height=&#34;800&#34;
+          style=&#34;border:1px solid #e5e7eb; border-radius:8px;&#34;
+          allowfullscreen&gt;
+    你的浏览器不支持内嵌 PDF，点击 &lt;a href=&#34;./notes.pdf&#34;&gt;这里下载&lt;/a&gt;。
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;演化博弈论大纲 
+    &lt;div id=&#34;演化博弈论大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%bc%94%e5%8c%96%e5%8d%9a%e5%bc%88%e8%ae%ba%e5%a4%a7%e7%ba%b2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;img src=&#34;./evol_game.jpg&#34;&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

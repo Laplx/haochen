@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Communication on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/communication/</link>
+    <description>Recent content in Communication on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>信息论</title>
+      <link>http://localhost:1313/haochen/notes/information/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
+    &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-entropy&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;entropy&lt;/strong&gt; $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;joint entropy&lt;/strong&gt;, &lt;strong&gt;conditional entropy&lt;/strong&gt;  $H(X,Y)=H(X)+H(Y|X)$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $H(X|Y) \neq H(X|Y=y)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;relative entropy(KL distance)&lt;/strong&gt; $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $D(p\|q) \neq D(q\|p)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mutual inforamtion&lt;/strong&gt; $I(X;Y)=D(p(x,y)\|p(x)p(y))$&lt;/p&gt;
+&lt;p&gt;$I(X;Y)=H(X)+H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$&lt;br&gt;
+Venn diagram&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;chain rule&lt;/strong&gt; $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

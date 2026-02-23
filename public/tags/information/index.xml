@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Information on Hao Chen&#39;s Blog</title>
+    <link>http://localhost:1313/haochen/tags/information/</link>
+    <description>Recent content in Information on Hao Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
+    <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
+    <copyright>© 2026 Hao Chen</copyright>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/information/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>信息论</title>
+      <link>http://localhost:1313/haochen/notes/information/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
+    &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#1-entropy&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;1.1 
+    &lt;div id=&#34;11&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#11&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;entropy&lt;/strong&gt; $H(X) = - \sum\limits_{x\in \mathcal{X}} p(x)logp(x) = -Elogp(X)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;joint entropy&lt;/strong&gt;, &lt;strong&gt;conditional entropy&lt;/strong&gt;  $H(X,Y)=H(X)+H(Y|X)$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $H(X|Y) \neq H(X|Y=y)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;relative entropy(KL distance)&lt;/strong&gt; $D(p\|q)=- \sum\limits_{x\in \mathcal{X}} p(x)log\frac{p(x)}{q(x)} = -Elog\frac{p(X)}{q(X)}$&lt;br&gt;
+&lt;em&gt;note:&lt;/em&gt; usually $D(p\|q) \neq D(q\|p)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mutual inforamtion&lt;/strong&gt; $I(X;Y)=D(p(x,y)\|p(x)p(y))$&lt;/p&gt;
+&lt;p&gt;$I(X;Y)=H(X)+H(Y)-H(X,Y)=H(X)-H(X|Y),\ I(X;X)=H(X)$&lt;br&gt;
+Venn diagram&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;chain rule&lt;/strong&gt; $H(X_1,\cdots,X_n)=\sum\limits_{i=1}^nH(X_i|X_{i-1},\cdots,X_1),\ I(X_1,\cdots,X_n;Y)=\sum\limits_{i=1}^nI(X_i;Y|X_{i-1},\cdots,X_1)$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Regression on Channel</title>
+      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
+    &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9b%9e%e5%bd%92%e5%9c%a8%e4%bf%a1%e9%81%93%e4%b8%8a&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;（这是一个很蠢的想法……可以来抠一下是否成立或者说条件在哪里）&lt;/p&gt;
+&lt;p&gt;我们假想我们做的回归 $Y$ 对 $X$ 其实由一个高斯信道 $X\rightarrow Y$ 把控。如果事实上机制就是这样，那么估计的信道容量会趋向真实值 $\hat{C}\rightarrow C=-\frac{1}{2}\ln(1-R^2)$，这也是最大可能达到的码率——这里就有事了，我们正是依靠$X$的行为传递的信息去判别$Y$​。&lt;/p&gt;
+&lt;p&gt;若连续变量 $X$ 确实按照高斯分布，那么理论上我们能无限量的发出信息；但这并没有用，鉴于信道的限制，我们相当于以至少存在 $D_{min}=\sigma_X^2(1-R^2)$ 的均方误差进行测量。（$R(D)=\frac{1}{2}\ln\frac{\sigma_X^2}{D}&amp;lt;C$）&lt;/p&gt;
+&lt;p&gt;如果形式的分组（就像处理微分熵那样），那么我们有 $\lfloor \frac{1}{\sqrt{1-R^2}}\rfloor$ units。于是相关系数 $R\ge \frac{\sqrt{3}}{2}=0.866$ 尚才1个bit的定性判断。否则在样本量趋向于无穷时候，结果落在典型集中的概率会趋向于0，亦即此时用以预测其实跟打奖没什么区别呃呃。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Theory of Theory</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
+    &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%90%86%e8%ae%ba%e7%9a%84%e7%90%86%e8%ae%ba&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;我要讲的是“学科的学科”——虽然高中课本里哲学似乎便这么宣称——但这里讲的是言之有物的理论构建，而非关乎世界本质的基础支撑。&lt;/p&gt;
+&lt;p&gt;广义的理论（Theory）可以等同为知识（Knowledge），而知识被我分为 Experience、Analysis、Science 三种层级。Experience 指经验性的总结 Synthesize 和解释 Explain，例如我们可以对厕所的规划和使用形成学问，对什么样的音乐是好听的形成学问，但其来源都是已有事物的 Application，类似一个经验丰富的老技工。Analysis 指在一定抽象程度上建立的统一分析框架 Analytical Frame，大家在平常能见到的“XX学”都已经达到了这样的标准；但 Analysis 在现实中仍然有可能只能做解释或归纳性的预测。Science 被定义为 Modeling 模型化现实，给出考察对象之间的作用关联，其目的是预测 Predict 和控制 Control。我们这里的理论 Theory 便是狭义的理论，特指科学学科 Science。我给出的范式是：&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{X} \rightarrow X \rightarrow \boxed{\mathbb{T}} \rightarrow Y \rightarrow \mathcal{Y}
+$$&lt;/p&gt;
+&lt;p&gt;$\mathcal{X} \rightarrow X$ 和 $\mathcal{Y} \rightarrow Y$ 都是概念化 Conceptualize 的过程。$\mathcal{X}$ 和 $\mathcal{Y}$ 是现实世界的对象或情形，$X$ 和 $Y$ 是我们理论的输入和输出。（注意$X$可以不仅仅是某个数值变量“政府年度固定投资额”，还可以是“财政政策不变”这样更为抽象的输入或问询。）科学理论的核心是相关与因果。仅相关的关联性可以做到预测，而因果性（并不是一个容易论断的东西）可以做控制和应用。中间的模型机制 Laws or Theorems $T$ 和概念 Concepts $C$ 组成了一个完整的理论 $\mathbb{T}=\{T_1,\cdots,T_i,C_1,\cdots,C_j\}$ 。每个定理（或定理的一部分）都可以写成 $c = T(c_1,\cdots,c_n)$，其中 $c$ 是 $C$ 的具象输入。我们这里缺少了几个理论里常见的模块，但其实已经纳入机制 $T$ 内了，包括假设 Assumption 和公理 Axiom ——一种未经验证的假定的$C$之间的关联性；引理 Lemma 和推论 Corollary ——也是定理们特定的同义重复。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The Limit of Handwritting</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.29/</link>
+      <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.29/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;书写有极限吗 
+    &lt;div id=&#34;书写有极限吗&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%b9%a6%e5%86%99%e6%9c%89%e6%9e%81%e9%99%90%e5%90%97&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;作为速记爱好者，我开发过不止一套自己的速记符号，期间的考虑无非是平衡简化程度与易学易辨的程度。本周突然想来思考一下手写本身的 physical bound 在哪里。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+\text{Systematic Process}:\\
+1.\ infor&amp;amp;mation\ flow\ (sounds\ etc.)\\
+&amp;amp; \downarrow compiling\ (handwritting\ system)\\
+2.\ gra&amp;amp;phic\ symbols\\
+&amp;amp; \downarrow handwritting\\
+3.\ &amp;amp;notes\\
+&amp;amp; \downarrow interpreting\\
+4.\ recov&amp;amp;ered\ information
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+&amp;amp; \text{Assumption}:\\
+&amp;amp; 1.\ Fluency: A\ constant\ speed\ \mathbf{v}\ of\ writting\ lines\ or\ curves.\\
+&amp;amp; 2.\ Smoothness: There\ is\ no\ sharp\ angles\ and\ writter^\primes\ acceleration\ can\ be\ infinity.
+\end{align}
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Semantic Information</title>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.14/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      <author>laplx@foxmail.com (Hao Chen)</author>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.14/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;语义信息量 
+    &lt;div id=&#34;语义信息量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%af%ad%e4%b9%89%e4%bf%a1%e6%81%af%e9%87%8f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;顺着语言统计学讲，自然而然想到一个问题：怎么考察语言风格？是用词、用句、章法结构、信息量吗？这里想讨论一下我们怎么评估一个句子的信息量。&lt;/p&gt;
+&lt;p&gt;一个微观的角度从句子出发：&lt;/p&gt;
+&lt;p&gt;$$
+I = I(主) I(谓) I(宾) + I(定) I(宾) + I(状) I(谓) + I(谓) I(补) + \cdots
+$$&lt;/p&gt;
+&lt;p&gt;这个定义方式保证同样的几个实词，分成两句说和一句说有相同的信息量。&lt;/p&gt;
+&lt;p&gt;虚词应该直接定义为信息量为 0 的词，如 $I(但)=0$ $I(也)=0$。这个角度来说，&amp;lsquo;是&amp;rsquo;不能算虚词。&lt;/p&gt;
+&lt;p&gt;目前认为 $I(是) = I(一定) = 1$、$I(有) = I(存在) = 1$ 而 $I(不是) =  I(一定不) = 0$、$I(可能) &amp;lt; 0$（到底多少还应细化可能的含义才可以确定）&lt;/p&gt;
+&lt;p&gt;以上关键词的信息量推导自众所周知的香农的概念，他的信息量无关语义，这里可以构造出对接的地方。我得到的是 $I(p) = p\log p + p$。&lt;/p&gt;
+&lt;p&gt;容我解释一下，这个负信息量是有一定道理的。&lt;/p&gt;
+&lt;p&gt;$$
+I(它不是红色) = 0 \left\{
+\begin{aligned}
+I(它可能是红色) &amp;lt; 0 \\
+I(而它不是红色) &amp;gt; 0
+\end{aligned}
+\right.
+$$&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
