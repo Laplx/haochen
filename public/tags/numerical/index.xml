@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Numerical on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/numerical/</link>
+    <link>https://laplx.github.io/haochen/tags/numerical/</link>
     <description>Recent content in Numerical on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/numerical/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/numerical/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>数值</title>
-      <link>http://localhost:1313/haochen/notes/numerical/linalg/</link>
+      <link>https://laplx.github.io/haochen/notes/numerical/linalg/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/numerical/linalg/</guid>
+      <guid>https://laplx.github.io/haochen/notes/numerical/linalg/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;小结 
     &lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -96,10 +96,10 @@
     
     <item>
       <title>二十世纪的十余个算法</title>
-      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <link>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <guid>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
 
@@ -138,10 +138,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>共轭梯度法</title>
-      <link>http://localhost:1313/haochen/notes/numerical/cg/</link>
+      <link>https://laplx.github.io/haochen/notes/numerical/cg/</link>
       <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/numerical/cg/</guid>
+      <guid>https://laplx.github.io/haochen/notes/numerical/cg/</guid>
       <description>&lt;p&gt;
 
 如果初始点的选择不好或者函数行为不好时，最速下降法可能并不理想。我们先从几何和直觉上展示共轭梯度法，同时可以在后文理清数学逻辑后再来看看这两张图。&lt;/p&gt;

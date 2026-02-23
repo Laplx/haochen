@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/data/</link>
+    <link>https://laplx.github.io/haochen/tags/data/</link>
     <description>Recent content in Data on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/data/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>打卡软件 Swarm 数据分析报告</title>
-      <link>http://localhost:1313/haochen/essays/swarm/</link>
+      <link>https://laplx.github.io/haochen/essays/swarm/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
+      <guid>https://laplx.github.io/haochen/essays/swarm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
 &lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;

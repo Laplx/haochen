@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Economy, Notion, Statistics, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/23.09.22/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/essays/frivols/23.09.22/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/23.09.22/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/essays/frivols/23.09.22/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Measure Design">
   <meta property="og:description" content="建筑设计的计量 #我记得有种说法：高度发达的文明其艺术品的设计往往开始做“减法”，不再不断地添加繁复的雕刻和装饰，而是有意的简化和突出。这让我想到当下大城市里开始涌现的现代建筑和后现代建筑，想来我们可以去计量一个地区的艺术水平——似乎有些困难？不如先从建筑设计的水平开始。
@@ -126,7 +126,7 @@ $$ v_i = \sum_j \frac{r_{ij}}{v_j} $$
     
     "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e建筑设计的计量 \r\n    \u003cdiv id=\u0022建筑设计的计量\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%bb%ba%e7%ad%91%e8%ae%be%e8%ae%a1%e7%9a%84%e8%ae%a1%e9%87%8f\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e我记得有种说法：高度发达的文明其艺术品的设计往往开始做“减法”，不再不断地添加繁复的雕刻和装饰，而是有意的简化和突出。这让我想到当下大城市里开始涌现的现代建筑和后现代建筑，想来我们可以去计量一个地区的艺术水平——似乎有些困难？不如先从建筑设计的水平开始。\u003c\/p\u003e\n\u003cp\u003e不是美是稀缺的，而是稀缺造就美。\u003c\/p\u003e\n\u003cp\u003e审美的本质是什么恐怕不是一个能在这里简简单单就讨论完的东西。我现在比较武断的做出以上论断，是为了进一步发展指标。我倾向于认为是人类具有“审美的需求”——这个需求在日常的普遍的生活中没有得到满足——这正是稀缺性的意义。（我还要提到一个反驳的角度：这个价值与创造性价值尚有区分。如果我们纳入时间变量，那么富有创造性价值的事物在其之前极其稀缺，而在之后带动了大量的模仿者，或者说自己成为了开创者，那么它显然具有美的价值。但当这个事物的元素在生活中俯拾即是的时候，大家自然不再对其审美敏感。）\u003c\/p\u003e\n\u003cp\u003e以此逻辑为基础，我们同时也需要一些事先由美学专家（建筑设计家）挑出的评价维度，它反映了人类共性的审美需求。例如建筑的几何外形、色彩、结构、纹理（$X_1, X_2, X_3, X_4, \\ldots$）。借助计算机技术，我们可以获取一个街区的实景图，将各个建筑依照各个维度，进行数学上（计算机视觉上）的相似计算 $r_{ij1}, r_{ij2}, \\ldots$ ，再按一定方式如加权得到一个合并的建筑 $i$ 和建筑 $j$ 的相似系数 $r_{ij} = f(r_{ij1}, r_{ij2}, \\ldots)$ 。\u003c\/p\u003e\n\u003cp\u003e我们定义一个建筑对于一整个要考察的建筑群（称背景或参考基）的设计价值（审美价值）$v_i$ 为\u003c\/p\u003e\n\u003cp\u003e$$\nv_i = \\sum_j \\frac{r_{ij}}{v_j}\n$$\u003c\/p\u003e\n\u003cp\u003e\u003cem\u003e（$j$ 的遍历包括 $i$ 自身，需要自己给自己“壮胆”）（通过联立群体内全部建筑求解）\u003c\/em\u003e\u003c\/p\u003e\n\u003cp\u003e我未经严格考证的认为它确实具有 1. 给离群点赋以高值 2. 给群聚性缓慢提高值 等等合理的数学性质。\u003c\/p\u003e\n\u003cp\u003e上述把稀缺性挂钩审美价值的作法受到质疑大概来自这两个方面：\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003e日常的（普遍的）到底是什么？\u003c\/li\u003e\n\u003cli\u003e古怪的垃圾品？\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003cp\u003e建筑可以近乎完美的解决这两个问题，而绘画、音乐等艺术还需进一步考量。我们考虑全部的建筑具有一定的可行性，它们就是大家生活中接触到的建筑物的全集，那么一个标新立异的富有变异感的设计可以被视为高审美价值的。古怪的垃圾品鉴于建筑的规划、审批、施工需要层层把关实现，不大可能出现彻底的丑，何况不走寻常路可能本身就是艺术呢（比如争论中的行为艺术）。而画作、曲作的对比背景应该是人的日常生活，所以人们会喜欢欣赏画喜欢听音乐，我想这个指标可能需要做改进。\u003c\/p\u003e\n\u003cp\u003e从这个指标出发，那么研究空间就大了。我抛砖引玉一个：\u003c\/p\u003e\n\u003cp\u003e现在的城市建筑都由设计院、建筑事务所设计。最终整个城市或某个空间区域分布里的总设计度 $V = \\sum v$ 与它们花费的总设计费用 $ C = \\sum c$ 的比值 $ \\zeta = \\frac{V}{C}$ 表示了一单位费用下产生的艺术效用，称作 $ conservative\\ factor \\ \\zeta$  保守度——因为建设过程是甲乙双方协商的结果，文化保守的地区在变异程度上要弱于开放的地区，可能也是人均 GDP 高的地区。\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/23.09.22\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/frivols\/23.09.22\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1252,7 +1252,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

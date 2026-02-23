@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Model, Finance, Game, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/23.12.15/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/essays/frivols/23.12.15/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/23.12.15/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/essays/frivols/23.12.15/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Dividend Signaling Model">
   <meta property="og:description" content="一个股利信号模型 #来尝试做一个可以解释正向 / 反向股利信号的模型。我这里叫正向指的是公告发放股利后，公司股价上升的情况，即投资者认为是公司盈利好、富裕现金多的信号；反向信号即公告后股价下跌。
@@ -112,7 +112,7 @@
     
     "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e一个股利信号模型 \r\n    \u003cdiv id=\u0022一个股利信号模型\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e4%b8%80%e4%b8%aa%e8%82%a1%e5%88%a9%e4%bf%a1%e5%8f%b7%e6%a8%a1%e5%9e%8b\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e来尝试做一个可以解释正向 \/ 反向股利信号的模型。我这里叫正向指的是公告发放股利后，公司股价上升的情况，即投资者认为是公司盈利好、富裕现金多的信号；反向信号即公告后股价下跌。\u003c\/p\u003e\n\u003cp\u003e模型的设定如下：\u003c\/p\u003e\n\u003cp\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003cfigure\u003e\r\n    \u003cimg class=\u0022my-0 rounded-md\u0022 loading=\u0022lazy\u0022 alt=\u0022\u0022 src=\u0022.\/23.12.15.png\u0022\u003e\r\n\r\n  \r\n\u003c\/figure\u003e\r\n\u003c\/p\u003e\n\u003cp\u003e我们纳入代理问题的考量。存在投资者（外部股权）和内部代理人（经理，可能持有股份）两方，公司正在经营一个新项目。这里关键的假设有：风险中性（贝叶斯均衡）；风险项目的产出简化为两点分布，以一定概率 $\\alpha$ 获得现值 $R$，$1-\\alpha$ 概率亏空为 $0$；私人收益线性函数（见下）。\u003c\/p\u003e\n\u003cp\u003e当下第一期实现了收入 $R_0$，但之后仍然存在风险：好项目获得 $R$ 的概率为 $\\alpha_H - \\tau \\theta$（$0$ 的概率为 $1-\\alpha_H\u002b \\tau \\theta$），坏项目获得 $R$ 的概率为 $\\alpha_L - \\tau \\theta$，且 $\\alpha_H \u0026gt; \\alpha_L$。其中 $\\theta$ 为经理的偷懒程度，$\\theta \\in [0,1]$，$\\theta = 0$ 为认真工作；$\\tau$ 表示了偷懒对项目经营的危险程度。\u003c\/p\u003e\n\u003cp\u003e这里的信息不对称表现为外部投资者不清楚 $\\alpha$ 并赋以 $\\alpha_H$ 概率 $\\gamma$（$\\alpha_L$ 概率 $1-\\gamma$），而经理知道自己是 $\\alpha_H$ 还是 $\\alpha_L$。经理决定股利分配政策，实施发放股利 $D$，为市场所观测。之后由董事会（投资者控制）决定经理报酬方案 $R^a$（根据信号 $D$ 和未来项目收入 $R$ 获得报酬，即 $R^a(D,R)$ 且默认失败没有补偿 $R^a(D,0) = 0$）。最后项目执行，经理选择 $\\theta$ 并最终依概率得到 $R$ 或 $0$。（流程可见上图）\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/23.12.15\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/frivols\/23.12.15\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1313,7 +1313,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

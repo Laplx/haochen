@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/papers/metarl/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/papers/metarl/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/papers/metarl/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/papers/metarl/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Meta RL">
   <meta property="og:description" content="部分内容亦可参考强化学习笔记标准的 RL 针对于特定的 MDP 环境利用学习算法求解一个策略。Meta-RL 则希望能够迅速适应不同新任务并得到相应的最优策略，即我们要确定（学习）一个良好的学习算法（learn to learn）。
@@ -109,7 +109,7 @@ Meta-RL 的基本假设是用于 meta-training 的老任务与 meta-testing 的�
     
     "abstract": "\u003cblockquote\u003e\n\u003cp\u003e部分内容亦可参考\u003ca\r\n  href=\u0022..\/..\/notes\/reinforce-learn\/#7-meta-rl\u0022\u003e强化学习笔记\u003c\/a\u003e\r\n\u003c\/p\u003e\u003c\/blockquote\u003e\n\u003cp\u003e标准的 RL 针对于特定的 MDP 环境利用学习算法求解一个策略。Meta-RL 则希望能够迅速适应不同新任务并得到相应的最优策略，即我们要确定（学习）一个良好的学习算法（learn to learn）。\u003c\/p\u003e\n\u003cp\u003e当然，从形式逻辑上我们还是可以将 Meta-RL 放入 RL 的框架，后面各类求解方式确实与 RL 无异，但这一概念主要强调了在直观上的短时学习性，这也是现在 AGI 非常关注的能力。另一个有些类似的是上下文学习 ICL，但注意到 ICL 更多需要模型自行思考给定任务，而不能通过交互的方式探索和在线学习策略。\u003c\/p\u003e\n\u003cp\u003eMeta-RL 的基本假设是用于 meta-training 的老任务与 meta-testing 的新任务服从同一任务分布 $p(\\mathcal{T})$，基本问题可以表述如下：\n$$\n\\min _{\\boldsymbol{\\theta}, \\psi} \\mathbb{E}_{\\mathcal{T} \\sim \\rho(\\mathcal{T})}\\left[\\mathcal{L}\\left(\\mathcal{D}_{\\mathcal{T}}^{\\text {test }}, \\theta^{\\prime}\\right)\\right] \\quad \\text { s.t. } \\quad \\theta^{\\prime}=u_{\\psi}\\left(\\mathcal{D}_{\\mathcal{T}}^{\\text {tr }}, \\theta\\right)\n$$\u003c\/p\u003e\n\u003cp\u003e其中 $\\mathcal{D}_{\\mathcal{T}}^{\\text{tr}}, \\mathcal{D}_{\\mathcal{T}}^{\\text{test}}$ 为某采样任务得到的训练集和测试集。s.t. 的部分就是利用较小的数据（$\\mathcal{D}^{\\text{tr}}_{\\mathcal{T}}$）即时适应该任务的过程，称作 \u003cstrong\u003einner loop\u003c\/strong\u003e；在各任务上实行学习算法，得到最终的平均损失（用以更新 Meta-RL 参数）的过程称作 \u003cstrong\u003eouter loop\u003c\/strong\u003e。（还有一对文章爱用的词是 \u0026lsquo;fast\u0026rsquo; and \u0026lsquo;slow\u0026rsquo;。）\u003c\/p\u003e\n\u003cp\u003e（ICL 也可被这样刻画，不过如前所述，Meta-RL 多为交互得到数据，考察每个 inner loop 的平均损失，因此不区分 $\\mathcal{D}_{\\mathcal{T}}^{\\text{tr}}$ 和 $\\mathcal{D}_{\\mathcal{T}}^{\\text{test}}$。）\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/papers\/metarl\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/papers\/metarl\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1295,7 +1295,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

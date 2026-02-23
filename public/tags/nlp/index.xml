@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NLP on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/nlp/</link>
+    <link>https://laplx.github.io/haochen/tags/nlp/</link>
     <description>Recent content in NLP on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自然语言处理</title>
-      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <link>https://laplx.github.io/haochen/notes/nlp/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <guid>https://laplx.github.io/haochen/notes/nlp/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
     &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

@@ -2,561 +2,561 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/</link>
+    <link>https://laplx.github.io/haochen/tags/</link>
     <description>Recent content in Tags on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/haochen/tags/ai/</link>
+      <link>https://laplx.github.io/haochen/tags/ai/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/ai/</guid>
+      <guid>https://laplx.github.io/haochen/tags/ai/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Algorithm</title>
-      <link>http://localhost:1313/haochen/tags/algorithm/</link>
+      <link>https://laplx.github.io/haochen/tags/algorithm/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/algorithm/</guid>
+      <guid>https://laplx.github.io/haochen/tags/algorithm/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>CS</title>
-      <link>http://localhost:1313/haochen/tags/cs/</link>
+      <link>https://laplx.github.io/haochen/tags/cs/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/cs/</guid>
+      <guid>https://laplx.github.io/haochen/tags/cs/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Math</title>
-      <link>http://localhost:1313/haochen/tags/math/</link>
+      <link>https://laplx.github.io/haochen/tags/math/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/math/</guid>
+      <guid>https://laplx.github.io/haochen/tags/math/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Stochastic</title>
-      <link>http://localhost:1313/haochen/tags/stochastic/</link>
+      <link>https://laplx.github.io/haochen/tags/stochastic/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/stochastic/</guid>
+      <guid>https://laplx.github.io/haochen/tags/stochastic/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Analysis</title>
-      <link>http://localhost:1313/haochen/tags/analysis/</link>
+      <link>https://laplx.github.io/haochen/tags/analysis/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/analysis/</guid>
+      <guid>https://laplx.github.io/haochen/tags/analysis/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Linear Algebra</title>
-      <link>http://localhost:1313/haochen/tags/linear-algebra/</link>
+      <link>https://laplx.github.io/haochen/tags/linear-algebra/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/linear-algebra/</guid>
+      <guid>https://laplx.github.io/haochen/tags/linear-algebra/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Numerical</title>
-      <link>http://localhost:1313/haochen/tags/numerical/</link>
+      <link>https://laplx.github.io/haochen/tags/numerical/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/numerical/</guid>
+      <guid>https://laplx.github.io/haochen/tags/numerical/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Reinforcement</title>
-      <link>http://localhost:1313/haochen/tags/reinforcement/</link>
+      <link>https://laplx.github.io/haochen/tags/reinforcement/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/reinforcement/</guid>
+      <guid>https://laplx.github.io/haochen/tags/reinforcement/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Knowledge Representation</title>
-      <link>http://localhost:1313/haochen/tags/knowledge-representation/</link>
+      <link>https://laplx.github.io/haochen/tags/knowledge-representation/</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/knowledge-representation/</guid>
+      <guid>https://laplx.github.io/haochen/tags/knowledge-representation/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Search</title>
-      <link>http://localhost:1313/haochen/tags/search/</link>
+      <link>https://laplx.github.io/haochen/tags/search/</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/search/</guid>
+      <guid>https://laplx.github.io/haochen/tags/search/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Model</title>
-      <link>http://localhost:1313/haochen/tags/model/</link>
+      <link>https://laplx.github.io/haochen/tags/model/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/model/</guid>
+      <guid>https://laplx.github.io/haochen/tags/model/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Statistical Mechanics</title>
-      <link>http://localhost:1313/haochen/tags/statistical-mechanics/</link>
+      <link>https://laplx.github.io/haochen/tags/statistical-mechanics/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/statistical-mechanics/</guid>
+      <guid>https://laplx.github.io/haochen/tags/statistical-mechanics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Optimization</title>
-      <link>http://localhost:1313/haochen/tags/optimization/</link>
+      <link>https://laplx.github.io/haochen/tags/optimization/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/optimization/</guid>
+      <guid>https://laplx.github.io/haochen/tags/optimization/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Physics</title>
-      <link>http://localhost:1313/haochen/tags/physics/</link>
+      <link>https://laplx.github.io/haochen/tags/physics/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/physics/</guid>
+      <guid>https://laplx.github.io/haochen/tags/physics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Linguistics</title>
-      <link>http://localhost:1313/haochen/tags/linguistics/</link>
+      <link>https://laplx.github.io/haochen/tags/linguistics/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/linguistics/</guid>
+      <guid>https://laplx.github.io/haochen/tags/linguistics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Literature</title>
-      <link>http://localhost:1313/haochen/tags/literature/</link>
+      <link>https://laplx.github.io/haochen/tags/literature/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/literature/</guid>
+      <guid>https://laplx.github.io/haochen/tags/literature/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>http://localhost:1313/haochen/tags/statistics/</link>
+      <link>https://laplx.github.io/haochen/tags/statistics/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/statistics/</guid>
+      <guid>https://laplx.github.io/haochen/tags/statistics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Color</title>
-      <link>http://localhost:1313/haochen/tags/color/</link>
+      <link>https://laplx.github.io/haochen/tags/color/</link>
       <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/color/</guid>
+      <guid>https://laplx.github.io/haochen/tags/color/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Finance</title>
-      <link>http://localhost:1313/haochen/tags/finance/</link>
+      <link>https://laplx.github.io/haochen/tags/finance/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/finance/</guid>
+      <guid>https://laplx.github.io/haochen/tags/finance/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>International</title>
-      <link>http://localhost:1313/haochen/tags/international/</link>
+      <link>https://laplx.github.io/haochen/tags/international/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/international/</guid>
+      <guid>https://laplx.github.io/haochen/tags/international/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Liquidity</title>
-      <link>http://localhost:1313/haochen/tags/liquidity/</link>
+      <link>https://laplx.github.io/haochen/tags/liquidity/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/liquidity/</guid>
+      <guid>https://laplx.github.io/haochen/tags/liquidity/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Monetary</title>
-      <link>http://localhost:1313/haochen/tags/monetary/</link>
+      <link>https://laplx.github.io/haochen/tags/monetary/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/monetary/</guid>
+      <guid>https://laplx.github.io/haochen/tags/monetary/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Multivariable</title>
-      <link>http://localhost:1313/haochen/tags/multivariable/</link>
+      <link>https://laplx.github.io/haochen/tags/multivariable/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/multivariable/</guid>
+      <guid>https://laplx.github.io/haochen/tags/multivariable/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Nonparametric</title>
-      <link>http://localhost:1313/haochen/tags/nonparametric/</link>
+      <link>https://laplx.github.io/haochen/tags/nonparametric/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/nonparametric/</guid>
+      <guid>https://laplx.github.io/haochen/tags/nonparametric/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Probability</title>
-      <link>http://localhost:1313/haochen/tags/probability/</link>
+      <link>https://laplx.github.io/haochen/tags/probability/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/probability/</guid>
+      <guid>https://laplx.github.io/haochen/tags/probability/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/haochen/tags/database/</link>
+      <link>https://laplx.github.io/haochen/tags/database/</link>
       <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/database/</guid>
+      <guid>https://laplx.github.io/haochen/tags/database/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>SQL</title>
-      <link>http://localhost:1313/haochen/tags/sql/</link>
+      <link>https://laplx.github.io/haochen/tags/sql/</link>
       <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/sql/</guid>
+      <guid>https://laplx.github.io/haochen/tags/sql/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>System</title>
-      <link>http://localhost:1313/haochen/tags/system/</link>
+      <link>https://laplx.github.io/haochen/tags/system/</link>
       <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/system/</guid>
+      <guid>https://laplx.github.io/haochen/tags/system/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Language</title>
-      <link>http://localhost:1313/haochen/tags/language/</link>
+      <link>https://laplx.github.io/haochen/tags/language/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/language/</guid>
+      <guid>https://laplx.github.io/haochen/tags/language/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>NLP</title>
-      <link>http://localhost:1313/haochen/tags/nlp/</link>
+      <link>https://laplx.github.io/haochen/tags/nlp/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/nlp/</guid>
+      <guid>https://laplx.github.io/haochen/tags/nlp/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>ODE</title>
-      <link>http://localhost:1313/haochen/tags/ode/</link>
+      <link>https://laplx.github.io/haochen/tags/ode/</link>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/ode/</guid>
+      <guid>https://laplx.github.io/haochen/tags/ode/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Notion</title>
-      <link>http://localhost:1313/haochen/tags/notion/</link>
+      <link>https://laplx.github.io/haochen/tags/notion/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/notion/</guid>
+      <guid>https://laplx.github.io/haochen/tags/notion/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Game</title>
-      <link>http://localhost:1313/haochen/tags/game/</link>
+      <link>https://laplx.github.io/haochen/tags/game/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/game/</guid>
+      <guid>https://laplx.github.io/haochen/tags/game/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Topology</title>
-      <link>http://localhost:1313/haochen/tags/topology/</link>
+      <link>https://laplx.github.io/haochen/tags/topology/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/topology/</guid>
+      <guid>https://laplx.github.io/haochen/tags/topology/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Galois</title>
-      <link>http://localhost:1313/haochen/tags/galois/</link>
+      <link>https://laplx.github.io/haochen/tags/galois/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/galois/</guid>
+      <guid>https://laplx.github.io/haochen/tags/galois/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Economy</title>
-      <link>http://localhost:1313/haochen/tags/economy/</link>
+      <link>https://laplx.github.io/haochen/tags/economy/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/economy/</guid>
+      <guid>https://laplx.github.io/haochen/tags/economy/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Psychology</title>
-      <link>http://localhost:1313/haochen/tags/psychology/</link>
+      <link>https://laplx.github.io/haochen/tags/psychology/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/psychology/</guid>
+      <guid>https://laplx.github.io/haochen/tags/psychology/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Mechanics</title>
-      <link>http://localhost:1313/haochen/tags/mechanics/</link>
+      <link>https://laplx.github.io/haochen/tags/mechanics/</link>
       <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/mechanics/</guid>
+      <guid>https://laplx.github.io/haochen/tags/mechanics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Information</title>
-      <link>http://localhost:1313/haochen/tags/information/</link>
+      <link>https://laplx.github.io/haochen/tags/information/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/information/</guid>
+      <guid>https://laplx.github.io/haochen/tags/information/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Miscellaneous</title>
-      <link>http://localhost:1313/haochen/tags/misc/</link>
+      <link>https://laplx.github.io/haochen/tags/misc/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/misc/</guid>
+      <guid>https://laplx.github.io/haochen/tags/misc/</guid>
       <description>&lt;p&gt;杂项包括各类非技术创作。&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Computation</title>
-      <link>http://localhost:1313/haochen/tags/computation/</link>
+      <link>https://laplx.github.io/haochen/tags/computation/</link>
       <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/computation/</guid>
+      <guid>https://laplx.github.io/haochen/tags/computation/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Logic</title>
-      <link>http://localhost:1313/haochen/tags/logic/</link>
+      <link>https://laplx.github.io/haochen/tags/logic/</link>
       <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/logic/</guid>
+      <guid>https://laplx.github.io/haochen/tags/logic/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Communication</title>
-      <link>http://localhost:1313/haochen/tags/communication/</link>
+      <link>https://laplx.github.io/haochen/tags/communication/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/communication/</guid>
+      <guid>https://laplx.github.io/haochen/tags/communication/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Society</title>
-      <link>http://localhost:1313/haochen/tags/society/</link>
+      <link>https://laplx.github.io/haochen/tags/society/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/society/</guid>
+      <guid>https://laplx.github.io/haochen/tags/society/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>SciPop</title>
-      <link>http://localhost:1313/haochen/tags/scipop/</link>
+      <link>https://laplx.github.io/haochen/tags/scipop/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/scipop/</guid>
+      <guid>https://laplx.github.io/haochen/tags/scipop/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>EMW</title>
-      <link>http://localhost:1313/haochen/tags/emw/</link>
+      <link>https://laplx.github.io/haochen/tags/emw/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/emw/</guid>
+      <guid>https://laplx.github.io/haochen/tags/emw/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Dynamic System</title>
-      <link>http://localhost:1313/haochen/tags/dynamic-system/</link>
+      <link>https://laplx.github.io/haochen/tags/dynamic-system/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/dynamic-system/</guid>
+      <guid>https://laplx.github.io/haochen/tags/dynamic-system/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Crypto</title>
-      <link>http://localhost:1313/haochen/tags/crypto/</link>
+      <link>https://laplx.github.io/haochen/tags/crypto/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/crypto/</guid>
+      <guid>https://laplx.github.io/haochen/tags/crypto/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Quantum</title>
-      <link>http://localhost:1313/haochen/tags/quantum/</link>
+      <link>https://laplx.github.io/haochen/tags/quantum/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/quantum/</guid>
+      <guid>https://laplx.github.io/haochen/tags/quantum/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Complexity</title>
-      <link>http://localhost:1313/haochen/tags/complexity/</link>
+      <link>https://laplx.github.io/haochen/tags/complexity/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/complexity/</guid>
+      <guid>https://laplx.github.io/haochen/tags/complexity/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Program</title>
-      <link>http://localhost:1313/haochen/tags/program/</link>
+      <link>https://laplx.github.io/haochen/tags/program/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/program/</guid>
+      <guid>https://laplx.github.io/haochen/tags/program/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Frivolity</title>
-      <link>http://localhost:1313/haochen/tags/frivolity/</link>
+      <link>https://laplx.github.io/haochen/tags/frivolity/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/frivolity/</guid>
+      <guid>https://laplx.github.io/haochen/tags/frivolity/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Data</title>
-      <link>http://localhost:1313/haochen/tags/data/</link>
+      <link>https://laplx.github.io/haochen/tags/data/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/data/</guid>
+      <guid>https://laplx.github.io/haochen/tags/data/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Multivariate</title>
-      <link>http://localhost:1313/haochen/tags/multivariate/</link>
+      <link>https://laplx.github.io/haochen/tags/multivariate/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/tags/multivariate/</guid>
+      <guid>https://laplx.github.io/haochen/tags/multivariate/</guid>
       <description></description>
       
     </item>

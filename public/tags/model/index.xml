@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Model on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/model/</link>
+    <link>https://laplx.github.io/haochen/tags/model/</link>
     <description>Recent content in Model on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/model/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/model/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>大模型与统计力学</title>
-      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
+      <link>https://laplx.github.io/haochen/essays/loss-gamma/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
+      <guid>https://laplx.github.io/haochen/essays/loss-gamma/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
@@ -43,10 +43,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Geometric Hermeneutics</title>
-      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/25.01.10/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/25.01.10/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
     &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -86,10 +86,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>打卡软件 Swarm 数据分析报告</title>
-      <link>http://localhost:1313/haochen/essays/swarm/</link>
+      <link>https://laplx.github.io/haochen/essays/swarm/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
+      <guid>https://laplx.github.io/haochen/essays/swarm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
 &lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;
@@ -120,10 +120,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Ludology</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.07.12/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.07.12/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.07.12/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.07.12/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;游戏论 
     &lt;div id=&#34;游戏论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -158,10 +158,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Astrofinance</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.01.19/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.01.19/</link>
       <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.01.19/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.19/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;天体金融学 
     &lt;div id=&#34;天体金融学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -197,10 +197,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>CC Theorem</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.01.05/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.01.05/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.01.05/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.05/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;CC 定理 
     &lt;div id=&#34;cc-定理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -231,10 +231,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Theory about Making Friends</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.12.29/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.12.29/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.12.29/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;交友论 
     &lt;div id=&#34;交友论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -255,10 +255,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Dividend Signaling Model</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.12.15/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.12.15/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.12.15/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;一个股利信号模型 
     &lt;div id=&#34;一个股利信号模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -291,10 +291,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Model for the Nations</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.11.24/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.11.24/</link>
       <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.11.24/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.24/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;国际关系模型 
     &lt;div id=&#34;国际关系模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -321,20 +321,20 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Miller-Orr 结论推导</title>
-      <link>http://localhost:1313/haochen/essays/miller-orr/</link>
+      <link>https://laplx.github.io/haochen/essays/miller-orr/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/miller-orr/</guid>
+      <guid>https://laplx.github.io/haochen/essays/miller-orr/</guid>
       <description>&lt;img src=&#34;./millerorr.jpg&#34; style=&#34;zoom:50%;&#34;&gt;</description>
       
     </item>
     
     <item>
       <title>Theory of Theory</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.10.20/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.20/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
     &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -355,10 +355,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>The Limit of Handwritting</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.29/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.29/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.29/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;书写有极限吗 
     &lt;div id=&#34;书写有极限吗&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -393,10 +393,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Can I Update in Time</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.15/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.15/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.15/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;更新之谜 
     &lt;div id=&#34;更新之谜&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -413,10 +413,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Choices at traffic lights</title>
-      <link>http://localhost:1313/haochen/essays/frivols/rglights/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/rglights/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/rglights/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/rglights/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;最简单的模型 
     &lt;div id=&#34;最简单的模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

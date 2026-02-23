@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topology on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/topology/</link>
+    <link>https://laplx.github.io/haochen/tags/topology/</link>
     <description>Recent content in Topology on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Wed, 21 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/topology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/topology/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>拓扑</title>
-      <link>http://localhost:1313/haochen/notes/topology/</link>
+      <link>https://laplx.github.io/haochen/notes/topology/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/topology/</guid>
+      <guid>https://laplx.github.io/haochen/notes/topology/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
     &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="AI, CS, Math, Stochastic, Algorithm, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/notes/generative/vae/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/notes/generative/vae/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/notes/generative/vae/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/notes/generative/vae/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="生成模型">
   <meta property="og:description" content="VAE #Settings and Loss #$$ x \underset{q_\phi(z|x)}{\xrightarrow{\text{enc.}}} z \underset{p_\theta(x|z)}{\xrightarrow{\text{dec.}}} \hat{x} $$
@@ -114,7 +114,7 @@ $$ \mathcal{L}=-\mathbb{E}_{z \sim q_{\phi}(z\mid x)}\left[\log p_{\theta}(x\mid
     
     "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eVAE \r\n    \u003cdiv id=\u0022vae\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#vae\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch3 class=\u0022relative group\u0022\u003eSettings and Loss \r\n    \u003cdiv id=\u0022settings-and-loss\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#settings-and-loss\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e$$\nx \\underset{q_\\phi(z|x)}{\\xrightarrow{\\text{enc.}}} z \\underset{p_\\theta(x|z)}{\\xrightarrow{\\text{dec.}}} \\hat{x}\n$$\u003c\/p\u003e\n\u003cp\u003eEncoder (approximate posterior): $q_{\\phi}(z\\mid x)$\u003cbr\u003e\nDecoder (likelihood model): $p_{\\theta}(x\\mid z)$\u003c\/p\u003e\n\u003cp\u003eAE: deterministic in $z, \\hat{x}$, $f_\\theta$ acts like a corset, $\\mathcal{L}_{\\text{recons.}} = |x - \\hat{x}|^2$\u003c\/p\u003e\n\u003cp\u003e$$\n\\mathcal{L}=-\\mathbb{E}_{z \\sim q_{\\phi}(z\\mid x)}\\left[\\log p_{\\theta}(x\\mid z)\\right]\u002b\\beta \\cdot \\mathrm{KL}\\bigl(q_{\\phi}(z\\mid x)|p(z)\\bigr)\n$$\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/notes\/generative\/vae\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/notes\/generative\/vae\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1344,7 +1344,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

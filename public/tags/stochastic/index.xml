@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stochastic on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/stochastic/</link>
+    <link>https://laplx.github.io/haochen/tags/stochastic/</link>
     <description>Recent content in Stochastic on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/stochastic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/stochastic/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>强化学习</title>
-      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
+      <link>https://laplx.github.io/haochen/notes/reinforce-learn/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
+      <guid>https://laplx.github.io/haochen/notes/reinforce-learn/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
     &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -160,10 +160,10 @@
     
     <item>
       <title>随机分析</title>
-      <link>http://localhost:1313/haochen/notes/stochastic-analysis/</link>
+      <link>https://laplx.github.io/haochen/notes/stochastic-analysis/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/stochastic-analysis/</guid>
+      <guid>https://laplx.github.io/haochen/notes/stochastic-analysis/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;要点 
     &lt;div id=&#34;要点&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -200,10 +200,10 @@
     
     <item>
       <title>生成模型</title>
-      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
+      <link>https://laplx.github.io/haochen/notes/generative/vae/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
+      <guid>https://laplx.github.io/haochen/notes/generative/vae/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
     &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -237,10 +237,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Miller-Orr 结论推导</title>
-      <link>http://localhost:1313/haochen/essays/miller-orr/</link>
+      <link>https://laplx.github.io/haochen/essays/miller-orr/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/miller-orr/</guid>
+      <guid>https://laplx.github.io/haochen/essays/miller-orr/</guid>
       <description>&lt;img src=&#34;./millerorr.jpg&#34; style=&#34;zoom:50%;&#34;&gt;</description>
       
     </item>

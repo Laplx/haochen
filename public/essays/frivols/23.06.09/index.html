@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Math, Game, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/23.06.09/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/essays/frivols/23.06.09/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/23.06.09/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/essays/frivols/23.06.09/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Dots and Boxes">
   <meta property="og:description" content="划线围格 #这是一个曾在我高中时流行的简单的纸笔小游戏。经过搜索叫做点格棋 Dots and Boxes，由法国数学家Lucas在1891年推出（原本以为没名字，自己取了中文名划线围格和英文名Grid Enclosing）（失望的发现已经是一个经典的Computer Games项目了，但还是坚持完成本篇吧）。游戏进程如下：有 $n \times n$ 大小的网格，双方玩家互相沿着某一条直线划线（一次划一个单位小格的边），当某块区域被合拢围起来时，内部格数归最后一笔合拢的玩家所有，此时该玩家必须再走一步棋（直至没有产生围格为止）。到最后棋面被完全瓜分成若干个完整区域（最外的边线也要一笔笔划上），计算玩家得分（所占格数）判断胜利。
@@ -121,7 +121,7 @@ reference
     
     "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e划线围格 \r\n    \u003cdiv id=\u0022划线围格\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%88%92%e7%ba%bf%e5%9b%b4%e6%a0%bc\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e这是一个曾在我高中时流行的简单的纸笔小游戏。经过搜索叫做点格棋 Dots and Boxes，由法国数学家Lucas在1891年推出（原本以为没名字，自己取了中文名划线围格和英文名Grid Enclosing）（失望的发现已经是一个经典的Computer Games项目了，但还是坚持完成本篇吧）。游戏进程如下：有 $n \\times n$ 大小的网格，双方玩家互相沿着某一条直线划线（一次划一个单位小格的边），当某块区域被合拢围起来时，内部格数归最后一笔合拢的玩家所有，此时该玩家必须再走一步棋（直至没有产生围格为止）。到最后棋面被完全瓜分成若干个完整区域（最外的边线也要一笔笔划上），计算玩家得分（所占格数）判断胜利。\u003c\/p\u003e\n\u003cp\u003e这里简单介绍我的一小部分想法：将游戏局面转化为连接图。（便于计算机存储、处理并设计算法；目前网上可以搜到最好的程序是alpha-beta search）\u003c\/p\u003e\n\u003cp\u003e从每个边界开口进去，经过所有奇性格（四边中只有两条边被划过的格子），到达一处格子（小于等于一条边被划过的），称为中心格。中心格用圈表示，圈之间用直线连接，线旁标上连接管的格子长度（0长可不写）。每一步都是cut off一段直线并把其上数字归为己有。若一个圈只有两条线连接了，它将消失并与两边的线联合起来成为新的更长的管。\u003c\/p\u003e\n\u003cp\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003cfigure\u003e\r\n    \u003cimg class=\u0022my-0 rounded-md\u0022 loading=\u0022lazy\u0022 alt=\u0022\u0022 src=\u0022.\/23.6.9.jpg\u0022\u003e\r\n\r\n  \r\n\u003c\/figure\u003e\r\n\u003c\/p\u003e\n\u003cp\u003e\u003cem\u003e（右上角笔误，斜线上写1）\u003c\/em\u003e\u003c\/p\u003e\n\u003cp\u003e（原谅我有点懒，这之中还有很多定义和定理要详细证明，有时间单独发到research栏目里）\u003c\/p\u003e\n\u003cp\u003e（图论及其矩阵的方式并不是很好，鉴于节点会消灭\u0026hellip;）\u003c\/p\u003e\n\u003cp\u003e肯定有人想，这个想法很不错啊，为什么不继续？原因同开头——已经有人做过了！Elwyn R. Berlekamp 在[1]的前言中提到，自己在小时候便对点格棋产生了极大的兴趣，随后在当大学教授期间与学生Conway合作共同研究了相关理论[1] [2]。（有时间我再比较一下理论的异同）\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003ereference\u003c\/strong\u003e\u003c\/p\u003e\n\u003cp\u003e[1] Berlekamp, Elwyn R. \u003cem\u003eThe dots and boxes game: sophisticated child\u0026rsquo;s play\u003c\/em\u003e. CRC Press, 2000.\u003c\/p\u003e\n\u003cp\u003e[2] Berlekamp, Elwyn R., John H. Conway, and Richard K. Guy. \u003cem\u003eWinning Ways for Your Mathematical Plays, Volume 3\u003c\/em\u003e. CRC Press, 2018.\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/23.06.09\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/frivols\/23.06.09\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1247,7 +1247,7 @@ The second player wins if $n$ is odd.</strong></p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

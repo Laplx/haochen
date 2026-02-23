@@ -1,4 +1,4 @@
-baseURL = 'https://laplx.github.io/haochen'
+baseURL = 'https://laplx.github.io/haochen/'
 defaultContentLanguage = 'zh-cn'
 theme = 'blowfish'
 

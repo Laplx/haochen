@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linguistics on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/linguistics/</link>
+    <link>https://laplx.github.io/haochen/tags/linguistics/</link>
     <description>Recent content in Linguistics on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/linguistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/linguistics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>语言统计学下的红楼梦续作问题</title>
-      <link>http://localhost:1313/haochen/essays/hlm/</link>
+      <link>https://laplx.github.io/haochen/essays/hlm/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
+      <guid>https://laplx.github.io/haochen/essays/hlm/</guid>
       <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
 &lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
 我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
@@ -41,8 +41,8 @@
       /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
       /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
     &#34;
-    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
-    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
+    data-zoom-src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;&gt;
 
   
 &lt;/figure&gt;
@@ -68,10 +68,10 @@
     
     <item>
       <title>自然语言处理</title>
-      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <link>https://laplx.github.io/haochen/notes/nlp/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <guid>https://laplx.github.io/haochen/notes/nlp/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
     &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

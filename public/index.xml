@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/</link>
+    <link>https://laplx.github.io/haochen/</link>
     <description>Recent content on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ARC-AGI(Abstraction and Reasoning Corpus)</title>
-      <link>http://localhost:1313/haochen/essays/arc/</link>
+      <link>https://laplx.github.io/haochen/essays/arc/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/arc/</guid>
+      <guid>https://laplx.github.io/haochen/essays/arc/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;概况 Overview 
     &lt;div id=&#34;概况-overview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -71,10 +71,10 @@
     
     <item>
       <title>强化学习</title>
-      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
+      <link>https://laplx.github.io/haochen/notes/reinforce-learn/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
+      <guid>https://laplx.github.io/haochen/notes/reinforce-learn/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
     &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -218,10 +218,10 @@
     
     <item>
       <title>LLM Sense-Making</title>
-      <link>http://localhost:1313/haochen/papers/nlp-senmaking/</link>
+      <link>https://laplx.github.io/haochen/papers/nlp-senmaking/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/papers/nlp-senmaking/</guid>
+      <guid>https://laplx.github.io/haochen/papers/nlp-senmaking/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Does It Make Sense? And why? A Pilot Study for Sense Making and Explanation 
     &lt;div id=&#34;does-it-make-sense-and-why-a-pilot-study-for-sense-making-and-explanation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -239,10 +239,10 @@
     
     <item>
       <title>数值</title>
-      <link>http://localhost:1313/haochen/notes/numerical/linalg/</link>
+      <link>https://laplx.github.io/haochen/notes/numerical/linalg/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/numerical/linalg/</guid>
+      <guid>https://laplx.github.io/haochen/notes/numerical/linalg/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;小结 
     &lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -322,10 +322,10 @@
     
     <item>
       <title>大模型与统计力学</title>
-      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
+      <link>https://laplx.github.io/haochen/essays/loss-gamma/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
+      <guid>https://laplx.github.io/haochen/essays/loss-gamma/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
@@ -352,10 +352,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>语言统计学下的红楼梦续作问题</title>
-      <link>http://localhost:1313/haochen/essays/hlm/</link>
+      <link>https://laplx.github.io/haochen/essays/hlm/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
+      <guid>https://laplx.github.io/haochen/essays/hlm/</guid>
       <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
 &lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
 我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
@@ -380,8 +380,8 @@ $$&lt;/p&gt;
       /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
       /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
     &#34;
-    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
-    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
+    data-zoom-src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;&gt;
 
   
 &lt;/figure&gt;
@@ -407,10 +407,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>优化</title>
-      <link>http://localhost:1313/haochen/notes/optimization/</link>
+      <link>https://laplx.github.io/haochen/notes/optimization/</link>
       <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/optimization/</guid>
+      <guid>https://laplx.github.io/haochen/notes/optimization/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;笔记 
     &lt;div id=&#34;笔记&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -491,10 +491,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Planck 公式在历史上是怎么诞生的</title>
-      <link>http://localhost:1313/haochen/essays/planck/</link>
+      <link>https://laplx.github.io/haochen/essays/planck/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/planck/</guid>
+      <guid>https://laplx.github.io/haochen/essays/planck/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Wein：热力学结合实验定律猜测 
     &lt;div id=&#34;wein热力学结合实验定律猜测&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -533,10 +533,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>信息论</title>
-      <link>http://localhost:1313/haochen/notes/information/</link>
+      <link>https://laplx.github.io/haochen/notes/information/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <guid>https://laplx.github.io/haochen/notes/information/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
     &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -570,10 +570,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>Geometric Hermeneutics</title>
-      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/25.01.10/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/25.01.10/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
     &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -613,10 +613,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>计算理论</title>
-      <link>http://localhost:1313/haochen/notes/computation/</link>
+      <link>https://laplx.github.io/haochen/notes/computation/</link>
       <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/computation/</guid>
+      <guid>https://laplx.github.io/haochen/notes/computation/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Automaton and Language 
     &lt;div id=&#34;1-automaton-and-language&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -648,10 +648,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>随机分析</title>
-      <link>http://localhost:1313/haochen/notes/stochastic-analysis/</link>
+      <link>https://laplx.github.io/haochen/notes/stochastic-analysis/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/stochastic-analysis/</guid>
+      <guid>https://laplx.github.io/haochen/notes/stochastic-analysis/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;要点 
     &lt;div id=&#34;要点&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -688,10 +688,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>Attempts at Symmetry in Game Theory</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.08.02/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.08.02/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.08.02/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.08.02/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;关于对称性的类比尝试 
     &lt;div id=&#34;关于对称性的类比尝试&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -708,10 +708,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>拓扑</title>
-      <link>http://localhost:1313/haochen/notes/topology/</link>
+      <link>https://laplx.github.io/haochen/notes/topology/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/topology/</guid>
+      <guid>https://laplx.github.io/haochen/notes/topology/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
     &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -740,10 +740,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>打卡软件 Swarm 数据分析报告</title>
-      <link>http://localhost:1313/haochen/essays/swarm/</link>
+      <link>https://laplx.github.io/haochen/essays/swarm/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
+      <guid>https://laplx.github.io/haochen/essays/swarm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
 &lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;
@@ -774,10 +774,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>生成模型</title>
-      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
+      <link>https://laplx.github.io/haochen/notes/generative/vae/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
+      <guid>https://laplx.github.io/haochen/notes/generative/vae/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
     &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -811,10 +811,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Ludology</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.07.12/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.07.12/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.07.12/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.07.12/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;游戏论 
     &lt;div id=&#34;游戏论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -849,10 +849,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>量子力学的形式理论</title>
-      <link>http://localhost:1313/haochen/notes/quantum-form/</link>
+      <link>https://laplx.github.io/haochen/notes/quantum-form/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/quantum-form/</guid>
+      <guid>https://laplx.github.io/haochen/notes/quantum-form/</guid>
       <description>&lt;p&gt;
 
 系统的运动状态&lt;strong&gt;由 Hilbert 空间（所有平方可积函数构成的线性空间）中的一个矢量 $\ket{ \mathfrak{I} }$ 描述&lt;/strong&gt;。&lt;/p&gt;
@@ -870,10 +870,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>New Conway&#39;s Automata</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.08/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.08/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.08/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.08/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;新生命游戏 
     &lt;div id=&#34;新生命游戏&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -968,10 +968,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>数据库及实现</title>
-      <link>http://localhost:1313/haochen/notes/database/</link>
+      <link>https://laplx.github.io/haochen/notes/database/</link>
       <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/database/</guid>
+      <guid>https://laplx.github.io/haochen/notes/database/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 系统概论 
     &lt;div id=&#34;1-系统概论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1033,10 +1033,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Infinite Turing Machine</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.01.26/</link>
       <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
     &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1070,10 +1070,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>自然语言处理</title>
-      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <link>https://laplx.github.io/haochen/notes/nlp/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <guid>https://laplx.github.io/haochen/notes/nlp/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
     &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1089,10 +1089,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Astrofinance</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.01.19/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.01.19/</link>
       <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.01.19/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.19/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;天体金融学 
     &lt;div id=&#34;天体金融学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1128,10 +1128,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>实分析</title>
-      <link>http://localhost:1313/haochen/notes/real-analysis/</link>
+      <link>https://laplx.github.io/haochen/notes/real-analysis/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/real-analysis/</guid>
+      <guid>https://laplx.github.io/haochen/notes/real-analysis/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
     &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1217,10 +1217,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Regression on Channel</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.04.26/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.04.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
     &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1239,10 +1239,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>二十世纪的十余个算法</title>
-      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <link>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <guid>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
 
@@ -1281,10 +1281,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Newton 力学纲要</title>
-      <link>http://localhost:1313/haochen/essays/newton/</link>
+      <link>https://laplx.github.io/haochen/essays/newton/</link>
       <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/newton/</guid>
+      <guid>https://laplx.github.io/haochen/essays/newton/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Galileo 时空 
     &lt;div id=&#34;galileo-时空&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1330,10 +1330,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>ODE 解的存在性</title>
-      <link>http://localhost:1313/haochen/notes/diff-eqs/</link>
+      <link>https://laplx.github.io/haochen/notes/diff-eqs/</link>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/diff-eqs/</guid>
+      <guid>https://laplx.github.io/haochen/notes/diff-eqs/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;ODE 解的存在性 
     &lt;div id=&#34;ode-解的存在性&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1356,10 +1356,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>共轭梯度法</title>
-      <link>http://localhost:1313/haochen/notes/numerical/cg/</link>
+      <link>https://laplx.github.io/haochen/notes/numerical/cg/</link>
       <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/numerical/cg/</guid>
+      <guid>https://laplx.github.io/haochen/notes/numerical/cg/</guid>
       <description>&lt;p&gt;
 
 如果初始点的选择不好或者函数行为不好时，最速下降法可能并不理想。我们先从几何和直觉上展示共轭梯度法，同时可以在后文理清数学逻辑后再来看看这两张图。&lt;/p&gt;
@@ -1390,10 +1390,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>色彩科学</title>
-      <link>http://localhost:1313/haochen/notes/color-science/</link>
+      <link>https://laplx.github.io/haochen/notes/color-science/</link>
       <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/color-science/</guid>
+      <guid>https://laplx.github.io/haochen/notes/color-science/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Luminance 
     &lt;div id=&#34;luminance&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1452,10 +1452,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>博弈论</title>
-      <link>http://localhost:1313/haochen/notes/game/</link>
+      <link>https://laplx.github.io/haochen/notes/game/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/game/</guid>
+      <guid>https://laplx.github.io/haochen/notes/game/</guid>
       <description>&lt;p&gt;传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。&lt;/p&gt;
 &lt;p&gt;下面的讲义为本人重新基于 belief 概念整理后的形式化理论，并借鉴拓扑的思路分析不同博弈中的不变性。&lt;/p&gt;
 &lt;hr&gt;
@@ -1494,10 +1494,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>智能引论</title>
-      <link>http://localhost:1313/haochen/notes/ai-basics/</link>
+      <link>https://laplx.github.io/haochen/notes/ai-basics/</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/ai-basics/</guid>
+      <guid>https://laplx.github.io/haochen/notes/ai-basics/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;0 Intro 
     &lt;div id=&#34;0-intro&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1554,10 +1554,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Stokes 公式</title>
-      <link>http://localhost:1313/haochen/notes/stokes/</link>
+      <link>https://laplx.github.io/haochen/notes/stokes/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/stokes/</guid>
+      <guid>https://laplx.github.io/haochen/notes/stokes/</guid>
       <description>&lt;p&gt;
 
 假设某界面上下有四束平面电磁波，介质 1 中入射与出射电磁波为 $\vec{E}_{1}, \vec{E}_{1}^{\prime}$，介质 2 中入射与出射电磁波为 $\vec{E}_{2}, \vec{E}_{2}^{\prime}$。&lt;/p&gt;
@@ -1587,10 +1587,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Meta RL</title>
-      <link>http://localhost:1313/haochen/papers/metarl/</link>
+      <link>https://laplx.github.io/haochen/papers/metarl/</link>
       <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/papers/metarl/</guid>
+      <guid>https://laplx.github.io/haochen/papers/metarl/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;部分内容亦可参考&lt;a
   href=&#34;../../notes/reinforce-learn/#7-meta-rl&#34;&gt;强化学习笔记&lt;/a&gt;
@@ -1608,10 +1608,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>国际金融危机的分析框架</title>
-      <link>http://localhost:1313/haochen/essays/tirole/</link>
+      <link>https://laplx.github.io/haochen/essays/tirole/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/tirole/</guid>
+      <guid>https://laplx.github.io/haochen/essays/tirole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;介绍 
     &lt;div id=&#34;介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1665,10 +1665,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>统计</title>
-      <link>http://localhost:1313/haochen/notes/statistics/</link>
+      <link>https://laplx.github.io/haochen/notes/statistics/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/statistics/</guid>
+      <guid>https://laplx.github.io/haochen/notes/statistics/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;统计推断 
     &lt;div id=&#34;统计推断&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1732,10 +1732,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>CC Theorem</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.01.05/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.01.05/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.01.05/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.05/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;CC 定理 
     &lt;div id=&#34;cc-定理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1766,10 +1766,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Theory about Making Friends</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.12.29/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.12.29/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.12.29/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;交友论 
     &lt;div id=&#34;交友论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1790,10 +1790,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Dividend Signaling Model</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.12.15/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.12.15/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.12.15/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;一个股利信号模型 
     &lt;div id=&#34;一个股利信号模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1826,10 +1826,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Model for the Nations</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.11.24/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.11.24/</link>
       <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.11.24/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.24/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;国际关系模型 
     &lt;div id=&#34;国际关系模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1856,10 +1856,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>谈竞赛</title>
-      <link>http://localhost:1313/haochen/essays/olympic/</link>
+      <link>https://laplx.github.io/haochen/essays/olympic/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/olympic/</guid>
+      <guid>https://laplx.github.io/haochen/essays/olympic/</guid>
       <description>&lt;p&gt;​		刚好看到《金榜题名之后》和一篇北大教育研究的论文，想起曾经和一个人讨论过其所谓的&amp;rsquo;竞赛绑架论&amp;rsquo;。虽然高考、大学教育的讨论很火，但似乎没人写过关于高中竞赛的一些文字…于是突然想回忆一下竞赛这件事，不过我也只能从我的视角发表一些观点。&lt;/p&gt;
 &lt;p&gt;​		很多关于竞赛的争论本质上是精英文化和大众文化对话语权的争夺（譬如强基计划的种种争论）。&lt;/p&gt;
 &lt;p&gt;​		不过准确来说，同国际教育、素质教育、领导力教育不同，竞赛是介于大众和精英之间的&amp;rsquo;亚精英&amp;rsquo;。这使得大众的态度相比正宗的海淀精英教育对竞赛更加软化，在绝对的能力面前转而攻讦其他（如&amp;rsquo;为 🇺🇸 服务&amp;rsquo;）——崇拜和仇视是对立统一的。但&amp;rsquo;无产阶级&amp;rsquo;不是&amp;rsquo;普通阶级&amp;rsquo;。&lt;/p&gt;
@@ -1879,10 +1879,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>The Apple that Never Lands</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.11.17/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.11.17/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.11.17/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.17/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;永不落地的苹果 
     &lt;div id=&#34;永不落地的苹果&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1909,20 +1909,20 @@ $$&lt;/p&gt;
     
     <item>
       <title>Miller-Orr 结论推导</title>
-      <link>http://localhost:1313/haochen/essays/miller-orr/</link>
+      <link>https://laplx.github.io/haochen/essays/miller-orr/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/miller-orr/</guid>
+      <guid>https://laplx.github.io/haochen/essays/miller-orr/</guid>
       <description>&lt;img src=&#34;./millerorr.jpg&#34; style=&#34;zoom:50%;&#34;&gt;</description>
       
     </item>
     
     <item>
       <title>Love in Evolution and Equilirium</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.11.03/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.11.03/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.11.03/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.03/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;暧昧：进化与均衡 
     &lt;div id=&#34;暧昧进化与均衡&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1956,10 +1956,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Theory of Theory</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.10.20/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.20/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
     &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1980,10 +1980,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Knoid</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.10.06/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.10.06/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.10.06/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.06/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;知子网 
     &lt;div id=&#34;知子网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2030,10 +2030,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>The Limit of Handwritting</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.29/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.29/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.29/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;书写有极限吗 
     &lt;div id=&#34;书写有极限吗&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2068,10 +2068,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Measure Design</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.22/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.22/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
     &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2104,10 +2104,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Can I Update in Time</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.15/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.15/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.15/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;更新之谜 
     &lt;div id=&#34;更新之谜&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2124,10 +2124,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Theory of lazing in military training</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.01/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.01/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.01/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.01/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;军训偷懒学 
     &lt;div id=&#34;军训偷懒学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2193,10 +2193,10 @@ calculate the length of each interval and add then together.
     
     <item>
       <title>Choices at traffic lights</title>
-      <link>http://localhost:1313/haochen/essays/frivols/rglights/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/rglights/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/rglights/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/rglights/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;最简单的模型 
     &lt;div id=&#34;最简单的模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2231,10 +2231,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Meme Alive</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.07.28/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.07.28/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.07.28/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.07.28/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;流行的生命机制 
     &lt;div id=&#34;流行的生命机制&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2281,10 +2281,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Semantic Information</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.07.14/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.07.14/</link>
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.07.14/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.07.14/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语义信息量 
     &lt;div id=&#34;语义信息量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2317,10 +2317,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Hype Significance</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.06.23/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.06.23/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.06.23/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.23/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;显著你的显著 
     &lt;div id=&#34;显著你的显著&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2382,10 +2382,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>民科小传</title>
-      <link>http://localhost:1313/haochen/essays/folk-science/</link>
+      <link>https://laplx.github.io/haochen/essays/folk-science/</link>
       <pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/folk-science/</guid>
+      <guid>https://laplx.github.io/haochen/essays/folk-science/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;此文为田松所作上海科学技术出版社 03 年出版的《永动机与哥德巴赫猜想》一书，由我收集文字并勘误，添加了附言与进一步资料。&lt;/p&gt;&lt;/blockquote&gt;
 
@@ -2437,10 +2437,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Homomorphic Observation</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.06.16/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.06.16/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.06.16/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.16/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;观测同态 
     &lt;div id=&#34;观测同态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2461,10 +2461,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>行乞寺记</title>
-      <link>http://localhost:1313/haochen/essays/xingqisiji/</link>
+      <link>https://laplx.github.io/haochen/essays/xingqisiji/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/xingqisiji/</guid>
+      <guid>https://laplx.github.io/haochen/essays/xingqisiji/</guid>
       <description>&lt;p&gt;行乞寺原微信寺 传由知州马云建也 为智甫长老主持 诵习功德数十载 香火绵盛 然此后至余已几近泯没 寺内仅一假僧名冯况者 德州人 盖余交游所识也 时暇日 步上肯山 山水钟秀 一寺蔽隐林中 辄异之而拾往 但见寺前手书一联 &amp;lsquo;肯得济过行乞寺 感快慰卧毋仕园&amp;rsquo; 旋况出 相谈甚欢 况言之曰行乞得济之寺 其原书生 后罢儒业 乃至此而安&lt;/p&gt;
 &lt;p&gt;延余入 寺屋三楹 后辟一空地 名为毋仕园 其中清谧 陶然而卧 诚乐也 况欣而邀余共食 行乞寺所享奇肴 呼曰&amp;rsquo;饕餐&amp;rsquo; 其乃何物耶 一曰鸡脍 一曰黍条 更有甚者 盖笔酣墨饱之时 挥毫弃箸 蘸之即食 曰酣饱包 况每言及必大笑 只此毋仕 尽享幽会饕餐也哉 然好景易逝 是筵难再 自余得举 奔波海内而不返焉&lt;/p&gt;
 &lt;p&gt;德基四年秋 余除江州通判 过德州 时人竟皆传行乞寺盛名 顾羁行匆匆 恨亡一见 又三年 迁德州府录事参军 忽而念之 径造其寺 全然一无 未闻况音也 后余访之再 苔蔓丛芜 垣墙不在 隳颓如此 不胜唏吁&lt;/p&gt;
@@ -2474,10 +2474,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Dots and Boxes</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.06.09/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.06.09/</link>
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.06.09/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.09/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;划线围格 
     &lt;div id=&#34;划线围格&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2515,10 +2515,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Introduction to Roll Theory</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.05.26/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.05.26/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.05.26/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.05.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;选课学导论 
     &lt;div id=&#34;选课学导论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2537,10 +2537,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Moments Entropy</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.05.19/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.05.19/</link>
       <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.05.19/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.05.19/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;朋友圈熵 
     &lt;div id=&#34;朋友圈熵&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -2558,10 +2558,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Style Guide for Python Code</title>
-      <link>http://localhost:1313/haochen/essays/pypep8/</link>
+      <link>https://laplx.github.io/haochen/essays/pypep8/</link>
       <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/pypep8/</guid>
+      <guid>https://laplx.github.io/haochen/essays/pypep8/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1  Lines and Indentation 
     &lt;div id=&#34;1--lines-and-indentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

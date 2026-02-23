@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Math, Algorithm, Numerical, Linear Algebra, Analysis, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/notes/numerical/linalg/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/notes/numerical/linalg/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/notes/numerical/linalg/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/notes/numerical/linalg/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="数值">
   <meta property="og:description" content="小结 #{对于开篇提出的三大类基础数值问题，第二类最小二乘的大纲放入线性方程组中}
@@ -120,7 +120,7 @@ GMRES BiCG，QMR（$\in$ Petrov-Galerkin） CG^2 正规">
     
     "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e小结 \r\n    \u003cdiv id=\u0022小结\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%b0%8f%e7%bb%93\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cp\u003e{对于开篇提出的三大类基础数值问题，第二类最小二乘的大纲放入线性方程组中}\u003c\/p\u003e\n\r\n\u003ch3 class=\u0022relative group\u0022\u003e线性方程组 $Ax=b$ \r\n    \u003cdiv id=\u0022线性方程组-axb\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84-axb\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e直接\u003c\/strong\u003e\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eLU\n\u003cul\u003e\n\u003cli\u003eGauss 消去\u003c\/li\u003e\n\u003cli\u003eDoolittle\/Crout，Cholesky（或 LDL\u0026rsquo;）\u003c\/li\u003e\n\u003cli\u003ePivoting（PLU）\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eQR\n\u003cul\u003e\n\u003cli\u003eGS 正交化（经典col\/修正row）CGS, MGS, CGS2\u003c\/li\u003e\n\u003cli\u003eHouseholder\u003c\/li\u003e\n\u003cli\u003eGivens\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eSVD\u003c\/li\u003e\n\u003cli\u003e稀疏直接法\u003c\/li\u003e\n\u003cli\u003e特殊（Toeplitz，FFT，块）\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e迭代\u003c\/strong\u003e\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e定常\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e分裂（$A=M-N, \\rho(M^{-1}N)\u0026lt;1$，（弱）正则分裂，M-阵\/H-阵）\n\u003cul\u003e\n\u003cli\u003eJacobi\u003c\/li\u003e\n\u003cli\u003eGauss-Seidel\u003c\/li\u003e\n\u003cli\u003eSOR（或 SSOR）相容次序（Young\u0026rsquo;s Thm）\u003c\/li\u003e\n\u003cli\u003eRichardson\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e交替方向 e.g. ADI\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003eKrylov 子空间\u003c\/p\u003e\n\u003cp\u003e对称\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eCG（PCG）\u003c\/li\u003e\n\u003cli\u003eMINRES\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e非对称\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eGMRES\u003c\/li\u003e\n\u003cli\u003eBiCG，QMR（$\\in$ Petrov-Galerkin）\u003c\/li\u003e\n\u003cli\u003eCG^2\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e正规\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/notes\/numerical\/linalg\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/notes\/numerical\/linalg\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1533,7 +1533,7 @@ GMRES BiCG，QMR（$\in$ Petrov-Galerkin） CG^2 正规">
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Game, Math, Analysis, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/notes/game/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/notes/game/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/notes/game/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/notes/game/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="博弈论">
   <meta property="og:description" content="传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。
@@ -108,7 +108,7 @@
     
     "abstract": "\u003cp\u003e传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower\/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。\u003c\/p\u003e\n\u003cp\u003e下面的讲义为本人重新基于 belief 概念整理后的形式化理论，并借鉴拓扑的思路分析不同博弈中的不变性。\u003c\/p\u003e\n\u003chr\u003e\n\r\n\u003ch3 class=\u0022relative group\u0022\u003e讲义 \r\n    \u003cdiv id=\u0022讲义\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e8%ae%b2%e4%b9%89\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cdiv class=\u0022pdf-full\u0022 style=\u0022margin:1rem 0;\u0022\u003e\r\n  \u003ciframe src=\u0022.\/notes.pdf\u0022\r\n          width=\u0022100%\u0022\r\n          height=\u0022800\u0022\r\n          style=\u0022border:1px solid #e5e7eb; border-radius:8px;\u0022\r\n          allowfullscreen\u003e\r\n    你的浏览器不支持内嵌 PDF，点击 \u003ca href=\u0022.\/notes.pdf\u0022\u003e这里下载\u003c\/a\u003e。\r\n  \u003c\/iframe\u003e\r\n\u003c\/div\u003e\r\n\r\n\u003ch3 class=\u0022relative group\u0022\u003e演化博弈论大纲 \r\n    \u003cdiv id=\u0022演化博弈论大纲\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%bc%94%e5%8c%96%e5%8d%9a%e5%bc%88%e8%ae%ba%e5%a4%a7%e7%ba%b2\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cimg src=\u0022.\/evol_game.jpg\u0022\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/notes\/game\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/notes\/game\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1241,7 +1241,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

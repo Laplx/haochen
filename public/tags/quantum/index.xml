@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantum on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/quantum/</link>
+    <link>https://laplx.github.io/haochen/tags/quantum/</link>
     <description>Recent content in Quantum on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/quantum/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>量子力学的形式理论</title>
-      <link>http://localhost:1313/haochen/notes/quantum-form/</link>
+      <link>https://laplx.github.io/haochen/notes/quantum-form/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/quantum-form/</guid>
+      <guid>https://laplx.github.io/haochen/notes/quantum-form/</guid>
       <description>&lt;p&gt;
 
 系统的运动状态&lt;strong&gt;由 Hilbert 空间（所有平方可积函数构成的线性空间）中的一个矢量 $\ket{ \mathfrak{I} }$ 描述&lt;/strong&gt;。&lt;/p&gt;

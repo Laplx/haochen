@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Information on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/information/</link>
+    <link>https://laplx.github.io/haochen/tags/information/</link>
     <description>Recent content in Information on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/information/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/information/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>信息论</title>
-      <link>http://localhost:1313/haochen/notes/information/</link>
+      <link>https://laplx.github.io/haochen/notes/information/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <guid>https://laplx.github.io/haochen/notes/information/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
     &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -50,10 +50,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>Regression on Channel</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.04.26/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.04.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
     &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -72,10 +72,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>Theory of Theory</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.10.20/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.20/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
     &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -96,10 +96,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>The Limit of Handwritting</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.29/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.29/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.29/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;书写有极限吗 
     &lt;div id=&#34;书写有极限吗&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -134,10 +134,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Semantic Information</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.07.14/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.07.14/</link>
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.07.14/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.07.14/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语义信息量 
     &lt;div id=&#34;语义信息量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

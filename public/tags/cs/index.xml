@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CS on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/cs/</link>
+    <link>https://laplx.github.io/haochen/tags/cs/</link>
     <description>Recent content in CS on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>强化学习</title>
-      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
+      <link>https://laplx.github.io/haochen/notes/reinforce-learn/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
+      <guid>https://laplx.github.io/haochen/notes/reinforce-learn/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
     &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -160,10 +160,10 @@
     
     <item>
       <title>信息论</title>
-      <link>http://localhost:1313/haochen/notes/information/</link>
+      <link>https://laplx.github.io/haochen/notes/information/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/information/</guid>
+      <guid>https://laplx.github.io/haochen/notes/information/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
     &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -197,10 +197,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>计算理论</title>
-      <link>http://localhost:1313/haochen/notes/computation/</link>
+      <link>https://laplx.github.io/haochen/notes/computation/</link>
       <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/computation/</guid>
+      <guid>https://laplx.github.io/haochen/notes/computation/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Automaton and Language 
     &lt;div id=&#34;1-automaton-and-language&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -232,10 +232,10 @@ Venn diagram&lt;/p&gt;
     
     <item>
       <title>生成模型</title>
-      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
+      <link>https://laplx.github.io/haochen/notes/generative/vae/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
+      <guid>https://laplx.github.io/haochen/notes/generative/vae/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
     &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -269,10 +269,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>数据库及实现</title>
-      <link>http://localhost:1313/haochen/notes/database/</link>
+      <link>https://laplx.github.io/haochen/notes/database/</link>
       <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/database/</guid>
+      <guid>https://laplx.github.io/haochen/notes/database/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 系统概论 
     &lt;div id=&#34;1-系统概论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -334,10 +334,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>自然语言处理</title>
-      <link>http://localhost:1313/haochen/notes/nlp/</link>
+      <link>https://laplx.github.io/haochen/notes/nlp/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
+      <guid>https://laplx.github.io/haochen/notes/nlp/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
     &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -353,10 +353,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>二十世纪的十余个算法</title>
-      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <link>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <guid>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
 

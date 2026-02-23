@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Optimization on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/optimization/</link>
+    <link>https://laplx.github.io/haochen/tags/optimization/</link>
     <description>Recent content in Optimization on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>优化</title>
-      <link>http://localhost:1313/haochen/notes/optimization/</link>
+      <link>https://laplx.github.io/haochen/notes/optimization/</link>
       <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/optimization/</guid>
+      <guid>https://laplx.github.io/haochen/notes/optimization/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;笔记 
     &lt;div id=&#34;笔记&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -97,10 +97,10 @@
     
     <item>
       <title>二十世纪的十余个算法</title>
-      <link>http://localhost:1313/haochen/notes/algorithms/ten-algo/</link>
+      <link>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</link>
       <pubDate>Sun, 09 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/notes/algorithms/ten-algo/</guid>
+      <guid>https://laplx.github.io/haochen/notes/algorithms/ten-algo/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这里我来记录我认为的 20 世纪最具代表性的十个重要算法。鉴于已有包括 IEEE Computing in Science &amp;amp; Engineering 2000 及其之后的修改在内的许多更官方或大众的评选，并且其中一部分算法可能已经得到公认，因此我的版本自然也大差不差，但会稍微注重内容的不重叠性和数学性，主要目的还是帮助自己再对一些重要的算法做个回顾。&lt;/p&gt;&lt;/blockquote&gt;
 

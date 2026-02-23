@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="AI, Math, Model, Statistical Mechanics, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/essays/loss-gamma/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/essays/loss-gamma/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/essays/loss-gamma/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/essays/loss-gamma/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="大模型与统计力学">
   <meta property="og:description" content="我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。
@@ -119,7 +119,7 @@ $$ \arg\min_{\theta\in \Theta}\int L(x,\theta)d\hat{F}(x) \triangleq \hat{\theta
     
     "abstract": "\u003cblockquote\u003e\n\u003cp\u003e我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。\u003c\/p\u003e\u003c\/blockquote\u003e\n\u003cp\u003e假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。\u003c\/p\u003e\n\u003cp\u003e$$\n\\arg\\min_{\\theta\\in \\Theta}\\int L(x,\\theta)d\\hat{F}(x) \\triangleq \\hat{\\theta}\\\\\n\\int L(x,\\hat{\\theta})dF(x) \\triangleq \\mathcal{L}\n$$\u003c\/p\u003e\n\u003cp\u003e其中 $\\hat{F}$ 为采样 cdf，样本量记 $m$。定义 $S(\\theta,x)\\triangleq \\frac{\\partial L(x,\\theta)}{\\partial \\theta},\\ S(\\theta)\\triangleq \\mathbb{E}S(\\theta,x)$.\u003c\/p\u003e\n\u003cp\u003e由 CLT 有\n$$\n\\frac{1}{m}\\sum\\lim_{i=1}^m S(\\theta,x_i) \\overset{\\text{a.}}{\\sim} \\mathcal{N}(S(\\theta_0),\\frac{1}{m}V(S(\\theta_0,x)))\n$$\u003c\/p\u003e\n\u003cp\u003e同时将损失 Taylor 展开\n$$\n\\mathcal{L} -\\mathcal{L}_{\\min} \\overset{\\text{a.}}{\\sim} \\frac{\\mathbb{E}\\frac{\\partial^2 L(x,\\theta)}{\\partial \\theta^2}}{2} (\\theta-\\theta_0)^2\n$$\u003c\/p\u003e\n\u003cp\u003e可以得到\u003cstrong\u003e损失服从一个 Gamma 分布\u003c\/strong\u003e $\\mathcal{L} -\\mathcal{L}_{\\min} \\overset{\\text{a.}}{\\sim} \\text{Gamma}(\\frac{1}{2},\\beta)$，其中\n$$\n\\beta = m \\frac{\\mathbb{E}\\frac{\\partial^2 L(x,\\theta)}{\\partial \\theta^2}}{\\mathbb{E}(\\frac{\\partial L(x,\\theta)}{\\partial \\theta})^2}\n$$\u003c\/p\u003e\n\u003cp\u003e（可将 $m$ 类比为 $\\frac{1}{T}$，第二项为 $\\frac{1}{k}$）\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/essays\/loss-gamma\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/loss-gamma\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1122,7 +1122,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Papers on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/papers/</link>
+    <link>https://laplx.github.io/haochen/papers/</link>
     <description>Recent content in Papers on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/papers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/papers/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LLM Sense-Making</title>
-      <link>http://localhost:1313/haochen/papers/nlp-senmaking/</link>
+      <link>https://laplx.github.io/haochen/papers/nlp-senmaking/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/papers/nlp-senmaking/</guid>
+      <guid>https://laplx.github.io/haochen/papers/nlp-senmaking/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Does It Make Sense? And why? A Pilot Study for Sense Making and Explanation 
     &lt;div id=&#34;does-it-make-sense-and-why-a-pilot-study-for-sense-making-and-explanation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -34,10 +34,10 @@
     
     <item>
       <title>Meta RL</title>
-      <link>http://localhost:1313/haochen/papers/metarl/</link>
+      <link>https://laplx.github.io/haochen/papers/metarl/</link>
       <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/papers/metarl/</guid>
+      <guid>https://laplx.github.io/haochen/papers/metarl/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;部分内容亦可参考&lt;a
   href=&#34;../../notes/reinforce-learn/#7-meta-rl&#34;&gt;强化学习笔记&lt;/a&gt;

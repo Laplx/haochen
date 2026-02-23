@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Database, CS, System, SQL, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/notes/database/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/notes/database/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/notes/database/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/notes/database/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="数据库及实现">
   <meta property="og:description" content="1 系统概论 #DBS：硬件；软件（应用系统，DBMS，OS）；DB；人（用户，管理员）
@@ -137,7 +137,7 @@ E-R 模型：实体、属性、联系，码、域；实体型、实体集、属�
     
     "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e1 系统概论 \r\n    \u003cdiv id=\u00221-系统概论\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#1-%e7%b3%bb%e7%bb%9f%e6%a6%82%e8%ae%ba\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eDBS：硬件；软件（应用系统，\u003cstrong\u003eDBMS\u003c\/strong\u003e，OS）；DB；人（用户，管理员）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003eDBMS 特点：结构化（数据模型）；共享性高，冗余度低且易扩充；独立性高；统一管控（安全性、完整性、并发控制、恢复）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003eDBS 结构：三级模式 \u003cstrong\u003eSchema\u003c\/strong\u003e，二级映像\u003c\/p\u003e\n\u003cp\u003e子模式（外模式）、\u003cstrong\u003e（概念）模式\u003c\/strong\u003e、内模式；物理独立性与逻辑独立性\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e外部结构：单用户式、分布式和并行、客户机\/服务器、浏览器\/服务器（SaaS、PaaS、IaaS）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e数据模型\u003c\/strong\u003e三要素：数据结构，数据操作，完整性约束\u003c\/p\u003e\n\u003cp\u003e数据定义语言 \u003cstrong\u003eDDL\u003c\/strong\u003e，数据操纵语言 \u003cstrong\u003eDML\u003c\/strong\u003e（描述式的查询意图）\u003c\/p\u003e\n\u003cp\u003e（数据抽象）现实世界 - 信息世界 - 计算机世界；概念模型 - 逻辑模型 - 物理模型\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eE-R\u003c\/strong\u003e 模型：实体、属性、联系，码、域；实体型、实体集、属性型、联系型、度；E-R 图（Chen\/Crow）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e层次（树）、网状（有向图）、关系（二维表：元组\/属性；查询效率偏低）、面向对象（维护困难）\u003c\/p\u003e\n\u003cp\u003e向量、图（知识图谱）；数据仓库\u003c\/p\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\r\n\u003ch2 class=\u0022relative group\u0022\u003e2 关系 \r\n    \u003cdiv id=\u00222-关系\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#2-%e5%85%b3%e7%b3%bb\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e关系模式 $R(U,D,Dom,F)$：元组，属性 $U$、域 $D$、笛卡尔积、关系；（属性向域的映射集 $Dom$）\u003c\/p\u003e\n\u003cp\u003e超键、候选键（码，能唯一标识元组的最小属性组）、\u003cstrong\u003e主键\u003c\/strong\u003e（主码）、\u003cstrong\u003e外键\u003c\/strong\u003e、代理键（DBMS 分配）；\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003e主属性\u003c\/strong\u003e\/非主属性，单码、全码\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e关系运算：\u003cbr\u003e\n集合运算符 $\\cap,\\ \\cup,\\ -,\\ \\times$；逻辑与比较运算符 $\\land,\\ \\vee,\\ \\neg$；\u003cbr\u003e\n专用运算符 \u003cstrong\u003e选择\u003c\/strong\u003e $\\sigma_{\\theta}$，\u003cstrong\u003e投影\u003c\/strong\u003e $\\Pi$，\u003cstrong\u003e连接\u003c\/strong\u003e $\\bowtie_{\\theta},\\ \\bowtie$（一般连接、\u003cstrong\u003e自然连接\u003c\/strong\u003e；内连接、左\/右\/全外连接 ⟕, ⟖, ⟗、反连接 $\\rhd_\\theta,\\ \\rhd$），\u003cstrong\u003e除法\u003c\/strong\u003e $\\div$（$R\\div S ={t|t\\in \\pi_X(R) \\wedge t\\times\\pi_Y(S)\\subseteq R}$，$Y$ 为 $R$ 和 $S$ 相同属性），\u003cstrong\u003e重命名\u003c\/strong\u003e $\\rho_{B\\leftarrow A}(R),\\ \\rho_{S}(R),\\ \\rho_{S(A_1,\\dots,A_n)}(R)$\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/notes\/database\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/notes\/database\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1699,7 +1699,7 @@ ANALYZE 统计信息（$T(R), V(R,A)$），基数估计时假设各属性均匀�
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Math, Numerical, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/haochen/notes/numerical/cg/" />
+  <link rel="canonical" href="https://laplx.github.io/haochen/notes/numerical/cg/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/haochen/notes/numerical/cg/">
+  <meta property="og:url" content="https://laplx.github.io/haochen/notes/numerical/cg/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="共轭梯度法">
   <meta property="og:description" content="如果初始点的选择不好或者函数行为不好时，最速下降法可能并不理想。我们先从几何和直觉上展示共轭梯度法，同时可以在后文理清数学逻辑后再来看看这两张图。
@@ -113,7 +113,7 @@ $$ \dots \overset{p_{i-1}}{\longrightarrow} x_i \overset{p_{i}}{\longrightarrow}
     
     "abstract": "\u003cp\u003e\r\n\n如果初始点的选择不好或者函数行为不好时，最速下降法可能并不理想。我们先从几何和直觉上展示共轭梯度法，同时可以在后文理清数学逻辑后再来看看这两张图。\u003c\/p\u003e\n\u003cp\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003cfigure\u003e\r\n    \u003cimg class=\u0022my-0 rounded-md\u0022 loading=\u0022lazy\u0022 alt=\u0022CG\u0022 src=\u0022.\/CG.jpg\u0022\u003e\r\n\r\n  \r\n    \u003cfigcaption\u003eCG Sketch for memory\u003c\/figcaption\u003e\r\n\u003c\/figure\u003e\r\n\u003c\/p\u003e\n\u003cp\u003e对于精确线搜索，最速下降法的前后两步的下降方向必定是垂直的，从而导致了可能的 zigzag 现象。共轭梯度法所选择的共轭方向 $p_i$ 更加具备全局性；例如图中的二次函数 $f=\\frac{1}{2}x^\\prime Ax-b^\\prime x,\\ \\nabla f = Ax-b$，第二步的方向一定指向最优点 $Ax^*=b$。右图可见共轭方向并不一定垂直，而是 $A$ 意义下的垂直：$p_i^\\prime Ap_j = 0,\\ i\\neq j$。注意到对于 $A\\in \\mathbb{S}_\u002b$，易证这一组 $\\{p_i\\}_{i=1}^n$ 线性独立，我们希望逐步获得 $x^*$ 在这组基上的表示。\u003c\/p\u003e\n\u003chr\u003e\n\u003cp\u003e我们先考虑线性版本（即上面的 $f$）。\u003c\/p\u003e\n\u003cp\u003e$$\n\\dots \\overset{p_{i-1}}{\\longrightarrow} x_i \\overset{p_{i}}{\\longrightarrow} \\dots\n$$\u003c\/p\u003e\n\u003cp\u003e假装我们能获取每一步的搜索方向 $p_i$，那么由精确线搜索知 $p_i \\perp -\\nabla f_{i\u002b1}$，其中 $\\nabla f_{i\u002b1} := \\nabla f(x_{i\u002b1})$，且 $x_i = x_0 \u002b \\sum_{j=0}^{i-1}\\alpha_j p_j$，$\\alpha_i$ 记步长。\u003c\/p\u003e\n\u003cp\u003e同时我们可以直接得到一个关于搜索步长的表达式，对 $f(x_i \u002b \\alpha_i p_i) = g(\\alpha_i),\\ g^\\prime (\\alpha_i) = 0$ 得到\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/haochen\/notes\/numerical\/cg\/",
+    "url" : "https:\/\/laplx.github.io\/haochen\/notes\/numerical\/cg\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1166,7 +1166,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="http://localhost:1313/haochen/">
+  data-url="https://laplx.github.io/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

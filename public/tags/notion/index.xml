@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notion on Hao Chen&#39;s Blog</title>
-    <link>http://localhost:1313/haochen/tags/notion/</link>
+    <link>https://laplx.github.io/haochen/tags/notion/</link>
     <description>Recent content in Notion on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/notion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/notion/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Geometric Hermeneutics</title>
-      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/25.01.10/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/25.01.10/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
     &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -56,10 +56,10 @@
     
     <item>
       <title>Infinite Turing Machine</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.01.26/</link>
       <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
     &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -93,10 +93,10 @@
     
     <item>
       <title>Regression on Channel</title>
-      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/24.04.26/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/24.04.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
     &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -115,10 +115,10 @@
     
     <item>
       <title>Theory of Theory</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.10.20/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.20/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
     &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -139,10 +139,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Knoid</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.10.06/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.10.06/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.10.06/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.06/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;知子网 
     &lt;div id=&#34;知子网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -189,10 +189,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Measure Design</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.09.22/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.22/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
     &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -225,10 +225,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Meme Alive</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.07.28/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.07.28/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.07.28/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.07.28/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;流行的生命机制 
     &lt;div id=&#34;流行的生命机制&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -275,10 +275,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Hype Significance</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.06.23/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.06.23/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.06.23/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.23/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;显著你的显著 
     &lt;div id=&#34;显著你的显著&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -340,10 +340,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Homomorphic Observation</title>
-      <link>http://localhost:1313/haochen/essays/frivols/23.06.16/</link>
+      <link>https://laplx.github.io/haochen/essays/frivols/23.06.16/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>http://localhost:1313/haochen/essays/frivols/23.06.16/</guid>
+      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.16/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;观测同态 
     &lt;div id=&#34;观测同态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
