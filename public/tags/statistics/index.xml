@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statistics on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/statistics/</link>
+    <link>http://localhost:1313/haochen/tags/statistics/</link>
     <description>Recent content in Statistics on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>语言统计学下的红楼梦续作问题</title>
-      <link>https://laplx.github.io/haochen/essays/hlm/</link>
+      <link>http://localhost:1313/haochen/essays/hlm/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/hlm/</guid>
+      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
       <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
 &lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
 我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
@@ -41,8 +41,8 @@
       /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
       /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
     &#34;
-    data-zoom-src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;
-    src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;&gt;
+    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
 
   
 &lt;/figure&gt;
@@ -68,10 +68,10 @@
     
     <item>
       <title>打卡软件 Swarm 数据分析报告</title>
-      <link>https://laplx.github.io/haochen/essays/swarm/</link>
+      <link>http://localhost:1313/haochen/essays/swarm/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/swarm/</guid>
+      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
 &lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;
@@ -102,10 +102,10 @@
     
     <item>
       <title>统计</title>
-      <link>https://laplx.github.io/haochen/notes/statistics/</link>
+      <link>http://localhost:1313/haochen/notes/statistics/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/statistics/</guid>
+      <guid>http://localhost:1313/haochen/notes/statistics/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;统计推断 
     &lt;div id=&#34;统计推断&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -169,10 +169,10 @@
     
     <item>
       <title>The Apple that Never Lands</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.11.17/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.17/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.17/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.17/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;永不落地的苹果 
     &lt;div id=&#34;永不落地的苹果&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -199,10 +199,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Measure Design</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.09.22/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.22/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
     &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -235,10 +235,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Hype Significance</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.06.23/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.23/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.23/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.23/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;显著你的显著 
     &lt;div id=&#34;显著你的显著&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/ai/</link>
+    <link>http://localhost:1313/haochen/tags/ai/</link>
     <description>Recent content in AI on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>强化学习</title>
-      <link>https://laplx.github.io/haochen/notes/reinforce-learn/</link>
+      <link>http://localhost:1313/haochen/notes/reinforce-learn/</link>
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/reinforce-learn/</guid>
+      <guid>http://localhost:1313/haochen/notes/reinforce-learn/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Tables in RL for LLM 
     &lt;div id=&#34;tables-in-rl-for-llm&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -160,10 +160,10 @@
     
     <item>
       <title>大模型与统计力学</title>
-      <link>https://laplx.github.io/haochen/essays/loss-gamma/</link>
+      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/loss-gamma/</guid>
+      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
@@ -190,10 +190,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>生成模型</title>
-      <link>https://laplx.github.io/haochen/notes/generative/vae/</link>
+      <link>http://localhost:1313/haochen/notes/generative/vae/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/generative/vae/</guid>
+      <guid>http://localhost:1313/haochen/notes/generative/vae/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;VAE 
     &lt;div id=&#34;vae&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -227,10 +227,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>自然语言处理</title>
-      <link>https://laplx.github.io/haochen/notes/nlp/</link>
+      <link>http://localhost:1313/haochen/notes/nlp/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/nlp/</guid>
+      <guid>http://localhost:1313/haochen/notes/nlp/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Attetion &amp;amp; Transformer 
     &lt;div id=&#34;attetion--transformer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -246,10 +246,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>智能引论</title>
-      <link>https://laplx.github.io/haochen/notes/ai-basics/</link>
+      <link>http://localhost:1313/haochen/notes/ai-basics/</link>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/ai-basics/</guid>
+      <guid>http://localhost:1313/haochen/notes/ai-basics/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;0 Intro 
     &lt;div id=&#34;0-intro&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

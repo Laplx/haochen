@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="AI, Algorithm, Search, Knowledge Representation, " />
   
   
-  <link rel="canonical" href="https://laplx.github.io/haochen/notes/ai-basics/" />
+  <link rel="canonical" href="http://localhost:1313/haochen/notes/ai-basics/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="https://laplx.github.io/haochen/notes/ai-basics/">
+  <meta property="og:url" content="http://localhost:1313/haochen/notes/ai-basics/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="智能引论">
   <meta property="og:description" content="0 Intro #智能计算的方法： #推理（符号主义），包括归纳、演绎、因果，e.g. 专家系统
@@ -115,7 +115,7 @@ AI 发展技术形态： #从数据到知识到决策的大数据智能、多�
     
     "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e0 Intro \r\n    \u003cdiv id=\u00220-intro\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#0-intro\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch4 class=\u0022relative group\u0022\u003e智能计算的方法： \r\n    \u003cdiv id=\u0022智能计算的方法\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%99%ba%e8%83%bd%e8%ae%a1%e7%ae%97%e7%9a%84%e6%96%b9%e6%b3%95\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h4\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e推理（符号主义），包括归纳、演绎、因果，e.g. 专家系统\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e搜索（问题求解），包括无信息（深\/广度优先）、有信息（启发式）、对抗（e.g. Minimax, alpha-beta, MCT）\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e机器学习（数据驱动），包括\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e监督：判别式 $P(y|x)$（e.g. 回归, 提升, SVM, DecisionTree）与生成式 $P(X,Y)$（e.g. LDA, HMM）\u003c\/li\u003e\n\u003cli\u003e无监督：聚类（e.g K-means, 层次, 谱）、降维（线性（e.g. PCA, LDA\/FDA, CCA）与非线性 i.e. 流形学习）、EM\u003c\/li\u003e\n\u003cli\u003e半监督等\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003e强化学习（行为主义），MDP，exploration-exploitation tradeoff，MARL {博弈论可以提供多智能体环境下结果的刻画，或寻找合理解的非启发的方式，但不认为是核心}\u003c\/p\u003e\n\u003cp\u003eesp. 深度学习（联结主义）作为监督学习方法，并和强化学习结合（如拟合 Q 函数）；类脑计算\u003c\/p\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\r\n\u003ch4 class=\u0022relative group\u0022\u003eAI 发展技术形态： \r\n    \u003cdiv id=\u0022ai-发展技术形态\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#ai-%e5%8f%91%e5%b1%95%e6%8a%80%e6%9c%af%e5%bd%a2%e6%80%81\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h4\u003e\r\n\u003cp\u003e从数据到知识到决策的大数据智能、多模态智能、群体智能、人机混合的增强智能、机器人的智能自主系统\n{总而言之是大量的具备学习探索能力、独立交互各类信息、人在回路的融合社会}\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/laplx.github.io\/haochen\/notes\/ai-basics\/",
+    "url" : "http:\/\/localhost:1313\/haochen\/notes\/ai-basics\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1326,7 +1326,7 @@ AI 发展技术形态： #从数据到知识到决策的大数据智能、多�
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="https://laplx.github.io/haochen/">
+  data-url="http://localhost:1313/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

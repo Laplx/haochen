@@ -2,30 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Essays on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/essays/</link>
+    <link>http://localhost:1313/haochen/essays/</link>
     <description>Recent content in Essays on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/essays/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/essays/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ARC-AGI(Abstraction and Reasoning Corpus)</title>
-      <link>https://laplx.github.io/haochen/essays/arc/</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/haochen/essays/arc/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/arc/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;概况 Overview 
-    &lt;div id=&#34;概况-overview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+      <guid>http://localhost:1313/haochen/essays/arc/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;概况 Introduction 
+    &lt;div id=&#34;概况-introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
     &lt;span
         class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%a6%82%e5%86%b5-overview&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%a6%82%e5%86%b5-introduction&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
     &lt;/span&gt;        
     
 &lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./example1.png&#34; style=&#34;zoom:70%;&#34;&gt; &lt;img src=&#34;./example2.png&#34; style=&#34;zoom:71%;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;./example3.png&#34; style=&#34;zoom:60%;&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;train&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;output&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;..&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;output&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;..&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]},&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;..&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;..&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;output&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;..&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]}]}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;./leaderboard.jpg&#34; style=&#34;zoom:50%;&#34;&gt;
+&lt;p&gt;in official kaggle contest accuracy is based on pass@2&lt;/p&gt;
+&lt;p&gt;ARC3 is much more different from ARC1/2, stressing online learning and is like (meta-)rl&lt;/p&gt;
+&lt;p&gt;Engeering keys: data, fine-tuning, post-processing&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;数据增强 Data Augmentation 
     &lt;div id=&#34;数据增强-data-augmentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -36,45 +65,16 @@
     &lt;/span&gt;        
     
 &lt;/h2&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;微调 Fine-tuning 
-    &lt;div id=&#34;微调-fine-tuning&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%be%ae%e8%b0%83-fine-tuning&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;后处理优化 Post-Training Optimization 
-    &lt;div id=&#34;后处理优化-post-training-optimization&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%90%8e%e5%a4%84%e7%90%86%e4%bc%98%e5%8c%96-post-training-optimization&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-
-&lt;h3 class=&#34;relative group&#34;&gt;强化训练 SDPO 
-    &lt;div id=&#34;强化训练-sdpo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%bc%ba%e5%8c%96%e8%ae%ad%e7%bb%83-sdpo&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h3&gt;</description>
+&lt;p&gt;扩充任务方法：&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>大模型与统计力学</title>
-      <link>https://laplx.github.io/haochen/essays/loss-gamma/</link>
+      <link>http://localhost:1313/haochen/essays/loss-gamma/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/loss-gamma/</guid>
+      <guid>http://localhost:1313/haochen/essays/loss-gamma/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;我希望把平衡态和非平衡态统计力学的一些思路和结论平移到大模型的训练上，以解释 Scaling Law、涌现等现象，会持续补充内容。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设外界环境由数据集定义，样本量对应温度，在此温度下的动力学由训练方法确定，平衡态为经该样本量训练得到的最佳模型。&lt;/p&gt;
@@ -101,10 +101,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>语言统计学下的红楼梦续作问题</title>
-      <link>https://laplx.github.io/haochen/essays/hlm/</link>
+      <link>http://localhost:1313/haochen/essays/hlm/</link>
       <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/hlm/</guid>
+      <guid>http://localhost:1313/haochen/essays/hlm/</guid>
       <description>&lt;p&gt;红楼遗梦——红楼梦作者有谁？胡适的前 80 后 40 之说是否正确？&lt;/p&gt;
 &lt;p&gt;为了获取高质量的文本，最后选择了直接爬取“红楼星语”网站。&lt;br&gt;
 我以庚辰本（北大脂批本）作 1-80 回，81-120 回采用程乙本。（庚辰本 17/18 未分回，李文中对半拆开。）&lt;/p&gt;
@@ -129,8 +129,8 @@ $$&lt;/p&gt;
       /haochen/essays/hlm/clustering_hu_a2c59fec883219f3.png  660w,
       /haochen/essays/hlm/clustering_hu_3d5239f250bf016.png 1280w
     &#34;
-    data-zoom-src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;
-    src=&#34;https://laplx.github.io/haochen/essays/hlm/clustering.png&#34;&gt;
+    data-zoom-src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;
+    src=&#34;http://localhost:1313/haochen/essays/hlm/clustering.png&#34;&gt;
 
   
 &lt;/figure&gt;
@@ -156,10 +156,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Planck 公式在历史上是怎么诞生的</title>
-      <link>https://laplx.github.io/haochen/essays/planck/</link>
+      <link>http://localhost:1313/haochen/essays/planck/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/planck/</guid>
+      <guid>http://localhost:1313/haochen/essays/planck/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Wein：热力学结合实验定律猜测 
     &lt;div id=&#34;wein热力学结合实验定律猜测&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -198,10 +198,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Geometric Hermeneutics</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/25.01.10/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/25.01.10/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/25.01.10/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/25.01.10/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语言的几何学阐释 
     &lt;div id=&#34;语言的几何学阐释&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -241,10 +241,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Attempts at Symmetry in Game Theory</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.08.02/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.08.02/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.08.02/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.08.02/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;关于对称性的类比尝试 
     &lt;div id=&#34;关于对称性的类比尝试&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -261,10 +261,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>打卡软件 Swarm 数据分析报告</title>
-      <link>https://laplx.github.io/haochen/essays/swarm/</link>
+      <link>http://localhost:1313/haochen/essays/swarm/</link>
       <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/swarm/</guid>
+      <guid>http://localhost:1313/haochen/essays/swarm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Swarm 是 4sq 的一款依靠签到的社交应用。用户可以在自己感兴趣的地点打卡发照片，展示给好友。&lt;/p&gt;
 &lt;p&gt;本数据集中给出了三个城市范围内的签到数据和对应签到用户的个人信息数据，分别是纽约市（nyc）、旧金山（sfo）和香港（hk）。&lt;/p&gt;
@@ -295,10 +295,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Ludology</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.07.12/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.07.12/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.07.12/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.07.12/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;游戏论 
     &lt;div id=&#34;游戏论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -333,10 +333,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>New Conway&#39;s Automata</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.09.08/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.08/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.08/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.08/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;新生命游戏 
     &lt;div id=&#34;新生命游戏&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -431,10 +431,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Infinite Turing Machine</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.01.26/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.26/</link>
       <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.26/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;无限图灵机 
     &lt;div id=&#34;无限图灵机&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -468,10 +468,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Astrofinance</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.01.19/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.19/</link>
       <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.19/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.19/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;天体金融学 
     &lt;div id=&#34;天体金融学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -507,10 +507,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Regression on Channel</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.04.26/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.04.26/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.04.26/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.04.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;回归在信道上 
     &lt;div id=&#34;回归在信道上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -529,10 +529,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Newton 力学纲要</title>
-      <link>https://laplx.github.io/haochen/essays/newton/</link>
+      <link>http://localhost:1313/haochen/essays/newton/</link>
       <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/newton/</guid>
+      <guid>http://localhost:1313/haochen/essays/newton/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Galileo 时空 
     &lt;div id=&#34;galileo-时空&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -578,10 +578,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>国际金融危机的分析框架</title>
-      <link>https://laplx.github.io/haochen/essays/tirole/</link>
+      <link>http://localhost:1313/haochen/essays/tirole/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/tirole/</guid>
+      <guid>http://localhost:1313/haochen/essays/tirole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;介绍 
     &lt;div id=&#34;介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -635,10 +635,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>CC Theorem</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.01.05/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.05/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.05/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.05/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;CC 定理 
     &lt;div id=&#34;cc-定理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -669,10 +669,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Theory about Making Friends</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.12.29/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.12.29/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.29/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.12.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;交友论 
     &lt;div id=&#34;交友论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -693,10 +693,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Dividend Signaling Model</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.12.15/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.12.15/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.15/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.12.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;一个股利信号模型 
     &lt;div id=&#34;一个股利信号模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -729,10 +729,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Model for the Nations</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.11.24/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.24/</link>
       <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.24/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.24/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;国际关系模型 
     &lt;div id=&#34;国际关系模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -759,10 +759,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>谈竞赛</title>
-      <link>https://laplx.github.io/haochen/essays/olympic/</link>
+      <link>http://localhost:1313/haochen/essays/olympic/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/olympic/</guid>
+      <guid>http://localhost:1313/haochen/essays/olympic/</guid>
       <description>&lt;p&gt;​		刚好看到《金榜题名之后》和一篇北大教育研究的论文，想起曾经和一个人讨论过其所谓的&amp;rsquo;竞赛绑架论&amp;rsquo;。虽然高考、大学教育的讨论很火，但似乎没人写过关于高中竞赛的一些文字…于是突然想回忆一下竞赛这件事，不过我也只能从我的视角发表一些观点。&lt;/p&gt;
 &lt;p&gt;​		很多关于竞赛的争论本质上是精英文化和大众文化对话语权的争夺（譬如强基计划的种种争论）。&lt;/p&gt;
 &lt;p&gt;​		不过准确来说，同国际教育、素质教育、领导力教育不同，竞赛是介于大众和精英之间的&amp;rsquo;亚精英&amp;rsquo;。这使得大众的态度相比正宗的海淀精英教育对竞赛更加软化，在绝对的能力面前转而攻讦其他（如&amp;rsquo;为 🇺🇸 服务&amp;rsquo;）——崇拜和仇视是对立统一的。但&amp;rsquo;无产阶级&amp;rsquo;不是&amp;rsquo;普通阶级&amp;rsquo;。&lt;/p&gt;
@@ -782,10 +782,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>The Apple that Never Lands</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.11.17/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.17/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.17/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.17/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;永不落地的苹果 
     &lt;div id=&#34;永不落地的苹果&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -812,20 +812,20 @@ $$&lt;/p&gt;
     
     <item>
       <title>Miller-Orr 结论推导</title>
-      <link>https://laplx.github.io/haochen/essays/miller-orr/</link>
+      <link>http://localhost:1313/haochen/essays/miller-orr/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/miller-orr/</guid>
+      <guid>http://localhost:1313/haochen/essays/miller-orr/</guid>
       <description>&lt;img src=&#34;./millerorr.jpg&#34; style=&#34;zoom:50%;&#34;&gt;</description>
       
     </item>
     
     <item>
       <title>Love in Evolution and Equilirium</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.11.03/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.03/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.03/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.03/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;暧昧：进化与均衡 
     &lt;div id=&#34;暧昧进化与均衡&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -859,10 +859,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Theory of Theory</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.10.20/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.20/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.20/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.20/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;理论的理论 
     &lt;div id=&#34;理论的理论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -883,10 +883,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Knoid</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.10.06/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.10.06/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.10.06/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.10.06/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;知子网 
     &lt;div id=&#34;知子网&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -933,10 +933,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>The Limit of Handwritting</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.09.29/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.29/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.29/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.29/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;书写有极限吗 
     &lt;div id=&#34;书写有极限吗&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -971,10 +971,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Measure Design</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.09.22/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.22/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.22/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.22/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;建筑设计的计量 
     &lt;div id=&#34;建筑设计的计量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1007,10 +1007,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Can I Update in Time</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.09.15/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.15/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.15/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;更新之谜 
     &lt;div id=&#34;更新之谜&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1027,10 +1027,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Theory of lazing in military training</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.09.01/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.09.01/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.09.01/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.09.01/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;军训偷懒学 
     &lt;div id=&#34;军训偷懒学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1096,10 +1096,10 @@ calculate the length of each interval and add then together.
     
     <item>
       <title>Choices at traffic lights</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/rglights/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/rglights/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/rglights/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/rglights/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;最简单的模型 
     &lt;div id=&#34;最简单的模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1134,10 +1134,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Meme Alive</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.07.28/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.28/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.07.28/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.28/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;流行的生命机制 
     &lt;div id=&#34;流行的生命机制&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1184,10 +1184,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Semantic Information</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.07.14/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.07.14/</link>
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.07.14/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.07.14/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;语义信息量 
     &lt;div id=&#34;语义信息量&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1220,10 +1220,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Hype Significance</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.06.23/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.23/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.23/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.23/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;显著你的显著 
     &lt;div id=&#34;显著你的显著&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1285,10 +1285,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>民科小传</title>
-      <link>https://laplx.github.io/haochen/essays/folk-science/</link>
+      <link>http://localhost:1313/haochen/essays/folk-science/</link>
       <pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/folk-science/</guid>
+      <guid>http://localhost:1313/haochen/essays/folk-science/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;此文为田松所作上海科学技术出版社 03 年出版的《永动机与哥德巴赫猜想》一书，由我收集文字并勘误，添加了附言与进一步资料。&lt;/p&gt;&lt;/blockquote&gt;
 
@@ -1340,10 +1340,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Homomorphic Observation</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.06.16/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.16/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.16/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.16/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;观测同态 
     &lt;div id=&#34;观测同态&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1364,10 +1364,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>行乞寺记</title>
-      <link>https://laplx.github.io/haochen/essays/xingqisiji/</link>
+      <link>http://localhost:1313/haochen/essays/xingqisiji/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/xingqisiji/</guid>
+      <guid>http://localhost:1313/haochen/essays/xingqisiji/</guid>
       <description>&lt;p&gt;行乞寺原微信寺 传由知州马云建也 为智甫长老主持 诵习功德数十载 香火绵盛 然此后至余已几近泯没 寺内仅一假僧名冯况者 德州人 盖余交游所识也 时暇日 步上肯山 山水钟秀 一寺蔽隐林中 辄异之而拾往 但见寺前手书一联 &amp;lsquo;肯得济过行乞寺 感快慰卧毋仕园&amp;rsquo; 旋况出 相谈甚欢 况言之曰行乞得济之寺 其原书生 后罢儒业 乃至此而安&lt;/p&gt;
 &lt;p&gt;延余入 寺屋三楹 后辟一空地 名为毋仕园 其中清谧 陶然而卧 诚乐也 况欣而邀余共食 行乞寺所享奇肴 呼曰&amp;rsquo;饕餐&amp;rsquo; 其乃何物耶 一曰鸡脍 一曰黍条 更有甚者 盖笔酣墨饱之时 挥毫弃箸 蘸之即食 曰酣饱包 况每言及必大笑 只此毋仕 尽享幽会饕餐也哉 然好景易逝 是筵难再 自余得举 奔波海内而不返焉&lt;/p&gt;
 &lt;p&gt;德基四年秋 余除江州通判 过德州 时人竟皆传行乞寺盛名 顾羁行匆匆 恨亡一见 又三年 迁德州府录事参军 忽而念之 径造其寺 全然一无 未闻况音也 后余访之再 苔蔓丛芜 垣墙不在 隳颓如此 不胜唏吁&lt;/p&gt;
@@ -1377,10 +1377,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Dots and Boxes</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.06.09/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.09/</link>
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.09/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.09/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;划线围格 
     &lt;div id=&#34;划线围格&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1418,10 +1418,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Introduction to Roll Theory</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.05.26/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.05.26/</link>
       <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.05.26/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.05.26/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;选课学导论 
     &lt;div id=&#34;选课学导论&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1440,10 +1440,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Moments Entropy</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.05.19/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.05.19/</link>
       <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.05.19/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.05.19/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;朋友圈熵 
     &lt;div id=&#34;朋友圈熵&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -1461,10 +1461,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Style Guide for Python Code</title>
-      <link>https://laplx.github.io/haochen/essays/pypep8/</link>
+      <link>http://localhost:1313/haochen/essays/pypep8/</link>
       <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/pypep8/</guid>
+      <guid>http://localhost:1313/haochen/essays/pypep8/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1  Lines and Indentation 
     &lt;div id=&#34;1--lines-and-indentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

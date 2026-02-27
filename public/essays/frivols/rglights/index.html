@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Model, " />
   
   
-  <link rel="canonical" href="https://laplx.github.io/haochen/essays/frivols/rglights/" />
+  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/rglights/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="https://laplx.github.io/haochen/essays/frivols/rglights/">
+  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/rglights/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Choices at traffic lights">
   <meta property="og:description" content="最简单的模型 #假设城市的道路只有东南西北走向，起点与终点的方向固定。那么从起点到终点的所有最短路径长度都等于 1-范数，转过的角度必为 { 0, 左90, 右90 } 之一。
@@ -110,7 +110,7 @@ $$ \begin{array}{l} x - z = p \\ x &#43; y &#43; z = n \end{array} $$
     
     "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e最简单的模型 \r\n    \u003cdiv id=\u0022最简单的模型\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%9c%80%e7%ae%80%e5%8d%95%e7%9a%84%e6%a8%a1%e5%9e%8b\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e假设城市的道路只有东南西北走向，起点与终点的方向固定。那么从起点到终点的所有最短路径长度都等于 1-范数，转过的角度必为 { 0, 左90, 右90 } 之一。\u003c\/p\u003e\n\u003cp\u003e考虑所有红绿灯的计时是独立同分布。假设右转一直可行，直行与左转持续时间相同，为四分之一个周期。那么假设路上的左转数为 x，直行数为 y，右转数为 z，总共转过角度 p = 0\/1\/-1 for { 0, \u002b90, -90 }，总共经过路口数 n 一定。有小学二年级的方程\u003c\/p\u003e\n\u003cp\u003e$$\n\\begin{array}{l}\nx - z = p \\\\\nx \u002b y \u002b z = n\n\\end{array}\n$$\u003c\/p\u003e\n\u003cp\u003e是一组不定方程。C(1， -2， 1)\u003csup\u003eT\u003c\/sup\u003e 是齐次方程的通解。我们希望总共的等待时间 $T = x \u002b y$ 最小，就是希望 z 最大，x 最大，y 最小，得到一个显然但不是那么有用的结论：我们应该优先选择左转或右转，尽量减少直行。\u003c\/p\u003e\n\r\n\u003ch3 class=\u0022relative group\u0022\u003e过于理想化的因素 \r\n    \u003cdiv id=\u0022过于理想化的因素\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e8%bf%87%e4%ba%8e%e7%90%86%e6%83%b3%e5%8c%96%e7%9a%84%e5%9b%a0%e7%b4%a0\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e然而城市的道路不总是四四方方，不同道路的容量、流量、路况各不相同，不同转向的绿灯持续时间、转向消耗时间、危险性等各不相同，何况红绿灯间未必独立，也未必同规律。因此在路面上常出现以下几种情况。\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/frivols\/rglights\/",
+    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/rglights\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1270,7 +1270,7 @@ $$</p>
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="https://laplx.github.io/haochen/">
+  data-url="http://localhost:1313/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

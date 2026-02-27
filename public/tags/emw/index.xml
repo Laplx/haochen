@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>EMW on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/emw/</link>
+    <link>http://localhost:1313/haochen/tags/emw/</link>
     <description>Recent content in EMW on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/emw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/emw/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Stokes 公式</title>
-      <link>https://laplx.github.io/haochen/notes/stokes/</link>
+      <link>http://localhost:1313/haochen/notes/stokes/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/stokes/</guid>
+      <guid>http://localhost:1313/haochen/notes/stokes/</guid>
       <description>&lt;p&gt;
 
 假设某界面上下有四束平面电磁波，介质 1 中入射与出射电磁波为 $\vec{E}_{1}, \vec{E}_{1}^{\prime}$，介质 2 中入射与出射电磁波为 $\vec{E}_{2}, \vec{E}_{2}^{\prime}$。&lt;/p&gt;

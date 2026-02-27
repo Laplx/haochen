@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Game on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/game/</link>
+    <link>http://localhost:1313/haochen/tags/game/</link>
     <description>Recent content in Game on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/game/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Attempts at Symmetry in Game Theory</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.08.02/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.08.02/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.08.02/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.08.02/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;关于对称性的类比尝试 
     &lt;div id=&#34;关于对称性的类比尝试&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -33,10 +33,10 @@
     
     <item>
       <title>博弈论</title>
-      <link>https://laplx.github.io/haochen/notes/game/</link>
+      <link>http://localhost:1313/haochen/notes/game/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/game/</guid>
+      <guid>http://localhost:1313/haochen/notes/game/</guid>
       <description>&lt;p&gt;传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。&lt;/p&gt;
 &lt;p&gt;下面的讲义为本人重新基于 belief 概念整理后的形式化理论，并借鉴拓扑的思路分析不同博弈中的不变性。&lt;/p&gt;
 &lt;hr&gt;
@@ -75,10 +75,10 @@
     
     <item>
       <title>Dividend Signaling Model</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.12.15/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.12.15/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.12.15/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.12.15/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;一个股利信号模型 
     &lt;div id=&#34;一个股利信号模型&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -111,10 +111,10 @@
     
     <item>
       <title>Love in Evolution and Equilirium</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.11.03/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.11.03/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.11.03/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.11.03/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;暧昧：进化与均衡 
     &lt;div id=&#34;暧昧进化与均衡&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -148,10 +148,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Dots and Boxes</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/23.06.09/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/23.06.09/</link>
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/23.06.09/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/23.06.09/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;划线围格 
     &lt;div id=&#34;划线围格&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

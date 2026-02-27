@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Math, Model, Misc, " />
   
   
-  <link rel="canonical" href="https://laplx.github.io/haochen/essays/frivols/23.09.15/" />
+  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/23.09.15/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="https://laplx.github.io/haochen/essays/frivols/23.09.15/">
+  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/23.09.15/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Can I Update in Time">
   <meta property="og:description" content="更新之谜 #（发现真是很久没有更新这么困难了！很难说是自己不去动脑思考了还是对内容的要求变高了……于是这周来试着模型化一下这件事，但我并未给出解答）
@@ -106,7 +106,7 @@
     
     "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e更新之谜 \r\n    \u003cdiv id=\u0022更新之谜\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%9b%b4%e6%96%b0%e4%b9%8b%e8%b0%9c\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e（发现真是很久没有更新这么困难了！很难说是自己不去动脑思考了还是对内容的要求变高了……于是这周来试着模型化一下这件事，但我并未给出解答）\u003c\/p\u003e\n\u003cp\u003e我们把 $T$ 记两个星期五之间的一个更新区间。idea 的到来视作 Poisson 过程，其参数为 $\\lambda$ 。在产生一个 idea 之后，我会花费一定的时间思考以判断和调整其价值。我们假设 idea 们都具有一个 unknown 的 actual quality $g$ ，服从指数分布 $ f(g) = \\frac{1}{g_e} e^{-\\frac{g}{g_e}}， where\\ g_e = E(g)$ 。（准确来说应该是两者独立，$dt$ 时间段内产生质量 $g$ 附近 $dg$ 元段的 idea 的概率是 $\\lambda f(g)dtdg$ ）刚产生时我对它的认知为 $g(0)$，其后如果花的思考时间 $t_k$ 越多，对其的估计也能越准，即 $g(t) \\sim \\mathcal N(g, \\sigma^2(t)),\\ where\\ \\sigma^2(t)=\\sigma_0^2e^{-\\alpha t}$ （有待商榷，因为我的认知大概是连续光滑变动的，但或许我可以设计一个合适的随机过程使得累积量满足这样的正态分布）。我可以根据自己的 strategy 随时终止对此 idea 的思考和研究（要么感觉不错很有价值就写这个了，要么感觉价值很低算了算了）。如果没有达到标准，在 $t_1 \u002b t_{k1}$（$t_1$ 为产生用时，满足指数衰减）之后我可以继续等待 $t_2$ ，并对其进行思考。\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/frivols\/23.09.15\/",
+    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/23.09.15\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1223,7 +1223,7 @@ $$
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="https://laplx.github.io/haochen/">
+  data-url="http://localhost:1313/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

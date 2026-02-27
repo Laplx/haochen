@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   
   
   
-  <link rel="canonical" href="https://laplx.github.io/haochen/essays/arc/" />
+  <link rel="canonical" href="http://localhost:1313/haochen/essays/arc/" />
   
   
   
@@ -73,20 +73,26 @@
   
   
   
-  <meta property="og:url" content="https://laplx.github.io/haochen/essays/arc/">
+  <meta property="og:url" content="http://localhost:1313/haochen/essays/arc/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="ARC-AGI(Abstraction and Reasoning Corpus)">
-  <meta property="og:description" content="概况 Overview #数据增强 Data Augmentation #微调 Fine-tuning #后处理优化 Post-Training Optimization #强化训练 SDPO #">
+  <meta property="og:description" content="概况 Introduction #{&#34;train&#34;: [{&#34;input&#34;: [ [0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 8], [0, 0, 8, 8, 8, 0, 0, 8, 8, 8, 8], [0, 0, 8, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 0, 8, 8, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0]], &#34;output&#34;: [ [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 3, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0]]}, {&#34;input&#34;: [..], &#34;output&#34;: [..]}, .. ], &#34;test&#34;: [{&#34;input&#34;: [..], &#34;output&#34;: [..]}]} in official kaggle contest accuracy is based on pass@2
+ARC3 is much more different from ARC1/2, stressing online learning and is like (meta-)rl
+Engeering keys: data, fine-tuning, post-processing
+数据增强 Data Augmentation #扩充任务方法：">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essays">
-    <meta property="article:published_time" content="2026-02-05T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-02-05T00:00:00+00:00">
+    <meta property="article:published_time" content="2026-02-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-15T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ARC-AGI(Abstraction and Reasoning Corpus)">
-  <meta name="twitter:description" content="概况 Overview #数据增强 Data Augmentation #微调 Fine-tuning #后处理优化 Post-Training Optimization #强化训练 SDPO #">
+  <meta name="twitter:description" content="概况 Introduction #{&#34;train&#34;: [{&#34;input&#34;: [ [0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 8], [0, 0, 8, 8, 8, 0, 0, 8, 8, 8, 8], [0, 0, 8, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 0, 8, 8, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0]], &#34;output&#34;: [ [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 3, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0]]}, {&#34;input&#34;: [..], &#34;output&#34;: [..]}, .. ], &#34;test&#34;: [{&#34;input&#34;: [..], &#34;output&#34;: [..]}]} in official kaggle contest accuracy is based on pass@2
+ARC3 is much more different from ARC1/2, stressing online learning and is like (meta-)rl
+Engeering keys: data, fine-tuning, post-processing
+数据增强 Data Augmentation #扩充任务方法：">
 
     
   
@@ -99,23 +105,23 @@
     "name": "ARC-AGI(Abstraction and Reasoning Corpus)",
     "headline": "ARC-AGI(Abstraction and Reasoning Corpus)",
     
-    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e概况 Overview \r\n    \u003cdiv id=\u0022概况-overview\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%a6%82%e5%86%b5-overview\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch2 class=\u0022relative group\u0022\u003e数据增强 Data Augmentation \r\n    \u003cdiv id=\u0022数据增强-data-augmentation\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%95%b0%e6%8d%ae%e5%a2%9e%e5%bc%ba-data-augmentation\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch2 class=\u0022relative group\u0022\u003e微调 Fine-tuning \r\n    \u003cdiv id=\u0022微调-fine-tuning\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%be%ae%e8%b0%83-fine-tuning\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch2 class=\u0022relative group\u0022\u003e后处理优化 Post-Training Optimization \r\n    \u003cdiv id=\u0022后处理优化-post-training-optimization\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%90%8e%e5%a4%84%e7%90%86%e4%bc%98%e5%8c%96-post-training-optimization\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\r\n\u003ch3 class=\u0022relative group\u0022\u003e强化训练 SDPO \r\n    \u003cdiv id=\u0022强化训练-sdpo\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%bc%ba%e5%8c%96%e8%ae%ad%e7%bb%83-sdpo\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e",
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e概况 Introduction \r\n    \u003cdiv id=\u0022概况-introduction\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%a6%82%e5%86%b5-introduction\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cp\u003e\u003cimg src=\u0022.\/example1.png\u0022 style=\u0022zoom:70%;\u0022\u003e \u003cimg src=\u0022.\/example2.png\u0022 style=\u0022zoom:71%;\u0022\u003e\u003c\/p\u003e\n\u003cimg src=\u0022.\/example3.png\u0022 style=\u0022zoom:60%;\u0022\u003e\r\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 class=\u0022chroma\u0022\u003e\u003ccode class=\u0022language-json\u0022 data-lang=\u0022json\u0022\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e\u003cspan class=\u0022p\u0022\u003e{\u003c\/span\u003e\u003cspan class=\u0022nt\u0022\u003e\u0026#34;train\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[{\u003c\/span\u003e\u003cspan class=\u0022nt\u0022\u003e\u0026#34;input\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e8\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e]],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022nt\u0022\u003e\u0026#34;output\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e,\u003c\/span\u003e \u003cspan class=\u0022mi\u0022\u003e0\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e]]},\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e{\u003c\/span\u003e\u003cspan class=\u0022nt\u0022\u003e\u0026#34;input\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022err\u0022\u003e..\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \u003cspan class=\u0022nt\u0022\u003e\u0026#34;output\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022err\u0022\u003e..\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e]},\u003c\/span\u003e \u003cspan class=\u0022err\u0022\u003e..\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022cl\u0022\u003e  \u003cspan class=\u0022nt\u0022\u003e\u0026#34;test\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[{\u003c\/span\u003e\u003cspan class=\u0022nt\u0022\u003e\u0026#34;input\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022err\u0022\u003e..\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e],\u003c\/span\u003e \u003cspan class=\u0022nt\u0022\u003e\u0026#34;output\u0026#34;\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e:\u003c\/span\u003e \u003cspan class=\u0022p\u0022\u003e[\u003c\/span\u003e\u003cspan class=\u0022err\u0022\u003e..\u003c\/span\u003e\u003cspan class=\u0022p\u0022\u003e]}]}\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cimg src=\u0022.\/leaderboard.jpg\u0022 style=\u0022zoom:50%;\u0022\u003e\r\n\u003cp\u003ein official kaggle contest accuracy is based on pass@2\u003c\/p\u003e\n\u003cp\u003eARC3 is much more different from ARC1\/2, stressing online learning and is like (meta-)rl\u003c\/p\u003e\n\u003cp\u003eEngeering keys: data, fine-tuning, post-processing\u003c\/p\u003e\n\r\n\u003ch2 class=\u0022relative group\u0022\u003e数据增强 Data Augmentation \r\n    \u003cdiv id=\u0022数据增强-data-augmentation\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e6%95%b0%e6%8d%ae%e5%a2%9e%e5%bc%ba-data-augmentation\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h2\u003e\r\n\u003cp\u003e扩充任务方法：\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/arc\/",
+    "url" : "http:\/\/localhost:1313\/haochen\/essays\/arc\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-02-05T00:00:00\u002b00:00",
-    "datePublished": "2026-02-05T00:00:00\u002b00:00",
+    "dateCreated": "2026-02-15T00:00:00\u002b00:00",
+    "datePublished": "2026-02-15T00:00:00\u002b00:00",
     
-    "dateModified": "2026-02-05T00:00:00\u002b00:00",
+    "dateModified": "2026-02-15T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "17"
+    "wordCount": "883"
   }]
   </script>
 
@@ -747,7 +753,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-02-05T00:00:00&#43;00:00">February 5, 2026</time><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-02-15T00:00:00&#43;00:00">February 15, 2026</time><span class="px-2 text-primary-500">&middot;</span>
 
 
 
@@ -847,14 +853,11 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#概况-overview">概况 Overview</a></li>
+    <li><a href="#概况-introduction">概况 Introduction</a></li>
     <li><a href="#数据增强-data-augmentation">数据增强 Data Augmentation</a></li>
     <li><a href="#微调-fine-tuning">微调 Fine-tuning</a></li>
-    <li><a href="#后处理优化-post-training-optimization">后处理优化 Post-Training Optimization</a>
-      <ul>
-        <li><a href="#强化训练-sdpo">强化训练 SDPO</a></li>
-      </ul>
-    </li>
+    <li><a href="#推理优化-post-training-optimization">推理优化 Post-Training Optimization</a></li>
+    <li><a href="#强化训练-sdpo">强化训练 SDPO</a></li>
   </ul>
 </nav>
   </div>
@@ -868,14 +871,11 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#概况-overview">概况 Overview</a></li>
+    <li><a href="#概况-introduction">概况 Introduction</a></li>
     <li><a href="#数据增强-data-augmentation">数据增强 Data Augmentation</a></li>
     <li><a href="#微调-fine-tuning">微调 Fine-tuning</a></li>
-    <li><a href="#后处理优化-post-training-optimization">后处理优化 Post-Training Optimization</a>
-      <ul>
-        <li><a href="#强化训练-sdpo">强化训练 SDPO</a></li>
-      </ul>
-    </li>
+    <li><a href="#推理优化-post-training-optimization">推理优化 Post-Training Optimization</a></li>
+    <li><a href="#强化训练-sdpo">强化训练 SDPO</a></li>
   </ul>
 </nav>
   </div>
@@ -981,15 +981,44 @@
           
 
 
-<h2 class="relative group">概况 Overview 
-    <div id="概况-overview" class="anchor"></div>
+<h2 class="relative group">概况 Introduction 
+    <div id="概况-introduction" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%a6%82%e5%86%b5-overview" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%a6%82%e5%86%b5-introduction" aria-label="锚点">#</a>
     </span>        
     
 </h2>
+<p><img src="./example1.png" style="zoom:70%;"> <img src="./example2.png" style="zoom:71%;"></p>
+<img src="./example3.png" style="zoom:60%;">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;train&#34;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&#34;input&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> 
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;output&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span><span class="nt">&#34;input&#34;</span><span class="p">:</span> <span class="p">[</span><span class="err">..</span><span class="p">],</span> <span class="nt">&#34;output&#34;</span><span class="p">:</span> <span class="p">[</span><span class="err">..</span><span class="p">]},</span> <span class="err">..</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&#34;input&#34;</span><span class="p">:</span> <span class="p">[</span><span class="err">..</span><span class="p">],</span> <span class="nt">&#34;output&#34;</span><span class="p">:</span> <span class="p">[</span><span class="err">..</span><span class="p">]}]}</span>
+</span></span></code></pre></div><img src="./leaderboard.jpg" style="zoom:50%;">
+<p>in official kaggle contest accuracy is based on pass@2</p>
+<p>ARC3 is much more different from ARC1/2, stressing online learning and is like (meta-)rl</p>
+<p>Engeering keys: data, fine-tuning, post-processing</p>
 
 <h2 class="relative group">数据增强 Data Augmentation 
     <div id="数据增强-data-augmentation" class="anchor"></div>
@@ -1000,6 +1029,20 @@
     </span>        
     
 </h2>
+<p>扩充任务方法：</p>
+<ul>
+<li><strong>geometric transformations and color permutations</strong></li>
+<li>program synthesis, e.g. ReARC</li>
+<li>llm generation, e.g. NVARC</li>
+</ul>
+<p>Dataset:</p>
+<ul>
+<li>ARC-AGI1: eval 400, train 1k</li>
+<li>ConceptARC: 41k</li>
+<li>MiniARC: 37k</li>
+<li>ReARC: 102k</li>
+</ul>
+<p><strong>total training set 180.97k tasks</strong>, mostly have more pairs than evaluation tasks</p>
 
 <h2 class="relative group">微调 Fine-tuning 
     <div id="微调-fine-tuning" class="anchor"></div>
@@ -1010,18 +1053,90 @@
     </span>        
     
 </h2>
+<p>基座模型：</p>
+<ul>
+<li>Mistral-7B-Instruct-v0.3</li>
+<li>DeepSeek-R1-Distill-Qwen-7B</li>
+<li>Qwen3-4B-Thinking-2507</li>
+<li>Llama-3.2-3B</li>
+</ul>
+<p>综合基准效果和成本考虑选择 Qwen3-4B-Thinking-2507</p>
+<p><strong>baseline: 2%</strong> (on eval, the same below)</p>
+<p>Serialization:</p>
+<ul>
+<li>
+<p>16 tokens vocab and a short fixed form, max_len is 931</p>
+<p>each pair: <code>&lt;|im_start|&gt;userĊ{grid_in}&lt;|im_end|&gt;&lt;|im_start|&gt;assistantĊ{grid_out}&lt;|im_end|&gt;</code></p>
+</li>
+<li>
+<p>qwen use Ċ unicode to represent \n, and Ċ instead of \n has better outcomes (maybe \n&rsquo;s other pretrained meanings obscure the grid meaning)</p>
+</li>
+</ul>
+<p><strong>LoRA: 11.25%</strong> qkvogud, r=64, alpha=32, dropout=0.05, lr=1e-4, epoch=3, batch_size=4, grad_accum=2</p>
+<p>bf16, nf4 quant, 3.18% params, global_step=67866, 61.87h on 1 A100 GPU (2.437 samples per sec)</p>
 
-<h2 class="relative group">后处理优化 Post-Training Optimization 
-    <div id="后处理优化-post-training-optimization" class="anchor"></div>
+<h2 class="relative group">推理优化 Post-Training Optimization 
+    <div id="推理优化-post-training-optimization" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%90%8e%e5%a4%84%e7%90%86%e4%bc%98%e5%8c%96-post-training-optimization" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%8e%a8%e7%90%86%e4%bc%98%e5%8c%96-post-training-optimization" aria-label="锚点">#</a>
     </span>        
     
 </h2>
+<p>generate candidates then select the best-scored</p>
+<p><strong>dfs+prune: 12.5%</strong> (ARChitect original), cut off the sampled token path when accumulated prob&lt;0.05</p>
+<p>surpass 20% on training set</p>
+<p><strong>bfs or beam: roughly the same 12.5%</strong></p>
+<p><strong>ent_trigger: 14.75%</strong>, sample two different answers/paths at first, then compute next-token entropy at every token, rollout/sample another path(push into stack) from the position meeting <strong>large entropy or small concentration ratio</strong> with other top_k next-tokens (prune also)</p>
+<p>Meanwhile the searching process is restricted by max_rollouts and trigger_num for each path to control cost. If no candidates(all pruned) it will retry with looser conditions</p>
+<p><strong>transf_sampling: 17.2% direct and effective</strong></p>
+<p>sample an answer (then transf back) for every geo transf and color perm on the task</p>
+<p><strong>pass@16: 23.75%</strong> (transf_sampling, the same below), pass@16 of ent_trigger is roughly 16%</p>
+<p><strong>pass@8: 20.75%</strong></p>
+<p><strong>pass@32: 36.6%</strong> (on train)</p>
+<p><strong>pass@8: 30.3%</strong> (on train)</p>
+<p>Observation:</p>
+<ul>
+<li>
+<p>部分题目正确答案的路径概率非常低，实际上完全没学会（能搜出来的一般打分也靠前）</p>
+<p>key factor: LoRA rank needs to be larger</p>
+</li>
+<li>
+<p>hit rate of candidates 相对而言较高，esp. raises significantly after increasing search amount, &gt;40% estimated</p>
+<p>Select the best answer is far more difficult (future direction)</p>
+</li>
+<li>
+<p><strong>stack not queue</strong>: because of better outcomes</p>
+<p>Searching low-prob paths first allows for earlier pruning, otherwise computational limits may be reached before high-prob branches are fully searched, and it may lead to insufficient exploration</p>
+</li>
+<li>
+<p>ent_trigger is more efficient than original dfs (dfs needs to search more nodes to cover same candidates)</p>
+</li>
+<li>
+<p>cut tokenizer (train embeddings and lm_head) for efficiency because saving output_scores (on GPU and is finally copied to CPU) incurs substantial overhead</p>
+</li>
+<li>
+<p>other GPU-CPU optim: (real coding agent fault, may due to poor prompt)</p>
+<ul>
+<li>length by <code>input_ids.size(1)</code>(in-place) not <code>input_ids[0].tolist()</code> then len</li>
+<li>计算指定答案的 log_prob 应只需一次前向生成得到所有 logits</li>
+</ul>
+</li>
+<li>
+<p>in theory when generating cands only problem part&rsquo;s KV cache can be optimized so not very effective</p>
+</li>
+</ul>
+<p><strong>Repeat: pass@16 23.45%</strong>，基本无提升反而略差</p>
+<p>effectiveness relies on:</p>
+<ul>
+<li>earlier tokens can observe later tokens thru repeat</li>
+<li>repeated patterns usually receive higher weight from attention mechanisms (anaphora resolution, but may be over-focus &ldquo;aaaa&hellip;&rdquo;)</li>
+<li>same semantic information appearing at different absolute positions helps focusing on the content</li>
+</ul>
+<p>而任务里的 input-output pairs 大幅消解了影响，如果仅在各 grid 处马上重复则难以利用训练知识</p>
 
-<h3 class="relative group">强化训练 SDPO 
+<h2 class="relative group">强化训练 SDPO 
     <div id="强化训练-sdpo" class="anchor"></div>
     
     <span
@@ -1029,7 +1144,26 @@
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%bc%ba%e5%8c%96%e8%ae%ad%e7%bb%83-sdpo" aria-label="锚点">#</a>
     </span>        
     
-</h3>
+</h2>
+<p>$\mathcal{L}_{\mathrm{SDPO}}(\theta):=\sum_t \operatorname{KL}\left(\pi_\theta\left(\cdot \mid x, y_{&lt;t}\right) | \operatorname{stopgrad}\left(\pi_\theta\left(\cdot \mid x, f, y_{&lt;t}\right)\right)\right)$, where $f$ is rich feedback from env. Stopgrad to avoid teacher being affected by student, and has no trust region constraint since teacher and student share the same model which gives a natural regularization effect（论文里稳定化技术提到对教师指数移动平均或围绕 ref 教师分布施加约束）</p>
+<p>integrated into RLVR by $A_{i, t}\left(\hat{y}_{i, t}\right)=\log \frac{\pi_\theta\left(\hat{y}_{i, t} \mid x, f_i, y_{i,&lt;t}\right)}{\pi_\theta\left(\hat{y}_{i, t} \mid x, y_{i,&lt;t}\right)}$</p>
+<p>here use ground truth as $f$, <strong>student_prompt = question + wrong, teacher_prompt = question + gt + test_input + wrong</strong>, and loss is computed on wrong（由于 coverage 不高且缺乏证据，不用 self topk-choice SDPO）</p>
+<p><strong>only on tasks that candidates include gt</strong>, if oracle:</p>
+<ul>
+<li>becomes supervised learning or offline distillation not rl, 经实验 SFT(on self-teacher&rsquo;s correct answer) 更差</li>
+<li>can not prove that self-teaching enhances capability</li>
+<li>may leads to relying hindsight(over-confident) and forgetting</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>
+<p>comparation: SFT wastes wrong samples and memorize correct answers by rote, GRPO uses 0/1 reward and has no token-level credit assignment while SDPO is even logit-level</p>
+<p>sft 不知道错在哪，grpo 没有精细的部分模式奖惩</p>
+</li>
+<li>
+<p>can just leverage the cand sets generated earlier at pass@32, <strong>total trainable examples 4.02k</strong></p>
+</li>
+</ul>
 
           
           
@@ -1196,7 +1330,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="https://laplx.github.io/haochen/">
+  data-url="http://localhost:1313/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

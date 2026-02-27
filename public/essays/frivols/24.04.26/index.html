@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/haochen/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=haochen/livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -19,7 +19,7 @@
   <meta name="keywords" content="Misc, Notion, Information, " />
   
   
-  <link rel="canonical" href="https://laplx.github.io/haochen/essays/frivols/24.04.26/" />
+  <link rel="canonical" href="http://localhost:1313/haochen/essays/frivols/24.04.26/" />
   
   
   
@@ -73,7 +73,7 @@
   
   
   
-  <meta property="og:url" content="https://laplx.github.io/haochen/essays/frivols/24.04.26/">
+  <meta property="og:url" content="http://localhost:1313/haochen/essays/frivols/24.04.26/">
   <meta property="og:site_name" content="Hao Chen&#39;s Blog">
   <meta property="og:title" content="Regression on Channel">
   <meta property="og:description" content="回归在信道上 #（这是一个很蠢的想法……可以来抠一下是否成立或者说条件在哪里）
@@ -110,7 +110,7 @@
     
     "abstract": "\u003ch3 class=\u0022relative group\u0022\u003e回归在信道上 \r\n    \u003cdiv id=\u0022回归在信道上\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\r\n    \r\n    \u003cspan\r\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\r\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#%e5%9b%9e%e5%bd%92%e5%9c%a8%e4%bf%a1%e9%81%93%e4%b8%8a\u0022 aria-label=\u0022锚点\u0022\u003e#\u003c\/a\u003e\r\n    \u003c\/span\u003e        \r\n    \r\n\u003c\/h3\u003e\r\n\u003cp\u003e（这是一个很蠢的想法……可以来抠一下是否成立或者说条件在哪里）\u003c\/p\u003e\n\u003cp\u003e我们假想我们做的回归 $Y$ 对 $X$ 其实由一个高斯信道 $X\\rightarrow Y$ 把控。如果事实上机制就是这样，那么估计的信道容量会趋向真实值 $\\hat{C}\\rightarrow C=-\\frac{1}{2}\\ln(1-R^2)$，这也是最大可能达到的码率——这里就有事了，我们正是依靠$X$的行为传递的信息去判别$Y$​。\u003c\/p\u003e\n\u003cp\u003e若连续变量 $X$ 确实按照高斯分布，那么理论上我们能无限量的发出信息；但这并没有用，鉴于信道的限制，我们相当于以至少存在 $D_{min}=\\sigma_X^2(1-R^2)$ 的均方误差进行测量。（$R(D)=\\frac{1}{2}\\ln\\frac{\\sigma_X^2}{D}\u0026lt;C$）\u003c\/p\u003e\n\u003cp\u003e如果形式的分组（就像处理微分熵那样），那么我们有 $\\lfloor \\frac{1}{\\sqrt{1-R^2}}\\rfloor$ units。于是相关系数 $R\\ge \\frac{\\sqrt{3}}{2}=0.866$ 尚才1个bit的定性判断。否则在样本量趋向于无穷时候，结果落在典型集中的概率会趋向于0，亦即此时用以预测其实跟打奖没什么区别呃呃。\u003c\/p\u003e",
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/laplx.github.io\/haochen\/essays\/frivols\/24.04.26\/",
+    "url" : "http:\/\/localhost:1313\/haochen\/essays\/frivols\/24.04.26\/",
     "author" : {
       "@type": "Person",
       "name": "Hao Chen"
@@ -1222,7 +1222,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-index-500"
-  data-url="https://laplx.github.io/haochen/">
+  data-url="http://localhost:1313/haochen/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

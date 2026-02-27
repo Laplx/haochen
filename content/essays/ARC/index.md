@@ -6,14 +6,36 @@ tags: []
 draft: false
 ---
 {{< katex >}}
-## 概况
+## 概况 Introduction
 
-<img src="./example1.png" style="zoom:55%;"> <img src="./example2.png" style="zoom:58%;">
+<img src="./example1.png" style="zoom:70%;"> <img src="./example2.png" style="zoom:71%;">
 
 <img src="./example3.png" style="zoom:60%;">
 
 ```json
-{"train": [{"input": [[0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], [0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 8], [0, 0, 8, 8, 8, 0, 0, 8, 8, 8, 8], [0, 0, 8, 0, 8, 0, 0, 0, 0, 0, 0], [0, 0, 8, 8, 8, 0, 8, 8, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0]], "output": [[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1], [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 1, 0, 3, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0]]}, {"input": [..], "output": [..]}, ..], "test": [{"input": [..], "output": [..]}]}
+{"train": [{"input": [
+  [0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8], 
+  [0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 8], 
+  [0, 0, 8, 8, 8, 0, 0, 8, 8, 8, 8], 
+  [0, 0, 8, 0, 8, 0, 0, 0, 0, 0, 0], 
+  [0, 0, 8, 8, 8, 0, 8, 8, 8, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 8, 0, 8, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 8, 8, 8, 0, 0]], 
+  "output": [
+  [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1], 
+  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1], 
+  [0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1], 
+  [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0], 
+  [0, 0, 1, 1, 1, 0, 3, 3, 3, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 0], 
+  [0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0]]},
+  {"input": [..], "output": [..]}, ..
+  ],
+  "test": [{"input": [..], "output": [..]}]}
 ```
 
 <img src="./leaderboard.jpg" style="zoom:50%;">
@@ -56,15 +78,15 @@ Dataset:
 
 Serialization:
 
-- 16 tokens vocab and a short fixed form, max_len is 931
+- 16 tokens vocab and a short fixed form, max\_len is 931
 
   each pair: `<|im_start|>userĊ{grid_in}<|im_end|><|im_start|>assistantĊ{grid_out}<|im_end|>`
 
 - qwen use Ċ unicode to represent \n, and Ċ instead of \n has better outcomes (maybe \n's other pretrained meanings obscure the grid meaning)
 
-**LoRA: 11.25%** qkvogud, r=64, alpha=32, dropout=0.05, lr=1e-4, epoch=3, batch_size=4, grad_accum=2
+**LoRA: 11.25%** qkvogud, r=64, alpha=32, dropout=0.05, lr=1e-4, epoch=3, batch\_size=4, grad\_accum=2
 
-bf16, nf4 quant, 3.18% params, global_step=67866, 61.87h on 1 A100 GPU (2.437 samples per sec)
+bf16, nf4 quant, 3.18% params, global\_step=67866, 61.87h on 1 A100 GPU (2.437 samples per sec)
 
 ## 推理优化 Post-Training Optimization
 
@@ -76,15 +98,15 @@ surpass 20% on training set
 
 **bfs or beam: roughly the same 12.5%**
 
-**ent_trigger: 14.75%**, sample two different answers/paths at first, then compute next-token entropy at every token, rollout/sample another path(push into stack) from the position meeting **large entropy or small concentration ratio** with other top_k next-tokens (prune also)
+**ent\_trigger: 14.75%**, sample two different answers/paths at first, then compute next-token entropy at every token, rollout/sample another path(push into stack) from the position meeting **large entropy or small concentration ratio** with other top\_k next-tokens (prune also)
 
-Meanwhile the searching process is restricted by max_rollouts and trigger_num for each path to control cost. If no candidates(all pruned) it will retry with looser conditions
+Meanwhile the searching process is restricted by max\_rollouts and trigger\_num for each path to control cost. If no candidates(all pruned) it will retry with looser conditions
 
-**transf_sampling: 17.2% direct and effective**
+**transf\_sampling: 17.2% direct and effective**
 
 sample an answer (then transf back) for every geo transf and color perm on the task
 
-**pass@16: 23.75%** (transf_sampling, the same below), pass@16 of ent_trigger is roughly 16%
+**pass@16: 23.75%** (transf\_sampling, the same below), pass@16 of ent\_trigger is roughly 16%
 
 **pass@8: 20.75%**
 
@@ -106,14 +128,14 @@ Observation:
 
   Searching low-prob paths first allows for earlier pruning, otherwise computational limits may be reached before high-prob branches are fully searched, and it may lead to insufficient exploration
 
-- ent_trigger is more efficient than original dfs (dfs needs to search more nodes to cover same candidates)
+- ent\_trigger is more efficient than original dfs (dfs needs to search more nodes to cover same candidates)
 
-- cut tokenizer (train embeddings and lm_head) for efficiency because saving output_scores (on GPU and is finally copied to CPU) incurs substantial overhead
+- cut tokenizer (train embeddings and lm\_head) for efficiency because saving output\_scores (on GPU and is finally copied to CPU) incurs substantial overhead
 
 - other GPU-CPU optim: (real coding agent fault, may due to poor prompt)
 
   - length by `input_ids.size(1)`(in-place) not `input_ids[0].tolist()` then len
-  - 计算指定答案的 log_prob 应只需一次前向生成得到所有 logits
+  - 计算指定答案的 log\_prob 应只需一次前向生成得到所有 logits
 
 - in theory when generating cands only problem part's KV cache can be optimized so not very effective
 
@@ -129,11 +151,11 @@ effectiveness relies on:
 
 ## 强化训练 SDPO
 
-$\mathcal{L}_{\mathrm{SDPO}}(\theta):=\sum_t \operatorname{KL}\left(\pi_\theta\left(\cdot \mid x, y_{<t}\right) \| \operatorname{stopgrad}\left(\pi_\theta\left(\cdot \mid x, f, y_{<t}\right)\right)\right)$, where $f$ is rich feedback from env. Stopgrad to avoid teacher being affected by student, and has no trust region constraint since teacher and student share the same model which gives a natural regularization effect（论文里稳定化技术提到对教师指数移动平均或围绕 ref 教师分布施加约束）
+$\mathcal{L}\_{\mathrm{SDPO}}(\theta):=\sum\_t \operatorname{KL}\left(\pi\_\theta\left(\cdot \mid x, y\_{<t}\right) \| \operatorname{stopgrad}\left(\pi\_\theta\left(\cdot \mid x, f, y\_{<t}\right)\right)\right)$, where $f$ is rich feedback from env. Stopgrad to avoid teacher being affected by student, and has no trust region constraint since teacher and student share the same model which gives a natural regularization effect（论文里稳定化技术提到对教师指数移动平均或围绕 ref 教师分布施加约束）
 
-integrated into RLVR by $A_{i, t}\left(\hat{y}_{i, t}\right)=\log \frac{\pi_\theta\left(\hat{y}_{i, t} \mid x, f_i, y_{i,<t}\right)}{\pi_\theta\left(\hat{y}_{i, t} \mid x, y_{i,<t}\right)}$
+integrated into RLVR by $A\_{i, t}\left(\hat{y}\_{i, t}\right)=\log \frac{\pi\_\theta\left(\hat{y}\_{i, t} \mid x, f\_i, y\_{i,<t}\right)}{\pi\_\theta\left(\hat{y}\_{i, t} \mid x, y\_{i,<t}\right)}$
 
-here use ground truth as $f$, **student_prompt = question + wrong, teacher_prompt = question + gt + test_input + wrong**, and loss is computed on wrong（由于 coverage 不高且缺乏证据，不用 self topk-choice SDPO）
+here use ground truth as $f$, **student\_prompt = question + wrong, teacher\_prompt = question + gt + test\_input + wrong**, and loss is computed on wrong（由于 coverage 不高且缺乏证据，不用 self topk-choice SDPO）
 
 **only on tasks that candidates include gt**, if oracle:
 

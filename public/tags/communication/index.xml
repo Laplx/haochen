@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Communication on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/communication/</link>
+    <link>http://localhost:1313/haochen/tags/communication/</link>
     <description>Recent content in Communication on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/communication/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>信息论</title>
-      <link>https://laplx.github.io/haochen/notes/information/</link>
+      <link>http://localhost:1313/haochen/notes/information/</link>
       <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/information/</guid>
+      <guid>http://localhost:1313/haochen/notes/information/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;1 Entropy 
     &lt;div id=&#34;1-entropy&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

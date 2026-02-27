@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Physics on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/physics/</link>
+    <link>http://localhost:1313/haochen/tags/physics/</link>
     <description>Recent content in Physics on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/physics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Planck 公式在历史上是怎么诞生的</title>
-      <link>https://laplx.github.io/haochen/essays/planck/</link>
+      <link>http://localhost:1313/haochen/essays/planck/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/planck/</guid>
+      <guid>http://localhost:1313/haochen/essays/planck/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Wein：热力学结合实验定律猜测 
     &lt;div id=&#34;wein热力学结合实验定律猜测&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -55,10 +55,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>量子力学的形式理论</title>
-      <link>https://laplx.github.io/haochen/notes/quantum-form/</link>
+      <link>http://localhost:1313/haochen/notes/quantum-form/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/quantum-form/</guid>
+      <guid>http://localhost:1313/haochen/notes/quantum-form/</guid>
       <description>&lt;p&gt;
 
 系统的运动状态&lt;strong&gt;由 Hilbert 空间（所有平方可积函数构成的线性空间）中的一个矢量 $\ket{ \mathfrak{I} }$ 描述&lt;/strong&gt;。&lt;/p&gt;
@@ -76,10 +76,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Astrofinance</title>
-      <link>https://laplx.github.io/haochen/essays/frivols/24.01.19/</link>
+      <link>http://localhost:1313/haochen/essays/frivols/24.01.19/</link>
       <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/frivols/24.01.19/</guid>
+      <guid>http://localhost:1313/haochen/essays/frivols/24.01.19/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;天体金融学 
     &lt;div id=&#34;天体金融学&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -115,10 +115,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>Newton 力学纲要</title>
-      <link>https://laplx.github.io/haochen/essays/newton/</link>
+      <link>http://localhost:1313/haochen/essays/newton/</link>
       <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/essays/newton/</guid>
+      <guid>http://localhost:1313/haochen/essays/newton/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Galileo 时空 
     &lt;div id=&#34;galileo-时空&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -164,10 +164,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>色彩科学</title>
-      <link>https://laplx.github.io/haochen/notes/color-science/</link>
+      <link>http://localhost:1313/haochen/notes/color-science/</link>
       <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/color-science/</guid>
+      <guid>http://localhost:1313/haochen/notes/color-science/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Luminance 
     &lt;div id=&#34;luminance&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -226,10 +226,10 @@ $$&lt;/p&gt;
     
     <item>
       <title>Stokes 公式</title>
-      <link>https://laplx.github.io/haochen/notes/stokes/</link>
+      <link>http://localhost:1313/haochen/notes/stokes/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/stokes/</guid>
+      <guid>http://localhost:1313/haochen/notes/stokes/</guid>
       <description>&lt;p&gt;
 
 假设某界面上下有四束平面电磁波，介质 1 中入射与出射电磁波为 $\vec{E}_{1}, \vec{E}_{1}^{\prime}$，介质 2 中入射与出射电磁波为 $\vec{E}_{2}, \vec{E}_{2}^{\prime}$。&lt;/p&gt;

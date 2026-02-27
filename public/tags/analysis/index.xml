@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Analysis on Hao Chen&#39;s Blog</title>
-    <link>https://laplx.github.io/haochen/tags/analysis/</link>
+    <link>http://localhost:1313/haochen/tags/analysis/</link>
     <description>Recent content in Analysis on Hao Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>laplx@foxmail.com (Hao Chen)</managingEditor>
     <webMaster>laplx@foxmail.com (Hao Chen)</webMaster>
     <copyright>© 2026 Hao Chen</copyright>
-    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://laplx.github.io/haochen/tags/analysis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/haochen/tags/analysis/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>数值</title>
-      <link>https://laplx.github.io/haochen/notes/numerical/linalg/</link>
+      <link>http://localhost:1313/haochen/notes/numerical/linalg/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/numerical/linalg/</guid>
+      <guid>http://localhost:1313/haochen/notes/numerical/linalg/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;小结 
     &lt;div id=&#34;小结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -96,10 +96,10 @@
     
     <item>
       <title>随机分析</title>
-      <link>https://laplx.github.io/haochen/notes/stochastic-analysis/</link>
+      <link>http://localhost:1313/haochen/notes/stochastic-analysis/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/stochastic-analysis/</guid>
+      <guid>http://localhost:1313/haochen/notes/stochastic-analysis/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;要点 
     &lt;div id=&#34;要点&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -136,10 +136,10 @@
     
     <item>
       <title>实分析</title>
-      <link>https://laplx.github.io/haochen/notes/real-analysis/</link>
+      <link>http://localhost:1313/haochen/notes/real-analysis/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/real-analysis/</guid>
+      <guid>http://localhost:1313/haochen/notes/real-analysis/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;大纲 
     &lt;div id=&#34;大纲&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -225,10 +225,10 @@
     
     <item>
       <title>ODE 解的存在性</title>
-      <link>https://laplx.github.io/haochen/notes/diff-eqs/</link>
+      <link>http://localhost:1313/haochen/notes/diff-eqs/</link>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/diff-eqs/</guid>
+      <guid>http://localhost:1313/haochen/notes/diff-eqs/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;ODE 解的存在性 
     &lt;div id=&#34;ode-解的存在性&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -251,10 +251,10 @@ $$&lt;/p&gt;</description>
     
     <item>
       <title>博弈论</title>
-      <link>https://laplx.github.io/haochen/notes/game/</link>
+      <link>http://localhost:1313/haochen/notes/game/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <author>laplx@foxmail.com (Hao Chen)</author>
-      <guid>https://laplx.github.io/haochen/notes/game/</guid>
+      <guid>http://localhost:1313/haochen/notes/game/</guid>
       <description>&lt;p&gt;传统博弈论自 Von Neumann 的最小最大博弈和 Nash 的均衡概念（并使用 Brower/Kakutani fix point 证明了存在性）而兴起，扩展到基于 Bayes 和数学期望的非完全信息情形，后主要以泛函分析等为理论工具，并广泛应用于建模各类问题；不过几乎始终囿于精巧的函数分析，均衡解的存在、可达与稳定性等，对于智能体决策的刻画较为有限，且缺乏复杂的动态性（即便演化博弈论），但这一方法论仍存有其可取之处和简洁的洞察力，对框架应予以基本的了解。&lt;/p&gt;
 &lt;p&gt;下面的讲义为本人重新基于 belief 概念整理后的形式化理论，并借鉴拓扑的思路分析不同博弈中的不变性。&lt;/p&gt;
 &lt;hr&gt;
