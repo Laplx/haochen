@@ -40,7 +40,7 @@ draft: false
 
 <img src="./leaderboard.jpg" style="zoom:50%;">
 
-in official kaggle contest accuracy is based on pass@2
+in official kaggle contest accuracy is based on pass@2 (my transf_sampling on eval gets 19.5%)
 
 ARC3 is much more different from ARC1/2, stressing online learning and is like (meta-)rl
 
@@ -102,13 +102,15 @@ surpass 20% on training set
 
 Meanwhile the searching process is restricted by max\_rollouts and trigger\_num for each path to control cost. If no candidates(all pruned) it will retry with looser conditions
 
-**transf\_sampling: 17.2% direct and effective**
+**transf\_sampling: 16.5% direct and effective**
 
 sample an answer (then transf back) for every geo transf and color perm on the task
 
 **pass@16: 23.75%** (transf\_sampling, the same below), pass@16 of ent\_trigger is roughly 16%
 
-**pass@8: 20.75%**
+**pass@8: 20.75%** 近似正确的答案基本聚集在分数前部（但难以细分出第一）
+
+another evaluation shows pass@1/2/4/8/16 16.5%/19.5%/21%/22.3%/22.3%
 
 **pass@32: 36.6%** (on train)
 
@@ -116,7 +118,9 @@ sample an answer (then transf back) for every geo transf and color perm on the t
 
 Observation:
 
-- 部分题目正确答案的路径概率非常低，实际上完全没学会（能搜出来的一般打分也靠前）
+- 部分题目正确答案的路径概率非常低，实际上完全没学会
+  
+  能搜出来的一般打分也靠前，但不一定第一 pass@8 $\approx$ pass@16
 
   key factor: LoRA rank needs to be larger
 
@@ -170,3 +174,13 @@ Properties:
   sft 不知道错在哪，grpo 没有精细的部分模式奖惩
 
 - can just leverage the cand sets generated earlier at pass@32, **total trainable examples 4.02k**
+
+**pass@1/2/4/8/16 17%/22%/25.5%/27.5%/28%** (on eval 200 tasks) compared to 20.75%/23.75% @8/16
+
+batch\_size=2, lr=1e-4, top\_k=16, qkvogud, r=32, alpha=32, dropout=0.05, grad\_accum=2
+
+amp bf16, 1.62% params, max\_step=5660, <2h on 1 A100 GPU (due to restricted resources)
+
+(pass@1/2/4/8/16 16.8%/21%/23.5%/24.5%/24.5% when max\_steps=1000, lr=5e-5, top\_k=64)
+
+can find the correct answer to more questions after little training. Though from statistical view (assuming that the correctness of each task’s answer follows an i.i.d. sampling process, approx z‑test $z = \frac{p_1 - p_2}{\sqrt{ \frac{p_1(1-p_1) + p_2(1-p_2)}{n} }}$) it is not significant (z=1.37, p=0.17 for pass@16, z=1.82, p=0.025 for pass@8)
